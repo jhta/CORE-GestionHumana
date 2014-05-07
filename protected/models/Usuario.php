@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'usuario':
  * @property integer $id
  * @property string $nombre
- * @property string $contraseña
+ * @property string $contrasena
  * @property string $sesion
  * @property string $correo
  * @property string $descripcion
@@ -33,16 +33,16 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, contraseña, correo', 'required'),
+			array('nombre, contrasena, correo', 'required'),
 			array('nombre', 'length', 'max'=>50),
-			array('contraseña', 'length', 'max'=>25),
+			array('contrasena', 'length', 'max'=>25),
 			array('sesion', 'length', 'max'=>20),
 			array('correo', 'length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>120),
 			array('titulo', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, contraseña, sesion, correo, descripcion, titulo', 'safe', 'on'=>'search'),
+			array('id, nombre, contrasena, sesion, correo, descripcion, titulo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,7 +66,7 @@ class Usuario extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
-			'contraseña' => 'Contraseña',
+			'contrasena' => 'Contraseña',
 			'sesion' => 'Sesion',
 			'correo' => 'Correo',
 			'descripcion' => 'Descripcion',
@@ -94,7 +94,7 @@ class Usuario extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('contraseña',$this->contraseña,true);
+		$criteria->compare('contrasena',$this->contrasena,true);
 		$criteria->compare('sesion',$this->sesion,true);
 		$criteria->compare('correo',$this->correo,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
