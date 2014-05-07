@@ -26,9 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'contraseña'); ?>
-		<?php echo $form->textField($model,'contraseña',array('size'=>25,'maxlength'=>25)); ?>
-		<?php echo $form->error($model,'contraseña'); ?>
+		<?php echo $form->labelEx($model,'contrasena'); ?>
+		<?php echo $form->textField($model,'contrasena',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->error($model,'contrasena'); ?>
 	</div>
 
 	<div class="row">
