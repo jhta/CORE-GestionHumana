@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50536
 File Encoding         : 65001
 
-Date: 2014-05-07 15:38:48
+Date: 2014-05-07 15:52:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -108,14 +108,15 @@ DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `contraseña` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `contrasena` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `sesion` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `correo` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(120) COLLATE utf8_unicode_ci DEFAULT NULL,
   `titulo` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of usuario
 -- ----------------------------
+INSERT INTO `usuario` VALUES ('1', 'jeison', '123', 'aaasd', 'jeisonhs93@gmail.com', 'dfgdfhgjhkk,utdewfrth', 'egnhhgrrgf');
