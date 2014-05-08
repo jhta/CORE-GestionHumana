@@ -33,7 +33,7 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, contrasena, correo', 'required'),
+			array('nombre, contrasena, correo, username', 'required'),
 			array('nombre', 'length', 'max'=>50),
 			array('contrasena', 'length', 'max'=>25),
 			array('sesion', 'length', 'max'=>20),
@@ -42,7 +42,7 @@ class Usuario extends CActiveRecord
 			array('titulo', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, contrasena, sesion, correo, descripcion, titulo', 'safe', 'on'=>'search'),
+			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,9 +65,10 @@ class Usuario extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+                        'username' => 'Nombre de Usuario',
 			'nombre' => 'Nombre',
 			'contrasena' => 'Contraseña',
-			'sesion' => 'Sesion',
+			'sesion' => 'Sesión',
 			'correo' => 'Correo',
 			'descripcion' => 'Descripcion',
 			'titulo' => 'Titulo',
@@ -93,6 +94,7 @@ class Usuario extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+                $criteria->compare('username',$this->username);
 		$criteria->compare('nombre',$this->nombre,true);
 		$criteria->compare('contrasena',$this->contrasena,true);
 		$criteria->compare('sesion',$this->sesion,true);
