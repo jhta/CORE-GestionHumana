@@ -13,14 +13,6 @@
 	<?php echo CHtml::encode($data->nombre); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('contrasena')); ?>:</b>
-	<?php echo CHtml::encode($data->contrasena); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('sesion')); ?>:</b>
-	<?php echo CHtml::encode($data->sesion); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('correo')); ?>:</b>
 	<?php echo CHtml::encode($data->correo); ?>
 	<br />
