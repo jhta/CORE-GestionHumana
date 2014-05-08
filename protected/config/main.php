@@ -43,9 +43,15 @@ return array(
                         'showScriptName'=>false,
                         'urlSuffix'=>'.jsp',
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                            '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                            '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+                            '<controller:\w+>/<action:(create|view|update|delete|admin|index)>'=>'<controller>/<action>', //limited for this action(create|view|update|delete|admin|index)
+                            '<controller:(etiqueta)>/<action:\w+>/<id:\w+>'=>'etiqueta/<action>',
+                            '<controller:(etiqueta)>/<id:\w+>'=>'etiqueta/view',
+                            //--------------------------------------------
+//				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+//				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+//				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
 		
