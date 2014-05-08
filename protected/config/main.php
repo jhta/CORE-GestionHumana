@@ -62,10 +62,10 @@ return array(
 		
                 'db'=>array(
                     'class'=>'CDbConnection',
-                    'connectionString' => 'mysql:host=localhost;dbname=core-gestionhumana',
+                    'connectionString' => 'mysql:host=localhost;dbname=core',
                     'emulatePrepare' => true,
-                    'username' => 'root',
-                    'password' => '',
+                    'username' => 'desarrolladores',
+                    'password' => 'C@Re2014-1',
                     'charset' => 'utf8',
                 ),
 		'errorHandler'=>array(
