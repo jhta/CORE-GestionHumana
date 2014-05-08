@@ -68,7 +68,7 @@ class Publicacion extends CActiveRecord
 			'id' => 'ID',
 			'titulo' => 'Titulo',
 			'contenido' => 'Contenido',
-			'USUARIO_id' => 'Usuario',
+			'USUARIO_id' => 'Autor',
 			'fecha' => 'Fecha',
 		);
 	}

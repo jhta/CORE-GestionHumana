@@ -18,7 +18,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('USUARIO_id')); ?>:</b>
-	<?php echo CHtml::encode($data->USUARIO_id); ?>
+	<?php echo CHtml::encode(Usuario::model()->findByPk($data->USUARIO_id)->nombre); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fecha')); ?>:</b>
