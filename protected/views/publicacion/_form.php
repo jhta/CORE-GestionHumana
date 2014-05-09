@@ -50,7 +50,7 @@
 <?php $this->endWidget(); ?>
         <div>hola</div>
 <?php
-  $this->widget('CMultiFileUpload', array(
+  /*$this->widget('CMultiFileUpload', array(
      'model'=>$data,
      'attribute'=>'files',
      'accept'=>'jpg|gif|png',
@@ -66,6 +66,6 @@
      'max'=>5, // max 10 files
  
  
-  ));
+  ));*/
 ?>
 </div><!-- form -->
