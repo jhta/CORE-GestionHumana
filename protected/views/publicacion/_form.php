@@ -48,10 +48,10 @@
 	</div>
 
 <?php $this->endWidget(); ?>
-        <div>hola</div>
+        <div>hola mundo</div>
 <?php
   /*$this->widget('CMultiFileUpload', array(
-     'model'=>$data,
+     'model'=>$model,
      'attribute'=>'files',
      'accept'=>'jpg|gif|png',
      'options'=>array(
