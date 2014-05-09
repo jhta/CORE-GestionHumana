@@ -48,6 +48,7 @@
 	</div>
 
 <?php $this->endWidget(); ?>
+        <div>hola mundo!</div>
 <?php
   $this->widget('CMultiFileUpload', array(
      'model'=>$model,
