@@ -18,7 +18,8 @@
  */
 class Publicacion extends CActiveRecord
 {
-	/**
+	public $files;
+        /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -34,6 +35,7 @@ class Publicacion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('files','file','allowEmpty' => true),
 			array('titulo, contenido, USUARIO_id, fecha', 'required'),
 			array('USUARIO_id', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>50),
@@ -68,7 +70,7 @@ class Publicacion extends CActiveRecord
 			'id' => 'ID',
 			'titulo' => 'Titulo',
 			'contenido' => 'Contenido',
-			'USUARIO_id' => 'Usuario',
+			'USUARIO_id' => 'Autor',
 			'fecha' => 'Fecha',
 		);
 	}

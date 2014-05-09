@@ -1,111 +1,124 @@
-/*
-Navicat MySQL Data Transfer
+-- phpMyAdmin SQL Dump
+-- version 4.0.9
+-- http://www.phpmyadmin.net
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 08-05-2014 a las 04:21:47
+-- Versión del servidor: 5.6.14
+-- Versión de PHP: 5.5.6
 
-Source Server         : Workep
-Source Server Version : 50536
-Source Host           : localhost:3306
-Source Database       : core-gestionhumana
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-Target Server Type    : MYSQL
-Target Server Version : 50536
-File Encoding         : 65001
 
-Date: 2014-05-07 15:52:06
-*/
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
-SET FOREIGN_KEY_CHECKS=0;
+--
+-- Base de datos: `core-gestionhumana`
+--
 
--- ----------------------------
--- Table structure for `archivo`
--- ----------------------------
-DROP TABLE IF EXISTS `archivo`;
-CREATE TABLE `archivo` (
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `archivo`
+--
+
+CREATE TABLE IF NOT EXISTS `archivo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `tipo` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `peso` int(11) NOT NULL,
   `PUBLICACION_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `PUBLICACION_id` (`PUBLICACION_id`),
-  CONSTRAINT `holi` FOREIGN KEY (`PUBLICACION_id`) REFERENCES `publicacion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `PUBLICACION_id` (`PUBLICACION_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of archivo
--- ----------------------------
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `comentario`
--- ----------------------------
-DROP TABLE IF EXISTS `comentario`;
-CREATE TABLE `comentario` (
+--
+-- Estructura de tabla para la tabla `comentario`
+--
+
+CREATE TABLE IF NOT EXISTS `comentario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `comentario` text COLLATE utf8_unicode_ci NOT NULL,
   `PUBLICACION_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `PUBLICACION_id` (`PUBLICACION_id`),
-  CONSTRAINT `PUBLICACION_id` FOREIGN KEY (`PUBLICACION_id`) REFERENCES `publicacion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `PUBLICACION_id` (`PUBLICACION_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of comentario
--- ----------------------------
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `etiqueta`
--- ----------------------------
-DROP TABLE IF EXISTS `etiqueta`;
-CREATE TABLE `etiqueta` (
+--
+-- Estructura de tabla para la tabla `etiqueta`
+--
+
+CREATE TABLE IF NOT EXISTS `etiqueta` (
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`nombre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- ----------------------------
--- Records of etiqueta
--- ----------------------------
+--
+-- Volcado de datos para la tabla `etiqueta`
+--
 
--- ----------------------------
--- Table structure for `publicacion`
--- ----------------------------
-DROP TABLE IF EXISTS `publicacion`;
-CREATE TABLE `publicacion` (
+INSERT INTO `etiqueta` (`nombre`) VALUES
+('primera');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `publicacion`
+--
+
+CREATE TABLE IF NOT EXISTS `publicacion` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `contenido` text COLLATE utf8_unicode_ci NOT NULL,
   `USUARIO_id` int(11) NOT NULL,
   `fecha` date NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `USUARIO_id` (`USUARIO_id`),
-  CONSTRAINT `publicacion_ibfk_1` FOREIGN KEY (`USUARIO_id`) REFERENCES `usuario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `USUARIO_id` (`USUARIO_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
--- ----------------------------
--- Records of publicacion
--- ----------------------------
+--
+-- Volcado de datos para la tabla `publicacion`
+--
 
--- ----------------------------
--- Table structure for `trending`
--- ----------------------------
-DROP TABLE IF EXISTS `trending`;
-CREATE TABLE `trending` (
+INSERT INTO `publicacion` (`id`, `titulo`, `contenido`, `USUARIO_id`, `fecha`) VALUES
+(1, 'Mi primera publicación', 'Esta es Mi primera publicación ojalá la disfruten', 4, '2014-05-07');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `trending`
+--
+
+CREATE TABLE IF NOT EXISTS `trending` (
   `PUBLICACION_id` int(11) NOT NULL,
   `ETIQUETA_nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ETIQUETA_nombre`),
-  KEY `publi` (`PUBLICACION_id`),
-  CONSTRAINT `publi` FOREIGN KEY (`PUBLICACION_id`) REFERENCES `publicacion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `eti` FOREIGN KEY (`ETIQUETA_nombre`) REFERENCES `etiqueta` (`nombre`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `publi` (`PUBLICACION_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- ----------------------------
--- Records of trending
--- ----------------------------
+--
+-- Volcado de datos para la tabla `trending`
+--
 
--- ----------------------------
--- Table structure for `usuario`
--- ----------------------------
-DROP TABLE IF EXISTS `usuario`;
-CREATE TABLE `usuario` (
+INSERT INTO `trending` (`PUBLICACION_id`, `ETIQUETA_nombre`) VALUES
+(1, 'primera');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `contrasena` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
@@ -114,9 +127,44 @@ CREATE TABLE `usuario` (
   `descripcion` varchar(120) COLLATE utf8_unicode_ci DEFAULT NULL,
   `titulo` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
--- ----------------------------
--- Records of usuario
--- ----------------------------
-INSERT INTO `usuario` VALUES ('1', 'jeison', '123', 'aaasd', 'jeisonhs93@gmail.com', 'dfgdfhgjhkk,utdewfrth', 'egnhhgrrgf');
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `contrasena`, `sesion`, `correo`, `descripcion`, `titulo`) VALUES
+(4, 'Cristian Camilo Morales Jiménez', '1234', '', 'ccmj202@gmail.com', 'Soy un hombre que le gustan los largos paseos por la playa', 'Ingeniero de Sistemas e Informática');
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `archivo`
+--
+ALTER TABLE `archivo`
+  ADD CONSTRAINT `holi` FOREIGN KEY (`PUBLICACION_id`) REFERENCES `publicacion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `comentario`
+--
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `PUBLICACION_id` FOREIGN KEY (`PUBLICACION_id`) REFERENCES `publicacion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `publicacion`
+--
+ALTER TABLE `publicacion`
+  ADD CONSTRAINT `publicacion_ibfk_1` FOREIGN KEY (`USUARIO_id`) REFERENCES `usuario` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `trending`
+--
+ALTER TABLE `trending`
+  ADD CONSTRAINT `publi` FOREIGN KEY (`PUBLICACION_id`) REFERENCES `publicacion` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `eti` FOREIGN KEY (`ETIQUETA_nombre`) REFERENCES `etiqueta` (`nombre`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

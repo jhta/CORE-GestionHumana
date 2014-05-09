@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'CORE Gestión Humana',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -23,7 +23,7 @@ return array(
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'   hola',
+			'password'=>'hola',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
@@ -62,10 +62,10 @@ return array(
 		
                 'db'=>array(
                     'class'=>'CDbConnection',
-                    'connectionString' => 'mysql:host=localhost;dbname=core-gestionhumana',
+                    'connectionString' => 'mysql:host=localhost;dbname=core',
                     'emulatePrepare' => true,
-                    'username' => 'root',
-                    'password' => '',
+                    'username' => 'desarrolladores',
+                    'password' => 'C@Re2014-1',
                     'charset' => 'utf8',
                 ),
 		'errorHandler'=>array(
@@ -93,6 +93,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'info@coregestionhumana.com',
 	),
 );
