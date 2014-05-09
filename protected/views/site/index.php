@@ -3,7 +3,7 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
-
+<script>alert("hola");</script>
 <h1>Bienvenidos a <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
