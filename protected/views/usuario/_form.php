@@ -38,12 +38,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'sesion'); ?>
-		<?php echo $form->textField($model,'sesion',array('size'=>60,'maxlength'=>150)); ?>
-		<?php echo $form->error($model,'sesion'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'correo'); ?>
 		<?php echo $form->textField($model,'correo',array('size'=>60,'maxlength'=>60)); ?>
 		<?php echo $form->error($model,'correo'); ?>

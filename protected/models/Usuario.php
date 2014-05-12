@@ -88,7 +88,7 @@ class Usuario extends CActiveRecord
         
         public function validatePassword($password)
 	{
-		return $this->hashPassword($password,$this->sesion)===$this->contrasena;
+		return $this->hashPassword($password,$this->sesion) === $this->contrasena;
 	}
         
         
