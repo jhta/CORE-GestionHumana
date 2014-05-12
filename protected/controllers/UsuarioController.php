@@ -70,7 +70,7 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
-                        $model->contrasena= $model->hashPassword($_POST['Usuario']['constrasena'],$session= $model->generateSalt());
+                        $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
 			$model->sesion= $session;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -97,7 +97,7 @@ class UsuarioController extends Controller
 		{
 			$model->attributes=$_POST['Usuario'];
                         $session= $model->generateSalt();
-                        $model->contrasena= $model->hashPassword($_POST['Usuario']['constrasena'],$session);
+                        $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
 			$model->sesion= $session;
                         if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
