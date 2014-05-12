@@ -25,15 +25,21 @@
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>60)); ?>
+		<?php echo $form->error($model,'username'); ?>
+	</div>
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'contrasena'); ?>
-		<?php echo $form->textField($model,'contrasena',array('size'=>25,'maxlength'=>25)); ?>
+		<?php echo $form->textField($model,'contrasena',array('size'=>150,'maxlength'=>150)); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'sesion'); ?>
-		<?php echo $form->textField($model,'sesion',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'sesion',array('size'=>60,'maxlength'=>150)); ?>
 		<?php echo $form->error($model,'sesion'); ?>
 	</div>
 
@@ -51,7 +57,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'titulo'); ?>
-		<?php echo $form->textField($model,'titulo',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->textField($model,'titulo',array('size'=>60,'maxlength'=>60)); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
 

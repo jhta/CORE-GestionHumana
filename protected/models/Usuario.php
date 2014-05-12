@@ -35,11 +35,9 @@ class Usuario extends CActiveRecord
 		return array(
 			array('nombre, contrasena, correo, username', 'required'),
 			array('nombre', 'length', 'max'=>50),
-			array('contrasena', 'length', 'max'=>150),
-			array('sesion', 'length', 'max'=>20),
-			array('correo', 'length', 'max'=>60),
+			array('contrasena, sesion', 'length', 'max'=>150),
+			array('correo, titulo, username', 'length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>120),
-			array('titulo', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo', 'safe', 'on'=>'search'),
