@@ -87,6 +87,27 @@ class Usuario extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
+        
+        public function validatePassword($password)
+	{
+		return $this->hashPassword($password,$this->sesion)===$this->contrasena;
+	}
+        
+        
+        public function generateSalt(){
+            return uniqid('',true);
+        }
+	/**
+	 * Generates the password hash.
+	 * @param string password
+	 * @return string hash
+	 */
+	public function hashPassword($password,$salt)
+	{
+		return md5($salt.$password);
+	}
+        
+        
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
