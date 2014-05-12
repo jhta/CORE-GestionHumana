@@ -35,7 +35,7 @@ class Usuario extends CActiveRecord
 		return array(
 			array('nombre, contrasena, correo, username', 'required'),
 			array('nombre', 'length', 'max'=>50),
-			array('contrasena', 'length', 'max'=>25),
+			array('contrasena', 'length', 'max'=>150),
 			array('sesion', 'length', 'max'=>20),
 			array('correo', 'length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>120),
