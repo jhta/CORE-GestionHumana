@@ -19,9 +19,6 @@ $this->breadcrumbs=array(
 
 <?php else: ?>
 
-<p>
-Si tienes preguntas respecto a cualqueir cosa, envíanos un mail, nosotros somos muy queridos :D !
-</p>
 
 <div class="form">
 
