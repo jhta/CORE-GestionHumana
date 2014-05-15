@@ -1,53 +1,3 @@
-<?php
-/* @var $this SiteController */
-/* @var $model ContactForm */
-/* @var $form CActiveForm */
-
-$this->pageTitle=Yii::app()->name . ' - Contact Us';
-$this->breadcrumbs=array(
-	'Contact',
-);
-?>
-
-<script>
-
-var validator = new FormValidator('contact-form', [{
-    name: 'req',
-    display: 'required',    
-    rules: 'required'
-}, {
-    name: 'alphanumeric',
-    rules: 'alpha_numeric'
-}, {
-    name: 'password',
-    rules: 'required'
-}, {
-    name: 'password_confirm',
-    display: 'password confirmation',
-    rules: 'required|matches[password]'
-}, {
-    name: 'email',
-    rules: 'valid_email',
-    depends: function() {
-        return Math.random() > .5;
-    }
-}, {
-    name: 'minlength',
-    display: 'min length',
-    rules: 'min_length[8]'
-}], function(errors, event) {
-    if (errors.length > 0) {
-         var errorString = '';
-        
-        for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
-            errorString += errors[i].message + '<br />';
-        }
-        
-        $("#errorReport").append(errorString);
-    }
-});
-</script>
-
 
 <div id="errorReport"></div>
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
@@ -145,16 +95,16 @@ var validator = new FormValidator('contact-form', [{
 		<?php echo $form->error($model,'body'); ?>
 	</div>
 
-	<?php //if(CCaptcha::checkRequirements()): ?>
-	<!--<div class="row">-->
-		<?php //echo $form->labelEx($model,'verifyCode'); ?>
-		<!--<div>-->
-		<?php //$this->widget('CCaptcha'); ?>
-		<?php //echo $form->textField($model,'verifyCode',array('required'=>true)); ?>
-		<!--</div>-->
-		<?php //echo $form->error($model,'verifyCode'); ?>
-	<!--</div>-->
-	<?php //endif; ?>
+	<?php  if(CCaptcha::checkRequirements()): ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<div>
+		<?php $this->widget('CCaptcha'); ?>
+		<?php echo $form->textField($model,'verifyCode',array('required'=>true)); ?>
+		</div>
+		<?php echo $form->error($model,'verifyCode'); ?>
+	</div>
+	<?php endif; ?>
 
 	<div class="row buttons">
           
