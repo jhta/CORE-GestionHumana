@@ -100,6 +100,7 @@ class PublicacionController extends Controller
 		{
 			$model->attributes=$_POST['Publicacion'];
                         $model->fecha= date("Y-m-d H:i:s");
+                        
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
