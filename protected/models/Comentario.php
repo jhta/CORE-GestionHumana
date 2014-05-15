@@ -36,7 +36,7 @@ class Comentario extends CActiveRecord
 			array('comentario', 'length', 'max'=>2000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, comentario, PUBLICACION_id', 'safe', 'on'=>'search'),
+			array('id, fecha_creacion, nombre, comentario, PUBLICACION_id', 'safe', 'on'=>'search'),
 		);
 	}
 

@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'comentario'); ?>
-		<?php echo $form->textField($model,'comentario',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'comentario',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'comentario'); ?>
 	</div>
 
