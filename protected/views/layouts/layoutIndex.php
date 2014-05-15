@@ -625,10 +625,10 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
                     
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image01.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image04.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
+											{image : 'http://www.duiops.net/seresvivos/galeria/focas/1100.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : 'http://www.sonrullan.com/pagina/alumne/trabajos/focas/foca4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : 'http://www.duiops.net/seresvivos/galeria/focas/1100.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : 'http://www.sonrullan.com/pagina/alumne/trabajos/focas/foca4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
