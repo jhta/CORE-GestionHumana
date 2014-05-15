@@ -12,7 +12,7 @@
 
 	<div class="time">
                 
-		<?php echo date('F d, Y \a \l\a\s H:i:s A',strtotime($comentario->fecha_creacion)); ?>
+		<?php echo date('F d, Y \a \l\a\s H:i:s a',strtotime($comentario->fecha_creacion)); ?>
 	</div>
 
 	<div class="content">
