@@ -30,9 +30,9 @@ $this->menu=array(
 )); ?>
 
 <div id="comentarios">
-    <?php if($model->cuentaComentario>=1): ?>
+    <?php if($model->cuentaComentarios>=1): ?>
             <h3>
-                <?php echo $model->cuentaComentario > 1 ? $model->cuentaComentarios . ' comentarios' : 'Un comentario'; ?>
+                <?php echo $model->cuentaComentarios > 1 ? $model->cuentaComentarios . ' comentarios' : 'Un comentario'; ?>
             </h3>
 
             <?php $this->renderPartial('_comentarios',array(
