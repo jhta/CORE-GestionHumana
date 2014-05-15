@@ -59,6 +59,7 @@ class Publicacion extends CActiveRecord
 			'usuario' => array(self::BELONGS_TO, 'Usuario', 'USUARIO_id'),
 			'trendings' => array(self::HAS_MANY, 'Trending', 'PUBLICACION_id'),
                         'cuentaComentarios' => array(self::STAT, 'Comentario', 'PUBLICACION_id'),
+                        
 		);
 	}
         

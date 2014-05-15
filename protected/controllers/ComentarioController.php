@@ -68,9 +68,8 @@ class ComentarioController extends Controller
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Comentario'])){
-                    $model->fecha= date("Y-m-d H:i:s");
-                    
                     $model->attributes=$_POST['Comentario'];
+                    $model->fecha= date("Y-m-d H:i:s");
                     
                     if($model->save())
                         $this->redirect(array('view','id'=>$model->id));
