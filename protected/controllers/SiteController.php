@@ -54,7 +54,7 @@ class SiteController extends Controller
 		$model=new ContactForm;
 		if(isset($_POST['ContactForm']))
 		{
-			$model->attributes=$_POST['ContactForm'];
+			$model->attributes= $_POST['ContactForm'];
 			if($model->validate())
 			{
 				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
