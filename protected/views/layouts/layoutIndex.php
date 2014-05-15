@@ -126,7 +126,9 @@
                 <li><a href="#work">Nuestro Trabajo</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
-				<li><a id="login" href="#content-login" class="external">login</a></li>
+                <li><a id="login" href="#" class="external">Blog</a></li>
+                <li><a id="login" href="#content-login" class="external">login</a></li>
+                
             </ul>
         </nav>
         
@@ -624,10 +626,10 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
                     
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image01.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/slider-images/image04.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
+											{image : 'http://www.duiops.net/seresvivos/galeria/focas/1100.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : 'http://www.sonrullan.com/pagina/alumne/trabajos/focas/foca4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : 'http://www.duiops.net/seresvivos/galeria/focas/1100.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : 'http://www.sonrullan.com/pagina/alumne/trabajos/focas/foca4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
