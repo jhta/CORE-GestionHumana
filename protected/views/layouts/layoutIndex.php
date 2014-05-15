@@ -126,7 +126,7 @@
                 <li><a href="#work">Nuestro Trabajo</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
-                <li><a id="login" href="#" class="external">Blog</a></li>
+                <li><?php echo CHtml::link('Blog', array('publicacion/view'),array('class'=>'External')); ?></li>
                 <li><a id="login" href="#content-login" class="external">login</a></li>
             </ul>
         </nav>
@@ -436,7 +436,7 @@
                     <li><a href="#">info@coregestionhumana.com</a></li>
                     <li>(+57)314-615-2596</li>
                     <li>
-                        Core Gestion Humana
+                        Diego Flórez
                         <br>
                         5240 Medellín, Colombia.
                         <br>
