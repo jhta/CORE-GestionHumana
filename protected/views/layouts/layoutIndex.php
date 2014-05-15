@@ -626,7 +626,7 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 		slides 					:  	[			// Slideshow Images
                     
 											{image : 'http://www.duiops.net/seresvivos/galeria/focas/1100.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : 'http://www.sonrullan.com/pagina/alumne/trabajos/focas/foca4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '<?php echo Yii::app()->request->baseUrl; ?>/images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
 											{image : 'http://www.duiops.net/seresvivos/galeria/focas/1100.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
 											{image : 'http://www.sonrullan.com/pagina/alumne/trabajos/focas/foca4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
