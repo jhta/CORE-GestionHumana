@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('America/Bogota');
 class PublicacionController extends Controller
 {
 	/**
@@ -98,6 +98,7 @@ class PublicacionController extends Controller
 		if(isset($_POST['Publicacion']))
 		{
 			$model->attributes=$_POST['Publicacion'];
+                        $model->fecha= date("Y-m-d H:i:s");
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

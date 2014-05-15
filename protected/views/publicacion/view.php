@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Publicacion #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->titulo; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -28,9 +28,20 @@ $this->menu=array(
 		'fecha',
 	),
 )); ?>
-
+<p></p>
 <div id="comentarios">
-    <h3>Leave a Comment</h3>
+    <?php if($model->cuentaComentarios>=1): ?>
+            <h3>
+                <?php echo $model->cuentaComentarios > 1 ? $model->cuentaComentarios . ' comentarios' : 'Un comentario'; ?>
+            </h3>
+
+            <?php $this->renderPartial('_comentarios',array(
+                    'post'=>$model,
+                    'comentarios'=>$model->comentarios,
+            )); ?>
+    <?php endif; ?>
+    
+    <h3>Dejanos un comentario</h3>
 
     <?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
             <div class="flash-success">

@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('America/Bogota');
 class ComentarioController extends Controller
 {
 	/**
@@ -70,6 +70,7 @@ class ComentarioController extends Controller
 		if(isset($_POST['Comentario']))
 		{
 			$model->attributes=$_POST['Comentario'];
+                        $model->fecha_creacion= date("Y-m-d H:i:s");
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

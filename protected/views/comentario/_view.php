@@ -17,9 +17,4 @@
 	<?php echo CHtml::encode($data->comentario); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('PUBLICACION_id')); ?>:</b>
-	<?php echo CHtml::encode($data->PUBLICACION_id); ?>
-	<br />
-
-
 </div>

@@ -27,20 +27,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contenido'); ?>
-		<?php echo $form->textField($model,'contenido',array('size'=>60,'maxlength'=>5000)); ?>
+		<?php echo $form->textArea($model,'contenido',array('rows'=>50, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
-		<?php echo $form->textField($model,'USUARIO_id'); ?>
+		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
-		<?php echo $form->error($model,'fecha'); ?>
 	</div>
 
 	<div class="row buttons">
@@ -52,7 +46,7 @@
   $this->widget('CMultiFileUpload', array(
      'model'=>$model,
      'attribute'=>'files',
-     'accept'=>'jpg|gif|png',
+     //'accept'=>'jpg|gif|png',
      'options'=>array(
         // 'onFileSelect'=>'function(e, v, m){ alert("onFileSelect - "+v) }',
         // 'afterFileSelect'=>'function(e, v, m){ alert("afterFileSelect - "+v) }',
