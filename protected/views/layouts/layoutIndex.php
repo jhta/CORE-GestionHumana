@@ -125,6 +125,7 @@
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.sticky.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/validate.js"></script> <!-- Validate form -->
 
 <!--<script src="<?php //echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>  Default JS -->
 <!-- End Js -->

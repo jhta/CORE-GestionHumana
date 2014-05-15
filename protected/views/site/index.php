@@ -1,3 +1,22 @@
+<script>
+//$(document).ready(function() {
+// var $model = <?php //echo $model;?>;
+// 
+//        $.ajax({
+//            async: true,
+//            cache: false,
+//            url: "site/contact",
+//            data: $model,
+//            type: "post"
+//        }).done(function(result) {
+//             $('#contacta').html(result);
+//            //location.href = "espacioproyecto/" + result + "";
+//        });
+//
+//    });
+</script>
+
+
 
 <!-- Header -->
 <header>
@@ -102,13 +121,14 @@
     <!-- End Title Page -->
     
     <!-- Contact Form -->
-    <div class="row">
-        <?php $this->renderPartial('//site/contact', array('model'=>$model)); ?>
+    <div class="row" id="contacta">
+        
         
         
     	<div class="span9">
             
-            
+              <?php $this->renderPartial('//site/contact', array('model'=>$model)); ?>
+      
         
 <!--        	<form id="contact-form" class="contact-form" action="#">
             	<p class="contact-name">

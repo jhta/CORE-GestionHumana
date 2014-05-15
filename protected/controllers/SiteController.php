@@ -47,7 +47,7 @@ class SiteController extends Controller
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
 				//$this->redirect("http://www.google.com");
-                                Yii::app()->user->setFlash('contact','Todo bien, todo bonito, solo nacional a morir, solo verdolaga, un 3-0 si dios quiere');
+                                //Yii::app()->user->setFlash('contact','Todo bien, todo bonito, solo nacional a morir, solo verdolaga, un 3-0 si dios quiere');
 //                                $this->refresh();
 			}
                         
