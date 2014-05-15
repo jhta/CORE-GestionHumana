@@ -11,8 +11,8 @@
 	</div>
 
 	<div class="time">
-                <?php date_default_timezone_set('America/Bogota'); ?>
-		<?php echo date('F d, Y \a\t H:i a',$comentario->fecha_creacion); ?>
+                
+		<?php echo date('F d, Y \a\t H:i a',strtotime($comentario->fecha_creacion)); ?>
 	</div>
 
 	<div class="content">

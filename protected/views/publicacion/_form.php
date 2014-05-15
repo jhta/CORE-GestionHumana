@@ -37,12 +37,6 @@
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
-		<?php echo $form->error($model,'fecha'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
@@ -52,7 +46,7 @@
   $this->widget('CMultiFileUpload', array(
      'model'=>$model,
      'attribute'=>'files',
-     'accept'=>'jpg|gif|png',
+     //'accept'=>'jpg|gif|png',
      'options'=>array(
         // 'onFileSelect'=>'function(e, v, m){ alert("onFileSelect - "+v) }',
         // 'afterFileSelect'=>'function(e, v, m){ alert("afterFileSelect - "+v) }',
