@@ -126,7 +126,7 @@
                 <li><a href="#work">Nuestro Trabajo</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
-                <li><?php echo CHtml::link('Blog',array('publicacion/index'),array('class'=>'External')); ?></li>
+                <li><?php echo CHtml::link('Blog', Yii::app()->request->baseUrl.'/publicacion/index',array('class'=>'External')); ?></li>
                 <li><a id="login" href="#content-login" class="external">login</a></li>
             </ul>
         </nav>
