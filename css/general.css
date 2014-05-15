@@ -1,0 +1,87 @@
+/* ==================================================
+   Container centrado
+================================================== */
+.container{
+    margin: 0 auto !important;
+}
+
+
+
+/* ==================================================
+   Logotipo
+================================================== */
+
+.log{
+	margin: 0 auto;
+  height: 170px;
+  width: 480px;
+  background:url('http://2.bp.blogspot.com/-o_1syBY9vto/UlqrsVxx2iI/AAAAAAAAK6U/iDHfAL4WtfU/s1600/Doctor_Who_logo_2012.svg.png') no-repeat;
+  background-size:100% 100%;
+}
+
+/* ==================================================
+   Login
+================================================== */
+
+.form-signin{
+
+   	margin: 0 225px;
+    padding:10px;
+    text-align: center;
+}
+#content-login{
+    display: none;
+    width: 700px;
+    height: 300px;
+    margin:0 auto !important;
+    height:100%;
+    padding: -10px;
+    overflow: hidden;
+
+        
+}
+
+#content-login > .container{
+	width: 100%;
+}
+
+.fancybox-skin{
+    padding: 0;
+    background-image:url('../images/login.jpg');
+        background-position: 94% 91%;
+        background-size: 100% 100%;
+        
+}
+.input-login{
+    border-radius:0 !important;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    -o-border-radius:0;
+    
+    width: 250px;
+    height: 35px;
+}
+
+.btn-login{
+	color: white;
+	font-size: 20px;
+    margin-top: 10px;
+    background: rgba(15,15,15,0.4);
+    border-radius: 0;
+    border:black;
+    width: 250px;
+    height: 35px;
+box-shadow: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+-o-box-shadow: none;
+    
+}
+
+
+.btn-login:hover{
+    border-width:3px ;
+    border: #eee;
+    background: rgba(15,15,15,0.8);
+    
+}
