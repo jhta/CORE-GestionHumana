@@ -121,6 +121,17 @@ class Publicacion extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Publicacion the static model class
 	 */
+        
+        /**
+	 * @return string the URL that shows the detail of the post
+	 */
+	public function getUrl(){
+		return Yii::app()->createUrl('publicacion/view', array(
+			'id'=>$this->id,
+			'title'=>$this->titulo,
+		));
+	}
+        
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
