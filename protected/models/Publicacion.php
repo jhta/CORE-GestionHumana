@@ -103,7 +103,17 @@ class Publicacion extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+        
+        /**
+	 * Adds a new comment to this post.
+	 * This method will set status and post_id of the comment accordingly.
+	 * @param Comment the comment to be added
+	 * @return boolean whether the comment is saved successfully
+	 */
+	public function addComment($comment){
+		$comment->PUBLICACION_id = $this->id;
+		return $comment->save();
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

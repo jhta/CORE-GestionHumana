@@ -49,11 +49,39 @@ class PublicacionController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+	public function actionView($id){
+            
+            $model=$this->loadModel($id);
+            $comment= $this->newComment($model);
+            $this->render('view',array(
+                    'model'=>$model,
+                    'comment'=>$comment,
+            ));
+	}
+        /**
+	 * Creates a new comment.
+	 * This method attempts to create a new comment based on the user input.
+	 * If the comment is successfully created, the browser will be redirected
+	 * to show the created comment.
+	 * @param Post the post that the new comment belongs to
+	 * @return Comment the comment instance
+	 */
+        protected function newComment($post){
+		$comment= new Comentario;
+		if(isset($_POST['ajax']) && $_POST['ajax']==='comment-form')
+		{
+			echo CActiveForm::validate($comment);
+			Yii::app()->end();
+		}
+		if(isset($_POST['Comentario']))
+		{
+			$comment->attributes= $_POST['Comentario'];
+			if($post->addComment($comment)){
+                            Yii::app()->user->setFlash('commentSubmitted','Gracias por tu comentario. Para nosotros es muy importante tu opinión');
+                            $this->refresh();
+			}
+		}
+		return $comment;
 	}
 
 	/**
