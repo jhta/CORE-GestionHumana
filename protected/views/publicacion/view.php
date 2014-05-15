@@ -24,10 +24,7 @@ $this->menu=array(
 		'id',
 		'titulo',
 		'contenido',
-		array(
-                        'label' => $model->USUARIO_id->getAttributeLabel('nombre'),
-                        'value' => $model->USUARIO_id->nombre
-                ),
+		'USUARIO_id',
 		'fecha',
 	),
 )); ?>
