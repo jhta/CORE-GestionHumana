@@ -32,12 +32,12 @@ class SiteController extends Controller
                 $model=new ContactForm;
 		if(isset($_POST['ContactForm']))
 		{
-//                    echo "<script type='text/javascript'>alert('Gonorreas3');</script>";    
+                    //echo "<script type='text/javascript'>alert('Gonorreas3');</script>";    
                                 
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-                                echo "<script type='text/javascript'>alert('Todo bien, todo bonito, solo nacional a morir, solo verdolaga, un 3-0 si dios quiere');</script>";    
+                                echo "<script type='text/javascript'>alert('Tu mensaje a sido enviado :D');</script>";    
 				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
 				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
 				$headers="From: $name <{$model->email}>\r\n".
@@ -49,11 +49,13 @@ class SiteController extends Controller
 				//$this->redirect("http://www.google.com");
                                 //Yii::app()->user->setFlash('contact','Todo bien, todo bonito, solo nacional a morir, solo verdolaga, un 3-0 si dios quiere');
 //                                $this->refresh();
-			}
+			}else{
+                            //echo "<script type='text/javascript'>alert('Gonorreas2');</script>";    
+                        }
                         
                         
                     }else{
-//                        echo "<script type='text/javascript'>alert('Gonorreas2');</script>";    
+                        
                     }
                 
                 
