@@ -103,10 +103,10 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
                     
-											{image : '../CORE-GestionHumana/images/slider-images/image01.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '../CORE-GestionHumana/images/slider-images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '../CORE-GestionHumana/images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '../CORE-GestionHumana/images/slider-images/image04.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
+											{image : '../images/slider-images/image01.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/image04.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
