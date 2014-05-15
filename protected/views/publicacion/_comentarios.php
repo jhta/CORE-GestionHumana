@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="time">
-		<?php echo date('F j, Y \a\t h:i a',$comentario->fecha_creacion); ?>
+		<?php echo date('m d, Y \a\t H:i',$comentario->fecha_creacion); ?>
 	</div>
 
 	<div class="content">

@@ -70,7 +70,7 @@ class ComentarioController extends Controller
 		if(isset($_POST['Comentario']))
 		{
 			$model->attributes=$_POST['Comentario'];
-                        $model->fecha_creacion= date("Y-m-d H-i-s");
+                        $model->fecha_creacion= date("Y-m-d H:i:s");
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
