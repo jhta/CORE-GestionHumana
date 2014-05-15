@@ -48,7 +48,7 @@ class Comentario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pUBLICACION' => array(self::BELONGS_TO, 'Publicacion', 'PUBLICACION_id'),
+			'publicacion' => array(self::BELONGS_TO, 'Publicacion', 'PUBLICACION_id'),
 		);
 	}
 
@@ -60,6 +60,7 @@ class Comentario extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
+                        'fecha_creacion'=>'Fecha Creacion',
 			'comentario' => 'Comentario',
 			'PUBLICACION_id' => 'Publicacion',
 		);
@@ -85,6 +86,7 @@ class Comentario extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
+                $criteria->compare('fecha_creacion',$this->fecha_creacion,true);
 		$criteria->compare('comentario',$this->comentario,true);
 		$criteria->compare('PUBLICACION_id',$this->PUBLICACION_id);
 
@@ -92,13 +94,26 @@ class Comentario extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+        
+        /**
+	 * @param Post the post that this comment belongs to. If null, the method
+	 * will query for the post.
+	 * @return string the permalink URL for this comment
+	 */
+	public function getUrl($post=null){
+		if($post===null)
+                    $post=$this->publicacion;
+                
+		return $post->url.'#c'.$this->id;
+	}
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
 	 * @return Comentario the static model class
 	 */
+        
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);

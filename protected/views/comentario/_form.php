@@ -27,14 +27,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'comentario'); ?>
-		<?php echo $form->textField($model,'comentario',array('size'=>60,'maxlength'=>2000)); ?>
+		<?php echo $form->textField($model,'comentario',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'comentario'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'PUBLICACION_id'); ?>
-		<?php echo $form->textField($model,'PUBLICACION_id'); ?>
-		<?php echo $form->error($model,'PUBLICACION_id'); ?>
 	</div>
 
 	<div class="row buttons">

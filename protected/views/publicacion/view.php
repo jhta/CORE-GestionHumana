@@ -30,7 +30,18 @@ $this->menu=array(
 )); ?>
 
 <div id="comentarios">
-    <h3>Leave a Comment</h3>
+    <?php if($model->commentCount>=1): ?>
+            <h3>
+                <?php echo $model->commentCount > 1 ? $model->cuentaComentarios . ' comentarios' : 'Un comentario'; ?>
+            </h3>
+
+            <?php $this->renderPartial('_comentarios',array(
+                    'post'=>$model,
+                    'comentarios'=>$model->comentarios,
+            )); ?>
+    <?php endif; ?>
+    
+    <h3>Dejanos un comentario</h3>
 
     <?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
             <div class="flash-success">

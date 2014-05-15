@@ -56,11 +56,12 @@ class Publicacion extends CActiveRecord
 		return array(
 			'archivos' => array(self::HAS_MANY, 'Archivo', 'PUBLICACION_id'),
 			'comentarios' => array(self::HAS_MANY, 'Comentario', 'PUBLICACION_id'),
-			'uSUARIO' => array(self::BELONGS_TO, 'Usuario', 'USUARIO_id'),
+			'usuario' => array(self::BELONGS_TO, 'Usuario', 'USUARIO_id'),
 			'trendings' => array(self::HAS_MANY, 'Trending', 'PUBLICACION_id'),
+                        'cuentaComentarios' => array(self::STAT, 'Comentario', 'PUBLICACION_id'),
 		);
 	}
-
+        
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
