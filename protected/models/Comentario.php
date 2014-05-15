@@ -30,13 +30,13 @@ class Comentario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, comentario', 'required'),
+			array('nombre, comentario, fecha', 'required'),
 			array('PUBLICACION_id', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>30),
 			array('comentario', 'length', 'max'=>2000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, fecha_creacion, nombre, comentario, PUBLICACION_id', 'safe', 'on'=>'search'),
+			array('id, fecha, nombre, comentario, PUBLICACION_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +60,7 @@ class Comentario extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
-                        'fecha_creacion'=>'Fecha Creacion',
+                        'fecha'=>'Fecha Creacion',
 			'comentario' => 'Comentario',
 			'PUBLICACION_id' => 'Publicacion',
 		);
@@ -86,7 +86,7 @@ class Comentario extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
-                $criteria->compare('fecha_creacion',$this->fecha_creacion,true);
+                $criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('comentario',$this->comentario,true);
 		$criteria->compare('PUBLICACION_id',$this->PUBLICACION_id);
 
