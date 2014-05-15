@@ -1,6 +1,12 @@
 jQuery(function($){
 
-var BRUSHED = window.BRUSHED || {};
+inicio();
+ $(window).load(function(){
+        
+        $(".sticky-nav").sticky({ topSpacing: 0 });
+        
+ 
+    });
 
 /* ==================================================
    Login fancybox
@@ -21,11 +27,13 @@ $("#login")
 
 /* ==================================================
    Mobile Navigation
-================================================== */
+================================================== */   
 var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
-BRUSHED.mobileNav = function(){
+ function mobileNav(){
 	var windowWidth = $(window).width();
+        
+
 	
 	if( windowWidth <= 979 ) {
 		if( $('#mobile-nav').length > 0 ) {
@@ -40,9 +48,10 @@ BRUSHED.mobileNav = function(){
 	}
 }
 
-BRUSHED.listenerMenu = function(){
+ function listenerMenu(){
 	$('#mobile-nav').on('click', function(e){
-		$(this).toggleClass('open');
+		
+        $(this).toggleClass('open');
 		
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#navigation-mobile').slideDown(500, 'easeOutExpo');
@@ -62,8 +71,7 @@ BRUSHED.listenerMenu = function(){
 /* ==================================================
    Slider Options
 ================================================== */
-alert("hola");
-BRUSHED.slider = function(){
+  function slider(){
 	$.supersized({
 		// Functionality
 		slideshow               :   1,			// Slideshow on/off
@@ -95,10 +103,10 @@ BRUSHED.slider = function(){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
                     
-											{image : '_include/images/slider-images/image01.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '_include/images/slider-images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '_include/images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '_include/images/slider-images/image04.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
+											{image : '../images/slider-images/image01.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/image02.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/image04.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
@@ -108,14 +116,15 @@ BRUSHED.slider = function(){
 	});
 
 }
-
+    
 
 /* ==================================================
    Navigation Fix
 ================================================== */
 
-BRUSHED.nav = function(){
-	$('.sticky-nav').waypoint('sticky');
+ function nav(){
+	//$('.sticky-nav').waypoint('sticky');
+         $(".sticky-nav").sticky({ topSpacing: 0 });
 }
 
 
@@ -123,7 +132,7 @@ BRUSHED.nav = function(){
    Filter Works
 ================================================== */
 
-BRUSHED.filter = function (){
+ function filter(){
 	if($('#projects').length > 0){		
 		var $container = $('#projects');
 		
@@ -176,7 +185,7 @@ BRUSHED.filter = function (){
    FancyBox
 ================================================== */
 
-BRUSHED.fancyBox = function(){
+ function fancyBox(){
 	if($('.fancybox').length > 0 || $('.fancybox-media').length > 0 || $('.fancybox-various').length > 0){
 		
 		$(".fancybox").fancybox({				
@@ -204,7 +213,7 @@ BRUSHED.fancyBox = function(){
 /* ==================================================
    Contact Form
 ================================================== */
-
+/*
 BRUSHED.contactForm = function(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
@@ -229,7 +238,7 @@ BRUSHED.contactForm = function(){
 		return false;
 	});
 }
-
+*/
 
 /* ==================================================
    Twitter Feed
@@ -268,7 +277,7 @@ BRUSHED.tweetFeed = function(){
    Menu Highlight
 ================================================== */
 
-BRUSHED.menu = function(){
+function menu(){
 	$('#menu-nav, #menu-nav-mobile').onePageNav({
 		currentClass: 'current',
     	changeHash: false,
@@ -284,8 +293,8 @@ BRUSHED.menu = function(){
    Next Section
 ================================================== */
 
-BRUSHED.goSection = function(){
-	$('#nextsection').on('click', function(){
+ function goSection(){
+        $('#nextsection').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 		
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
@@ -297,8 +306,8 @@ BRUSHED.goSection = function(){
    GoUp
 ================================================== */
 
-BRUSHED.goUp = function(){
-	$('#goUp').on('click', function(){
+function goUp(){
+    	$('#goUp').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 		
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
@@ -310,8 +319,8 @@ BRUSHED.goUp = function(){
 /* ==================================================
 	Scroll to Top
 ================================================== */
-
-BRUSHED.scrollToTop = function(){
+ function scrollToTop(){
+        
 	var windowWidth = $(window).width(),
 		didScroll = false;
 
@@ -343,7 +352,7 @@ BRUSHED.scrollToTop = function(){
    Thumbs / Social Effects
 ================================================== */
 
-BRUSHED.utils = function(){
+ function utils(){
 	
 	$('.item-thumbs').bind('touchstart', function(){
 		$(".active").removeClass("active");
@@ -366,7 +375,7 @@ BRUSHED.utils = function(){
    Accordion
 ================================================== */
 
-BRUSHED.accordion = function(){
+ function accordion(){
 	var accordion_trigger = $('.accordion-heading.accordionize');
 	
 	accordion_trigger.delegate('.accordion-toggle','click', function(event){
@@ -388,7 +397,7 @@ BRUSHED.accordion = function(){
    Toggle
 ================================================== */
 
-BRUSHED.toggle = function(){
+ function toggle(){
 	var accordion_trigger_toggle = $('.accordion-heading.togglize');
 	
 	accordion_trigger_toggle.delegate('.accordion-toggle','click', function(event){
@@ -408,7 +417,7 @@ BRUSHED.toggle = function(){
    Tooltip
 ================================================== */
 
-BRUSHED.toolTip = function(){ 
+ function toolTip(){ 
     $('a[data-toggle=tooltip]').tooltip();
 }
 
@@ -417,25 +426,24 @@ BRUSHED.toolTip = function(){
 	Init
 ================================================== */
 
-BRUSHED.slider();
 
-$(document).ready(function(){
-	Modernizr.load([
-	{
-		test: Modernizr.placeholder,
-		nope: '_include/js/placeholder.js', 
-		complete : function() {
-				if (!Modernizr.placeholder) {
-						Placeholders.init({
-						live: true,
-						hideOnFocus: false,
-						className: "yourClass",
-						textColor: "#999"
-						});    
-				}
-		}
-	}
-	]);
+function inicio(){
+//	Modernizr.load([
+//	{
+//		test: Modernizr.placeholder,
+//		nope: '<?//php echo Yii::app()->request->baseUrl; ?>/js/placeholder.js', 
+//		complete : function() {
+//				if (!Modernizr.placeholder) {
+//						Placeholders.init({
+//						live: true,
+//						hideOnFocus: false,
+//						className: "yourClass",
+//						textColor: "#999"
+//						});    
+//				}
+//		}
+//	}
+//	]);
 	
 	// Preload the page with jPreLoader
 	$('body').jpreLoader({
@@ -447,23 +455,28 @@ $(document).ready(function(){
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
 	});
-	
-	BRUSHED.nav();
-	BRUSHED.mobileNav();
-	BRUSHED.listenerMenu();
-	BRUSHED.menu();
-	BRUSHED.goSection();
-	BRUSHED.goUp();
-	BRUSHED.filter();
-	BRUSHED.fancyBox();
-	BRUSHED.contactForm();
-	BRUSHED.tweetFeed();
-	BRUSHED.scrollToTop();
-	BRUSHED.utils();
-	BRUSHED.accordion();
-	BRUSHED.toggle();
-	BRUSHED.toolTip();
-});
+        
+        $(".sticky-nav").sticky({ topSpacing: 0 });
+        
+        //var BRUSHED = window.BRUSHED || {};
+        slider();
+
+	nav();
+	mobileNav();
+	listenerMenu();
+	menu();
+	goSection();
+	goUp();
+	filter();
+	fancyBox();
+	//contactForm();
+	//tweetFeed();
+	scrollToTop();
+	utils();
+	accordion();
+	toggle();
+	toolTip();
+}
 
 $(window).resize(function(){
 	BRUSHED.mobileNav();
