@@ -459,10 +459,10 @@
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/alessioatzeni" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
+                        <li><a href="https://twitter.com/ccmoralesj" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="https://www.facebook.com/ccmoralesj" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                        <li><a href="https://plus.google.com/+CristianCamiloMoralesJiménez" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
+                        <li><a href="http://www.linkedin.com/in/nadie" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
                         
                     </ul>
                 </nav>
