@@ -126,7 +126,8 @@
                 <li><a href="#work">Nuestro Trabajo</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
-				<li><a id="login" href="#content-login" class="external">login</a></li>
+                <li><a id="login" href="#" class="external">Blog</a></li>
+                <li><a id="login" href="#content-login" class="external">login</a></li>
             </ul>
         </nav>
         
