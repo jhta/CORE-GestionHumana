@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Publicacion #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->titulo; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -28,7 +28,7 @@ $this->menu=array(
 		'fecha',
 	),
 )); ?>
-
+<p></p>
 <div id="comentarios">
     <?php if($model->cuentaComentarios>=1): ?>
             <h3>
