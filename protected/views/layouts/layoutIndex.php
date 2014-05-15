@@ -431,16 +431,16 @@
         
         <div class="span3">
         	<div class="contact-details">
-        		<h3>Contact Details</h3>
+        		<h3>Detalles de contacto</h3>
                 <ul>
-                    <li><a href="#">hello@brushed.com</a></li>
-                    <li>(916) 375-2525</li>
+                    <li><a href="#">info@coregestionhumana.com</a></li>
+                    <li>(+57)314-615-2596</li>
                     <li>
-                        Brushed Studio
+                        Core Gestion Humana
                         <br>
-                        5240 Vanish Island. 105
+                        5240 Medellín, Colombia.
                         <br>
-                        Unknow
+                        Psicologo
                     </li>
                 </ul>
             </div>
