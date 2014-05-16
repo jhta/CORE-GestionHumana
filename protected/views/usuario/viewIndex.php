@@ -13,7 +13,8 @@
             </div>
             <h3 class="profile-name">Nombre X<?php //echo $i['nombre'];?></h3>
             <p class="profile-description">
-                <?php echo substr($i['descripcion'],0,305)."...";?>
+                aaaa
+                <?php// echo substr($i['descripcion'],0,305)."...";?>
             <div class="social">
             	<ul class="social-icons">
                 	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
