@@ -347,24 +347,24 @@
         ),
 )); ?>
     <h1 class="form-signin-heading text-muted">Login</h1>
-		<?php echo $form->textField($model,'username',array(
+		<?php echo $form->textField($modelL,'username',array(
                     'class'=>'form-control input-login',
                     'placeholder'=>'Nombre de usuario',
                     'required'=>true,
                 )); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->error($modelL,'username'); ?>
                 
-		<?php echo $form->passwordField($model,'password',array(
+		<?php echo $form->passwordField($modelL,'password',array(
                     'class'=>'form-control input-login',
                     'placeholder'=>'Contraseña',
                     'required'=>true,
                 )); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->error($modelL,'password'); ?>
 	
 
 	
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
+		<?php echo $form->checkBox($modelL,'rememberMe'); ?>
+		<?php echo $form->error($modelL,'rememberMe'); ?>
     </br>
 
 		<?php echo CHtml::submitButton('Login',array(
