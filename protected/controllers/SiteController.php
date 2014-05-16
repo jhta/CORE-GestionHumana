@@ -69,7 +69,7 @@ class SiteController extends Controller
                         }
 				
 		}else{
-                    echo "<script type='text/javascript'>alert('no lo recibe');</script>";
+                    //echo "<script type='text/javascript'>alert('no lo recibe');</script>";
                             
                 }
 		// display the login form
