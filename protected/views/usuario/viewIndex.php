@@ -11,7 +11,7 @@
                 </div>
                 <img src="http://media.comicbookmovie.com/images/users/uploads/8073/Game_of_Thrones_Ygritte.jpg" alt="John Doe">
             </div>
-            <h3 class="profile-name"><?php echo $i['nombre'];?></h3>
+            <h3 class="profile-name">Nombre X<?php //echo $i['nombre'];?></h3>
             <p class="profile-description">
                 <?php echo substr($i['descripcion'],0,305)."...";?>
             <div class="social">
