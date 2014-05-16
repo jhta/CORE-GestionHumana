@@ -43,6 +43,27 @@ class SiteController extends Controller
                 //get all Usuarios
                 $Usuarios = Usuario::model()->findAll();
 		
+                $modelL=new LoginForm;
+
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($modelL);
+			Yii::app()->end();
+		}
+
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $modelL->login())
+				$this->redirect(Yii::app()->user->returnUrl);
+		}
+		// display the login form
+		//$this->render('login',array('model'=>$model));
+                
+                
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
                 $model=new ContactForm;
@@ -77,6 +98,7 @@ class SiteController extends Controller
                 
 		$this->render('index',array(
                     'model'=>$model,
+                    'modelL'=>$modelL,
                     'Publicaciones'=>$Publicaciones,
                     'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,

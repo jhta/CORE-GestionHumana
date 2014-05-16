@@ -318,7 +318,7 @@
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2014  <a href="http://twitter.com/jh7a" title=""></a>sinSO. Todos los derechos reservados </p>
+	<p class="credits">&copy;2014  <a href="http://twitter.com/jh7a" title="">sinSO</a>. Todos los derechos reservados </p>
 </footer>
 <!-- End Footer -->
 
@@ -334,6 +334,47 @@
    
 <div class="container">
 
+<!--Login-->    
+<div class="form">
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'login-form',
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+	),
+        'htmlOptions'=>array(
+            'class'=>'form-signin',
+        ),
+)); ?>
+    <h1 class="form-signin-heading text-muted">Login</h1>
+		<?php echo $form->textField($model,'username',array(
+                    'class'=>'form-control input-login',
+                    'placeholder'=>'Nombre de usuario',
+                    'required'=>true,
+                )); ?>
+		<?php echo $form->error($model,'username'); ?>
+                
+		<?php echo $form->passwordField($model,'password',array(
+                    'class'=>'form-control input-login',
+                    'placeholder'=>'Contraseña',
+                    'required'=>true,
+                )); ?>
+		<?php echo $form->error($model,'password'); ?>
+	
+
+	
+		<?php echo $form->checkBox($model,'rememberMe'); ?>
+		<?php echo $form->error($model,'rememberMe'); ?>
+    </br>
+
+		<?php echo CHtml::submitButton('Login',array(
+                    'class'=>'btn btn-lg btn-primary btn-block btn-login',
+                )); ?>
+	
+<?php $this->endWidget(); ?>
+</div><!-- form -->
+    
+<!--    
     <form class="form-signin ">
         <h1 class="form-signin-heading text-muted">Login</h1>
         <input type="text" class="form-control input-login" placeholder="Email address" required="" autofocus="">
@@ -341,7 +382,7 @@
         </br><button class="btn btn-lg btn-primary btn-block btn-login" type="submit">
             Login
         </button>
-    </form>
+    </form>-->
 
 </div>
 </div>

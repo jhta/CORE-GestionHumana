@@ -18,8 +18,7 @@
             <div class="social">
             	<ul class="social-icons">
                 	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-dribbble"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="font-icon-social-facebook"></i></a></li>
                 </ul>
             </div>
         </div>
