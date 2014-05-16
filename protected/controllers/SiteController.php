@@ -57,7 +57,8 @@ class SiteController extends Controller
 		{
                     echo "<script type='text/javascript'>alert('lo recibe');</script>";
                             
-			$modelL->attributes=$_POST['LoginForm'];
+			$modelL->attributes= $_POST['LoginForm'];
+                        echo "<script type='text/javascript'>alert('".  var_dump($_POST['LoginForm'])."');</script>";
 			// validate user input and redirect to the previous page if valid
 			if($modelL->validate() && $modelL->login()){
                             echo "<script type='text/javascript'>alert('funciona');</script>";
