@@ -53,19 +53,17 @@ class SiteController extends Controller
 		}
 
 		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-                    //echo "<script type='text/javascript'>alert('lo recibe');</script>";
-                            
+                // Always remeber yo cant ECHO befor LogIn Finishes it issue
+                // If you echo befor the redirect, then the LogIn fails
+		if(isset($_POST['LoginForm'])){        
 			$modelL->attributes= $_POST['LoginForm'];
                         
 			// validate user input and redirect to the previous page if valid
+                        
 			if($modelL->validate() && $modelL->login()){
-                            //echo "<script type='text/javascript'>alert('funciona');</script>";
                             $this->redirect(Yii::app()->user->returnUrl);
                         }else{
                             echo "<script type='text/javascript'>alert('no valida');</script>";
-                            
                         }
 				
 		}else{
@@ -95,7 +93,7 @@ class SiteController extends Controller
 					"Content-Type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				//$this->redirect("http://www.google.com");
+				
                                 //Yii::app()->user->setFlash('contact','Todo bien, todo bonito, solo nacional a morir, solo verdolaga, un 3-0 si dios quiere');
 //                                $this->refresh();
 			}else{
@@ -116,7 +114,7 @@ class SiteController extends Controller
                     'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,
                         ));
-                //echo "<script type='text/javascript'>alert('Gonorreas');</script>";    
+                    
 	}
 
 	/**
