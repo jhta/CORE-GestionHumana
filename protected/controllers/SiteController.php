@@ -30,7 +30,7 @@ class SiteController extends Controller
             
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 4;
-                $Criteria->order = "fecha DES";
+                $Criteria->order = "fecha";
                 //get 4 Publicaciones
                 $Publicaciones = Publicacion::model()->findAll($Criteria);
                 
