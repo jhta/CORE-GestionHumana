@@ -43,6 +43,38 @@ class SiteController extends Controller
                 //get all Usuarios
                 $Usuarios = Usuario::model()->findAll();
 		
+                $modelL=new LoginForm;
+
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($modelL);
+			Yii::app()->end();
+		}
+
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+                    echo "<script type='text/javascript'>alert('lo recibe');</script>";
+                            
+			$modelL->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($modelL->validate() && $modelL->login()){
+                            echo "<script type='text/javascript'>alert('funciona');</script>";
+                            $this->redirect(Yii::app()->user->returnUrl);
+                        }else{
+                            echo "<script type='text/javascript'>alert('no valida');</script>";
+                            
+                        }
+				
+		}else{
+                    echo "<script type='text/javascript'>alert('no lo recibe');</script>";
+                            
+                }
+		// display the login form
+		//$this->render('login',array('model'=>$model));
+                
+                
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
                 $model=new ContactForm;
@@ -70,13 +102,15 @@ class SiteController extends Controller
                         }
                         
                         
-                    }else{
+                    }else
+                        {
                         
                     }
                 
                 
 		$this->render('index',array(
                     'model'=>$model,
+                    'modelL'=>$modelL,
                     'Publicaciones'=>$Publicaciones,
                     'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,
