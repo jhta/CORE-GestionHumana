@@ -11,10 +11,10 @@
                 </div>
                 <img src="http://media.comicbookmovie.com/images/users/uploads/8073/Game_of_Thrones_Ygritte.jpg" alt="John Doe">
             </div>
-            <h3 class="profile-name">Nombre X<?php //echo $i['nombre'];?></h3>
+            <h3 class="profile-name"><?php echo $i['nombre'];?></h3>
             <p class="profile-description">
-                aaaa
-                <?php// echo substr($i['descripcion'],0,305)."...";?>
+                
+                <?php echo substr($i['descripcion'],0,305)."...";?>
             <div class="social">
             	<ul class="social-icons">
                 	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>

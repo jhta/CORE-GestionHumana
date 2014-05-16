@@ -41,7 +41,7 @@ class SiteController extends Controller
                 $Publicaciones2 = Publicacion::model()->findAll($Criteria2);
                 
                 //get all Usuarios
-                $Usuarios = Publicacion::model()->findAll();
+                $Usuarios = Usuario::model()->findAll();
 		
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
