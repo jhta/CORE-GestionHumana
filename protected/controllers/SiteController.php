@@ -61,7 +61,7 @@ class SiteController extends Controller
                         
 			if($modelL->validate() && $modelL->login()){
                             $this->redirect(Yii::app()->user->returnUrl);
-                            echo "<script type='text/javascript'>alert('".Yii::app()->user->username."');</script>";
+                            
                             
                         }else{
                             echo "<script type='text/javascript'>alert('no valida');</script>";
