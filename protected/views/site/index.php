@@ -92,7 +92,7 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Acerca de Nosotros</h2>
-                <h3 class="title-description">Aprende Acerca de Nuestro Equipo &amp; Cltura.</h3>
+                <h3 class="title-description">Aprende Acerca de Nuestro Equipo &amp; Cultura.</h3>
             </div>
         </div>
     </div>  
