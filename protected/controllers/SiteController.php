@@ -55,10 +55,13 @@ class SiteController extends Controller
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			$model->attributes=$_POST['LoginForm'];
+			$modelL->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $modelL->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+			if($modelL->validate() && $modelL->login()){
+                            echo "<script type='text/javascript'>alert('Gonorreas');</script>";
+                            $this->redirect(Yii::app()->user->returnUrl);
+                        }
+				
 		}
 		// display the login form
 		//$this->render('login',array('model'=>$model));
@@ -91,7 +94,8 @@ class SiteController extends Controller
                         }
                         
                         
-                    }else{
+                    }else
+                        {
                         
                     }
                 
