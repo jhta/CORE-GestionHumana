@@ -1,6 +1,6 @@
 <div class="post">
 	<div class="title">
-            <b><?php echo CHtml::encode($data->title); ?></b>
+            <b><?php echo CHtml::encode($data->titulo); ?></b>
 	</div>
         <br/>
 	<div class="author">
