@@ -116,6 +116,8 @@ class Publicacion extends CActiveRecord
 		$comment->PUBLICACION_id = $this->id;
 		return $comment->save();
 	}
+        
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
