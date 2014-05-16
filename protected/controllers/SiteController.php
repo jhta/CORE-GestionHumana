@@ -25,10 +25,8 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
-	{
+	public function actionIndex(){
             
-            echo "<script type='text/javascript'>alert('".Yii::app()->user->username."');</script>";
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
@@ -63,6 +61,7 @@ class SiteController extends Controller
                         
 			if($modelL->validate() && $modelL->login()){
                             $this->redirect(Yii::app()->user->returnUrl);
+                            echo "<script type='text/javascript'>alert('".Yii::app()->user->username."');</script>";
                             
                         }else{
                             echo "<script type='text/javascript'>alert('no valida');</script>";
