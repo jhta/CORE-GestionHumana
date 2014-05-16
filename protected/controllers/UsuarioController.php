@@ -72,27 +72,28 @@ class UsuarioController extends Controller
                         $Nombre_foto='';
                         $Extension_foto='';
                         if(isset($model->foto)){
-                            $arr = split('[.]',$model->foto->name);
-                            $archivito='';
-                            $total= count($arr);
-                            for($j=0;$j<=($total-2);$j++){
-                                $archivito.=$arr[$j];
-                            }
-                            $carpeta1= DIRECTORY_SEPARATOR.Yii::app()->user->getState('username');
-                            $directorio1= '.'.
-                                    DIRECTORY_SEPARATOR.'files'.
-                                    DIRECTORY_SEPARATOR.'Adjuntos Enviados'.
-                                    $carpeta1;
+                            $carpeta= DIRECTORY_SEPARATOR.Yii::app()->user->getState('username');
+                            $directorio1= Yii::app()->request->baseUrl.
+                                    DIRECTORY_SEPARATOR.'images'.
+                                    $carpeta;
                             mkdir($directorio1);
-                            $Nombre_foto= $carpeta1.DIRECTORY_SEPARATOR.$archivito;
+                            $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
                             $Extension_foto= '.'.$model->foto->extensionName;
                         }
                         
 			$model->attributes= $_POST['Usuario'];
                         $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
 			$model->sesion= $session;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        $model->nombre_foto= $Nombre_foto;
+                        $model->formato_foto= $Extension_foto;
+                        
+                        if($model->save()){
+                            if(isset($modelM->foto)) 
+                                $modelM->foto->saveAs($directorio1.DIRECTORY_SEPARATOR.Yii::app()->user->id);
+                                $this->redirect(array('view','id'=>$model->id));
+                        }
+                        
+				
 		}
 
 		$this->render('create',array(
