@@ -28,6 +28,7 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
             
+            echo "<script type='text/javascript'>alert('".Yii::app()->user->username."');</script>";
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
@@ -62,6 +63,7 @@ class SiteController extends Controller
                         
 			if($modelL->validate() && $modelL->login()){
                             $this->redirect(Yii::app()->user->returnUrl);
+                            
                         }else{
                             echo "<script type='text/javascript'>alert('no valida');</script>";
                         }

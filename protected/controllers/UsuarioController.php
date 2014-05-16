@@ -67,9 +67,28 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuario']))
-		{
-			$model->attributes=$_POST['Usuario'];
+		if(isset($_POST['Usuario'])){
+                        if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
+                        $Nombre_foto='';
+                        $Extension_foto='';
+                        if(isset($model->foto)){
+                            $arr = split('[.]',$model->foto->name);
+                            $archivito='';
+                            $total= count($arr);
+                            for($j=0;$j<=($total-2);$j++){
+                                $archivito.=$arr[$j];
+                            }
+                            $carpeta1= DIRECTORY_SEPARATOR.Yii::app()->user->username;
+                            $directorio1= '.'.
+                                    DIRECTORY_SEPARATOR.'files'.
+                                    DIRECTORY_SEPARATOR.'Adjuntos Enviados'.
+                                    $carpeta1;
+                            mkdir($directorio1);
+                            $Nombre_foto= $carpeta1.DIRECTORY_SEPARATOR.$archivito;
+                            $Extension_foto= '.'.$model->foto->extensionName;
+                        }
+                        
+			$model->attributes= $_POST['Usuario'];
                         $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
 			$model->sesion= $session;
 			if($model->save())
