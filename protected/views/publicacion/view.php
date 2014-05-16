@@ -4,9 +4,9 @@
 
 $this->breadcrumbs=array(
 	'Publicacions'=>array('index'),
-	$model->id,
+	$model->titulo,
 );
-
+$this->pageTitle=$model->titulo;
 $this->menu=array(
 	array('label'=>'List Publicacion', 'url'=>array('index')),
 	array('label'=>'Create Publicacion', 'url'=>array('create')),
@@ -16,18 +16,11 @@ $this->menu=array(
 );
 ?>
 
-<h1><?php echo $model->titulo; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php $this->renderPartial('_view2', array(
 	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'titulo',
-		'contenido',
-		'USUARIO_id',
-		'fecha',
-	),
 )); ?>
+
 <p></p>
 <div id="comentarios">
     <?php if($model->cuentaComentarios>=1): ?>

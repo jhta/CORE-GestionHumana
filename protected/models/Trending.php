@@ -46,8 +46,8 @@ class Trending extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pUBLICACION' => array(self::BELONGS_TO, 'Publicacion', 'PUBLICACION_id'),
-			'eTIQUETANombre' => array(self::BELONGS_TO, 'Etiqueta', 'ETIQUETA_nombre'),
+			'publicacion' => array(self::BELONGS_TO, 'Publicacion', 'PUBLICACION_id'),
+			'etiquetaNombre' => array(self::BELONGS_TO, 'Etiqueta', 'ETIQUETA_nombre'),
 		);
 	}
 
