@@ -27,10 +27,20 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+            
+                $Criteria = new CDbCriteria();
+                $Criteria->limit = 4;
+                $Criteria->order = "fecha DES";
+                //get 4 Publicaciones
+                $Publicaciones = Publicacion::model()->findAll($Criteria);
+                
+                //get all Usuarios
+                $Usuarios = Publicacion::model()->findAll();
+		
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
                 $model=new ContactForm;
-		if(isset($_POST['ContactForm']))
+                if(isset($_POST['ContactForm']))
 		{
                     //echo "<script type='text/javascript'>alert('Gonorreas3');</script>";    
                                 
@@ -59,13 +69,18 @@ class SiteController extends Controller
                     }
                 
                 
-		$this->render('index',array('model'=>$model));
+		$this->render('index',array(
+                    'model'=>$model,
+                    'Publicaciones'=>$Publicaciones,
+                    'Usuarios'=>$Usuarios,
+                        ));
                 //echo "<script type='text/javascript'>alert('Gonorreas');</script>";    
 	}
 
 	/**
 	 * This is the action to handle external exceptions.
 	 */
+        
 	public function actionError()
 	{
 		if($error=Yii::app()->errorHandler->error)
