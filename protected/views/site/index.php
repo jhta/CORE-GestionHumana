@@ -118,8 +118,10 @@
     <div class="row">
         <div class="span12">
             <div class="title-page">
-                <h2 class="title">Get in Touch</h2>
-                <h3 class="title-description">We’re currently accepting new client projects. We look forward to serving you.</h3>
+                <h2 class="title">Ponte en Contacto</h2>
+                <h3 class="title-description">
+                    Tienes alguna pregunta? Necesitas alguna infromación adicional? Enviamos un correo y lo responderemos lo antes posible
+                </h3>
             </div>
         </div>
     </div>
