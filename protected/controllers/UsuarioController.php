@@ -78,7 +78,7 @@ class UsuarioController extends Controller
                             for($j=0;$j<=($total-2);$j++){
                                 $archivito.=$arr[$j];
                             }
-                            $carpeta1= DIRECTORY_SEPARATOR.Yii::app()->user->username;
+                            $carpeta1= DIRECTORY_SEPARATOR.Yii::app()->user->getState('username');
                             $directorio1= '.'.
                                     DIRECTORY_SEPARATOR.'files'.
                                     DIRECTORY_SEPARATOR.'Adjuntos Enviados'.

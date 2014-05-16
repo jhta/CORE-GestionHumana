@@ -95,7 +95,7 @@ class PublicacionController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-                echo "<script type='text/javascript'>alert('".Yii::app()->user->username."');</script>";
+               
 		if(isset($_POST['Publicacion']))
 		{
 			$model->attributes=$_POST['Publicacion'];

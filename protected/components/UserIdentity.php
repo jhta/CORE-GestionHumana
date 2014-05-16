@@ -28,7 +28,7 @@ class UserIdentity extends CUserIdentity
 		{
 			$this->_id= $user->id;
                         $this->setState('nombre',$user->nombre);
-			//$this->setState('usermname',$user->username);
+			$this->setState('username',$user->username);
                         
                         $this->username= $user->username;
 			$this->errorCode= self::ERROR_NONE;
