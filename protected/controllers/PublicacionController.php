@@ -109,6 +109,16 @@ class PublicacionController extends Controller
 			'model'=>$model,
 		));
 	}
+        
+        public function actionPublicacionIndex(){
+            $Criteria = new CDbCriteria();
+            $Criteria->limit = 4;
+            $Criteria->order = "fecha DES";
+            
+            
+            $Publicaciones = Publicacion::model()->findAll($Criteria);
+            return $Publicaciones;
+        }
 
 	/**
 	 * Updates a particular model.

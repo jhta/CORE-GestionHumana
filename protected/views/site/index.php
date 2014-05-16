@@ -71,7 +71,9 @@
         <div class="container">
             <div class="row">
                 <!-- renderizo vista de las ultimas 4 publicaciones-->
-                <?php $this->renderPartial('//publicacion/viewIndex'/*,array('tareas'=>$tareas)*/); ?>
+                <?php $this->renderPartial('//publicacion/viewIndex',array(
+                    'Publicacion'=>$Publicaciones,
+                        )); ?>
                 
             </div>  
         </div>  
@@ -97,7 +99,9 @@
     
     <!-- Usuarios -->
     <div class="row">
-    	<?php $this->renderPartial('//usuario/viewIndex'/*,array('tareas'=>$tareas)*/); ?>
+    	<?php $this->renderPartial('//usuario/viewIndex',array(
+                    'Usuarios'=>$Usuarios,
+                        )); ?>
             
     </div>
     <!-- End Usiarios -->
@@ -171,8 +175,6 @@
             'name'=>'contact-form'
         ),
 )); ?>
-
-	<p class="note">Campos con <span class="required">*</span>, son "Campo Requerido"</p>
 
 	<?php echo $form->errorSummary($model); ?>
         <p class="contact-name">
