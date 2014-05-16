@@ -29,10 +29,16 @@ class SiteController extends Controller
 	{
             
                 $Criteria = new CDbCriteria();
-                $Criteria->limit = 4;
+                $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
                 //get 4 Publicaciones
                 $Publicaciones = Publicacion::model()->findAll($Criteria);
+                $Criteria2 = new CDbCriteria();
+                $Criteria2->limit = 2;
+                $Criteria2->offset=2;
+                $Criteria2->order = "fecha DESC";
+                //get 4 Publicaciones
+                $Publicaciones2 = Publicacion::model()->findAll($Criteria2);
                 
                 //get all Usuarios
                 $Usuarios = Publicacion::model()->findAll();
@@ -72,6 +78,7 @@ class SiteController extends Controller
 		$this->render('index',array(
                     'model'=>$model,
                     'Publicaciones'=>$Publicaciones,
+                    'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,
                         ));
                 //echo "<script type='text/javascript'>alert('Gonorreas');</script>";    

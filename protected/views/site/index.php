@@ -72,7 +72,8 @@
             <div class="row">
                 <!-- renderizo vista de las ultimas 4 publicaciones-->
                 <?php $this->renderPartial('//publicacion/viewIndex',array(
-                    'Publicacion'=>$Publicaciones,
+                    'Publicaciones'=>$Publicaciones,
+                    'Publicaciones2'=>$Publicaciones2,
                         )); ?>
                 
             </div>  
