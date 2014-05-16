@@ -76,6 +76,7 @@ class PublicacionController extends Controller
 		if(isset($_POST['Comentario']))
 		{
 			$comment->attributes= $_POST['Comentario'];
+                        $comment->fecha= date("Y-m-d H:i:s");
 			if($post->addComment($comment)){
                             Yii::app()->user->setFlash('commentSubmitted','Gracias por tu comentario. Para nosotros es muy importante tu opinión');
                             $this->refresh();
@@ -99,6 +100,7 @@ class PublicacionController extends Controller
 		{
 			$model->attributes=$_POST['Publicacion'];
                         $model->fecha= date("Y-m-d H:i:s");
+                        
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -150,7 +152,7 @@ class PublicacionController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
-
+                
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));

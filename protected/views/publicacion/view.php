@@ -24,7 +24,7 @@ $this->menu=array(
 		'id',
 		'titulo',
 		'contenido',
-		'USUARIO_id.nombre',
+		'USUARIO_id',
 		'fecha',
 	),
 )); ?>
