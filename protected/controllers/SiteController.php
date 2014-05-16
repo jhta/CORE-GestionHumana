@@ -61,7 +61,7 @@ class SiteController extends Controller
                         
 			// validate user input and redirect to the previous page if valid
 			if($modelL->validate() && $modelL->login()){
-                            echo "<script type='text/javascript'>alert('funciona');</script>";
+                            //echo "<script type='text/javascript'>alert('funciona');</script>";
                             $this->redirect(Yii::app()->user->returnUrl);
                         }else{
                             echo "<script type='text/javascript'>alert('no valida');</script>";
