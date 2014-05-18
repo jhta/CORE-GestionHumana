@@ -10,7 +10,10 @@
 
 ?>
 
-<li><a href="#<?php //echo CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id)); ?>">
-        <?php echo CHtml::encode($data->titulo); ?>
-    </a>
+<li><?php echo CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id)); ?>">
+        <?php //echo CHtml::encode($data->titulo); ?>
+    
+    <span class="label label-default pull-right" style="
+    background: #cccc99;
+"><?php echo CHtml::encode($data->fecha); ?></span>
 </li>
