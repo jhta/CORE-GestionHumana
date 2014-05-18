@@ -1,13 +1,19 @@
 
 <!-- sidebar -->
 <div class="column col-xs-3" id="sidebar">
-    <a class="logo" href="#">B</a>
+    <a class="logo col-xs-1" href="#" style="margin-right: 0;">C</a>
+    <a class="logo col-xs-4 col-xs-offset-1" href="#" style="
+    margin-left: 0;
+    background: transparent;
+    color: white;
+">CORE</a>
     <legend style="color: white;">Publicaciones</legend>
     <ul class="nav">
         
         <?php  $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_viewSideBar',
+                    'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
             ));
 //            $this->renderPartial('_viewSideBar', array(
 //            'publicacionesl' => $publicacionesl,
@@ -45,7 +51,7 @@
                     'ajaxUpdate'=>false,
                     'enablePagination'=>false,
                     'pagerCssClass' => 'result-list',
-                    'summaryText' => 'Total '. $pages->itemCount .' Results Found',
+                    'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
                 
             )); 
             
