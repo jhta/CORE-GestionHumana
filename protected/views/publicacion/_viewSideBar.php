@@ -10,7 +10,7 @@
 
 ?>
 
-<li class="sideBar-link"><?php echo substr(CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id)),0,40); ?>">
+<li class="sideBar-link"><?php echo substr(CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id)),0,40); ?>
         <?php //echo CHtml::encode($data->titulo); ?>
     
     <span class="label label-default pull-right" style="
