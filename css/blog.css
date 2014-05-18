@@ -138,5 +138,5 @@ small.text-muted {
 }
 
 small>a{
-    color:#cccc99;
+    color:#cccc99 !important;
 }
