@@ -1,10 +1,9 @@
 <?php /* @var $this Controller */ ?>
-<?php $this->beginContent('//layouts/main'); ?>
+<?php $this->beginContent('//layouts/layoutBlog'); ?>
 <div class="span-19">
 	<div id="content">
 		<?php echo $content; ?>
-            <p style="color: red;">Lorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbv
-
+            
 	</div><!-- content -->
 </div>
 <div class="span-5 last">
