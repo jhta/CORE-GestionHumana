@@ -149,5 +149,9 @@ small>a{
 .label-tag{
     background: #cccc99;
 font-size: 13px;
-padding: 0px;
+
+}
+
+.label-tag>a{
+    color: white !important;
 }

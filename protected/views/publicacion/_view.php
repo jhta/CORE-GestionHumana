@@ -14,10 +14,11 @@
         <span class="text-muted" ><?php echo substr(CHtml::encode($data->contenido) ,0,150)."..."; ?></span>
         <h4> 
             <small class="text-muted">
-                <?php echo CHtml::encode($data->fecha); ?><br />
                 <label class="label label-tag"><?php echo CHtml::link('Leer Más', array('view', 'id'=>$data->id));?></label>
                 <label class="label label-tag"><?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?></label>
             </small>
+            <div>Publicado: <?php echo CHtml::encode($data->fecha); ?></div><br />
+                
             
         </h4>
     </div>
