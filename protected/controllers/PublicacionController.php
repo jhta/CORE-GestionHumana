@@ -138,7 +138,7 @@ class PublicacionController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
+                
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -163,9 +163,13 @@ class PublicacionController extends Controller
 	 */
 	public function actionIndex()
 	{
+                $Criteria= new CDbCriteria();
+                $Criteria->limit=15;
+                $publicacionesl=Publicacion::model()->findAll();
 		$dataProvider=new CActiveDataProvider('Publicacion');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+                        'publicacionesl'=>$publicacionesl,
 		));
 	}
 
