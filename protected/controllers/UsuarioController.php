@@ -86,7 +86,7 @@ class UsuarioController extends Controller
 
                     if($model->save()){
                         if(isset($modelM->foto)) 
-                            $modelM->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id);
+                            $modelM->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
                         $this->redirect(array('view','id'=>$model->id));
                     }	
 		}
