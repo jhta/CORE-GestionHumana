@@ -17,10 +17,10 @@
 <div class="column col-xs-3" id="sidebar">
     <a class="logo" href="#">B</a>
     <ul class="nav">
-        <?php $this->widget('zii.widgets.CListView', array(
-                    'dataProvider'=>$dataProvider,
-                    'itemView'=>'_viewSideBar',
-            )); ?>
+        <?php // $this->widget('zii.widgets.CListView', array(
+                    //'dataProvider'=>$dataProvider,
+                    //'itemView'=>'_viewSideBar',
+            //)); ?>
     </ul>
     <ul class="nav hidden-xs" id="sidebar-footer">
         <li>
