@@ -11,7 +11,7 @@
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
         <h4><span class="label label-default">techvisually.com</span></h4><h4>
             <small class="text-muted"><?php echo CHtml::encode($data->fecha); ?>
-                <?php CHtml::link('Leer Más', array('view', 'id'=>$data->id),array('class'=>'text-muted'));?>
+                <?php echo CHtml::link('Leer Más', array('view', 'id'=>$data->id),array('class'=>'text-muted'));?>
                 <?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
             </small>
         </h4>
