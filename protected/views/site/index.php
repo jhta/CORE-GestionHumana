@@ -1,7 +1,7 @@
 <script>
 $(document).ready(function() {
     $('#Blog').click(function(){
-        window.location.href= "<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>";
+        window.open("<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>","_blank");
     });
 });
 </script>
