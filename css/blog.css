@@ -118,7 +118,7 @@ h1,h2,h3 {
   background-color:transparent;
 }
 .label-default {
-  background-color:#dddddd;
+  background-color:rgba(26, 46, 66, 0.75);
 }
 .page-header {
   margin-top: 55px;
@@ -135,4 +135,8 @@ h1,h2,h3 {
 
 small.text-muted {
   font-family:courier,courier-new,monospace;
+}
+
+small>a{
+    color:#cccc99;
 }
