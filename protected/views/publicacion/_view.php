@@ -12,7 +12,7 @@
         <h4><span class="label label-default">techvisually.com</span></h4><h4>
             <small class="text-muted"><?php echo CHtml::encode($data->fecha); ?>
                 <a href="#" class="text-muted">Leer Mas</a>
-                <?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios',array('class'=>'text-muted')); ?>
+                <?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
             </small>
         </h4>
     </div>
