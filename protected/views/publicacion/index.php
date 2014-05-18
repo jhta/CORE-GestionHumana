@@ -1,22 +1,8 @@
-<?php
-/* @var $this PublicacionController */
-/* @var $dataProvider CActiveDataProvider */
-
-//$this->breadcrumbs=array(
-//	'Publicacions',
-//);
-//
-//$this->menu=array(
-//	array('label'=>'Create Publicacion', 'url'=>array('create')),
-//	array('label'=>'Manage Publicacion', 'url'=>array('admin')),
-//);
-?>
-
 
 <!-- sidebar -->
 <div class="column col-xs-3" id="sidebar">
     <a class="logo" href="#">B</a>
-    <legend>Posts</legend>
+    <legend style="color: white;">Publicaciones</legend>
     <ul class="nav">
         
         <?php  $this->widget('zii.widgets.CListView', array(
