@@ -140,3 +140,18 @@ small.text-muted {
 small>a{
     color:#cccc99 !important;
 }
+
+.sideBar-link{
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.label-tag{
+    background: #cccc99;
+font-size: 13px;
+
+}
+
+.label-tag>a{
+    color: white !important;
+}

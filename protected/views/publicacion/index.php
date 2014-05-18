@@ -1,21 +1,8 @@
-<?php
-/* @var $this PublicacionController */
-/* @var $dataProvider CActiveDataProvider */
-
-//$this->breadcrumbs=array(
-//	'Publicacions',
-//);
-//
-//$this->menu=array(
-//	array('label'=>'Create Publicacion', 'url'=>array('create')),
-//	array('label'=>'Manage Publicacion', 'url'=>array('admin')),
-//);
-?>
-
 
 <!-- sidebar -->
 <div class="column col-xs-3" id="sidebar">
     <a class="logo" href="#">B</a>
+    <legend style="color: white;">Publicaciones</legend>
     <ul class="nav">
         
         <?php  $this->widget('zii.widgets.CListView', array(
@@ -48,17 +35,30 @@
                 </div> 
             </div>
             <!--Fin Titulo para post-->
-            ____________________________________________________________________________________
-<!--            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+<!--            ____________________________________________________________________________________
+            ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     CONTENIDO GENERAL
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
             <?php $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_view',
-            )); ?>
-
-
-
+                    'ajaxUpdate'=>false,
+                    'enablePagination'=>false,
+                    'pagerCssClass' => 'result-list',
+                    'summaryText' => 'Total '. $pages->itemCount .' Results Found',
+                
+            )); 
+            
+            $this->widget('CLinkPager', array(
+                    'header' => '',
+                    'firstPageLabel' => '&lt;&lt;',
+                    'prevPageLabel' => '&lt;',
+                    'nextPageLabel' => '&gt;',
+                    'lastPageLabel' => '&lt;&lt;',
+                    'pages' => $pages,
+            ));
+            ?>
+            
             <!--Element-->
             <!--Contacto-->
             <div class="col-sm-12">

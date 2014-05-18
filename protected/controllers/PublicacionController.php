@@ -162,15 +162,21 @@ class PublicacionController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
-                $Criteria= new CDbCriteria();
-                $Criteria->limit=15;
-                $publicacionesl=Publicacion::model()->findAll();
-		$dataProvider=new CActiveDataProvider('Publicacion');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-                        'publicacionesl'=>$publicacionesl,
-		));
+	{   
+            
+            //$Criteria2 = new CDbCriteria();
+            //$Criteria2->order="fecha DESC";
+            
+            $count = Publicacion::model()->count();
+            $pages = new CPagination($count);
+            $pages->setPageSize(10);
+            //$result=  Publicacion::model()->findAll($Criteria2);
+            $dataProvider=new CActiveDataProvider('Publicacion');
+            $this->render('index',array(
+                    'dataProvider'=>$dataProvider,
+                    'pages'=>$pages,
+
+            ));
 	}
 
 	/**
