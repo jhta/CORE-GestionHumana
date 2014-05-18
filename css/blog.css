@@ -44,9 +44,9 @@ a {
   position: absolute;
   right: 0;
   top: 0;
-  background-image:url('http://www.bootply.com/assets/example/bg_suburb.jpg');
-  background-size:cover;
-  background-attachment:fixed;
+  background-image: url('http://th06.deviantart.net/fs71/PRE/i/2010/156/d/0/Shiny_Blue_Texture_3_by_BrokenVain_Stock.png');
+background-attachment: fixed;
+}
 }
 
 .divider {

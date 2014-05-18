@@ -54,7 +54,7 @@
             <!--Titulo para post-->
             <div class="col-sm-12" id="featured">   
                 <div class="page-header text-muted">
-                    Featured
+                    Publicaciones
                 </div> 
             </div>
             <!--Fin Titulo para post-->
