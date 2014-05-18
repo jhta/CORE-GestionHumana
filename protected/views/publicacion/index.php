@@ -16,6 +16,7 @@
 <!-- sidebar -->
 <div class="column col-xs-3" id="sidebar">
     <a class="logo" href="#">B</a>
+    <legend>Posts</legend>
     <ul class="nav">
         
         <?php  $this->widget('zii.widgets.CListView', array(
