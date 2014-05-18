@@ -72,8 +72,9 @@ class UsuarioController extends Controller
                     $Nombre_foto='';
                     $Extension_foto='';
                     if(isset($model->foto)){
-                        $carpeta= DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'profilePictures';
+                        $carpeta= DIRECTORY_SEPARATOR.'images'/*.DIRECTORY_SEPARATOR.'profilePictures'*/;
                         $directorio= Yii::app()->request->baseUrl.$carpeta;
+                        echo $directorio;
                         $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
                         $Extension_foto= '.'.$model->foto->extensionName;
                     }
