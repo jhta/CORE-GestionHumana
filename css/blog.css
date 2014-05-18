@@ -146,3 +146,8 @@ small>a{
     margin-bottom: 10px;
     font-weight: bold;
 }
+.label-tag{
+    background: #cccc99;
+font-size: 13px;
+padding: 0px;
+}
