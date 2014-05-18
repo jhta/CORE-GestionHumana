@@ -11,7 +11,7 @@
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
         <h4><span class="label label-default"><?php echo implode(' ', $data->tagLinks); ?></span></h4>
         
-        <span class="text-muted" ><?php echo substr($string, CHtml::encode($data->contenido),0,150)."..."; ?></span>
+        <span class="text-muted" ><?php echo substr(CHtml::encode($data->contenido) ,0,150)."..."; ?></span>
         <h4> 
             <small class="text-muted">
                 <?php echo CHtml::encode($data->fecha); ?><br />
