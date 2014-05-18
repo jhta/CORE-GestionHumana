@@ -10,9 +10,9 @@
 
 ?>
 
-<li class="sideBar-link"><?php echo substr(CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id)),0,90); ?>
-        <?php //echo CHtml::encode($data->titulo); ?>
-    
+<li class="sideBar-link">
+    <span class="glyphicon glyphicon-eye-open"></span>
+    <?php echo substr(CHtml::link(CHtml::encode($data->titulo), array('view', 'id'=>$data->id)),0,90); ?>
     <span class="label label-default pull-right" style="
     background: #cccc99;
 "><?php echo substr(CHtml::encode($data->fecha),0,10) ; ?></span>

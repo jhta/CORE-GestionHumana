@@ -19,7 +19,7 @@
     <legend>Posts</legend>
     <ul class="nav">
         
-        <?php  $this->widget('zii.widgets.CListView', array(
+        <?php  $this->widget('zii.widg  ets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_viewSideBar',
             ));
