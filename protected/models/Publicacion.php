@@ -124,7 +124,7 @@ class Publicacion extends CActiveRecord
 		$links= array();
 		foreach($this->trendings as $tag)
                     $links[]= CHtml::encode($tag->ETIQUETA_nombre);
-                    //$links[]=CHtml::link(CHtml::encode($tag), array('post/index', 'tag'=>$tag));
+                    //$links[]=CHtml::link(CHtml::encode($tag->ETIQUETA_nombre), array('modelo/controlador', 'parametro'=>$parametro));
 		return $links;
 	}
 	/**
