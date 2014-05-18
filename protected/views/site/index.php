@@ -1,19 +1,9 @@
 <script>
-//$(document).ready(function() {
-// var $model = <?php //echo $model;?>;
-// 
-//        $.ajax({
-//            async: true,
-//            cache: false,
-//            url: "site/contact",
-//            data: $model,
-//            type: "post"
-//        }).done(function(result) {
-//             $('#contacta').html(result);
-//            //location.href = "espacioproyecto/" + result + "";
-//        });
-//
-//    });
+$(document).ready(function() {
+    $('#Blog').click(function(){
+        window.location.href= "<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>";
+    });
+});
 </script>
 
 
@@ -33,7 +23,7 @@
                 <li><a href="#work">Nuestro Trabajo</a></li>
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
-                <li><?php echo CHtml::link('Blog', array('publicacion/index'),array('class'=>'External')); ?></li>
+                <li><?php echo CHtml::link('Blog', array('publicacion/index'),array('class'=>'External','id'=>'Blog')); ?></li>
                 <li><a id="login" href="#content-login" class="external">login</a></li>
             </ul>
         </nav>
