@@ -164,7 +164,7 @@ class PublicacionController extends Controller
 	public function actionIndex()
 	{       
             $Criteria = new CDbCriteria();
-            $Criteria->order="fecha DESC";
+            //$Criteria->order="fecha DESC";
             
             $count = Publicacion::model()->count();
             $pages = new CPagination($count);
