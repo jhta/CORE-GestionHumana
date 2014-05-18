@@ -17,6 +17,7 @@
  */
 class Usuario extends CActiveRecord
 {
+        public $foto;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -33,14 +34,16 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('foto','file', 'allowEmpty'=>true),
 			array('nombre, contrasena, correo, username', 'required'),
-			array('nombre', 'length', 'max'=>50),
+			array('nombre, nombre_foto', 'length', 'max'=>50),
+                        array('formato_foto', 'length', 'max'=>10),
 			array('contrasena, sesion', 'length', 'max'=>150),
 			array('correo, titulo, username', 'length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>120),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo', 'safe', 'on'=>'search'),
+			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo, nombre_foto, formato_foto', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,7 +55,7 @@ class Usuario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'publicacions' => array(self::HAS_MANY, 'Publicacion', 'USUARIO_id'),
+			'publicaciones' => array(self::HAS_MANY, 'Publicacion', 'USUARIO_id'),
 		);
 	}
 
@@ -120,6 +123,8 @@ class Usuario extends CActiveRecord
 		$criteria->compare('correo',$this->correo,true);
 		$criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('titulo',$this->titulo,true);
+                $criteria->compare('nombre_foto',$this->nombre_foto,true);
+                $criteria->compare('formato_foto',$this->formato_foto,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

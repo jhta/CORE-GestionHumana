@@ -67,13 +67,28 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuario']))
-		{
-			$model->attributes=$_POST['Usuario'];
-                        $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
-			$model->sesion= $session;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		if(isset($_POST['Usuario'])){
+                    if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
+                    $Nombre_foto='';
+                    $Extension_foto='';
+                    if(isset($model->foto)){
+                        $carpeta= DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'profilePictures';
+                        $directorio= Yii::app()->request->baseUrl.$carpeta;
+                        $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
+                        $Extension_foto= '.'.$model->foto->extensionName;
+                    }
+
+                    $model->attributes= $_POST['Usuario'];
+                    $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
+                    $model->sesion= $session;
+                    $model->nombre_foto= $Nombre_foto;
+                    $model->formato_foto= $Extension_foto;
+
+                    if($model->save()){
+                        if(isset($modelM->foto)) 
+                            $modelM->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
+                        $this->redirect(array('view','id'=>$model->id));
+                    }	
 		}
 
 		$this->render('create',array(
@@ -93,14 +108,28 @@ class UsuarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Usuario']))
-		{
-			$model->attributes=$_POST['Usuario'];
-                        $session= $model->generateSalt();
-                        $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
-			$model->sesion= $session;
-                        if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		if(isset($_POST['Usuario'])){
+                    if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
+                    $Nombre_foto='';
+                    $Extension_foto='';
+                    if(isset($model->foto)){
+                        $carpeta= DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'profilePictures';
+                        $directorio= Yii::app()->request->baseUrl.$carpeta;
+                        $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
+                        $Extension_foto= '.'.$model->foto->extensionName;
+                    }
+                    $model->attributes=$_POST['Usuario'];
+                    $session= $model->generateSalt();
+                    $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
+                    $model->sesion= $session;
+                    $model->nombre_foto= $Nombre_foto;
+                    $model->formato_foto= $Extension_foto;
+
+                    if($model->save()){
+                        if(isset($modelM->foto)) 
+                            $modelM->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
+                        $this->redirect(array('view','id'=>$model->id));
+                    }
 		}
 
 		$this->render('update',array(
