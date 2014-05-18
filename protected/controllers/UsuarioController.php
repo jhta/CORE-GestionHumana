@@ -118,6 +118,7 @@ class UsuarioController extends Controller
                         $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
                         $Extension_foto= '.'.$model->foto->extensionName;
                     }
+                    
                     $model->attributes=$_POST['Usuario'];
                     $session= $model->generateSalt();
                     $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
