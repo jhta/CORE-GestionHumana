@@ -9,12 +9,14 @@
 <div class="row">    
     <div class="col-sm-10">
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
-        <h4><span class="label label-default">techvisually.com</span></h4><br/>
+        <h4><span class="label label-default">techvisually.com</span></h4>
+        <br />
         <h4>
             <small class="text-muted"><?php echo CHtml::encode($data->fecha); ?>
                 <?php echo CHtml::link('Leer Más', array('view', 'id'=>$data->id),array('class'=>'text-muted'));?>
+                <?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
             </small>
-            <?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
+            
         </h4>
     </div>
     <div class="col-sm-2">
