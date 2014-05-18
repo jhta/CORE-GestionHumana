@@ -1,7 +1,7 @@
 <script>
 $(document).ready(function() {
     $('#Blog').click(function(){
-        window.open("<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>","_blank");
+        window.location.href= "<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>";
     });
 });
 </script>
@@ -137,24 +137,6 @@ $(document).ready(function() {
 
 <div class="contact-form" >
 
-<!--        	<form id="contact-form" class="contact-form" action="#">
-            	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
-                </p>
-                <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
-                </p>
-                <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
-                </p>
-                <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
-                </p>
-                
-                <div id="response">
-                
-                </div>
-            </form>-->
     
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'contact-form',
@@ -243,27 +225,7 @@ $(document).ready(function() {
 </div><!-- form -->
 
 <?php endif; ?>
-        
-<!--        	<form id="contact-form" class="contact-form" action="#">
-            	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
-                </p>
-                <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
-                </p>
-                <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
-                </p>
-                <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
-                </p>
-                
-                <div id="response">
-                
                 </div>
-            </form>-->
-         
-        </div>
         
         <div class="span3">
         	<div class="contact-details">
@@ -284,7 +246,7 @@ $(document).ready(function() {
     </div>
     <!-- End Contact Form -->
 </div>
-</div>
+</div>      
 <!-- End Contact Section -->
 
 <!-- Twitter Feed -->
