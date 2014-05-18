@@ -24,6 +24,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('titulo')); ?>:</b>
 	<?php echo CHtml::encode($data->titulo); ?>
 	<br />
+        
+        <?php if($data->nombre_foto != ''){ ?>
+        <img src="<?php echo Yii::app()->request->baseUrl.$data->nombre_foto.$data->formato_foto ?>">
+        <?php } ?>
 
 
 </div>
