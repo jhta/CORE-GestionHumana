@@ -43,13 +43,6 @@ $this->menu=array(
         <div class="full col-sm-9">
 
             <!-- content -->
-            <!--Titulo para post-->
-            <div class="col-sm-12" id="featured">   
-                <div class="page-header text-muted">
-                    Publicaciones
-                </div> 
-            </div>
-            <!--Fin Titulo para post-->
 <!--            ____________________________________________________________________________________
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     CONTENIDO POST
