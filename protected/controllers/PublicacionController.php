@@ -102,18 +102,19 @@ class PublicacionController extends Controller
                         $model->fecha= date("Y-m-d H:i:s");
                         
                         $images= CUploadedFile::getInstancesByName('files');
+                        if(!isset($images)) echo "<script type='text/javascript'>alert('no está seteado!');</script>";
                         if(isset($images) && count($images) > 0){
                             $i= 1;
                             foreach ($images as $image => $pic){
                                 
                                 $carpeta= DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'PostsImages';
                                 $directorio= Yii::getPathOfAlias('webroot').$carpeta;
-                                $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.$model->titulo.'('.($i++).')';
+                                $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.$model->id.'('.($i++).')';
                                 $Extension_foto= '.'.$pic->extensionName;
                                 
                                 if ($pic->saveAs($directorio.DIRECTORY_SEPARATOR.$model->titulo.'('.($i++).')')) {
                                     
-                                    $img_add = new Archivo();
+                                    $img_add = new Archivo;
                                     
                                     $img_add->nombre = $Nombre_foto; 
                                     $img_add->formato= $Extension_foto;
