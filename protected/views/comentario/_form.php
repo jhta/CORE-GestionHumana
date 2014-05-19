@@ -15,24 +15,33 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Requeridos <span class="required">*</span> </p>
-
+	
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>30,'maxlength'=>30)); ?>
+		<?php echo $form->textField($model,'nombre',
+                        array('size'=>30,
+                            'maxlength'=>30,
+                             'class'=>'form-control',
+                            'placeholder'=>'nombre'
+                            )); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'comentario'); ?>
-		<?php echo $form->textArea($model,'comentario',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'comentario',
+                        array('rows'=>6,
+                            'cols'=>50,
+                             'class'=>'form-control',
+                            'placeholder'=>'Escribe aqui tu comentario'
+                            )); ?>
 		<?php echo $form->error($model,'comentario'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Guardar', array(
+                    'class'=>'btn',
+                )); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
