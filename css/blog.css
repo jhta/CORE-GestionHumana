@@ -182,3 +182,11 @@ body{
 .comentario{
     margin-bottom: 25px;
 }
+
+.input-comentario{
+    border-radius: 0;
+    -o-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    
+}

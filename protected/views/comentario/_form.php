@@ -22,8 +22,9 @@
 		<?php echo $form->textField($model,'nombre',
                         array('size'=>30,
                             'maxlength'=>30,
-                             'class'=>'form-control',
-                            'placeholder'=>'nombre'
+                             'class'=>'form-control input-comentario',
+                            'placeholder'=>'nombre',
+                            'required'=>'required',
                             )); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
@@ -32,15 +33,17 @@
 		<?php echo $form->textArea($model,'comentario',
                         array('rows'=>6,
                             'cols'=>50,
-                             'class'=>'form-control',
-                            'placeholder'=>'Escribe aqui tu comentario'
+                             'class'=>'form-control input-comentario',
+                            'placeholder'=>'Escribe aqui tu comentario',
+                            'required'=>'required',
                             )); ?>
 		<?php echo $form->error($model,'comentario'); ?>
 	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Guardar', array(
-                    'class'=>'btn',
+                    'class'=>'btn btn-primary',
+                    'style'=>'margin-top:15px;'
                 )); ?>
 	</div>
 
