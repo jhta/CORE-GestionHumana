@@ -38,7 +38,7 @@
 <!-- /sidebar -->
 
 <!-- main -->
-<div class="column col-xs-8 col-xs-offset-2"  id="main">
+<div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
     <div class="padding">
         <div class="full col-sm-9 text-center container-fluid">
 
