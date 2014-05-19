@@ -159,14 +159,20 @@ font-size: 13px;
 
 .contenido-blog{
     padding-bottom: 40px;
-    border-bottom: 1px solid rgb(180,180,180);
+    border-bottom: 1px solid rgb(235,235,235);
 }
 
 .contenedor-post{
     overflow: hidden;
     margin-top: 60px;
+    margin-bottom: 60px;
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     -o-border-radius: 8px;
+}
+body{
+    background: url("http://th06.deviantart.net/fs71/PRE/i/2010/156/d/0/Shiny_Blue_Texture_3_by_BrokenVain_Stock.png") top right no-repeat;
+    background-repeat-x: initial;
+    background-attachment: fixed;
 }
