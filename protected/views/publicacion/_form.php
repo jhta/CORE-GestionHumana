@@ -46,7 +46,7 @@
   $this->widget('CMultiFileUpload', array(
      'model'=>$model,
      'attribute'=>'files',
-     //'accept'=>'jpg|gif|png',
+     'accept'=>'jpg|gif|png|svg|jpeg',
      'options'=>array(
         // 'onFileSelect'=>'function(e, v, m){ alert("onFileSelect - "+v) }',
         // 'afterFileSelect'=>'function(e, v, m){ alert("afterFileSelect - "+v) }',
