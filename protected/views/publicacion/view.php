@@ -54,9 +54,9 @@
             <p></p>
             <div id="comentarios">
                 <?php if($model->cuentaComentarios>=1): ?>
-                        <h3>
-                            <?php echo $model->cuentaComentarios > 1 ? $model->cuentaComentarios . ' comentarios' : 'Un comentario'; ?>
-                        </h3>
+                        <label>
+                            <?php echo $model->cuentaComentarios > 1 ? $model->cuentaComentarios . ' comentarios:' : 'Un comentario:'; ?>
+                        </label>
 
                         <?php $this->renderPartial('_comentarios',array(
                                 'post'=>$model,
@@ -64,7 +64,7 @@
                         )); ?>
                 <?php endif; ?>
 
-                <h3>Dejanos un comentario</h3>
+                <h4>Dejanos un comentario!</h4>
 
                 <?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
                         <div class="flash-success">
