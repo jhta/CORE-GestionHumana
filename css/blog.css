@@ -158,6 +158,15 @@ font-size: 13px;
 }
 
 .contenido-blog{
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     border-bottom: 1px solid rgb(180,180,180);
+}
+
+.contenedor-post{
+    overflow: hidden;
+    margin-top: 60px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
 }
