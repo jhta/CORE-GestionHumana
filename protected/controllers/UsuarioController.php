@@ -85,8 +85,8 @@ class UsuarioController extends Controller
                     $model->formato_foto= $Extension_foto;
 
                     if($model->save()){
-                        if(isset($modelM->foto)) 
-                            $modelM->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
+                        if(isset($model->foto)) 
+                            $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
                         $this->redirect(array('view','id'=>$model->id));
                     }	
 		}
@@ -127,8 +127,8 @@ class UsuarioController extends Controller
                     $model->formato_foto= $Extension_foto;
 
                     if($model->save()){
-                        if(isset($modelM->foto)) 
-                            $modelM->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
+                        if(isset($model->foto)) 
+                            $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
                         $this->redirect(array('view','id'=>$model->id));
                     }
 		}
