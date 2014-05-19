@@ -137,6 +137,7 @@ class UsuarioController extends Controller
                     ));
                 }else{
                     echo "<script type='text/javascript'>alert('No puedes modificar un perfil que no sea el tuyo');</script>";
+                    $this->redirect(array('index'));
                 }
 
 		
