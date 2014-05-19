@@ -178,3 +178,7 @@ body{
     padding-bottom: 5px;
     border-bottom: solid 1px rgb(235,235,235);
 }
+
+.comentario{
+    margin-bottom: 25px;
+}

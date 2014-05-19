@@ -6,14 +6,12 @@
 		'title'=>'Enlace Permanente para un comentario',
 	)); ?>
 
-	<div class="author">
-		<?php echo $comentario->nombre; ?> dice:
-	</div>
+	<label class="author">
+		<?php echo $comentario->nombre; ?> 
+	</label>
 
-	<div class="time">
-                
-		<?php echo date('F d, Y \a \l\a\s H:i:s a',strtotime($comentario->fecha)); ?>
-	</div>
+	<small class="time text-muted"> * <?php echo date('F d, Y \a \l\a\s H:i:s a',strtotime($comentario->fecha)); ?>
+	</small>
 
 	<div class="content">
 		<?php echo nl2br(CHtml::encode($comentario->comentario)); ?>
