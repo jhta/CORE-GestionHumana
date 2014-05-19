@@ -9,7 +9,7 @@
                     <span class="overlay-img"></span>
                     <span class="overlay-text-thumb"><?php echo $i['titulo'];?></span>
                 </div>
-                <img src="http://media.comicbookmovie.com/images/users/uploads/8073/Game_of_Thrones_Ygritte.jpg" alt="John Doe">
+                    <img src= "<?php echo Yii::app()->request->baseUrl.$i['nombre_foto'].$i['formato_foto'];?>" alt="<?php echo $i['nombre'] ?>">
             </div>
             <h3 class="profile-name"><?php echo $i['nombre'];?></h3>
             <p class="profile-description">
