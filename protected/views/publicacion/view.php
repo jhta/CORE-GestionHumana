@@ -27,15 +27,7 @@ $this->menu=array(
     <legend style="color: white;">Publicaciones</legend>
     <ul class="nav">
         
-        <?php  $this->widget('zii.widgets.CListView', array(
-                    'dataProvider'=>$dataProvider,
-                    'itemView'=>'_viewSideBar',
-                    'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
-            ));
-//            $this->renderPartial('_viewSideBar', array(
-//            'publicacionesl' => $publicacionesl,
-//            ));
-        ?>
+        
     </ul>
     <ul class="nav hidden-xs" id="sidebar-footer">
         <li>
