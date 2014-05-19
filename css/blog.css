@@ -196,3 +196,8 @@ body{
     -moz-border-radius: 0;
     
 }
+
+.content{
+    padding: 10px;
+    border-left: 5px solid #eee;
+}
