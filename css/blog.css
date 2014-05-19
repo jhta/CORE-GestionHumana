@@ -29,8 +29,6 @@ a {
 }
 
 .column {
-  height: 100%;
-  overflow: auto;
   *zoom:1;
 }
 
@@ -44,8 +42,6 @@ a {
   position: absolute;
   right: 0;
   top: 0;
-  background-image: url('http://th06.deviantart.net/fs71/PRE/i/2010/156/d/0/Shiny_Blue_Texture_3_by_BrokenVain_Stock.png');
-background-attachment: fixed;
 }
 
 
@@ -175,4 +171,10 @@ body{
     background: url("http://th06.deviantart.net/fs71/PRE/i/2010/156/d/0/Shiny_Blue_Texture_3_by_BrokenVain_Stock.png") top right no-repeat;
     background-repeat-x: initial;
     background-attachment: fixed;
+}
+
+#comentarios>label{
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: solid 1px rgb(235,235,235);
 }
