@@ -22,14 +22,14 @@
     </ul>
     <ul class="nav hidden-xs" id="sidebar-footer">
         <li>
-            <a href="http://www.bootply.com"><h3>SINSO S.A</h3></a>
+            
         </li>
     </ul>
 </div>
 <!-- /sidebar -->
 
 <!-- main -->
-<div class="column col-xs-9" id="main">
+<div class="column2 col-xs-9" id="main">
     <div class="padding">
         <div class="full col-sm-9">
 

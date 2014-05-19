@@ -32,6 +32,12 @@ a {
   *zoom:1;
 }
 
+.column2 {
+  *zoom:1;
+  overflow-y: auto;
+  height: 100%;
+}
+
 .column .padding {
   padding: 20px;
 }
