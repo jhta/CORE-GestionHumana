@@ -102,7 +102,7 @@ class PublicacionController extends Controller
                         $model->fecha= date("Y-m-d H:i:s");
                         
                         $images= CUploadedFile::getInstancesByName('files');
-                        if(!isset($images)) echo "<script type='text/javascript'>alert('no está seteado!');</script>";
+                        
                         if(isset($images) && count($images) > 0){
                             $i= 1;
                             foreach ($images as $image => $pic){
@@ -122,7 +122,7 @@ class PublicacionController extends Controller
                                     $img_add->peso= $pic->size;
                                     $img_add->PUBLICACION_id = $model->id; 
                                     
-                                    $img_add->save();
+                                    if(!$img_add->save())echo "<script type='text/javascript'>alert('no está guardando!');</script>";
                                 }
                                 else{
                                     echo 'Cannot upload!';
