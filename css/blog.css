@@ -156,3 +156,8 @@ font-size: 13px;
 .label-tag>a{
     color: white !important;
 }
+
+.contenido-blog{
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgb(180,180,180);
+}

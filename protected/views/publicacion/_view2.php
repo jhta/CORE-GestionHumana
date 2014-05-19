@@ -7,7 +7,7 @@
         <legend><?php echo CHtml::encode($data->titulo); ?></legend>
     </div>
     <br/>
-    <div class="content ">
+    <div class="content " >
             <?php
                     $this->beginWidget('CMarkdown', array('purifyOutput'=>true));
                     echo $data->contenido;
@@ -15,9 +15,9 @@
             ?>
     </div>
     <div class="nav">
-            <b>Etiquetas:</b>
+            <!--<b>Etiquetas:</b>-->
             <?php //echo implode(', ', $data->tagLinks); ?>
             <br/>
-            <?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
+            <?php //echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
     </div>
 </div>
