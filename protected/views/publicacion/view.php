@@ -52,7 +52,7 @@
             )); ?>
 
             <p></p>
-            <div id="comentarios">
+            <div id="comentarios" class="text-left">
                 <?php if($model->cuentaComentarios>=1): ?>
                         <label class="text-left">
                             <?php echo $model->cuentaComentarios > 1 ? $model->cuentaComentarios . ' comentarios:' : 'Un comentario:'; ?>

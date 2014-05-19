@@ -1,10 +1,10 @@
 <?php foreach($comentarios as $comentario): ?>
 <div class="comentario" id="c<?php echo $comentario->id; ?>">
 
-	<?php echo CHtml::link("#{$comentario->id}", $comentario->getUrl($post), array(
+	<label><?php echo CHtml::link("#{$comentario->id}", $comentario->getUrl($post), array(
 		'class'=>'cid',
 		'title'=>'Enlace Permanente para un comentario',
-	)); ?>
+	)); ?></label>
 
 	<label class="author">
 		<?php echo $comentario->nombre; ?> 
