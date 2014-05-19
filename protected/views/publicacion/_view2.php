@@ -1,12 +1,12 @@
-<div class="post">
+<div class="post text-center container" >
 	<div class="title">
-            <b><?php echo CHtml::encode($data->titulo); ?></b>
+            <legend><?php echo CHtml::encode($data->titulo); ?></legend>
 	</div>
         <br/>
-	<div class="author">
+	<small class="author text-muted text-left">
             publicado por <?php echo $data->USUARIO_id->nombre . ' en ' . date('F j, Y H:i:s ', strtotime($data->fecha)); ?>
-	</div>
-	<div class="content">
+	</small>
+	<div class="content ">
 		<?php
 			$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
 			echo $data->contenido;
