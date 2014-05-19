@@ -10,7 +10,8 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Usuario', 'url'=>array('index')),
 	array('label'=>'Create Usuario', 'url'=>array('create')),
-	array('label'=>'Update Usuario', 'url'=>array('update', 'id'=>$model->id)),
+	(Yii::app()->user->id == $model->id)?
+        array('label'=>'Update Usuario', 'url'=>array('update', 'id'=>$model->id)):array('label'=>'List Usuario', 'url'=>array('index')),
 	array('label'=>'Delete Usuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Usuario', 'url'=>array('admin')),
 );
@@ -23,8 +24,6 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'nombre',
-		'contrasena',
-		'sesion',
 		'correo',
 		'descripcion',
 		'titulo',
