@@ -40,7 +40,7 @@
 <!-- main -->
 <div class="column col-xs-9" id="main">
     <div class="padding">
-        <div class="full col-sm-9">
+        <div class="full col-sm-9 text-center container">
 
             <!-- content -->
 <!--            ____________________________________________________________________________________
