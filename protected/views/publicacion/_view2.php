@@ -7,7 +7,7 @@
         <legend><?php echo CHtml::encode($data->titulo); ?></legend>
     </div>
     <br/>
-    <div class="content " >
+    <div class="content contenido-blog" >
             <?php
                     $this->beginWidget('CMarkdown', array('purifyOutput'=>true));
                     echo $data->contenido;
