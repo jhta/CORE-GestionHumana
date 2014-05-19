@@ -32,13 +32,13 @@ class Archivo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, tipo, peso, PUBLICACION_id', 'required'),
+			array('nombre, formato, tipo, peso, PUBLICACION_id', 'required'),
 			array('peso, PUBLICACION_id', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>50),
 			array('tipo', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nombre, tipo, peso, PUBLICACION_id', 'safe', 'on'=>'search'),
+			array('id, nombre, formato, tipo, peso, PUBLICACION_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +50,7 @@ class Archivo extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pUBLICACION' => array(self::BELONGS_TO, 'Publicacion', 'PUBLICACION_id'),
+			'publicaciones' => array(self::BELONGS_TO, 'Publicacion', 'PUBLICACION_id'),
 		);
 	}
 
@@ -62,6 +62,7 @@ class Archivo extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'nombre' => 'Nombre',
+                        'formato' => 'Formato',
 			'tipo' => 'Tipo',
 			'peso' => 'Peso',
 			'PUBLICACION_id' => 'Publicacion',
@@ -88,6 +89,7 @@ class Archivo extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
+                $criteria->compare('formato',$this->formato,true);
 		$criteria->compare('tipo',$this->tipo,true);
 		$criteria->compare('peso',$this->peso);
 		$criteria->compare('PUBLICACION_id',$this->PUBLICACION_id);
