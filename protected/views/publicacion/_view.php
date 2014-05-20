@@ -20,9 +20,9 @@
             
         </h4>
          <small class="text-muted">Publicado: <?php echo CHtml::encode($data->fecha); ?></small>
-    </div>
+    </div> 
     <div class="col-sm-2">
-        <a href="#" class="pull-right"><img src="http://www.bootply.com/assets/example/bg_sailboat.jpg" class="img-circle"></a>
+        <a href="#" class="pull-right"><img src="<?php echo $data->USUARIO_id->nombre_foto.$data->USUARIO_id->formato_foto; ?>" class="img-circle"></a>
     </div> 
 </div>
 <div class="row divider">    

@@ -143,7 +143,7 @@ class PublicacionController extends Controller
         public function actionPublicacionIndex(){
             $Criteria = new CDbCriteria();
             $Criteria->limit = 4;
-            $Criteria->order = "fecha DES";
+            $Criteria->order = "fecha DESC";
             
             
             $Publicaciones = Publicacion::model()->findAll($Criteria);
@@ -202,12 +202,19 @@ class PublicacionController extends Controller
             $pages->setPageSize(10);
             //$result=  Publicacion::model()->findAll($Criteria2);
             $dataProvider=new CActiveDataProvider('Publicacion');
+            
             $this->render('index',array(
                     'dataProvider'=>$dataProvider,
                     'pages'=>$pages,
 
             ));
 	}
+        
+      public function actionGetLInk($id)
+      {
+          $usuario= Usuario::model()->findByPk($id);
+          return ($usuario->nombre_foto).($usuario->formato_foto);
+      }
 
 	/**
 	 * Manages all models.
