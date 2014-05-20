@@ -233,7 +233,16 @@ class PublicacionController extends Controller
             $criteria->condition= 'trending.ETIQUETA_nombre= :ETIQUETA_nombre';
             $criteria->params= array(':ETIQUETA_nombre'=>$tagName);
             $model= Publicacion::model()->findAll($criteria);
-            $this->renderPartial('_view',array('data'=>$model));
+            
+            $count = Publicacion::model()->count($criteria);
+            $pages = new CPagination($count);
+            $pages->setPageSize(10);
+            
+            $dataProvider=new CActiveDataProvider($model);
+            $this->render('index',array(
+                    'dataProvider'=>$dataProvider,
+                    'pages'=>$pages,
+            ));
         }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
