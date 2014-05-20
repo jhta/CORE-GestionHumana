@@ -5,7 +5,7 @@
     background: transparent;
     color: white;
 ">CORE</a>
-    <legend style="color: white;">Publicaciones con etiqueta <?php echo $tagname;?></legend>
+    <legend style="color: white;">Publicaciones con etiqueta <?php echo $tagName;?></legend>
     <ul class="nav">
         
         <?php  $this->widget('zii.widgets.CListView', array(
@@ -35,7 +35,7 @@
             <!--Titulo para post-->
             <div class="col-sm-12" id="featured">   
                 <div class="page-header text-muted">
-                    Publicaciones con etiqueta <?php echo $tagname;?>
+                    Publicaciones con etiqueta <?php echo $tagName;?>
                 </div> 
             </div>
             <!--Fin Titulo para post-->
