@@ -22,7 +22,7 @@
          <small class="text-muted">Publicado: <?php echo CHtml::encode($data->fecha); ?></small>
     </div> 
     <div class="col-sm-2">
-        <a href="#" class="pull-right"><img src="<?php echo $this->getLink($data->USUARIO_id);?>" class="img-circle"></a>
+        <a href="#" class="pull-right"><img src="<?php echo $this->traerLink($data->USUARIO_id);?>" class="img-circle"></a>
     </div> 
 </div>
 <div class="row divider">    
