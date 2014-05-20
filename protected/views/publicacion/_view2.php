@@ -1,6 +1,6 @@
 <div class="post " >
     <small class="author text-muted text-left">
-        publicado por <?php echo $data->USUARIO_id->nombre . ' en ' . date('F j, Y H:i:s ', strtotime($data->fecha)); ?>
+        publicado por <?php echo $this-> traerNombre($data->USUARIO_id). ' en ' . date('F j, Y H:i:s ', strtotime($data->fecha)); ?>
     </small>
 
     <div class="title">

@@ -215,6 +215,12 @@ class PublicacionController extends Controller
           $usuario= Usuario::model()->findByPk($id);
           return ($usuario->nombre_foto).($usuario->formato_foto);
       }
+      
+      public function traerNombre($id)
+      {
+          $usuario= Usuario::model()->findByPk($id);
+          return $usuario->nombre;
+      }
 
 	/**
 	 * Manages all models.
