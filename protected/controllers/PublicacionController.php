@@ -229,7 +229,7 @@ class PublicacionController extends Controller
          */
         public function actionAllTagPost($tagName){
             $criteria= new CDbCriteria();
-            $criteria->join='INNER JOIN trending ON publicacion.id = trending.PUBLICACION_id';
+            $criteria->join='INNER JOIN trending ON id = trending.PUBLICACION_id';
             $criteria->condition= 'trending.ETIQUETA_nombre= :ETIQUETA_nombre';
             $criteria->params= array(':ETIQUETA_nombre'=>$tagName);
             $model= Publicacion::model()->findAll($criteria);
