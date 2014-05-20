@@ -204,9 +204,11 @@ body{
 
 .view>.row>.col-sm-10>h4>span{
     margin-right: 5px;
+    padding: 3px;
 }
 
 .view>.row>.col-sm-10>h4>span>a{
    color: white;
+   font-size: 11px;
    text-decoration:none;
 }
