@@ -50,7 +50,7 @@
                             </div>
                             <div id="oneArea" class="accordion-body collapse">
                                 <div class="accordion-inner">
-                                    <?php echo substr($i['contenido'], 0,300); ?>
+                                    <?php echo mb_substr($i['contenido'], 0,300); ?>
 <!--                                    Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                                     Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. 
                                     Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet. Donec sed odio dui. 
