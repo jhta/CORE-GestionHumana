@@ -55,6 +55,7 @@
                 
             )); 
             
+            
             $this->widget('CLinkPager', array(
                     'header' => '',
                     'firstPageLabel' => '&lt;&lt;',
