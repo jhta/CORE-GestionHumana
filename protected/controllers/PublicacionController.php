@@ -239,16 +239,16 @@ class PublicacionController extends Controller
             $criteria->join='INNER JOIN trending ON id = trending.PUBLICACION_id';
             $criteria->condition= 'trending.ETIQUETA_nombre= :ETIQUETA_nombre';
             $criteria->params= array(':ETIQUETA_nombre'=>$tagName);
-            $model= Publicacion::model()->findAll($criteria);
+            //$model= Publicacion::model()->findAll($criteria);
             
             $count = Publicacion::model()->count($criteria);
             $pages = new CPagination($count);
             $pages->setPageSize(10);
-            
-            $dataProvider=new CActiveDataProvider($model);
-            $this->render('index',array(
-                    'dataProvider'=>$dataProvider,
-                    'pages'=>$pages,
+            $dataProvider= new CActiveDataProvider(get_class($this), array('criteria'=> $criteria));
+            $this->render('tagView',array(
+                'tagName'=>$tagName,
+                'pages'=>$pages,
+                'dataProvider'=>$dataProvider,
             ));
         }
 	/**
