@@ -28,7 +28,7 @@ class PublicacionController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','AllTagPost'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -230,7 +230,18 @@ class PublicacionController extends Controller
 			'model'=>$model,
 		));
 	}
-
+        
+        /*
+         * Shows all post with an specific tag. 
+         */
+        public function actionAllTagPost($tagName){
+            $criteria= new CDbCriteria();
+            $criteria->join='INNER JOIN trending ON id = trending.PUBLICACION_id';
+            $criteria->condition= 'trending.ETIQUETA_nombre= :ETIQUETA_nombre';
+            $criteria->params= array(':ETIQUETA_nombre'=>$tagName);
+            $model= Publicacion::model()->findAll($criteria);
+            $this->renderPartial('_view',array('data'=>$model));
+        }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
