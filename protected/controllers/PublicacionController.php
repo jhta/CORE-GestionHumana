@@ -210,10 +210,16 @@ class PublicacionController extends Controller
             ));
 	}
         
-      public function actionGetLInk($id)
+      public function traerLInk($id)
       {
           $usuario= Usuario::model()->findByPk($id);
           return ($usuario->nombre_foto).($usuario->formato_foto);
+      }
+      
+      public function traerNombre($id)
+      {
+          $usuario= Usuario::model()->findByPk($id);
+          return $usuario->nombre;
       }
 
 	/**
