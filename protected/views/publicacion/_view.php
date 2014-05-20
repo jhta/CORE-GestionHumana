@@ -9,7 +9,7 @@
 <div class="row">    
     <div class="col-sm-10">
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
-        <h4><span class="label label-default"><?php echo implode(' ', $data->tagLinks); ?></span></h4>
+        <h4><?php echo implode('</span>', $data->tagLinks); ?></h4>
         
         <span class="text-muted" ><?php echo substr(CHtml::encode($data->contenido) ,0,150)."..."; ?></span>
         <h4>    
