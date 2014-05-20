@@ -250,7 +250,7 @@ class PublicacionController extends Controller
             $count = Publicacion::model()->count($criteria);
             $pages = new CPagination($count);
             $pages->setPageSize(10);
-            $dataProvider= new CActiveDataProvider(get_class($this), array('criteria'=> $criteria));
+            $dataProvider= new CActiveDataProvider(Publicacion::model(), array('criteria'=> $criteria));
             $this->render('tagView',array(
                 'tagName'=>$tagName,
                 'pages'=>$pages,
