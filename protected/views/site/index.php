@@ -195,7 +195,7 @@ $(document).ready(function() {
                     'cols'=>40,
                     'required'=>true,
                     'id'=>'contact_message',
-                    'placeholder'=>'Escribe aqui tu mensaje',
+                    'placeholder'=>'Escribe aquí tu mensaje',
                     
                     )); ?>
 		<?php echo $form->error($model,'body'); ?>
