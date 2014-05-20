@@ -36,7 +36,7 @@ class ContactForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'verifyCode'=>'Código de verificación (Se usa para comprobar que es una persona y no una maquina quien nos escribe)',
+			'verifyCode'=>'Código de verificación (Se usa para comprobar que es una persona y no una máquina quien nos escribe)',
 		);
 	}
 }

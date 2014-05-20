@@ -89,7 +89,7 @@
                     'cols'=>40,
                     'required'=>true,
                     'id'=>'contact_message',
-                    'placeholder'=>'Escribe aqui tu mensaje',
+                    'placeholder'=>'Escribe aquí tu mensaje',
                     'name'=>'message'
                     )); ?>
 		<?php echo $form->error($model,'body'); ?>

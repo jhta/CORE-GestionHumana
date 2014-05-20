@@ -110,7 +110,7 @@ $(document).ready(function() {
             <div class="title-page">
                 <h2 class="title">Ponte en Contacto</h2>
                 <h3 class="title-description">
-                    Tienes alguna pregunta? Necesitas alguna infromación adicional? Enviamos un correo y lo responderemos lo antes posible
+                    ¿Tienes alguna pregunta?, ¿Necesitas alguna información adicional? Envíanos un correo y lo responderemos lo antes posible
                 </h3>
             </div>
         </div>
