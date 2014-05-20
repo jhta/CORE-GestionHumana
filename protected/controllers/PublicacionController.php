@@ -223,7 +223,18 @@ class PublicacionController extends Controller
 			'model'=>$model,
 		));
 	}
-
+        
+        /*
+         * Shows all post with an specific tag. 
+         */
+        public function actionAllTagPost($tagName){
+            $criteria= new CDbCriteria();
+            $criteria->join='INNER JOIN publicacion ON publicacion.id = trending.PUBLICACION_id';
+            $criteria->condition= 'trending.ETIQUETA_nombre= :ETIQUETA_nombre';
+            $criteria->params= array(':ETIQUETA_nombre'=>$tagName);
+            $model= Publicacion::model()->findAll($criteria);
+            $this->renderParcial('_view',array('data'=>$model));
+        }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

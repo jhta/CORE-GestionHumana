@@ -123,7 +123,7 @@ class Publicacion extends CActiveRecord
 	public function getTagLinks(){
 		$links= array();
 		foreach($this->trendings as $tag)
-                    $links[]= '<span class="label label-default">'.CHtml::link(CHtml::encode($tag->ETIQUETA_nombre),array('#'));
+                    $links[]= '<span class="label label-default">'.CHtml::link(CHtml::encode($tag->ETIQUETA_nombre),array('publicacion/AllTagPost','tagName'=>$tag->ETIQUETA_nombre));
                     //$links[]=CHtml::link(CHtml::encode($tag->ETIQUETA_nombre), array('modelo/controlador', 'parametro'=>$parametro));
 		return $links;
 	}
