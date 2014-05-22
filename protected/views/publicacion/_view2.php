@@ -15,10 +15,5 @@
                     $this->endWidget();
             ?>
     </div>
-    <div class="nav">
-            <!--<b>Etiquetas:</b>-->
-            <?php //echo implode(', ', $data->tagLinks); ?>
-            <br/>
-            <?php //echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?>
-    </div>
+    
 </div>

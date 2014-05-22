@@ -64,7 +64,7 @@
                         )); ?>
                 <?php endif; ?>
 
-                <h4>Dejanos un comentario!</h4>
+                <h4>Déjanos un comentario!</h4>
 
                 <?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
                         <div class="flash-success">
