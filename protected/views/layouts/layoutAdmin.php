@@ -26,7 +26,7 @@
 
 <title>CORE | Gestión Humana</title>
 <!--main admin-->
-<link href='<?php echo Yii::app()->request->baseUrl; ?>/admin.css' rel='stylesheet' type='text/css'>
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" rel='stylesheet' type='text/css'>
 
 </head>
 <body>
