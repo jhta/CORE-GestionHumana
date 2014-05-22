@@ -114,7 +114,7 @@ body>.col-xs-3>.btn{
 #slide-left{
     	background: transparent;
 	color: white;
-
+        margin: 0 auto;
 }
 
 #slide-right{

@@ -115,10 +115,6 @@
 <!--<script src="<?php //echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>  Default JS -->
 <!-- End Js -->
 
-<script>
-
-</script>
-
 
 </body>
 </html>
