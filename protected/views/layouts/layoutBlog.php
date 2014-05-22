@@ -19,7 +19,7 @@
 
 <!--font-->
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<!-- Latest compiled and minified JavaScript -->
+<!-- Latest compiled and minified JaaavaScript -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <title>CORE | Gestión Humana</title>
