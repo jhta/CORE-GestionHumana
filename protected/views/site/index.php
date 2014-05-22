@@ -214,7 +214,7 @@ $(document).ready(function() {
 
 	<div class="row buttons">
           
-		<?php echo CHtml::submitButton('Submit',array(
+		<?php echo CHtml::submitButton('Enviar',array(
                     'id'=>'contact_submit',
                     'class'=>'submit'
                             )); ?>
