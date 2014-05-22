@@ -13,7 +13,7 @@
         </div>
         <div class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</div>
 </div>
-<div class="col-xs-9">
+<div class="col-xs-9" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right">
                         <div class="pull-right">
