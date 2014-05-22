@@ -1,4 +1,4 @@
-<div class="col-xs-3">
+<div class="col-xs-3" id="slide-left">
         <div id="edit-perfil">
                 <div class="imagen">
                         <img  class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120">
