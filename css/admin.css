@@ -50,6 +50,7 @@ h4{
 
 .nombre, .descripcion, .imagen{
 	margin: 0 auto;
+        color: white;
 }
 
 .imagen{
@@ -105,6 +106,6 @@ body>.col-xs-3>.btn{
 }
 
 .btn-primary{
-	background: rgba(91,91,91) !important;
+	background: rgb(91,91,91) !important;
 	color: white !important;
 }
