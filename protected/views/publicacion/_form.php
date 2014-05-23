@@ -24,7 +24,7 @@
                             'maxlength'=>50,
                             
                             'class'=>'form-control',
-                            'placeholder'=>'nombre',
+                            'placeholder'=>'titulo',
                             
                             )); ?>
 		<?php echo $form->error($model,'titulo'); ?>
@@ -36,7 +36,7 @@
                         array('rows'=>50,
                             'cols'=>50,
                             'class'=>'form-control',
-                            'placeholder'=>'Escribe aqui tu comentario'
+                            'placeholder'=>'Escribe aqui tu contenido'
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
@@ -47,6 +47,19 @@
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'tags',
+                        array('size'=>50,
+                            'maxlength'=>100,
+                            
+                            'class'=>'form-control',
+                            'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
+                            
+                            )); ?>
+		<?php echo $form->textField($model,'tags'); ?>
+		<?php echo $form->error($model,'USUARIO_id'); ?>
+	</div>
+    
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Enviar' , array(
                     'class'=>'btn',

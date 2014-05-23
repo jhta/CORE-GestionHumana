@@ -131,7 +131,18 @@ class PublicacionController extends Controller
                     
                         }
 			if($model->save()){
-                            $this->redirect(array('view','id'=>$model->id));
+                            $arrTags= split('[;]',$_POST['Publicacion']['tags']);
+                            foreach($arrTags as $tag){
+                                $newTag= new Etiqueta;
+                                $newTag->nombre= $tag;
+                                if($newTag->save()){
+                                    $trend= new Trending;
+                                    $trend->ETIQUETA_nombre= $newTag->nombre;
+                                    $trend->PUBLICACION_id= $model->id;
+                                    if($trend->save()) $this->redirect(array('view','id'=>$model->id));
+                                }
+                            }
+                            
                         }
 		}
 
