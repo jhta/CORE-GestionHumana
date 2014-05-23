@@ -2,6 +2,8 @@
 
 class SiteController extends Controller
 {
+    
+
 	/**
 	 * Declares class-based actions.
 	 */
@@ -167,10 +169,18 @@ class SiteController extends Controller
 		//$this->renderPartial('contact',array('model'=>$model));
 	}
 
+        public function actionAdmin()
+	{
+            $this->render('admin');
+	}
+
+        
+        
 	/**
 	 * Displays the login page
 	 */
-	public function actionLogin()
+	
+        public function actionLogin()
 	{
 		$model=new LoginForm;
 
