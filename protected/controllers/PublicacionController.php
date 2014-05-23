@@ -176,8 +176,20 @@ class PublicacionController extends Controller
 		if(isset($_POST['Publicacion']))
 		{
 			$model->attributes=$_POST['Publicacion'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                        if($model->save()){
+                            $arrTags= split('[;]',$_POST['Publicacion']['tags']);
+                            foreach($arrTags as $tag){
+                                $newTag= new Etiqueta;
+                                $newTag->nombre= $tag;
+                                if($newTag->save()){
+                                    $trend= new Trending;
+                                    $trend->ETIQUETA_nombre= $newTag->nombre;
+                                    $trend->PUBLICACION_id= $model->id;
+                                    $trend->save();
+                                }
+                            }
+                            $this->redirect(array('view','id'=>$model->id));
+                        }
 		}
                 
 		$this->render('update',array(

@@ -61,7 +61,7 @@
 	</div>
     
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Enviar' , array(
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
                     'class'=>'btn',
                 ) ); ?>
 	</div>
