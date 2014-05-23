@@ -48,7 +48,8 @@
 	</div>
 
         <div class="row">
-		<?php echo $form->labelEx($model,'tags',
+		<?php echo $form->labelEx($model,'tags'); ?>
+		<?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
                             
@@ -56,12 +57,11 @@
                             'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
                             
                             )); ?>
-		<?php echo $form->textField($model,'tags'); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
     
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Enviar' , array(
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Enviar' , array(
                     'class'=>'btn',
                 ) ); ?>
 	</div>

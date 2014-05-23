@@ -139,10 +139,10 @@ class PublicacionController extends Controller
                                     $trend= new Trending;
                                     $trend->ETIQUETA_nombre= $newTag->nombre;
                                     $trend->PUBLICACION_id= $model->id;
-                                    if($trend->save()) $this->redirect(array('view','id'=>$model->id));
+                                    $trend->save();
                                 }
                             }
-                            
+                            $this->redirect(array('view','id'=>$model->id));
                         }
 		}
 
