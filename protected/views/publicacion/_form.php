@@ -9,7 +9,9 @@
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/jquery.popline.js"></script>
 </head>
 <script>
-$(".editor").popline();
+$(document).ready(function(){
+    $(".editor").popline();
+});
 </script>
 <div class="form">
 
