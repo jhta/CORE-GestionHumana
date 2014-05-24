@@ -3,7 +3,13 @@
 /* @var $model Publicacion */
 /* @var $form CActiveForm */
 ?>
-
+<head>
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/popline/themes/default.css" rel="stylesheet">
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/jquery.popline.min.js"></script>
+</head>
+<script>
+$(".editor").popline();
+</script>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -65,7 +71,7 @@
                     'class'=>'btn',
                 ) ); ?>
 	</div>
-
+        <div class='editor' contenteditable='true'></div>
 <?php $this->endWidget(); ?>
 <?php
   $this->widget('CMultiFileUpload', array(
