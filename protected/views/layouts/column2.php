@@ -18,6 +18,6 @@
 		));
 		$this->endWidget();
 	?>
-	</div><!-- sidebar -->
+	</div><!-- sidebarr -->
 </div>
 <?php $this->endContent(); ?>
