@@ -3,7 +3,24 @@
 /* @var $model Publicacion */
 /* @var $form CActiveForm */
 ?>
-
+<head>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo Yii::app()->request->baseUrl; ?>/popline/themes/popclip.css" rel="stylesheet">
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/jquery.popline.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.backcolor.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.blockformat.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.blockquote.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.decoration.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.justify.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.link.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.list.js"></script>
+</head>
+<script>
+$(document).ready(function(){
+    $(".editor").popline();
+});
+</script>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -24,7 +41,7 @@
                             'maxlength'=>50,
                             
                             'class'=>'form-control',
-                            'placeholder'=>'nombre',
+                            'placeholder'=>'titulo',
                             
                             )); ?>
 		<?php echo $form->error($model,'titulo'); ?>
@@ -36,7 +53,7 @@
                         array('rows'=>50,
                             'cols'=>50,
                             'class'=>'form-control',
-                            'placeholder'=>'Escribe aqui tu comentario'
+                            'placeholder'=>'Escribe aqui tu contenido'
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
@@ -47,12 +64,29 @@
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'tags'); ?>
+		<?php echo $form->textField($model,'tags',
+                        array('size'=>50,
+                            'maxlength'=>100,
+                            
+                            'class'=>'form-control',
+                            'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
+                            
+                            )); ?>
+		<?php echo $form->error($model,'USUARIO_id'); ?>
+	</div>
+    
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Enviar' , array(
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
                     'class'=>'btn',
                 ) ); ?>
 	</div>
-
+    <div class='editor' contenteditable='true'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    </div>
 <?php $this->endWidget(); ?>
 <?php
   $this->widget('CMultiFileUpload', array(

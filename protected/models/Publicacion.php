@@ -19,6 +19,7 @@
 class Publicacion extends CActiveRecord
 {
 	public $files;
+        public $tags;
         /**
 	 * @return string the associated database table name
 	 */

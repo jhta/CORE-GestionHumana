@@ -35,6 +35,7 @@
 
   $.popline.addButton({
     blockFormat: {
+      //iconClass: "fa fa-header",
       text: "H",
       mode: "edit",
       buttons: {
