@@ -4,4 +4,4 @@
 	<?php echo $content; ?>
     <!--<p>Lorem afa sgndfnhgaaaaaanhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbvLorem afa sgndfnhgnhgncvnbcnbv-->
 </div><!-- content -->
-<?php $this->endContent(); ?>
+<?php $this->endContent();?>

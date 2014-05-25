@@ -171,7 +171,7 @@ class SiteController extends Controller
 
         public function actionAdmin()
 	{
-            $this->layout='//layout/column3';
+            $this->layout='//layouts/column3';
             $this->render('admin');
 	}
 
