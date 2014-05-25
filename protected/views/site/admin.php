@@ -52,7 +52,8 @@
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
         </div>
     <div class="btn btn-primary " data-toggle="modal" data-target="#myModal">
-  <span class="glyphicon glyphicon-edit">Editar </span> 
+  <span class="glyphicon glyphicon-edit"> </span> 
+  <span> Editar</span>
 </div>
     
     <!--<div class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</div>-->
