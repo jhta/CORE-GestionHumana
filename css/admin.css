@@ -116,6 +116,10 @@ body>.col-xs-3>.btn{
         font-size: 15px;
 }
 
+#edit-perfil>.btn-primary{
+ width: 100px;   
+}
+
 #slide-left{
     	background: transparent;
 	color: white;
