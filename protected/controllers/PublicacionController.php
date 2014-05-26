@@ -96,7 +96,7 @@ class PublicacionController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
                
-		if(isset($_POST['Publicacion']))
+		if(isset($_POST['Publicacion'],$_POST['contenido']))
 		{
 			$model->attributes=$_POST['Publicacion'];
                         $model->fecha= date("Y-m-d H:i:s");

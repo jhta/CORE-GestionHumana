@@ -13,6 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Publicacion</h1>
+<h1>Crear Publicación</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php //$this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_publicar', array('model'=>$model)); ?>
