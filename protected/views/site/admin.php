@@ -4,9 +4,9 @@
     )*/);?>
 
 <!-- Informacion de perfil en columna de la izquierda-->
-<?php $this->renderPartial('//usuario/_viewAdmin'/*, array(
-     'model' => $model,
-    )*/);?>
+<?php $this->renderPartial('//usuario/_viewAdmin', array(
+     'model' => $modelU,
+    ));?>
 
 
 <div class="col-xs-9" id="slide-right">

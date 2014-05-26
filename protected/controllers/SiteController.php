@@ -191,8 +191,9 @@ class SiteController extends Controller
 
         public function actionAdmin()
 	{
+            $modelU= Usuario::model()->findByPk(Yii::app()->user->id);
             $this->layout='//layouts/column3';
-            $this->render('admin');
+            $this->render('admin',array('modelU'=>$modelU));
 	}
 
         
