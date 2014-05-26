@@ -30,6 +30,8 @@ $(document).ready(function(){
                 url: <?php echo "'".CController::createUrl('publicacion/create')."'"; ?>,
                 data: ajax_data,
                 type: "post",
+            }).done(function(resul){
+                alert(resul);
             });
     });
 });
