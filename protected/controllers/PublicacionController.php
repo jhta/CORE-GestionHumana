@@ -139,7 +139,7 @@ class PublicacionController extends Controller
                         }
                         
 			if($model->save()){
-                            $arrTags= split('[;]',$_POST['Publicacion']['tags']);
+                            $arrTags= split('[;]',$_POST['tags']);
                             foreach($arrTags as $tag){
                                 $newTag= new Etiqueta;
                                 $newTag->nombre= $tag;
