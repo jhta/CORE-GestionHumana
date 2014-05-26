@@ -103,7 +103,7 @@ class PublicacionController extends Controller
                         $model->contenido= $_POST['contenido'];
                         $model->USUARIO_id=$_POST['USUARIO_id'];
                         $model->fecha= date("Y-m-d H:i:s");
-                        
+                        echo 'Entro';/*
                         $images= CUploadedFile::getInstancesByName('files');
                         
                         if(isset($images) && count($images) > 0){
@@ -147,7 +147,7 @@ class PublicacionController extends Controller
                                 }
                             }
                             $this->redirect(array('view','id'=>$model->id));
-                        }else{echo'holi2';}
+                        }else{echo'holi2';}*/
                 }else{echo 'holi';}
 
 		$this->render('create',array(
