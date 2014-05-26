@@ -99,7 +99,7 @@ class PublicacionController extends Controller
 		if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id']))
 		{
 			//$model->attributes=$_POST['Publicacion'];
-                        echo 'Entro';/*
+                        
                         $model->titulo= $_POST['titulo'];
                         $model->contenido= $_POST['contenido'];
                         $model->USUARIO_id=$_POST['USUARIO_id'];
@@ -148,7 +148,7 @@ class PublicacionController extends Controller
                                 }
                             }
                             $this->redirect(array('view','id'=>$model->id));
-                        }else{echo'holi2';}*/
+                        }else{echo'holi2';}
                 }else{echo 'holi';}
 
 		$this->render('create',array(
