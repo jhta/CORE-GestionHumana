@@ -32,7 +32,7 @@ class PublicacionController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','crear'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -99,10 +99,8 @@ class PublicacionController extends Controller
 	}
         
         public function actionCrear(){
-            if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id']))
-		{
+            if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id'])){
 			//$model->attributes=$_POST['Publicacion'];
-                        
                         $model->titulo= $_POST['titulo'];
                         $model->contenido= $_POST['contenido'];
                         $model->USUARIO_id=$_POST['USUARIO_id'];
