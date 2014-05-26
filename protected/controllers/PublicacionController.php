@@ -145,7 +145,7 @@ class PublicacionController extends Controller
                                 }
                             }
                             $this->redirect(array('view','id'=>$model->id));
-                        }else{echo'holi';}
+                        }else{echo'holi2';}
                 }else{echo 'holi';}
 
 		$this->render('create',array(
