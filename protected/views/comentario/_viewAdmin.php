@@ -2,36 +2,16 @@
                         <div class="panel panel-default">
                                 <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Ultimos Comentarios</div>
                                 <div class="panel-body">
+                                    <?php foreach ($UComentarios as $i) {
+                                        
+                                     ?>
                                         <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
+                                            <small class="text-muted"> <?php echo $i->fecha; ?></small>
+                                            <small class="text-muted"> <?php echo $i->nombre; ?></small>
+                                            <p><?php echo substr($i->comentario, 0, 100) ?>..</p>
                                         </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
+                                    <?php }?>    
+                                        
                                 </div>
                         </div>	
                 </div>

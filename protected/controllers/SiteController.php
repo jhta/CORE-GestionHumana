@@ -190,10 +190,17 @@ class SiteController extends Controller
 	}
 
         public function actionAdmin()
-	{
+	{   $Criteria = new CDbCriteria();
+            $Criteria->order="fecha DESC";
+            $Criteria->limit=15;
+            $UComentarios= Comentario::model()->findAll($Criteria);
             $modelU= Usuario::model()->findByPk(Yii::app()->user->id);
             $this->layout='//layouts/column3';
-            $this->render('admin',array('modelU'=>$modelU,));
+            $this->render('admin',
+                    array(
+                        'modelU'=>$modelU,
+                        'UComentarios'=>$UComentarios,
+                ));
 	}
 
         

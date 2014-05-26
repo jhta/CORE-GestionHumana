@@ -55,6 +55,18 @@ class ComentarioController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
+        /**
+	 * Displays all model's order by last date.
+	 */
+        public function actionViewAdmin(){
+            $Criteria = new CDbCriteria();
+            $Criteria->order="fecha DESC";
+            $Criteria->limit=15;
+            $UComentarios= Comentario::model()->findAll($Criteria);
+            $this->renderPartial('_viewAdmin',array(
+			'UComentarios'=>$UComentarios,
+		));
+        }
 
 	/**
 	 * Creates a new model.

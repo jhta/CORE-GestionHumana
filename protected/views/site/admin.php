@@ -50,9 +50,9 @@
 
                 </div>
               <!-- Modal Para editar perfil-->
-<?php $this->renderPartial('//comentario/_viewAdmin'/*, array(
-     'model' => $model,
-    )*/);?>
+<?php $this->renderPartial('//comentario/_viewAdmin', array(
+     'UComentarios' => $UComentarios,
+    ));?>
         </div>
         <div id="edit-index">
                 <legend><span class="glyphicon glyphicon-wrench"></span> Administracion</legend>

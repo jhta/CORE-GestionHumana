@@ -171,7 +171,7 @@ label.filebutton {
     
 }
 
-#imagen>.img-circle{
+.imagen>.img-circle{
     width: 130px !important;
     height: 130px !important;
 }
