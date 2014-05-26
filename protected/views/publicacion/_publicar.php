@@ -25,12 +25,14 @@ $(document).ready(function(){
         var contenido= $('#contenido').html();
         var USUARIO_id= $('#USUARIO_id').val();
         var tags= $('#tags').val();
+        var data= $('#publicacion-form').serialize();
         alert(contenido);
         var ajax_data = {
                 "titulo":titulo,
                 "contendio": contenido,
                 "USUARIO_id":USUARIO_id,
-                "tags":tags
+                "tags":tags,
+                "data":data
             };
             $.ajax({  
                 async:true,    
