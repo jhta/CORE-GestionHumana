@@ -131,6 +131,7 @@ class PublicacionController extends Controller
                             }
                     
                         }
+                        
 			if($model->save()){
                             $arrTags= split('[;]',$_POST['Publicacion']['tags']);
                             foreach($arrTags as $tag){
@@ -144,7 +145,7 @@ class PublicacionController extends Controller
                                 }
                             }
                             $this->redirect(array('view','id'=>$model->id));
-                        }
+                        }else{echo'holi';}
                 }else{echo 'holi';}
 
 		$this->render('create',array(
