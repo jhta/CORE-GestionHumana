@@ -26,10 +26,10 @@ $(document).ready(function(){
         var contenido= $('#contenido').html();
         var USUARIO_id= $('#USUARIO_id').val();
         var tags= $('#tags').val();
-        //var data= $('#publicacion-form').serialize();
+        var data= $('#publicacion-form').serialize();
         
         var ajax_data = {
-                //"data":data,
+                "data":data,
                 "titulo":titulo,
                 "contenido": contenido,
                 "USUARIO_id":USUARIO_id,
