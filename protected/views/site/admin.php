@@ -5,7 +5,8 @@
 
 <!-- Informacion de perfil en columna de la izquierda-->
 <?php $this->renderPartial('//usuario/_viewAdmin', array(
-     'model' => $modelU,
+     'modelU' => $modelU,
+      'id'=>$id
     ));?>
 
 

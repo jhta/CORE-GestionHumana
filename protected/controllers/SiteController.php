@@ -193,7 +193,7 @@ class SiteController extends Controller
 	{
             $modelU= Usuario::model()->findByPk($this->getId());
             $this->layout='//layouts/column3';
-            $this->render('admin',array('modelU'=>$modelU));
+            $this->render('admin',array('modelU'=>$modelU, 'id'=>$this->getId()));
 	}
 
         
