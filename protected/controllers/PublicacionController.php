@@ -141,20 +141,20 @@ class PublicacionController extends Controller
 			if($model->save()){
                             if(isset($_POST['tags'])){
                                 $arrTags= split('[;]',$_POST['tags']);
-                            foreach($arrTags as $tag){
-                                $newTag= new Etiqueta;
-                                $newTag->nombre= $tag;
-                                if($newTag->save()){
-                                    $trend= new Trending;
-                                    $trend->ETIQUETA_nombre= $newTag->nombre;
-                                    $trend->PUBLICACION_id= $model->id;
-                                    $trend->save();
+                                foreach($arrTags as $tag){
+                                    $newTag= new Etiqueta;
+                                    $newTag->nombre= $tag;
+                                    if($newTag->save()){
+                                        $trend= new Trending;
+                                        $trend->ETIQUETA_nombre= $newTag->nombre;
+                                        $trend->PUBLICACION_id= $model->id;
+                                        $trend->save();
+                                    }
                                 }
-                            }
                             }
                             
                             $this->redirect(array('view','id'=>$model->id));
-                        }
+                        }else{echo $model->save();}
                 }
         }
         public function actionPublicacionIndex(){

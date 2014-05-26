@@ -27,7 +27,7 @@ $(document).ready(function(){
         var USUARIO_id= $('#USUARIO_id').val();
         var tags= $('#tags').val();
         //var data= $('#publicacion-form').serialize();
-        alert(tags);
+        
         var ajax_data = {
                 "data":data,
                 "titulo":titulo,
@@ -41,6 +41,8 @@ $(document).ready(function(){
             url: <?php echo "'".CController::createUrl('publicacion/Crear')."'"; ?>,
             data: ajax_data,
             type: "post",
+        }).done(function(resul){
+            alert(resul);
         });
     });
 });
