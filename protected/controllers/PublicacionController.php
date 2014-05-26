@@ -164,7 +164,7 @@ class PublicacionController extends Controller
                                 }
                             }
                                 
-                            $this->redirect(array('view','id'=>$model->id));
+                            $this->redirect(array('index'));
                         }
                 }
         }
