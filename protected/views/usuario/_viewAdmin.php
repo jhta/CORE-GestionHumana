@@ -11,7 +11,7 @@
                     <img  class="img-circle" src="<?php echo $foto?>">
                 </div>
             <h3 class="nombre"><?php echo Yii::app()->user->nombre; ?></h3>
-                <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
+                <div class="descripcion"><?php echo $modelU->descripcion; echo $id ?></div>
         </div>
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
   <span class="glyphicon glyphicon-edit"> </span> 
