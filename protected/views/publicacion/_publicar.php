@@ -29,7 +29,7 @@ $(document).ready(function(){
         alert(contenido);
         var ajax_data = {
                 "titulo":titulo,
-                "contendio": contenido,
+                "contenido": contenido,
                 "USUARIO_id":USUARIO_id,
                 "tags":tags,
                 "data":data
@@ -91,20 +91,20 @@ $(document).ready(function(){
         </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'USUARIO_id',array('id'=>'USUARIO_id')); ?>
-		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación')); ?>
+		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
+		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
         <div class="row">
-		<?php echo $form->labelEx($model,'tags',array('id'=>'tags')); ?>
+		<?php echo $form->labelEx($model,'tags'); ?>
 		<?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
                             
                             'class'=>'form-control',
                             'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
-                            
+                            'id'=>'tags'
                             )); ?>
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
