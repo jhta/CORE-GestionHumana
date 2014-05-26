@@ -21,6 +21,7 @@ $(document).ready(function(){
     $(".editor").popline();
     $('#publicacion').click(function(){
         var contenido= $('#contenido').html();
+        alert(contenido);
         var ajax_data = {
                 "contendio": contenido
             };
@@ -90,7 +91,7 @@ $(document).ready(function(){
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
                     'class'=>'btn',
-                    'id'=>'Publicacion',
+                    'id'=>'publicacion',
                 ) ); ?>
 	</div>
 <?php $this->endWidget(); ?>
