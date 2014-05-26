@@ -168,4 +168,10 @@ label.filebutton {
 #btn-perfil{
     width: 100px;
     margin-top: 15px;
+    
+}
+
+#imagen>.img-circle{
+    width: 130px !important;
+    height: 130px !important;
 }

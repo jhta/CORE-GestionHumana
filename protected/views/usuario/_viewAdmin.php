@@ -5,13 +5,13 @@
                         $foto= "https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120";
                         
                     }else{
-                        $foto= Yii::app()->request->baseUrl.$modelU->nombre_foto.".".$modelU->formato_foto;
+                        $foto= Yii::app()->request->baseUrl.$modelU->nombre_foto.$modelU->formato_foto;
                     }
                     ?>
                     <img  class="img-circle" src="<?php echo $foto?>">
                 </div>
             <h3 class="nombre"><?php echo Yii::app()->user->nombre; ?></h3>
-            <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
+            <div class="descripcion"><?php echo $modelU->descripcion; echo Yii::app()->request->baseUrl;?></div>
         </div>
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
   <span class="glyphicon glyphicon-edit"> </span> 
