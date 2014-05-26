@@ -96,10 +96,12 @@ class PublicacionController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
                
-		if(isset($_POST['Publicacion'],$_POST['contenido']))
+		if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id']))
 		{
-			$model->attributes=$_POST['Publicacion'];
+			//$model->attributes=$_POST['Publicacion'];
+                        $model->titulo= $_POST['titulo'];
                         $model->contenido= $_POST['contenido'];
+                        $model->USUARIO_id=$_POST['USUARIO_id'];
                         $model->fecha= date("Y-m-d H:i:s");
                         
                         $images= CUploadedFile::getInstancesByName('files');

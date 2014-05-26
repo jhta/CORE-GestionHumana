@@ -20,10 +20,16 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#publicacion').click(function(){
+        var titulo= $('#titulo').value;
         var contenido= $('#contenido').html();
+        var USUARIO_id= $('#USUARIO_id').value;
+        var tags= $('#tags').value;
         alert(contenido);
         var ajax_data = {
-                "contendio": contenido
+                "titulo":titulo,
+                "contendio": contenido,
+                "USUARIO_id":USUARIO_id,
+                "tags":tags
             };
             $.ajax({  
                 async:true,    
@@ -58,7 +64,7 @@ $(document).ready(function(){
                             
                             'class'=>'form-control',
                             'placeholder'=>'titulo',
-                            
+                            'id'=>'titulo',
                             )); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
@@ -70,13 +76,13 @@ $(document).ready(function(){
         </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
+		<?php echo $form->labelEx($model,'USUARIO_id',array('id'=>'USUARIO_id')); ?>
 		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
         <div class="row">
-		<?php echo $form->labelEx($model,'tags'); ?>
+		<?php echo $form->labelEx($model,'tags',array('id'=>'tags')); ?>
 		<?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
@@ -85,7 +91,7 @@ $(document).ready(function(){
                             'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
                             
                             )); ?>
-		<?php echo $form->error($model,'USUARIO_id'); ?>
+		<?php echo $form->error($model,'tags'); ?>
 	</div>
     
 	<div class="row buttons">
