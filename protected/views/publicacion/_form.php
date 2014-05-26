@@ -20,7 +20,7 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#publicacon').click(function(){
-        $('#contenidoForm').value= $('#contenido');
+        $('#contenidoForm').value= $('#contenido').html();
         alert($('#contenidoForm').value);
     });
 });
