@@ -151,8 +151,8 @@ class PublicacionController extends Controller
                                 }
                             }
                             $this->redirect(array('view','id'=>$model->id));
-                        }else{echo'holi2';}
-                }else{echo 'holi';}
+                        }
+                }
         }
         public function actionPublicacionIndex(){
             $Criteria = new CDbCriteria();
