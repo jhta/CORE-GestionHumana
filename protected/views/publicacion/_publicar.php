@@ -27,7 +27,7 @@ $(document).ready(function(){
         var USUARIO_id= $('#USUARIO_id').val();
         var tags= $('#tags').val();
         //var data= $('#publicacion-form').serialize();
-        alert('hola!');
+        alert(tags);
         var ajax_data = {
                 "data":data,
                 "titulo":titulo,

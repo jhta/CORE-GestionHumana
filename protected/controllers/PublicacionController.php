@@ -139,7 +139,8 @@ class PublicacionController extends Controller
                         }
                         
 			if($model->save()){
-                            $arrTags= split('[;]',$_POST['tags']);
+                            if(isset($_POST['tags'])){
+                                $arrTags= split('[;]',$_POST['tags']);
                             foreach($arrTags as $tag){
                                 $newTag= new Etiqueta;
                                 $newTag->nombre= $tag;
@@ -150,6 +151,8 @@ class PublicacionController extends Controller
                                     $trend->save();
                                 }
                             }
+                            }
+                            
                             $this->redirect(array('view','id'=>$model->id));
                         }
                 }
