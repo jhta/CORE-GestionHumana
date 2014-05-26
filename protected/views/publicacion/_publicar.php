@@ -29,11 +29,11 @@ $(document).ready(function(){
         var data= $('#publicacion-form').serialize();
         
         var ajax_data = {
+                "data":data,
                 "titulo":titulo,
                 "contenido": contenido,
                 "USUARIO_id":USUARIO_id,
-                "tags":tags,
-                "data":data
+                "tags":tags
             };
         $.ajax({  
             async:true,    
