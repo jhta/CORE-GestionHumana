@@ -105,8 +105,8 @@ class PublicacionController extends Controller
                         $model->contenido= $_POST['contenido'];
                         $model->USUARIO_id=$_POST['USUARIO_id'];
                         $model->fecha= date("Y-m-d H:i:s");
-                        
-                        $images= CUploadedFile::getInstancesByName('files');
+                        $images=null;
+                        //$images= CUploadedFile::getInstancesByName('files');
                         
                         if(isset($images) && count($images) > 0){
                             $i= 1;
