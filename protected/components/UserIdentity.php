@@ -28,12 +28,8 @@ class UserIdentity extends CUserIdentity
 		{
 			$this->_id= $user->id;
                         $this->setState('nombre',$user->nombre);
-			$this->_descripcion= $user->descripcion;
+			
                         $this->setState('username',$user->username);
-                        $this->setState('descripcion', $user->descripcion);
-                        $this->setState('nombre_foto', $user->nombre_foto);
-                        $this->setState('formato_foto', $user->formato_foto);
-                        $this->setState('titulo', $user->titulo);
                         $this->username= $user->username;
 			$this->errorCode= self::ERROR_NONE;
 		}
