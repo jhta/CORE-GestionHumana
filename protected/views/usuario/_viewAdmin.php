@@ -5,7 +5,7 @@
                         $foto= "https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120";
                         
                     }else{
-                        $foto= $modelU->nombre_foto.".".$modelU->formato_foto;
+                        $foto= Yii::app()->request->baseUrl.$modelU->nombre_foto.".".$modelU->formato_foto;
                     }
                     ?>
                     <img  class="img-circle" src="<?php echo $foto?>">
