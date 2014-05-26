@@ -8,7 +8,7 @@
                         $foto= $modelU->nombre_foto.".".$modelU->formato_foto;
                     }
                     ?>
-                    <img  class="img-circle" src="<?php $foto?>">
+                    <img  class="img-circle" src="<?php echo $foto?>">
                 </div>
             <h3 class="nombre"><?php echo Yii::app()->user->nombre; ?></h3>
                 <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
