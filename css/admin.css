@@ -117,7 +117,7 @@ body>.col-xs-3>.btn{
 }
 
 #edit-perfil>.btn-primary{
- width: 100px;   
+ width: 100px !important;   
 }
 
 #slide-left{
@@ -164,4 +164,8 @@ label.filebutton {
 	font-size: 22px;
 	padding: 5px;
 	top:5px;
+}
+#btn-perfil{
+    width: 100px;
+    margin-top: 15px;
 }

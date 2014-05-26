@@ -1,27 +1,14 @@
-<!-- Modal -->
+<!-- Modal Para editar perfil-->
 <?php $this->renderPartial('//usuario/_edit'/*, array(
      'model' => $model,
     )*/);?>
-<div class="col-xs-3" id="slide-left">
-        <div id="edit-perfil">
-                <div class="imagen">
-                        <img  class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120">
-                </div>
-                <h3 class="nombre">jeison higuita sanchez</h3>
-                <div class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-        </div>
-    <div class="btn btn-primary " data-toggle="modal" data-target="#myModal">
-  <span class="glyphicon glyphicon-edit"> </span> 
-  <span> Editar</span>
-</div>
-    
-    <!--<div class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</div>-->
-</div>
+
+<!-- Informacion de perfil en columna de la izquierda-->
+<?php $this->renderPartial('//usuario/_viewAdmin'/*, array(
+     'model' => $model,
+    )*/);?>
+
+
 <div class="col-xs-9" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right ">
@@ -61,43 +48,10 @@
                                 </script>
 
                 </div>
-                <div class="col-xs-5" >
-                        <div class="panel panel-default">
-                                <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Ultimos Comentarios</div>
-                                <div class="panel-body">
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                        <div class="comentario-admin">
-                                                <small class="text-muted">2013-12-12</small>
-                                                <small class="text-muted"> Nombre Post</small>
-                                                <p>Hola muy chimbita el post, jeison eres el mejor te amo lindo(100 caracteres)..</p>
-                                        </div>
-                                </div>
-                        </div>	
-                </div>
+              <!-- Modal Para editar perfil-->
+<?php $this->renderPartial('//comentario/_viewAdmin'/*, array(
+     'model' => $model,
+    )*/);?>
         </div>
         <div id="edit-index">
                 <legend><span class="glyphicon glyphicon-wrench"></span> Administracion</legend>
