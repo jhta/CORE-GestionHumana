@@ -110,10 +110,11 @@ $(document).ready(function(){
 	</div>
     
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
+            <div class="btn" id="publicacion">Pubiclar</div>
+		<?php /*echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
                     'class'=>'btn',
                     'id'=>'publicacion',
-                ) ); ?>
+                ) ); */?>
 	</div>
 <?php $this->endWidget(); ?>
 <?php

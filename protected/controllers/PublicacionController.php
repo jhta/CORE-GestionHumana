@@ -99,11 +99,12 @@ class PublicacionController extends Controller
 		if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id']))
 		{
 			//$model->attributes=$_POST['Publicacion'];
+                        echo 'Entro';/*
                         $model->titulo= $_POST['titulo'];
                         $model->contenido= $_POST['contenido'];
                         $model->USUARIO_id=$_POST['USUARIO_id'];
                         $model->fecha= date("Y-m-d H:i:s");
-                        echo 'Entro';/*
+                        
                         $images= CUploadedFile::getInstancesByName('files');
                         
                         if(isset($images) && count($images) > 0){
