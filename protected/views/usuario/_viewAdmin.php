@@ -3,7 +3,7 @@
                 <div class="imagen">
                         <img  class="img-circle" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120">
                 </div>
-                <h3 class="nombre">jeison higuita sanchez</h3>
+            <h3 class="nombre"><?php echo Yii::app()->user->nombre; ?></h3>
                 <div class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
