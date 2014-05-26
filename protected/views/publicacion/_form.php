@@ -19,6 +19,10 @@
 <script>
 $(document).ready(function(){
     $(".editor").popline();
+    $('#publicacon').click(function(){
+        $('#contenidoForm').value= $('#contenido');
+        alert($('#contenidoForm').value);
+    });
 });
 </script>
 <div class="form">
@@ -48,12 +52,13 @@ $(document).ready(function(){
 	</div>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'contenido'); ?>
+		<?php echo $form->labelEx($model,'contenido'); ?>
 		<?php echo $form->textArea($model,'contenido',
                         array('rows'=>50,
                             'cols'=>50,
                             'class'=>'form-control',
-                            'placeholder'=>'Escribe aqui tu contenido'
+                            'placeholder'=>'Escribe aqui tu contenido',
+                            'id'=>'contenidoForm',
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
@@ -74,12 +79,13 @@ $(document).ready(function(){
                             'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
                             
                             )); ?>
-		<?php echo $form->error($model,'USUARIO_id'); ?>
+		<?php echo $form->error($model,'tags'); ?>
 	</div>
     
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
                     'class'=>'btn',
+                    'id'=>'publicacion',
                 ) ); ?>
 	</div>
     <div class='editor' contenteditable='true' id="contenido">

@@ -15,5 +15,5 @@ $this->menu=array(
 
 <h1>Crear Publicación</h1>
 
-<?php //$this->renderPartial('_form', array('model'=>$model)); ?>
-<?php $this->renderPartial('_publicar', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php //$this->renderPartial('_publicar', array('model'=>$model)); ?>
