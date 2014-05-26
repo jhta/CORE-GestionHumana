@@ -17,7 +17,8 @@
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/popline/scripts/plugins/jquery.popline.list.js"></script>
 </head>
 <script>
-$(document).ready(function(){
+$(document).ready(function(resul){
+    alert(resul);
     $(".editor").popline();
     $('#publicacion').click(function(){
         $('#contenidoForm').val($('#contenido').html());

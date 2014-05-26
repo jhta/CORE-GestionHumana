@@ -20,10 +20,10 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#publicacion').click(function(){
-        var titulo= $('#titulo').value;
+        var titulo= $('#titulo').val();
         var contenido= $('#contenido').html();
-        var USUARIO_id= $('#USUARIO_id').value;
-        var tags= $('#tags').value;
+        var USUARIO_id= $('#USUARIO_id').val();
+        var tags= $('#tags').val();
         alert(contenido);
         var ajax_data = {
                 "titulo":titulo,
