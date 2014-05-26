@@ -99,7 +99,9 @@ class PublicacionController extends Controller
 	}
         
         public function actionCrear(){
+            
             if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id'])){
+                        $model= new Publicacion;
 			//$model->attributes=$_POST['Publicacion'];
                         $model->titulo= $_POST['titulo'];
                         $model->contenido= $_POST['contenido'];
