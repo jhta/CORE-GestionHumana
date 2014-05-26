@@ -1,12 +1,12 @@
 <div class="col-xs-3" id="slide-left">
         <div id="edit-perfil">
                 <div class="imagen">
-                    <?php if(Yii::app()->user->nombre_foto==NULL){
+                    <?php //if(Yii::app()->user->nombre_foto==NULL){
                         $foto= "https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120";
                         
-                    }else{
-                        $foto= Yii::app()->user->nombre_foto.".".Yii::app()->user->formato_foto;
-                    }
+                    //}else{
+                      //  $foto= Yii::app()->user->nombre_foto.".".Yii::app()->user->formato_foto;
+                    //}
                     ?>
                     <img  class="img-circle" src="<?php $foto?>">
                 </div>
