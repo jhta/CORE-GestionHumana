@@ -46,17 +46,13 @@ $(document).ready(function(){
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'publicacion-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'titulo'); ?>
+		<?php echo $form->labelEx($model,'titulo'); ?>
 		<?php echo $form->textField($model,'titulo',
                         array('size'=>50,
                             'maxlength'=>50,
@@ -81,7 +77,7 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
     
-    <div class="editor row" contenteditable="true" id="contenido">
+        <div class="editor row" contenteditable="true" id="contenido">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
@@ -108,10 +104,6 @@ $(document).ready(function(){
     
 	<div class="row buttons">
             <div class="btn" id="publicacion">Publicar</div>
-		<?php /*echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
-                    'class'=>'btn',
-                    'id'=>'publicacion',
-                ) ); */?>
 	</div>
 <?php $this->endWidget(); ?>
 <?php
@@ -129,8 +121,6 @@ $(document).ready(function(){
      ),
      'denied'=>'File is not allowed',
      'max'=>5, // max 10 files
- 
- 
   ));
 ?>
 </div><!-- form -->
