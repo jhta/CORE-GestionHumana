@@ -20,6 +20,7 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#publicacion').click(function(){
+        $('#contenidoForm').val($('#contenido').html());
         var titulo= $('#titulo').val();
         var contenido= $('#contenido').html();
         var USUARIO_id= $('#USUARIO_id').val();
@@ -68,8 +69,20 @@ $(document).ready(function(){
                             )); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
-
-	<div class="editor row" contenteditable='true' id="contenido">
+    
+        <div class="row">
+		<?php echo $form->labelEx($model,'contenido'); ?>
+		<?php echo $form->textArea($model,'contenido',
+                        array('rows'=>50,
+                            'cols'=>50,
+                            'class'=>'form-control',
+                            'placeholder'=>'Escribe aqui tu contenido',
+                            'id'=>'contenidoForm',
+                            )); ?>
+		<?php echo $form->error($model,'contenido'); ?>
+	</div>
+    
+	<div class="editor row" contenteditable="true" id="contenido">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
