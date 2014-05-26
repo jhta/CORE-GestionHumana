@@ -3,7 +3,10 @@ body>.col-xs-3{
 	color: white;
 	text-align: justify;
 }
-body{background: rgb(48, 47, 47);}
+body{background: url('http://th06.deviantart.net/fs71/PRE/i/2010/156/d/0/Shiny_Blue_Texture_3_by_BrokenVain_Stock.png');
+     background-repeat-x: initial;
+    background-attachment: fixed;
+}
 
 a{
 	color:black;
@@ -36,7 +39,7 @@ h4{
 .navbar-inverse{
 	margin: 0 -15px;
 	padding: 15px;
-	background: rgb(92, 91, 91);
+	background: #223A52;
 	border-radius: 0;
 	-o-border-radius: 0;
 	-moz-border-radius: 0;
@@ -102,17 +105,17 @@ body>.col-xs-3>.btn{
 }
 
 .panel-heading{
-	background: rgb(91,91,91) !important;
+	background:#223A52 !important;
 	color: white !important;
 }
 
 .btn-primary{
-	background: rgb(91,91,91) !important;
+	background:#223A52 !important;
 	color: white !important;
         display: block;
         margin: auto;
        
-        border: black;
+        border: white;
         font-size: 15px;
 }
 
