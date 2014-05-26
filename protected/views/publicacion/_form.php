@@ -19,7 +19,7 @@
 <script>
 $(document).ready(function(){
     $(".editor").popline();
-    $('#publicacon').click(function(){
+    $('#publicacion').click(function(){
         $('#contenidoForm').value= $('#contenido').html();
         alert($('#contenidoForm').value);
     });
