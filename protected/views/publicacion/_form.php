@@ -20,8 +20,8 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#publicacion').click(function(){
-        $('#contenidoForm').value= $('#contenido').html();
-        alert($('#contenidoForm').value);
+        $('#contenidoForm').val($('#contenido').html());
+        alert($('#contenidoForm').val());
     });
 });
 </script>
