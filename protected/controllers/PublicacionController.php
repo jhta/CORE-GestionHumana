@@ -32,7 +32,7 @@ class PublicacionController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','crear'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -73,8 +73,7 @@ class PublicacionController extends Controller
 			echo CActiveForm::validate($comment);
 			Yii::app()->end();
 		}
-		if(isset($_POST['Comentario']))
-		{
+		if(isset($_POST['Comentario'])){
 			$comment->attributes= $_POST['Comentario'];
                         $comment->fecha= date("Y-m-d H:i:s");
 			if($post->addComment($comment)){
@@ -89,19 +88,27 @@ class PublicacionController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
+	public function actionCreate(){
 		$model=new Publicacion;
-
+                
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-               
-		if(isset($_POST['Publicacion']))
-		{
-			$model->attributes=$_POST['Publicacion'];
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+        
+        public function actionCrear(){
+            
+            if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id'])){
+                        $model= new Publicacion;
+			//$model->attributes=$_POST['Publicacion'];
+                        $model->titulo= $_POST['titulo'];
+                        $model->contenido= $_POST['contenido'];
+                        $model->USUARIO_id=$_POST['USUARIO_id'];
                         $model->fecha= date("Y-m-d H:i:s");
-                        
-                        $images= CUploadedFile::getInstancesByName('files');
+                        $images= null;
+                        //$images= CUploadedFile::getInstancesByName('files');
                         
                         if(isset($images) && count($images) > 0){
                             $i= 1;
@@ -130,27 +137,37 @@ class PublicacionController extends Controller
                             }
                     
                         }
+                        
 			if($model->save()){
-                            $arrTags= split('[;]',$_POST['Publicacion']['tags']);
-                            foreach($arrTags as $tag){
-                                $newTag= new Etiqueta;
-                                $newTag->nombre= $tag;
-                                if($newTag->save()){
-                                    $trend= new Trending;
-                                    $trend->ETIQUETA_nombre= $newTag->nombre;
-                                    $trend->PUBLICACION_id= $model->id;
-                                    $trend->save();
+                            if(isset($_POST['tags'])){
+                                $arrTags= split('[;]',$_POST['tags']);
+                                foreach($arrTags as $tag){
+                                    $newTag= new Etiqueta;
+                                    $newTag->nombre= $tag;
+                                    $criteria= new CDbCriteria();
+                                    $criteria->condition= 'nombre=:nombre';
+                                    $criteria->params= array(':nombre'=>$tag);
+                                    
+                                    if(Etiqueta::model()->exists($criteria)){
+                                        $trend= new Trending;
+                                        $trend->ETIQUETA_nombre= $tag;
+                                        $trend->PUBLICACION_id= $model->id;
+                                        $trend->save();
+                                    }else{
+                                        if($newTag->save()){
+                                            $trend= new Trending;
+                                            $trend->ETIQUETA_nombre= $newTag->nombre;
+                                            $trend->PUBLICACION_id= $model->id;
+                                            $trend->save();
+                                        }
+                                    }
                                 }
                             }
-                            $this->redirect(array('view','id'=>$model->id));
+                                
+                            $this->redirect(array('index'));
                         }
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-        
+                }
+        }
         public function actionPublicacionIndex(){
             $Criteria = new CDbCriteria();
             $Criteria->limit = 4;

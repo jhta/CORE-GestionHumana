@@ -19,6 +19,10 @@
 <script>
 $(document).ready(function(){
     $(".editor").popline();
+    $('#publicacion').click(function(){
+        $('#contenidoForm').val($('#contenido').html());
+        alert($('#contenidoForm').val());
+    });
 });
 </script>
 <div class="form">
@@ -48,12 +52,13 @@ $(document).ready(function(){
 	</div>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'contenido'); ?>
+		<?php echo $form->labelEx($model,'contenido'); ?>
 		<?php echo $form->textArea($model,'contenido',
                         array('rows'=>50,
                             'cols'=>50,
                             'class'=>'form-control',
-                            'placeholder'=>'Escribe aqui tu contenido'
+                            'placeholder'=>'Escribe aqui tu contenido',
+                            'id'=>'contenidoForm',
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
@@ -74,15 +79,16 @@ $(document).ready(function(){
                             'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
                             
                             )); ?>
-		<?php echo $form->error($model,'USUARIO_id'); ?>
+		<?php echo $form->error($model,'tags'); ?>
 	</div>
     
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
                     'class'=>'btn',
+                    'id'=>'publicacion',
                 ) ); ?>
 	</div>
-    <div class='editor' contenteditable='true'>
+    <div class='editor' contenteditable='true' id="contenido">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
