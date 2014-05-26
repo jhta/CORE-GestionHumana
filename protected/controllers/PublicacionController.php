@@ -144,11 +144,22 @@ class PublicacionController extends Controller
                                 foreach($arrTags as $tag){
                                     $newTag= new Etiqueta;
                                     $newTag->nombre= $tag;
-                                    if($newTag->save()){
+                                    $criteria= new CDbCriteria();
+                                    $criteria->condition= 'nombre=:nombre';
+                                    $criteria->params= array(':nombre'=>$tag);
+                                    
+                                    if(Etiqueta::model()->exists($criteria)){
                                         $trend= new Trending;
-                                        $trend->ETIQUETA_nombre= $newTag->nombre;
+                                        $trend->ETIQUETA_nombre= $tag;
                                         $trend->PUBLICACION_id= $model->id;
                                         $trend->save();
+                                    }else{
+                                        if($newTag->save()){
+                                            $trend= new Trending;
+                                            $trend->ETIQUETA_nombre= $newTag->nombre;
+                                            $trend->PUBLICACION_id= $model->id;
+                                            $trend->save();
+                                        }
                                     }
                                 }
                             }
