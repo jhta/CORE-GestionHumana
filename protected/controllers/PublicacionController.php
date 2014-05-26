@@ -73,8 +73,7 @@ class PublicacionController extends Controller
 			echo CActiveForm::validate($comment);
 			Yii::app()->end();
 		}
-		if(isset($_POST['Comentario']))
-		{
+		if(isset($_POST['Comentario'])){
 			$comment->attributes= $_POST['Comentario'];
                         $comment->fecha= date("Y-m-d H:i:s");
 			if($post->addComment($comment)){
@@ -89,14 +88,18 @@ class PublicacionController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
+	public function actionCreate(){
 		$model=new Publicacion;
                 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-               
-		if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id']))
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+        
+        public function actionCrear(){
+            if(isset($_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id']))
 		{
 			//$model->attributes=$_POST['Publicacion'];
                         
@@ -150,12 +153,7 @@ class PublicacionController extends Controller
                             $this->redirect(array('view','id'=>$model->id));
                         }else{echo'holi2';}
                 }else{echo 'holi';}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-        
+        }
         public function actionPublicacionIndex(){
             $Criteria = new CDbCriteria();
             $Criteria->limit = 4;

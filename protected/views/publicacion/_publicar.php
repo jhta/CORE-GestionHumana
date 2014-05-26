@@ -19,6 +19,7 @@
 <script>
 $(document).ready(function(){
     $(".editor").popline();
+    
     $('#publicacion').click(function(){
         $('#contenidoForm').val($('#contenido').html());
         var titulo= $('#titulo').val();
@@ -26,7 +27,7 @@ $(document).ready(function(){
         var USUARIO_id= $('#USUARIO_id').val();
         var tags= $('#tags').val();
         var data= $('#publicacion-form').serialize();
-        alert(contenido);
+        
         var ajax_data = {
                 "titulo":titulo,
                 "contenido": contenido,
@@ -34,15 +35,13 @@ $(document).ready(function(){
                 "tags":tags,
                 "data":data
             };
-            $.ajax({  
-                async:true,    
-                cache:false,   
-                url: <?php echo "'".CController::createUrl('publicacion/create')."'"; ?>,
-                data: ajax_data,
-                type: "post",
-            }).done(function(resul){
-                alert(resul);
-            });
+        $.ajax({  
+            async:true,    
+            cache:false,   
+            url: <?php echo "'".CController::createUrl('publicacion/crear')."'"; ?>,
+            data: ajax_data,
+            type: "post",
+        });
     });
 });
 </script>
