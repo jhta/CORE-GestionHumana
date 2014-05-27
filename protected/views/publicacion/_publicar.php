@@ -39,6 +39,8 @@ $(document).ready(function(){
             url: <?php echo "'".CController::createUrl('publicacion/Crear')."'"; ?>,
             data: ajax_data,
             type: "post",
+        }).done(function(){
+            window.location.href = "<?php echo Yii::app()->createAbsoluteUrl('site/admin')?>";
         });
     });
 });

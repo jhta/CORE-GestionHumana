@@ -191,6 +191,7 @@ class SiteController extends Controller
             $Criteria->limit=15;
             $UComentarios= Comentario::model()->findAll($Criteria);
             $modelU= Usuario::model()->findByPk(Yii::app()->user->id);
+            
             $this->layout='//layouts/column3';
             $this->render('admin',
                     array(
