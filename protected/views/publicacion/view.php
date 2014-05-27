@@ -40,7 +40,7 @@
 <!-- main -->
 <div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
     <div class="padding">
-        <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn pull-left'));?>
+        <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));?>
         <div class="full col-sm-9 text-center container-fluid">
 
             <!-- content -->

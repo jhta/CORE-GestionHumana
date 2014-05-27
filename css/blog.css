@@ -212,3 +212,11 @@ body{
    font-size: 11px;
    text-decoration:none;
 }
+
+.btn-primary{
+	background:#223A52 !important;
+	color: white !important;
+   
+        border: white;
+        font-size: 15px;
+}

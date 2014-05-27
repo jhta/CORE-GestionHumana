@@ -35,7 +35,7 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12" id="featured">
-                <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn'));?>
+                <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn btn-primary'));?>
                 <div class="page-header text-muted">
                     Publicaciones con etiqueta <?php echo $tagName;?>
                 </div> 
