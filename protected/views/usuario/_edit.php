@@ -10,8 +10,8 @@
 
             
 $("#btn-send").click(function(){
-    alert("sisas");
-//var data=$("#edit_person-form").serialize();
+    
+var data=$("#edit_person-form").serialize();
 
 
 // $.ajax({
@@ -24,7 +24,6 @@ $("#btn-send").click(function(){
 // alert(result);
 //alert("nada");
 //       }); 
-       alert("nada de ajax");
 
 });
 });
@@ -33,7 +32,7 @@ $("#btn-send").click(function(){
         
        
         <?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'edit_person-form',
+    'id'=>'edit_person',
     'enableAjaxValidation'=>false,
         'htmlOptions'=>array(
                                'onsubmit'=>"return false;",/* Disable normal form submit */
