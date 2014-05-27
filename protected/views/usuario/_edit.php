@@ -5,44 +5,141 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
       </div>
-        <form  action="" method="post">
+        <script type="text/javascript">
+//            function send(){
+//               var data=$("#edit_person-form").serialize();
+// 
+// 
+//                $.ajax({
+//                 type: 'POST',
+//                  url: ' <?php //echo "'" . CController::createUrl('usuario/update') . "'"; ?>',
+//                 data:data,
+////              success:function(data){
+////                              alert(data); 
+////                            },
+////                 error: function(data) { // if error occured
+////                       alert("Lo sentimos, se h presentado un error :'(");
+////                       
+////                  },
+//
+//                dataType:'html'
+//                }).done(function(result) {
+//             alert(result);
+//            
+//        }); 
+//            }
+        </script>
+        
+        
+       
+        <?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'edit_person-form',
+    'enableAjaxValidation'=>false,
+        'htmlOptions'=>array(
+//                               'onsubmit'=>"return false;",/* Disable normal form submit */
+//                               'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
+                             ),
+)); ?>
       <div class="modal-body col-xs-10 col-xs-offset-1">
 												
             <div class="row">
             <h4 class="text-center" > Nombre</h4>
-            <input size="30" maxlength="30" class="form-control " edit-publicacioneseholder="nombre" required="required" name="Comentario[nombre]" id="Comentario_nombre" value="<?php echo Yii::app()->user->nombre; ?>" type="text" placeholder="Titulo texto">			
+            <?php echo $form->textField($modelU,'nombre',
+                    array(
+                        'size'=>50,
+                        'maxlength'=>50,
+                        'class'=>'form-control',
+                        'required'=>'requiered',
+                        'type'=>'text',
+                        'value'=> Yii::app()->user->nombre,
+                        'placeholder'=>'Nombre'
+                        
+                        )
+                ); ?>
+		<?php echo $form->error($modelU,'nombre'); ?>			
             </div>
 
-            <div class="row">
+          <div class="row">
             <h4 class="text-center" > Titulo</h4>
-            <input size="30" maxlength="30" class="form-control " edit-publicacioneseholder="nombre" required="required" value="<?php echo $modelU->titulo;?>" type="text" placeholder="Titulo texto">			
+            <?php echo $form->textField($modelU,'titulo',
+                    array(
+                        'size'=>50,
+                        'maxlength'=>50,
+                        'class'=>'form-control',
+                        'required'=>'requiered',
+                        'type'=>'text',
+                        'value'=> Yii::app()->user->titulo,
+                        'placeholder'=>'Titulo'
+                        
+                        )
+                ); ?>
+		<?php echo $form->error($modelU,'titulo'); ?>			
             </div>
-
+          
+          <div class="row">
+            <h4 class="text-center" > Correo</h4>
+            <?php echo $form->textField($modelU,'correo',
+                    array(
+                        'size'=>70,
+                        'maxlength'=>70,
+                        'class'=>'form-control',
+                        'required'=>'requiered',
+                        'type'=>'email',
+                        'value'=> Yii::app()->user->correo,
+                        'placeholder'=>'Correo'
+                        
+                        )
+                ); ?>
+		<?php echo $form->error($modelU,'correo'); ?>			
+            </div>
+          
+          <div class="row">
+            <h4 class="text-center" > Correo</h4>
+            <?php echo $form->textArea($modelU,'descripcion',
+                    array(
+                        'rows'=>6,
+                        'cols'=>50,
+                        'class'=>'form-control',
+                        'required'=>'requiered',
+                        'type'=>'text',
+                        'value'=> Yii::app()->user->correo,
+                        'placeholder'=>'Contenido'
+                        
+                        )
+                ); ?>
+		<?php echo $form->error($modelU,'descripcion'); ?>			
+            </div>
+          
             <div class="row">
-            <h4 class="text-center" > Correo:</h4>
-            <input size="30" maxlength="30" class="form-control " type="email" edit-publicacioneseholder="nombre" required="required" value="<?php echo $modelU->correo;?>" type="text" placeholder="Titulo texto">			
+            <h4 class="text-center" > Contraseña</h4>
+		<?php echo $form->textField($model,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
+		<?php echo $form->error($model,'contrasena'); ?>
             </div>
+          
 
-
-            <div class="row">
-                    <h4 class="text-center" > Descripción</h4>
-                    <textarea rows="6" cols="50" class="form-control " placeholder="Escribe aqui tu comentario" value="holi2" required="required" name="Comentario[comentario]" placeholder="cuerpoTexto" ><?php echo $modelU->descripcion;?>
-                    </textarea>			
-            </div>
-            <div class="row" style="margin-top:10px;">
-<!--                    <span>Foto: </span>
-                    <span class="glyphicon glyphicon-camera ico-camara " ><input type="file" id="myfile" name="myfile"></span>-->
+<div class="row">
+            <?php echo $form->fileField($model,'foto'); ?>
+            <?php echo $form->error($model,'foto'); ?>
+        </div>
+<!--            <div class="row" style="margin-top:10px;">
+                    <span>Foto: </span>
+                    <span class="glyphicon glyphicon-camera ico-camara " ><input type="file" id="myfile" name="myfile"></span>
+                 
                 <input type="file" class="filestyle" data-iconName="glyphicon-camera">
 
-            </div>
+            </div>-->
 
 			      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary btn-edit">Guardar Cambios</button>
+        <!--<button type="button" class="btn btn-primary btn-edit">Guardar Cambios</button>-->
+         <?php echo CHtml::Button('Guardar Cambios',array(
+            
+             'class'=>'btn btn-primary btn-edit',
+             )); ?> 
       </div>
-      </form>  
+       
     </div>
   </div>
 </div>
