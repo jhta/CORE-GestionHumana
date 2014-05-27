@@ -199,7 +199,50 @@ class SiteController extends Controller
                 ));
 	}
 
+        /*
+         * Changes the general information of the index
+         * 
+         */
+        public function actionCambiarGeneral(){
+            $model= new Informacion;
+            if(isset($_POST['titulo'])){
+                $model= Informacion::model()->findByPk(1);
+                
+                $model->titulo= $_POST['titulo'];
+                
+            }
+            
+            if(isset($_POST['descripcion'])){
+                $model= Informacion::model()->findByPk(1);
+                
+                $model->descripcion= $_POST['descripcion'];
+            }
+            
+            if($model->save()) echo 'Información General modificada';
+        }
         
+        /*
+         * Changes the mision of the company in the index page
+         * 
+         */
+        public function actionCambiarMision(){
+            if(isset($_POST['mision'])){
+                $model= Informacion::model()->findByPk(1);
+                
+                
+            }
+        }
+        /*
+         * Changes the mision of the company in the index page
+         * 
+         */
+        public function actionCambiarVision(){
+            if(isset($_POST['vision'])){
+                $model= Informacion::model()->findByPk(1);
+                
+                
+            }
+        }
         
 	/**
 	 * Displays the login page
