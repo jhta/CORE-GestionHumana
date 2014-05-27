@@ -110,17 +110,11 @@
 		<?php echo $form->error($modelU,'descripcion'); ?>			
             </div>
           
-            <div class="row">
-            <h4 class="text-center" > Contraseña</h4>
-		<?php echo $form->textField($modelU,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
-		<?php echo $form->error($modelU,'contrasena'); ?>
-            </div>
-          
 
 <div class="row">
-            <h4 class="text-center" > Contraseña</h4>
-            <?php// echo $form->fileField($model,'foto'); ?>
-            <?php //echo $form->error($model,'foto'); ?>
+            <h4 class="text-center" > Foto</h4>
+            <?php echo $form->fileField($modelU,'foto'); ?>
+            <?php echo $form->error($modelU,'foto'); ?>
         </div>
 <!--            <div class="row" style="margin-top:10px;">
                     <span>Foto: </span>
