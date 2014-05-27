@@ -1,8 +1,8 @@
 <!-- Modal Para editar perfil-->
-<?php //$this->renderPartial('//usuario/_edit', array(
-     //'modelU' => $modelU,
-       // 'id'=> $modelU->id,
-    //));?>
+<?php $this->renderPartial('//usuario/_edit', array(
+     'modelU' => $modelU,
+       'id'=> $modelU->id,
+    ));?>
 
 <!-- Informacion de perfil en columna de la izquierda-->
 <?php $this->renderPartial('//usuario/_viewAdmin', array(
@@ -36,7 +36,7 @@ $(document).ready(function(){
                 <div class="navbar-right ">
                         <div class="pull-right">
                                 <a href="<?php echo Yii::app()->request->baseUrl; ?>">INDEX</a>
-                                <a href="#">SALIR</a>
+                                <a href="<?php echo Yii::app()->createAbsoluteUrl('site/logout'); ?>">SALIR</a>
 
                         </div>
                 </div>
