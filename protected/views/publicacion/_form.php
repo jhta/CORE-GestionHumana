@@ -20,7 +20,7 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#tags').val("<?php echo implode(';',$model->TagList)?>");
-    $('#conetnido').html('<?php echo $conetindo ?>');
+    $('#contenido').html($('#contenidoForm').val());
     
     
 });
