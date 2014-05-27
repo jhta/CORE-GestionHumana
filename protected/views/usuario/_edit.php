@@ -112,8 +112,8 @@
           
             <div class="row">
             <h4 class="text-center" > Contraseña</h4>
-		<?php echo $form->textField($model,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
-		<?php echo $form->error($model,'contrasena'); ?>
+		<?php echo $form->textField($modelU,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
+		<?php echo $form->error($modelU,'contrasena'); ?>
             </div>
           
 
