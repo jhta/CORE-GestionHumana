@@ -1,7 +1,7 @@
 <!-- Modal Para editar perfil-->
-<?php $this->renderPartial('//usuario/_edit'/*, array(
-     'model' => $model,
-    )*/);?>
+<?php $this->renderPartial('//usuario/_edit', array(
+     'modelU' => $modelU,
+    ));?>
 
 <!-- Informacion de perfil en columna de la izquierda-->
 <?php $this->renderPartial('//usuario/_viewAdmin', array(
