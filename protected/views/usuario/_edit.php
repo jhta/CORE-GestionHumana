@@ -11,7 +11,7 @@
             
 $("#btn-send").click(function(){
     alert("sisas");
-var data=$("#edit_person-form").serialize();
+//var data=$("#edit_person-form").serialize();
 
 
 // $.ajax({
