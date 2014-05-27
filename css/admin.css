@@ -178,3 +178,7 @@ label.filebutton {
     width: 130px !important;
     height: 130px !important;
 }
+
+.btn-edit{
+    display: block !important;
+}
