@@ -6,39 +6,40 @@
         <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
       </div>
         <script type="text/javascript">
-//            function send(){
-//               var data=$("#edit_person-form").serialize();
-// 
-// 
-//                $.ajax({
-//                 type: 'POST',
-//                  url: ' <?php //echo "'" . CController::createUrl('usuario/update') . "'"; ?>',
-//                 data:data,
-////              success:function(data){
-////                              alert(data); 
-////                            },
-////                 error: function(data) { // if error occured
-////                       alert("Lo sentimos, se h presentado un error :'(");
-////                       
-////                  },
-//
-//                dataType:'html'
-//                }).done(function(result) {
-//             alert(result);
-//            
-//        }); 
-//            }
+//    $(document).ready(function(){        
+
+            
+//$("#btn-send").click(function(){
+//  alert("holi");  
+//var data=$("#edit_person").serialize();
+
+
+// $.ajax({
+//      async: true,
+//cache: false,
+//  type: 'post',
+//   url: ' <?php //echo "'" . CController::createUrl('usuario/update',array('id'=>$ModelU)) . "'"; ?>',
+//  data:data,
+// }).done(function(result) {
+// alert(result);
+//alert("nada");
+//       }); 
+
+});
+});
         </script>
         
         
        
         <?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'edit_person-form',
+    'id'=>'edit_person',
     'enableAjaxValidation'=>false,
         'htmlOptions'=>array(
+                                'enctype' => 'multipart/form-data',
 //                               'onsubmit'=>"return false;",/* Disable normal form submit */
-//                               'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
+                               'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
                              ),
+            
 )); ?>
       <div class="modal-body col-xs-10 col-xs-offset-1">
 												
@@ -110,16 +111,11 @@
 		<?php echo $form->error($modelU,'descripcion'); ?>			
             </div>
           
-            <div class="row">
-            <h4 class="text-center" > Contraseña</h4>
-		<?php echo $form->textField($model,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
-		<?php echo $form->error($model,'contrasena'); ?>
-            </div>
-          
 
 <div class="row">
-            <?php echo $form->fileField($model,'foto'); ?>
-            <?php echo $form->error($model,'foto'); ?>
+            <h4 class="text-center" > Foto</h4>
+            <?php echo $form->fileField($modelU,'foto'); ?>
+            <?php echo $form->error($modelU,'foto'); ?>
         </div>
 <!--            <div class="row" style="margin-top:10px;">
                     <span>Foto: </span>
@@ -135,10 +131,11 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <!--<button type="button" class="btn btn-primary btn-edit">Guardar Cambios</button>-->
          <?php echo CHtml::Button('Guardar Cambios',array(
-            
+            'id'=>'btn-send',
              'class'=>'btn btn-primary btn-edit',
              )); ?> 
       </div>
+        <?php $this->endWidget(); ?>
        
     </div>
   </div>

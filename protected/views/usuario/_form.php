@@ -4,6 +4,14 @@
 /* @var $form CActiveForm */
 ?>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
+      </div>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -60,11 +68,16 @@
             <?php echo $form->fileField($model,'foto'); ?>
             <?php echo $form->error($model,'foto'); ?>
         </div>
+              <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
-
+        </div>
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+    </div>
+  </div>
+</div>

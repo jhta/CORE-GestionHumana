@@ -32,7 +32,7 @@ class UsuarioController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete'),
+				'actions'=>array('create','update','delete','update2','admin'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -124,7 +124,7 @@ class UsuarioController extends Controller
                     $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
                     $model->sesion= $session;
                     $model->nombre_foto= $Nombre_foto;
-                    $model->formato_foto= $Extension_foto;
+                    $model->formato_foto= $Extension_foto;  
 
                     if($model->save()){
                         if(isset($model->foto)) 
@@ -140,8 +140,8 @@ class UsuarioController extends Controller
 		
 	}
         
-//        public function actionUpdate2()
-//	{
+        public function actionUpdate2()
+	{   echo "hola";
 //		//$model=$this->loadModel($id);
 //
 //		// Uncomment the following line if AJAX validation is needed
@@ -177,7 +177,7 @@ class UsuarioController extends Controller
 //                
 //
 //		
-//	}
+	}
         
         
 
