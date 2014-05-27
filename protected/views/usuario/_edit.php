@@ -10,8 +10,8 @@
 
             
 $("#btn-send").click(function(){
-    
-var data=$("#edit_person").serialize();
+  alert("holi");  
+//var data=$("#edit_person").serialize();
 
 
 // $.ajax({
