@@ -68,7 +68,7 @@
                         'class'=>'form-control',
                         'required'=>'requiered',
                         'type'=>'text',
-                        'value'=> Yii::app()->user->titulo,
+                        'value'=> $modelU->titulo,
                         'placeholder'=>'Titulo'
                         
                         )
@@ -85,7 +85,7 @@
                         'class'=>'form-control',
                         'required'=>'requiered',
                         'type'=>'email',
-                        'value'=> Yii::app()->user->correo,
+                        'value'=> $modelU->correo,
                         'placeholder'=>'Correo'
                         
                         )
@@ -94,7 +94,7 @@
             </div>
           
           <div class="row">
-            <h4 class="text-center" > Correo</h4>
+            <h4 class="text-center" > Descripcion</h4>
             <?php echo $form->textArea($modelU,'descripcion',
                     array(
                         'rows'=>6,
@@ -102,7 +102,7 @@
                         'class'=>'form-control',
                         'required'=>'requiered',
                         'type'=>'text',
-                        'value'=> Yii::app()->user->correo,
+                        'value'=> $modelU->descripcion,
                         'placeholder'=>'Contenido'
                         
                         )
