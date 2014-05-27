@@ -112,7 +112,8 @@ $(document).ready(function(){
                                                                     <textarea rows="6" cols="50" class="form-control input-comentario" placeholder="Escribe aqui la descripción que saldrá en el index" required="required" id="descripcionInfo" name="Comentario[comentario]" placeholder="cuerpoTexto" ></textarea>			</div>
 
                                                             <div class="row buttons">
-                                                                    <input class="btn btn-primary" id="general" style="margin-top:15px;" type="submit" name="yt0" value="Modificar">	</div>
+                                                                <a class="btn btn-primary" id="general" style="margin-top:15px;">Modificar</a> 
+                                                            </div>
 
                                                     </form>
                                             </div>
