@@ -82,17 +82,14 @@ class SiteController extends Controller
 			// validate user input and redirect to the previous page if valid
                         
 			if($modelL->validate() && $modelL->login()){
-                            $this->redirect(Yii::app()->user->returnUrl);
+                            $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                             
                             
                         }else{
                             echo "<script type='text/javascript'>alert('no valida');</script>";
                         }
 				
-		}else{
-                    //echo "<script type='text/javascript'>alert('no lo recibe');</script>";
-                            
-                }
+		}
 		// display the login form
 		//$this->render('login',array('model'=>$model));
                 
