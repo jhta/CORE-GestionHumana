@@ -29,13 +29,37 @@ $(document).ready(function() {
                 <li><a href="#contact">Contactanos</a></li>
                 <li><?php echo CHtml::link('Blog', array('publicacion/index'),array('class'=>'External','id'=>'Blog','target'=>'_blank')); ?></li>
                 <li><?php 
-                    if(!Yii::app()->user->isGuest) {
-                        echo CHtml::link('logout', array('site/logout'),array('class'=>'External','id'=>'logout'));
-                    }else{
-                        echo CHtml::link('login', "#content-login",array('class'=>'External','id'=>'login'));
-                    }   
+                    //if(!Yii::app()->user->isGuest) {
+                    //    echo CHtml::link('logout', array('site/logout'),array('class'=>'External','id'=>'logout'));
+                    //}else{
+                    //    echo CHtml::link('login', "#content-login",array('class'=>'External','id'=>'login'));
+                    //}   
                     
-                ?></li>
+                
+                ?>
+                <div class="dropdown">
+  <button class="btn dropdown-toggle sr-only" type="button"
+          id="dropdownMenu1" data-toggle="dropdown">
+    Menú desplegable
+    <span class="caret"></span>
+  </button>
+ 
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Acción</a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
+    </li>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
+    </li>
+    <li role="presentation" class="divider"></li>
+    <li role="presentation">
+      <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
+    </li>
+  </ul>
+</div></li>
                 <!--<li><a id="login" href="#content-loginclass="external">login</a></li>-->
             </ul>
         </nav>
