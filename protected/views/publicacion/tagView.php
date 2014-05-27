@@ -5,6 +5,7 @@
     background: transparent;
     color: white;
 ">CORE</a>
+    <?php echo CHtml::link('Atrás',array('publicacion/index'),array('class'=>'btn'));?>
     <legend style="color: white;">Publicaciones con etiqueta <?php echo $tagName;?></legend>
     <ul class="nav">
         
