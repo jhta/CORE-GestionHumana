@@ -8,7 +8,7 @@
         <script type="text/javascript">
             function send(){
                var data=$("#edit_person-form").serialize();
- 
+               alert("hola");
  
                 $.ajax({
                  type: 'POST',
