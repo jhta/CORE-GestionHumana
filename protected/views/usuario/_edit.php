@@ -112,14 +112,15 @@
           
             <div class="row">
             <h4 class="text-center" > Contraseña</h4>
-		<?php //echo $form->textField($model,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
-		<?php //echo $form->error($model,'contrasena'); ?>
+		<?php echo $form->textField($model,'contrasena',array('size'=>30,'maxlength'=>150,'class'=>'form-control', 'type'=>'password')); ?>
+		<?php echo $form->error($model,'contrasena'); ?>
             </div>
           
 
 <div class="row">
-            <?php //echo $form->fileField($model,'foto'); ?>
-            <?php //echo $form->error($model,'foto'); ?>
+            <h4 class="text-center" > Contraseña</h4>
+            <?php echo $form->fileField($model,'foto'); ?>
+            <?php echo $form->error($model,'foto'); ?>
         </div>
 <!--            <div class="row" style="margin-top:10px;">
                     <span>Foto: </span>
