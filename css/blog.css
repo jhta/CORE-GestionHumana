@@ -212,3 +212,13 @@ body{
    font-size: 11px;
    text-decoration:none;
 }
+
+.btn-primary{
+	background:#223A52 !important;
+	color: white !important;
+        display: block;
+        margin: auto;
+       
+        border: white;
+        font-size: 15px;
+}
