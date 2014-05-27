@@ -30,8 +30,9 @@
                     </textarea>			
             </div>
             <div class="row" style="margin-top:10px;">
-                    <span>Foto: </span>
-                    <span class="glyphicon glyphicon-camera ico-camara " ><input type="file" id="myfile" name="myfile"></span>
+<!--                    <span>Foto: </span>
+                    <span class="glyphicon glyphicon-camera ico-camara " ><input type="file" id="myfile" name="myfile"></span>-->
+                <input type="file" class="filestyle" data-iconName="glyphicon-camera">
 
             </div>
 

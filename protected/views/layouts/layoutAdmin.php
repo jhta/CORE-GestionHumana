@@ -24,6 +24,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+<script src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"></script>
+
 <title>CORE | Gestión Humana</title>
 <!--main admin-->
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" rel='stylesheet' type='text/css'>
