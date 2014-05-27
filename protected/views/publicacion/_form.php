@@ -78,15 +78,15 @@ $(document).ready(function(){
                             )); ?>
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
-    
+        <div class='editor' contenteditable='true' id="contenido">
+        
+        </div>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Editar', array(
                     'class'=>'btn',
                     'id'=>'publicacion',
                 ) ); ?>
 	</div>
-    <div class='editor' contenteditable='true' id="contenido">
-        
-    </div>
+    
 <?php $this->endWidget(); ?>
 </div><!-- form -->
