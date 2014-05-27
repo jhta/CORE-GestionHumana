@@ -13,10 +13,24 @@
             <h3 class="nombre"><?php echo Yii::app()->user->nombre; ?></h3>
             <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
         </div>
-    <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
+    <!--<div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
   <span class="glyphicon glyphicon-edit"> </span> 
   <span> Editar</span>
-</div>
+</div>-->
+    
+    <?php echo CHtml::link('Editar',array('update2',
+                                     
+                                     'id'=> $modelU->id,
+                                     ),
+            array(
+                'class'=>'btn btn-primary ',
+                'id'=>'btn-perfil',
+                'data-toggle'=>'modal',
+                'data-target'=>'#myModal',
+                
+            )
+            ); ?>
+
     
     <!--<div class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</div>-->
 </div>
