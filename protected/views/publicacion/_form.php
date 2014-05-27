@@ -42,6 +42,8 @@ $(document).ready(function(){
             url: <?php echo "'".CController::createUrl('publicacion/Actualizar')."'"; ?>,
             data: ajax_data,
             type: "post",
+        }).done(function(){
+            window.location.href = 'http://www.google.com';
         });
     });
     
