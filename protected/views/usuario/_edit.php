@@ -36,7 +36,7 @@
     'enableAjaxValidation'=>false,
         'htmlOptions'=>array(
                                 'enctype' => 'multipart/form-data',
-//                               'onsubmit'=>"return false;",/* Disable normal form submit */
+                               //'onsubmit'=>"return false;",/* Disable normal form submit */
                                'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
                              ),
             
@@ -130,10 +130,11 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <!--<button type="button" class="btn btn-primary btn-edit">Guardar Cambios</button>-->
-         <?php echo CHtml::Button('Guardar Cambios',array(
+         <?php  echo CHtml::Button('Guardar Cambios',array(
             'id'=>'btn-send',
              'class'=>'btn btn-primary btn-edit',
-             )); ?> 
+             )); ?>
+        <?php //echo CHtml::link('LinkText',array('usuario/update'),array('class'=>'btn_registro')); ?>
       </div>
         <?php $this->endWidget(); ?>
        
