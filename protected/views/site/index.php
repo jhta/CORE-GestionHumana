@@ -24,7 +24,15 @@ $(document).ready(function() {
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
                 <li><?php echo CHtml::link('Blog', array('publicacion/index'),array('class'=>'External','id'=>'Blog','target'=>'_blank')); ?></li>
-                <li><a id="login" href="#content-login" class="external">login</a></li>
+                <?php 
+                    if(Yii::app()->user->isGuest) {
+                        echo CHtml::link('logout', array('site/logout'),array('class'=>'External','id'=>'logout'));
+                    }else{
+                        echo CHtml::link('login', "#content-login",array('class'=>'External','id'=>'login'));
+                    }
+                    
+                ?>
+                <li><a id="login" href="#content-loginclass="external">login</a></li>
             </ul>
         </nav>
         

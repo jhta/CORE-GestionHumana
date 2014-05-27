@@ -1,4 +1,3 @@
-<div id="datosMierda"></div>
 <div class="col-xs-3" id="slide-left">
         <div id="edit-perfil">
                 <div class="imagen">
