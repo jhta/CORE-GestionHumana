@@ -30,13 +30,9 @@ class SiteController extends Controller
 				'actions'=>array('index','error','login','logout'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('admin'),
+			array('allow', 
+				'actions'=>array('Admin'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array(),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
