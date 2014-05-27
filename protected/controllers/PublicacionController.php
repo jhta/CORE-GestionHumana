@@ -164,7 +164,7 @@ class PublicacionController extends Controller
                                 }
                             }
                                 
-                            $this->redirect(array('index'));
+                            $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                         }
                 }
         }
@@ -232,7 +232,7 @@ class PublicacionController extends Controller
                             }
                         }
                     }
-                    $this->redirect(array('site/admin'));
+                    $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                 }
             }
         }
