@@ -6,31 +6,35 @@
         <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
       </div>
         <script type="text/javascript">
-            function send(){
-               var data=$("#edit_person-form").serialize();
-               alert("hola");
- 
-                $.ajax({
-                 type: 'POST',
-                  url: ' <?php echo "'" . CController::createUrl('usuario/update2') . "'"; ?>',
-                 data:data,
-//              success:function(data){
-//                              alert(data); 
-//                            },
-//                 error: function(data) { // if error occured
-//                       alert("Lo sentimos, se h presentado un error :'(");
-//                       
-//                  },
-
-                dataType:'html'
-                }).done(function(result) {
-             alert(result);
-            
-        }); 
-            }
+    $(document).ready(function(){        
+//    function send(){
+//               var data=$("#edit_person-form").serialize();
+//               alert("hola");
+// 
+//                $.ajax({
+//                     async: true,
+//            cache: false,
+//                 type: 'POST',
+//                  url: ' <?php echo "'" . CController::createUrl('usuario/update2') . "'"; ?>',
+//                 data:data,
+////              success:function(data){
+////                              alert(data); 
+////                            },
+////                 error: function(data) { // if error occured
+////                       alert("Lo sentimos, se h presentado un error :'(");
+////                       
+////                  },
+//
+//                dataType:'html'
+//                }).done(function(result) {
+//             alert(result);
+//            
+//        }); 
+//        } 
             
             $("#btn-send").click(function(){
                 alert("sisas");
+            });
             });
         </script>
         
