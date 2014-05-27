@@ -20,7 +20,7 @@
 $(document).ready(function(){
     $(".editor").popline();
     $('#tags').val(<?php echo implode(';',$model->TagList)?>);
-    $('#conetnido').htmtl($('#contenidoForm').val());
+    $('#conetnido').html($('#contenidoForm').val());
     
     
 });
@@ -35,7 +35,7 @@ $(document).ready(function(){
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php //echo $form->labelEx($model,'titulo'); ?>
+		<?php echo $form->labelEx($model,'titulo'); ?>
 		<?php echo $form->textField($model,'titulo',
                         array('size'=>50,
                             'maxlength'=>50,
