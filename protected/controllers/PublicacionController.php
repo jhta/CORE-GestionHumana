@@ -211,6 +211,7 @@ class PublicacionController extends Controller
                 
 		$this->render('update',array(
 			'model'=>$model,
+                        'contenido'=>$model->contenido,
 		));
 	}
 
