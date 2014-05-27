@@ -16,7 +16,7 @@
                 <div class="navbar-right ">
                         <div class="pull-right">
                                 <a href="<?php echo Yii::app()->request->baseUrl; ?>">INDEX</a>
-                                <a href="#">SALIR</a>
+                                <a href="<?php echo Yii::app()->createAbsoluteUrl('site/logout'); ?>">SALIR</a>
 
                         </div>
                 </div>
