@@ -38,7 +38,7 @@ class SiteController extends Controller
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
-                                'deniedCallback' => $this->redirect(Yii::app()->createAbsoluteUrl('/site/index')),
+                                'deniedCallback' => $this->redirect(Yii::app()->createAbsoluteUrl('site/index')),
 			),
 		);
 	}

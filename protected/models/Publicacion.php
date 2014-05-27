@@ -128,6 +128,16 @@ class Publicacion extends CActiveRecord
                     //$links[]=CHtml::link(CHtml::encode($tag->ETIQUETA_nombre), array('modelo/controlador', 'parametro'=>$parametro));
 		return $links;
 	}
+        
+        /**
+	 * @return array a list of links that point to the post list filtered by every tag of this post
+	 */
+	public function getTagList(){
+		$links= array();
+		foreach($this->trendings as $tag)
+                    $links[]= CHtml::encode($tag->ETIQUETA_nombre);
+		return $links;
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

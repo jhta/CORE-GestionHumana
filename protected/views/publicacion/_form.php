@@ -19,10 +19,10 @@
 <script>
 $(document).ready(function(){
     $(".editor").popline();
-    $('#publicacion').click(function(){
-        $('#contenidoForm').val($('#contenido').html());
-        alert($('#contenidoForm').val());
-    });
+    $('#tags').val(<?php echo implode(';',$model->TagList)?>);
+    $('#conetnido').htmtl($('#contenidoForm').val());
+    
+    
 });
 </script>
 <div class="form">
@@ -59,6 +59,7 @@ $(document).ready(function(){
                             'class'=>'form-control',
                             'placeholder'=>'Escribe aqui tu contenido',
                             'id'=>'contenidoForm',
+                            'style'=>'display: none;'
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
@@ -83,34 +84,13 @@ $(document).ready(function(){
 	</div>
     
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Publicar' : 'Editar' , array(
+		<?php echo CHtml::submitButton('Editar', array(
                     'class'=>'btn',
                     'id'=>'publicacion',
                 ) ); ?>
 	</div>
     <div class='editor' contenteditable='true' id="contenido">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        
     </div>
 <?php $this->endWidget(); ?>
-<?php
-  $this->widget('CMultiFileUpload', array(
-     'model'=>$model,
-     'attribute'=>'files',
-     'accept'=>'jpg|gif|png|svg|jpeg',
-     'options'=>array(
-        // 'onFileSelect'=>'function(e, v, m){ alert("onFileSelect - "+v) }',
-        // 'afterFileSelect'=>'function(e, v, m){ alert("afterFileSelect - "+v) }',
-        // 'onFileAppend'=>'function(e, v, m){ alert("onFileAppend - "+v) }',
-        // 'afterFileAppend'=>'function(e, v, m){ alert("afterFileAppend - "+v) }',
-        // 'onFileRemove'=>'function(e, v, m){ alert("onFileRemove - "+v) }',
-        // 'afterFileRemove'=>'function(e, v, m){ alert("afterFileRemove - "+v) }',
-     ),
-     'denied'=>'File is not allowed',
-     'max'=>5, // max 10 files
- 
- 
-  ));
-?>
 </div><!-- form -->
