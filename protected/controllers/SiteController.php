@@ -32,7 +32,7 @@ class SiteController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', 
-				'actions'=>array('Admin'),
+				'actions'=>array('Admin','CambiarGeneral','CambiarMision','CambiarVision'),
 				'users'=>array('@'),
                                 
 			),
