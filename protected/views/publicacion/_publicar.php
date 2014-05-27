@@ -26,6 +26,7 @@ $(document).ready(function(){
         var contenido= $('#contenido').html();
         var USUARIO_id= $('#USUARIO_id').val();
         var tags= $('#tags').val();
+        
         var ajax_data = {
                 "titulo":titulo,
                 "contenido": contenido,

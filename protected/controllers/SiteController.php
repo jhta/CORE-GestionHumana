@@ -23,6 +23,7 @@ class SiteController extends Controller
 		);
 	}
         
+                
         public function accessRules()
 	{
 		return array(
@@ -33,10 +34,11 @@ class SiteController extends Controller
 			array('allow', 
 				'actions'=>array('Admin'),
 				'users'=>array('@'),
-                                'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
+                                
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
+                                'deniedCallback' => $this->redirect(Yii::app()->createAbsoluteUrl('site/index')),
 			),
 		);
 	}
