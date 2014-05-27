@@ -11,7 +11,7 @@
             
 $("#btn-send").click(function(){
     
-var data=$("#edit_person-form").serialize();
+var data=$("#edit_person").serialize();
 
 
 // $.ajax({
