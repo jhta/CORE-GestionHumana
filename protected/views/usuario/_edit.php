@@ -6,11 +6,11 @@
         <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
       </div>
         <script type="text/javascript">
-    $(document).ready(function(){        
+//    $(document).ready(function(){        
 
             
-$("#btn-send").click(function(){
-  alert("holi");  
+//$("#btn-send").click(function(){
+//  alert("holi");  
 //var data=$("#edit_person").serialize();
 
 
@@ -18,7 +18,7 @@ $("#btn-send").click(function(){
 //      async: true,
 //cache: false,
 //  type: 'post',
-//   url: ' <?php //echo "'" . CController::createUrl('usuario/update2') . "'"; ?>',
+//   url: ' <?php //echo "'" . CController::createUrl('usuario/update',array('id'=>$ModelU)) . "'"; ?>',
 //  data:data,
 // }).done(function(result) {
 // alert(result);
@@ -35,9 +35,11 @@ $("#btn-send").click(function(){
     'id'=>'edit_person',
     'enableAjaxValidation'=>false,
         'htmlOptions'=>array(
-                               'onsubmit'=>"return false;",/* Disable normal form submit */
+                                'enctype' => 'multipart/form-data',
+//                               'onsubmit'=>"return false;",/* Disable normal form submit */
                                'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
                              ),
+            
 )); ?>
       <div class="modal-body col-xs-10 col-xs-offset-1">
 												
