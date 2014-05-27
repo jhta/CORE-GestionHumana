@@ -33,6 +33,7 @@ class SiteController extends Controller
 			array('allow', 
 				'actions'=>array('Admin'),
 				'users'=>array('@'),
+                                'deniedCallback' => function() { Yii::app()->controller->redirect(array ('/site/index')); }
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
