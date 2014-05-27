@@ -1,3 +1,4 @@
+<div id="datosMierda"></div>
 <div class="col-xs-3" id="slide-left">
         <div id="edit-perfil">
                 <div class="imagen">
@@ -18,17 +19,19 @@
   <span> Editar</span>
 </div>-->
     
-    <?php echo CHtml::link('Editar',array('update2',
-                                     
-                                     'id'=> $modelU->id,
-                                     ),
+    <?php echo CHtml::ajaxButton('Editar',array(
+        
+             CController::createUrl('usuario/update2'),                          
+            'id'=> $modelU->id,
+            ),
             array(
                 'class'=>'btn btn-primary ',
                 'id'=>'btn-perfil',
                 'data-toggle'=>'modal',
                 'data-target'=>'#myModal',
                 
-            )
+            ),
+            array('update'=>'#datosMierda')
             ); ?>
 
     
