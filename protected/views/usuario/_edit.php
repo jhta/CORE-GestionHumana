@@ -31,8 +31,9 @@ cache: false,
  dataType:'html'
  }).done(function(result) {
  alert(result);
-
+alert("nada");
        }); 
+       alert("nada de ajax");
 
 });
 });
