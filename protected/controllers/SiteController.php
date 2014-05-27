@@ -205,6 +205,7 @@ class SiteController extends Controller
          */
         public function actionCambiarGeneral(){
             $model= new Informacion;
+            echo 'hola pirola';/*
             if(isset($_POST['titulo'])){
                 $model= Informacion::model()->findByPk(1);
                 
@@ -219,6 +220,7 @@ class SiteController extends Controller
             }
             
             if($model->save()) echo 'Información General modificada';
+            */
         }
         
         /*
