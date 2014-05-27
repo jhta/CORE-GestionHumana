@@ -12,6 +12,7 @@
 
 <script>
 $(document).ready(function(){
+    alert('hola');
     $('#general').click(function(){
         var ajax_data={
             "titulo": $('#tituloInfo').val(),
