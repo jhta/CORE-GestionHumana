@@ -139,6 +139,8 @@ class UsuarioController extends Controller
 
 		
 	}
+        
+        
 
 	/**
 	 * Deletes a particular model.
