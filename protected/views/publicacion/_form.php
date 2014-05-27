@@ -22,6 +22,30 @@ $(document).ready(function(){
     $('#tags').val("<?php echo implode(';',$model->TagList)?>");
     $('#contenido').html($('#contenidoForm').val());
     
+    $('#publicacion').click(function(){
+        $('#contenidoForm').val($('#contenido').html());
+        var titulo= $('#titulo').val();
+        var contenido= $('#contenido').html();
+        var USUARIO_id= $('#USUARIO_id').val();
+        var tags= $('#tags').val();
+        
+        var ajax_data = {
+                "id":"<?php echo $model->id; ?>",
+                "titulo":titulo,
+                "contenido": contenido,
+                "USUARIO_id":USUARIO_id,
+                "tags":tags
+            };
+        $.ajax({  
+            async:true,    
+            cache:false,   
+            url: <?php echo "'".CController::createUrl('publicacion/Actualizar')."'"; ?>,
+            data: ajax_data,
+            type: "post",
+        }).done(function(){
+            window.location.href = "<?php echo Yii::app()->createAbsoluteUrl('site/admin')?>";
+        });
+    });
     
 });
 </script>
@@ -59,6 +83,9 @@ $(document).ready(function(){
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
 	</div>
+        <div class='editor' contenteditable='true' id="contenido">
+        
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
@@ -78,14 +105,9 @@ $(document).ready(function(){
                             )); ?>
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
-        <div class='editor' contenteditable='true' id="contenido">
         
-        </div>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Editar', array(
-                    'class'=>'btn',
-                    'id'=>'publicacion',
-                ) ); ?>
+            <div class="btn" id="publicacion">Editar</div>
 	</div>
     
 <?php $this->endWidget(); ?>

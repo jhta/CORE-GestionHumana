@@ -32,7 +32,7 @@ class PublicacionController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','crear'),
+				'actions'=>array('create','update','crear','actualizar'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -164,7 +164,7 @@ class PublicacionController extends Controller
                                 }
                             }
                                 
-                            $this->redirect(array('index'));
+                            $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                         }
                 }
         }
@@ -190,14 +190,39 @@ class PublicacionController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Publicacion']))
-		{
-			$model->attributes=$_POST['Publicacion'];
-                        if($model->save()){
-                            $arrTags= split('[;]',$_POST['Publicacion']['tags']);
-                            foreach($arrTags as $tag){
-                                $newTag= new Etiqueta;
-                                $newTag->nombre= $tag;
+		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+        
+        public function actionActualizar(){
+            if(isset($_POST['id'],$_POST['titulo'],$_POST['contenido'],$_POST['USUARIO_id'])){
+                $model= $this->loadModel($_POST['id']);
+
+                $model->titulo= $_POST['titulo'];
+                $model->contenido= $_POST['contenido'];
+                $model->USUARIO_id=$_POST['USUARIO_id'];
+                if($model->save()){
+                    if(isset($_POST['tags'])){
+                        $arrTags= split('[;]',$_POST['tags']);
+                        foreach($arrTags as $tag){
+                            $newTag= new Etiqueta;
+                            $newTag->nombre= $tag;
+                            $criteria= new CDbCriteria();
+                            $criteria->condition= 'nombre=:nombre';
+                            $criteria->params= array(':nombre'=>$tag);
+
+                            if(Etiqueta::model()->exists($criteria)){
+                                $trend= new Trending;
+                                $trend->ETIQUETA_nombre= $tag;
+                                $trend->PUBLICACION_id= $model->id;
+
+                                $criteria2= new CDbCriteria();
+                                $criteria2->condition= 'ETIQUETA_nombre= :ETIQUETA_nombre AND PUBLICACION_id= :PUBLICACION_id';
+                                $criteria2->params= array(':ETIQUETA_nombre'=>$tag,':PUBLICACION_id'=>$model->id);
+                                if(!Trending::model()->exists($criteria2))
+                                    $trend->save();
+                            }else{
                                 if($newTag->save()){
                                     $trend= new Trending;
                                     $trend->ETIQUETA_nombre= $newTag->nombre;
@@ -205,14 +230,12 @@ class PublicacionController extends Controller
                                     $trend->save();
                                 }
                             }
-                            $this->redirect(array('view','id'=>$model->id));
                         }
-		}
-                
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
+                    }
+                    $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
+                }
+            }
+        }
 
 	/**
 	 * Deletes a particular model.
