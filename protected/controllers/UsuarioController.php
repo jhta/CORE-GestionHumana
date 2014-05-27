@@ -28,7 +28,7 @@ class UsuarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','update'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -124,7 +124,7 @@ class UsuarioController extends Controller
                     $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
                     $model->sesion= $session;
                     $model->nombre_foto= $Nombre_foto;
-                    $model->formato_foto= $Extension_foto;
+                    $model->formato_foto= $Extension_foto;  
 
                     if($model->save()){
                         if(isset($model->foto)) 
