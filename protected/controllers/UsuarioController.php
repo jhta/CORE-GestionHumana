@@ -140,8 +140,8 @@ class UsuarioController extends Controller
 		
 	}
         
-//        public function actionUpdate2()
-//	{
+        public function actionUpdate2()
+	{   echo "hola";
 //		//$model=$this->loadModel($id);
 //
 //		// Uncomment the following line if AJAX validation is needed
@@ -177,7 +177,7 @@ class UsuarioController extends Controller
 //                
 //
 //		
-//	}
+	}
         
         
 

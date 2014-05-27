@@ -6,28 +6,28 @@
         <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
       </div>
         <script type="text/javascript">
-//            function send(){
-//               var data=$("#edit_person-form").serialize();
-// 
-// 
-//                $.ajax({
-//                 type: 'POST',
-//                  url: ' <?php //echo "'" . CController::createUrl('usuario/update') . "'"; ?>',
-//                 data:data,
-////              success:function(data){
-////                              alert(data); 
-////                            },
-////                 error: function(data) { // if error occured
-////                       alert("Lo sentimos, se h presentado un error :'(");
-////                       
-////                  },
-//
-//                dataType:'html'
-//                }).done(function(result) {
-//             alert(result);
-//            
-//        }); 
-//            }
+            function send(){
+               var data=$("#edit_person-form").serialize();
+ 
+ 
+                $.ajax({
+                 type: 'POST',
+                  url: ' <?php echo "'" . CController::createUrl('usuario/update2') . "'"; ?>',
+                 data:data,
+//              success:function(data){
+//                              alert(data); 
+//                            },
+//                 error: function(data) { // if error occured
+//                       alert("Lo sentimos, se h presentado un error :'(");
+//                       
+//                  },
+
+                dataType:'html'
+                }).done(function(result) {
+             alert(result);
+            
+        }); 
+            }
         </script>
         
         
@@ -36,8 +36,8 @@
     'id'=>'edit_person-form',
     'enableAjaxValidation'=>false,
         'htmlOptions'=>array(
-//                               'onsubmit'=>"return false;",/* Disable normal form submit */
-//                               'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
+                               'onsubmit'=>"return false;",/* Disable normal form submit */
+                               'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
                              ),
 )); ?>
       <div class="modal-body col-xs-10 col-xs-offset-1">
