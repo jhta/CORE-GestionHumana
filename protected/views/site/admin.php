@@ -12,7 +12,6 @@
 
 <script>
 $(document).ready(function(){
-    alert('hola');
     $('#general').click(function(){
         var ajax_data={
             "titulo": $('#tituloInfo').val(),
@@ -105,7 +104,7 @@ $(document).ready(function(){
                                                     <form  action="" method="post">
 
                                                             <div class="row">
-                                                            <input size="30" maxlength="70" class="form-control input-comentario" edit-publicacioneseholder="nombre" required="required" name="Comentario[nombre]" id="tituloInfo" type="text" placeholder="Titulo texto">			
+                                                            <input size="30" maxlength="70" class="form-control input-comentario" edit-publicacioneseholder="nombre" name="Comentario[nombre]" id="tituloInfo" type="text" placeholder="Titulo texto">			
                                                             </div>
 
 
@@ -113,7 +112,7 @@ $(document).ready(function(){
                                                                     <textarea rows="6" cols="50" class="form-control input-comentario" placeholder="Escribe aqui la descripción que saldrá en el index" required="required" id="descripcionInfo" name="Comentario[comentario]" placeholder="cuerpoTexto" ></textarea>			</div>
 
                                                             <div class="row buttons">
-                                                                    <input class="btn btn-primary" id="general" style="margin-top:15px;" type="submit" name="yt0" value="Comentar">	</div>
+                                                                    <input class="btn btn-primary" id="general" style="margin-top:15px;" type="submit" name="yt0" value="Modificar">	</div>
 
                                                     </form>
                                             </div>
@@ -132,7 +131,7 @@ $(document).ready(function(){
                                                                                     <textarea rows="6" cols="50" class="form-control input-comentario" placeholder="Escribe aqui la misión de la empresa" required="required" name="Comentario[comentario]" id="misionInfo" ></textarea>			</div>
 
                                                                                 <div class="row buttons">
-                                                                                    <input class="btn btn-primary" id="mision" style="margin-top:15px;" type="submit" name="yt0" value="Comentar">	</div>
+                                                                                    <input class="btn btn-primary" id="mision" style="margin-top:15px;" type="submit" name="yt0" value="Modificar">	</div>
 
                                                                         </form>
                                                                 </div>               
@@ -147,7 +146,7 @@ $(document).ready(function(){
                                                                             <textarea rows="6" cols="50" class="form-control input-comentario" placeholder="Escribe aqui la visión de la empresa" required="required" name="Comentario[comentario]" id="visionInfo"></textarea>			</div>
 
                                                                         <div class="row buttons">
-                                                                                <input class="btn btn-primary" id="vision" style="margin-top:15px;" type="submit" name="yt0" value="Comentar">	</div>
+                                                                                <input class="btn btn-primary" id="vision" style="margin-top:15px;" type="submit" name="yt0" value="Modificar">	</div>
 
                                                                 </form>
                                                         </div>
