@@ -43,7 +43,7 @@ $(document).ready(function(){
             data: ajax_data,
             type: "post",
         }).done(function(){
-            window.location.href = 'http://www.google.com';
+            window.location.href = "<?php echo Yii::app()->createAbsoluteUrl('site/admin')?>";
         });
     });
     
