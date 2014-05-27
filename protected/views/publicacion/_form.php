@@ -39,7 +39,7 @@ $(document).ready(function(){
 		<?php echo $form->textField($model,'titulo',
                         array('size'=>50,
                             'maxlength'=>50,
-                            
+                            'id'=>'titulo',
                             'class'=>'form-control',
                             'placeholder'=>'titulo',
                             
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
-		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación')); ?>
+		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
@@ -71,7 +71,7 @@ $(document).ready(function(){
 		<?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
-                            
+                            'id'=>'tags',
                             'class'=>'form-control',
                             'placeholder'=>'Agrega Etiquetas separadas por punto y coma (;)',
                             
