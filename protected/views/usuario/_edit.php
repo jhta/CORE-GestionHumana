@@ -14,25 +14,16 @@ $("#btn-send").click(function(){
 var data=$("#edit_person-form").serialize();
 
 
- $.ajax({
-      async: true,
-cache: false,
-  type: 'POST',
-   url: ' <?php echo "'" . CController::createUrl('usuario/update2') . "'"; ?>',
-  data:data,
-//              success:function(data){
-//                              alert(data); 
-//                            },
-//                 error: function(data) { // if error occured
-//                       alert("Lo sentimos, se h presentado un error :'(");
-//                       
-//                  },
-
- dataType:'html'
- }).done(function(result) {
- alert(result);
-alert("nada");
-       }); 
+// $.ajax({
+//      async: true,
+//cache: false,
+//  type: 'post',
+//   url: ' <?php //echo "'" . CController::createUrl('usuario/update2') . "'"; ?>',
+//  data:data,
+// }).done(function(result) {
+// alert(result);
+//alert("nada");
+//       }); 
        alert("nada de ajax");
 
 });
