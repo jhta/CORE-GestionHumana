@@ -28,6 +28,8 @@
             
         }); 
             }
+            
+            
         </script>
         
         
@@ -130,7 +132,7 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <!--<button type="button" class="btn btn-primary btn-edit">Guardar Cambios</button>-->
          <?php echo CHtml::Button('Guardar Cambios',array(
-            
+            'id'=>'btn-send',
              'class'=>'btn btn-primary btn-edit',
              )); ?> 
       </div>
