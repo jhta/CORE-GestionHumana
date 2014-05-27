@@ -180,5 +180,5 @@ label.filebutton {
 }
 
 .btn-edit{
-    display: block !important;
+    display: initial !important;
 }
