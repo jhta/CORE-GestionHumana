@@ -5,7 +5,7 @@
     background: transparent;
     color: white;
 ">CORE</a>
-    <?php echo CHtml::link('Atrás',array('publicacion/index'),array('class'=>'btn'));?>
+    
     <legend style="color: white;">Publicaciones con etiqueta <?php echo $tagName;?></legend>
     <ul class="nav">
         
@@ -34,7 +34,8 @@
 
             <!-- content -->
             <!--Titulo para post-->
-            <div class="col-sm-12" id="featured">   
+            <div class="col-sm-12" id="featured">
+                <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn'));?>
                 <div class="page-header text-muted">
                     Publicaciones con etiqueta <?php echo $tagName;?>
                 </div> 
