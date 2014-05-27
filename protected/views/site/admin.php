@@ -105,7 +105,7 @@ $(document).ready(function(){
                                                     <form  action="" method="post">
 
                                                             <div class="row">
-                                                            <input size="30" maxlength="30" class="form-control input-comentario" edit-publicacioneseholder="nombre" required="required" name="Comentario[nombre]" id="tituloInfo" type="text" placeholder="Titulo texto">			
+                                                            <input size="30" maxlength="70" class="form-control input-comentario" edit-publicacioneseholder="nombre" required="required" name="Comentario[nombre]" id="tituloInfo" type="text" placeholder="Titulo texto">			
                                                             </div>
 
 
