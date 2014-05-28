@@ -236,3 +236,10 @@ body{
 #new-publication row,#new-publication  .btn-primary{
     margin-bottom: 20px;
 }
+
+
+#new-publication select{
+    padding: 4px;
+margin: 8px 0;
+border-radius: 5px;
+}
