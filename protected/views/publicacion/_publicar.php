@@ -73,7 +73,6 @@
 
     <div class="row form-group">
 
-        <h4 class="text-center">Contenido</h4>	
         <?php
         echo $form->textArea($model, 'contenido', array('rows' => 50,
             'cols' => 50,
@@ -100,7 +99,7 @@
 <?php echo $form->error($model, 'USUARIO_id'); ?>
     </div>
 
-    <div class="row form-group col-xs-7">
+    <div class="pad-l-0 row form-group col-xs-7">
 
         <?php
         echo $form->textField($model, 'tags', array('size' => 50,
