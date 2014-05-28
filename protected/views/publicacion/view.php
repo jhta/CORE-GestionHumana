@@ -41,6 +41,11 @@
 <div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
     <div class="padding">
         <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));?>
+         <?php
+                    if(!Yii::app()->user->isGuest) {
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    }?>
+                   
         <div class="full col-sm-9 text-center container-fluid">
 
             <!-- content -->
