@@ -36,9 +36,9 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12" id="featured">   
-         nu       <div class="page-header text-muted">
+                <div class="page-header text-muted">
                     Publicaciones
-                    <?php CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    <?php echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     ?>
                     <!--<div class="btn btn-primary pull-right" style="
                         margin: -7px;
