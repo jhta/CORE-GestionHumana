@@ -244,6 +244,7 @@ border-radius: 5px;
 }
 
 #contenido{
+    min-height: 200px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
