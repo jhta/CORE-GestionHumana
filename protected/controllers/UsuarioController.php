@@ -87,7 +87,8 @@ class UsuarioController extends Controller
                     if($model->save()){
                         if(isset($model->foto)) 
                             $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
-                        $this->redirect(array('view','id'=>$model->id));
+                        Yii::app()->user->setFlash('usercreate','Se ha creado el usuario de manera correcta!');
+                        //$this->redirect(array('view','id'=>$model->id));
                     }	
 		}
 

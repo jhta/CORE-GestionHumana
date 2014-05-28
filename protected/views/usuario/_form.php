@@ -11,15 +11,17 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Crear Perfil</h4>
       </div>
-
+<?php if(Yii::app()->user->hasFlash('usercreate')): ?>
+    <div class="flash-success">
+            <?php echo Yii::app()->user->getFlash('usercreate'); ?>
+    </div>
+<?php else:?>
+        
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
+        'action' => array('/usuario/create'),
 	'enableAjaxValidation'=>false,
         'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
@@ -102,9 +104,9 @@
          'class'=>'btn btn-primary btn-edit',
         )); ?>
     </div>
-        </div>
 <?php $this->endWidget(); ?>
-
+</div>
+<?php endif ?>
 </div><!-- form -->
     </div>
   </div>
