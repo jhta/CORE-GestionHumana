@@ -47,10 +47,28 @@ class SiteController extends Controller
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex(){
-            
+            // The next lines calculates the visits to the website 
             $modelI= Informacion::model()->findByPk(1);
             $modelI->total_clicks = $modelI->total_clicks + 1;
             $modelI->save();
+            
+            //Visits per month
+            $estadistica= new Estadistica;
+            
+            $mensual= new CDbCriteria();
+            $mensual->condition= 'year= :year AND month = :month';
+            $mensual->params= array(':year'=>date("Y"),':month'=>date("F"));
+            if(Estadistica::model()->exists($mensual)){
+                $estadistica= Estadistica::model()->find($mensual);
+                $estadistica->visitas= $estadistica->visitas + 1;
+                $estadistica->save();
+            }else{
+                $estadistica->year= date("Y");
+                $estadistica->month= date("F");
+                $estadistica->visitas= 1;
+                $estadistica->save();
+            }
+            
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";

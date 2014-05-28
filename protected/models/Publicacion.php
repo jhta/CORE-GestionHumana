@@ -38,12 +38,12 @@ class Publicacion extends CActiveRecord
 		return array(
                         array('files','file','allowEmpty' => true),
 			array('titulo, contenido, USUARIO_id, fecha', 'required'),
-			array('USUARIO_id', 'numerical', 'integerOnly'=>true),
+			array('USUARIO_id, visitas', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>50),
 			array('contenido', 'length', 'max'=>5000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, titulo, contenido, USUARIO_id, fecha', 'safe', 'on'=>'search'),
+			array('id, titulo, contenido, USUARIO_id, fecha, visitas', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,6 +75,7 @@ class Publicacion extends CActiveRecord
 			'contenido' => 'Contenido',
 			'USUARIO_id' => 'Autor',
 			'fecha' => 'Fecha',
+                        'visitas'=>'Visitas a la publicación',
 		);
 	}
 
@@ -101,6 +102,7 @@ class Publicacion extends CActiveRecord
 		$criteria->compare('contenido',$this->contenido,true);
 		$criteria->compare('USUARIO_id',$this->USUARIO_id);
 		$criteria->compare('fecha',$this->fecha,true);
+                $criteria->compare('visitas',$this->visitas,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
