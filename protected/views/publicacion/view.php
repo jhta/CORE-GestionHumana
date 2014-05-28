@@ -38,16 +38,16 @@
 <!-- /sidebarr -->
 
 <script>//
-//$(document).ready(function(){
-//    $("#delete").click(
-//            $("#myModal2").fadeIn();
-//                );
-//});
+$(document).ready(function(){
+    $("#delete").click(
+            $("#myModal2").fadeIn();
+                );
+});
 //</script>
 <!-- Modal -->
 
 
-<div id="myModal2" class="modal hide fade" style="display: none; ">
+<div id="myModal2" class="modal hide fade" >
             <div class="modal-header">
               <button class="close" data-dismiss="modal">×</button>
               <h3>Modal Heading</h3>
