@@ -197,26 +197,26 @@ class SiteController extends Controller
             // Meter aquí los isset de cada post que sea necesario
             
             
-            if(isset($_POST['Informacion']['descripcion'])){
+            if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
-                $modelI->descripcion= $_POST['Informacion']['descripcion'];
+                if(isset($_POST['Informacion']['descripcion']))
+                    $modelI->descripcion= $_POST['Informacion']['descripcion'];
+
+                if(isset($_POST['Informacion']['titulo']))
+                    $modelI->titulo= $_POST['Informacion']['titulo'];
+                
+                if(isset($_POST['Informacion']['mision']))
+                    $modelI->mision= $_POST['Informacion']['mision'];
+                
+                if(isset($_POST['Informacion']['vision']))
+                    $modelI->vision= $_POST['Informacion']['vision'];
                 
                 if($modelI->save()){
                     Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
                     $this->refresh();     
                 }
-            }
-            
-            if(isset($_POST['Informacion']['titulo'])){
-                $modelI= Informacion::model()->findByPk(1);
-                
-                $modelI->titulo= $_POST['Informacion']['titulo'];
-                
-                if($modelI->save()){
-                    Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
-                    $this->refresh();     
-                }
+                    
             }
             
             $this->render('admin',
