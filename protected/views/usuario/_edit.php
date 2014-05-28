@@ -28,7 +28,7 @@
                         'class'=>'form-control',
                         'required'=>'requiered',
                         'type'=>'text',
-                        'value'=> Yii::app()->user->nombre,
+                        'value'=> $model->nombre,
                         'placeholder'=>'Nombre'
                         
                         )
