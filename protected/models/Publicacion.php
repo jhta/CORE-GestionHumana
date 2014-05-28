@@ -146,7 +146,7 @@ class Publicacion extends CActiveRecord
             include_once 'Html2Text.php';
             $html2text = new Html2Text\Html2Text(mb_substr($this->contenido,0,300));
             $texto= $html2text->get_text();
-            return $text;
+            return $texto;
         }
 	/**
 	 * Returns the static model of the specified AR class.
