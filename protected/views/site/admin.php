@@ -3,7 +3,10 @@
      'modelU' => $modelU,
        'id'=> $modelU->id,
     ));?>
-
+<!-- Modal para crear usuario -->
+<?php $this->renderPartial('//usuario/_form', array(
+     'model' => $model,
+    ));?>
 <!-- Informacion de perfil en columna de la izquierda-->
 <?php $this->renderPartial('//usuario/_viewAdmin', array(
      'modelU' => $modelU,

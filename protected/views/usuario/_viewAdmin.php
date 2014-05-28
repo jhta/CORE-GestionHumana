@@ -14,11 +14,14 @@
             <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
         </div>
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
-  <span class="glyphicon glyphicon-edit"> </span> 
-  <span> Editar</span>
-</div>
+        <span class="glyphicon glyphicon-edit"> </span> 
+        <span> Editar</span>
+    </div>
     
-    
+    <div class="btn btn-primary " id="btn-crear" data-toggle="modal" data-target="#myModal2">
+        <span class="glyphicon glyphicon-edit"> </span> 
+        <span>Crear Usuario</span>
+    </div>
 
     
     <!--<div class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</div>-->
