@@ -1,6 +1,6 @@
 
 <!-- sidebar -->
-<div class="column col-xs-3" id="sidebar">
+<div class="column col-sm-3 col-xs-0" id="sidebar">
     <a class="logo col-xs-1" href="#" style="margin-right: 0;">C</a>
     <a class="logo col-xs-4 col-xs-offset-1" href="#" style="
     margin-left: 0;
@@ -29,7 +29,7 @@
 <!-- /sidebar -->
 
 <!-- main -->
-<div class="column2 col-xs-9" id="main">
+<div class="column2 col-sm-9 col-xs-12" id="main">
     <div class="padding">
         <div class="full col-sm-9">
            
