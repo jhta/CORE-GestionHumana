@@ -57,8 +57,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Eliminar</button>
-        <?php  //echo CHtml::link(Eliminarl,  array('publicacion/delete', 'id'=>$model->id),array('type'=>'button' ,'class'=>'btn btn-primary '));?>
+        
+        <?php  echo CHtml::link(Eliminarl,  array('publicacion/delete', 'id'=>$model->id),array('type'=>'button' ,'class'=>'btn btn-primary '));?>
       </div>
     </div>
   </div>
@@ -76,9 +76,9 @@
                    
                     if(!Yii::app()->user->isGuest) {
                         echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
-                   
+                        echo '<button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2">';
                     }?>
-            <button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2">
+            
                 <span class="glyphicon glyphicon-trash" >Puta</span>
             </button>
           </div>
