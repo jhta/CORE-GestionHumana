@@ -192,10 +192,36 @@ class SiteController extends Controller
             $UComentarios= Comentario::model()->findAll($Criteria);
             $modelU= Usuario::model()->findByPk(Yii::app()->user->id);
             $this->layout='//layouts/column3';
+            $modelI= Informacion::model()->findByPk(1);
+            
+            // Meter aquí los isset de cada post que sea necesario
+            if(isset($_POST['Informacion']['titulo'])){
+                $modelI= Informacion::model()->findByPk(1);
+                
+                $modelI->titulo= $_POST['Informacion']['titulo'];
+                
+                if($modelI->save()){
+                    Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
+                    $this->refresh();     
+                }
+            }
+            
+            if(isset($_POST['Informacion']['descripcion'])){
+                $modelI= Informacion::model()->findByPk(1);
+                
+                $modelI->descripcion= $_POST['Informacion']['descripcion'];
+                
+                if($modelI->save()){
+                    Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
+                    $this->refresh();     
+                }
+            }
+            
             $this->render('admin',
                     array(
                         'modelU'=>$modelU,
                         'UComentarios'=>$UComentarios,
+                        'modelI'=>$modelI,
                 ));
 	}
 
