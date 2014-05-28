@@ -143,7 +143,7 @@ class Publicacion extends CActiveRecord
          * @return Plan Text
          */
         public function getPlainText(){
-            include_once(Yii::app()->request->baseUrl.'/extensions/Html2Text/Html2Text.php');
+            include_once 'Html2Text.php';
             $html2text = new Html2Text\Html2Text(mb_substr($this->contenido,0,300));
             $texto= $html2text->get_text();
             return $text;
