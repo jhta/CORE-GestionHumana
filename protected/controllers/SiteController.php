@@ -243,8 +243,8 @@ class SiteController extends Controller
                 if($model->save()){
                     if(isset($model->foto)) 
                         $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
-                    Yii::app()->user->setFlash('usercreate','Se ha creado el usuario de manera correcta!');
-                    $this->refresh(true,'#myModal2');
+                    Yii::app()->user->setFlash('usercreate','El usuario se ha creado de manera correcta!');
+                    $this->refresh();
                 }	
             }
             
