@@ -89,7 +89,7 @@
           
 
 <div class="row">
-            <h4 class="text-center" > Foto</h4>
+            <h4 class="text-center" >Foto</h4>
             <?php echo $form->fileField($modelU,'foto'); ?>
             <?php echo $form->error($modelU,'foto'); ?>
         </div>

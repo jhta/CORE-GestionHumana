@@ -117,6 +117,7 @@ class UsuarioController extends Controller
                         $directorio= Yii::getPathOfAlias('webroot').$carpeta;
                         $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
                         $Extension_foto= '.'.$model->foto->extensionName;
+                        unlink(Yii::getPathOfAlias('webroot') . DIRECTORY_SEPARATOR . $model->nombre_foto . $model->formato_foto);
                     }
 
                     $model->attributes=$_POST['Usuario'];
@@ -126,7 +127,7 @@ class UsuarioController extends Controller
                     if($model->save()){
                         if(isset($model->foto)) 
                             $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
-                        $this->refresh();
+                        $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                         //$this->redirect(array('view','id'=>$model->id));
                     }
                 }
