@@ -78,7 +78,7 @@ $(document).ready(function(){
 	<div class="row form-group">
 		<?php echo $form->labelEx($model,'contenido'); ?>
 		<?php echo $form->textArea($model,'contenido',
-                        array('rows'=>50,
+                        array('rows'=>10,
                             'cols'=>50,
                             'class'=>'form-control',
                             'placeholder'=>'Escribe aqui tu contenido',
