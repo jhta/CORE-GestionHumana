@@ -32,9 +32,10 @@ class Informacion extends CActiveRecord
 		return array(
 			array('descripcion, mision, vision', 'required'),
 			array('titulo', 'length', 'max'=>70),
+                        array('total_clicks', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, titulo, descripcion, mision, vision', 'safe', 'on'=>'search'),
+			array('id, titulo, descripcion, mision, vision, total_clicks', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,6 +50,7 @@ class Informacion extends CActiveRecord
                         'descipcion' => 'Descripción',
 			'mision' => 'Descripción Misión',
 			'vision' => 'Descripción Visión',
+                        'total_clicks'=> 'Total de Clicks',
 		);
 	}
 
@@ -75,7 +77,8 @@ class Informacion extends CActiveRecord
                 $criteria->compare('descripcion',$this->descripcion,true);
 		$criteria->compare('mision',$this->mision,true);
 		$criteria->compare('vision',$this->vision,true);
-		
+		$criteria->compare('total_clicks',$this->total_clicks,true);
+                
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
