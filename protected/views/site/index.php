@@ -14,10 +14,7 @@ $(document).ready(function() {
 </script>
 
 <!-- Header -->
-<?php   $modelI= Informacion::model()->findByPk(1);
-        $modelI->total_clicks = $modelI->total_clicks + 1;
-        $modelI->save();
-?>
+
 <header>
     <div class="sticky-nav">
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
