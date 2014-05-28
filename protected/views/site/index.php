@@ -14,7 +14,7 @@ $(document).ready(function() {
 </script>
 
 
-<?php $modelI->setAttribute('total_clicks',$modelI->total_clicks + 1);
+<?php $modelI->total_clicks;
 ?>
 <!-- Header -->
 <header>
