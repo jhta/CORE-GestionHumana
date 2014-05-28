@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
 });
 </script>
-<div class="form col-sm-10 col-sm-offset-1 col-xs-12" >
+<div class="form col-sm-10  col-xs-12" >
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'publicacion-form',
