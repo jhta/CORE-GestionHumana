@@ -57,26 +57,18 @@
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_view',
                     'ajaxUpdate'=>false,
-                    'enablePagination'=>false,
                     'pagerCssClass' => 'result-list',
                     'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
                 
             )); 
             
             
-            $this->widget('CLinkPager', array(
-                    'header' => '',
-                    'firstPageLabel' => '&lt;&lt;',
-                    'prevPageLabel' => '&lt;',
-                    'nextPageLabel' => '&gt;',
-                    'lastPageLabel' => '&lt;&lt;',
-                    'pages' => $pages,
-            ));
+            
             ?>
             
             <!--Element-->
                <!--footer-->
-               <?php $this->renderPartial('//site/footer');?>
+               <?php //$this->renderPartial('//site/footer');?>
              <!--end Footer-->
 
 
