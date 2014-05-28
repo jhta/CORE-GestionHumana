@@ -4,6 +4,7 @@
 ?>
 <script>
 $(document).ready(function(){
+    
     $('#content').html(<?php echo mb_substr(CHtml::encode($data->contenido) ,0,300)."..."; ?>);
 });
 </script>
