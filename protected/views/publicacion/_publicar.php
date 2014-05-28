@@ -133,6 +133,6 @@
     </div>
 
     <div class="row buttons form-group">
-        <div class="btn btn-primary"  id="publicacion">Publicar</div>
+        <div class="btn btn-primary col-xs-offset-6"  id="publicacion">Publicar</div>
     </div>
 </div><!-- form -->
