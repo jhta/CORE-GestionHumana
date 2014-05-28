@@ -38,7 +38,7 @@
 <!-- /sidebarr -->
 
 <!-- main -->
-<div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
+<div class="column col-sm-8 col-sm-offset-2 col-xs-12 contenedor-post"  id="main">
     <div class="padding">
         <div class="nav navbar ">
         <?php 
@@ -51,7 +51,7 @@
                     echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
                     }?>
           </div>
-        <div class="full col-sm-9 text-center container-fluid">
+        <div class="full col-sm-9 text-center col-xs-12 container-fluid">
 
             <!-- content -->
 <!--            ____________________________________________________________________________________
