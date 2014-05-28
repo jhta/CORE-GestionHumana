@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
 });
 </script>
-<div class="form col-sm-10  col-xs-12" >
+<div class="form col-sm-10 col-sm-offset-1 col-xs-12" >
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'publicacion-form',
@@ -55,7 +55,7 @@ $(document).ready(function(){
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row form-group">
-            <h4 class="text-center col-xs-1 col-xs-offset-1">Titulo</h4>
+            <h4 class="text-center col-xs-1 ">Titulo</h4>
             <div class="col-xs-9">
                 <?php echo $form->textField($model,'titulo',
                           array('size'=>50,
@@ -90,7 +90,7 @@ $(document).ready(function(){
         </div>
         </div>
 	<div class="row form-group" >
-            <h4 class="text-center col-xs-1 col-xs-offset-1">Autor</h4>
+            <h4 class="text-center col-xs-1 ">Autor</h4>
 		<div class="col-xs-9">
                     <?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
                 </div>
