@@ -105,9 +105,7 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
     
-	<div class="row buttons">
-            <div class="btn" id="publicacion">Publicar</div>
-	</div>
+	
 <?php $this->endWidget(); ?>
 <?php
   $this->widget('CMultiFileUpload', array(
@@ -126,4 +124,8 @@ $(document).ready(function(){
      'max'=>5, // max 10 files
   ));
 ?>
+    
+    <div class="row buttons">
+            <div class="btn btn-primary"  id="publicacion">Publicar</div>
+	</div>
 </div><!-- form -->
