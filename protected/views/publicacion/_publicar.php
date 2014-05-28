@@ -55,9 +55,9 @@ $(document).ready(function(){
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'titulo'); ?>
+            <h2 class="text-center">Titulo</h2>
 		<?php echo $form->textField($model,'titulo',
-                        array('size'=>50,
+                          array('size'=>50,
                             'maxlength'=>50,
                             
                             'class'=>'form-control',
@@ -68,8 +68,9 @@ $(document).ready(function(){
 	</div>
     
         <div class="row">
-		<?php echo $form->labelEx($model,'contenido'); ?>
-		<?php echo $form->textArea($model,'contenido',
+	
+            <h2 class="text-center">Contenido</h2>	
+            <?php echo $form->textArea($model,'contenido',
                         array('rows'=>50,
                             'cols'=>50,
                             'class'=>'form-control',
@@ -87,14 +88,14 @@ $(document).ready(function(){
         </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
+            <h2 class="text-center">Autor</h2>
 		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
         <div class="row">
-		<?php echo $form->labelEx($model,'tags'); ?>
-		<?php echo $form->textField($model,'tags',
+            	
+            <?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
                             
