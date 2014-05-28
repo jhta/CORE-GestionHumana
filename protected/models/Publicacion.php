@@ -1,5 +1,5 @@
 <?php
-
+Yii::import('ext.html2text.*',true);
 /**
  * This is the model class for table "publicacion".
  *
