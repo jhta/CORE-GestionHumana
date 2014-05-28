@@ -49,7 +49,7 @@ class SiteController extends Controller
 	public function actionIndex(){
             $modelI= Informacion::model()->findByPk(1);
              
-            $num= $modelI->total_clicks;
+            $num= $modelI->mision;
             echo $num;        
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
