@@ -114,7 +114,6 @@
                                                             <div class="row buttons">
                                                                 <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
                                                             </div>
-                                                    <?php $this->endWidget(); ?>
                                                 </div>
                                             <?php endif ?>
 
@@ -132,11 +131,7 @@
                                                 </div>
                                             <?php else:?>
                                                 <div class="row">
-                                                    <?php $form=$this->beginWidget('CActiveForm', array(
-                                                            'id'=>'mision-form',
-                                                            'enableAjaxValidation'=>false,
-                                                            'class'=>'form-update',
-                                                    )); ?>
+                                                    
                                                         <div class="row">
                                                             <?php echo $form->textArea($modelI,'mision',
                                                                     array('rows'=>6,
@@ -150,7 +145,6 @@
                                                         <div class="row buttons">
                                                             <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
                                                         </div>
-                                                    <?php $this->endWidget(); ?>
                                                 </div>
                                             <?php endif ?>
                                         </div>               
@@ -165,12 +159,7 @@
                                                 </div>
                                             <?php else:?>
                                                 <div class="row">
-                                                    <?php $form=$this->beginWidget('CActiveForm', array(
-                                                            'id'=>'vision-form',
-                                                            'enableAjaxValidation'=>false,
-                                                            'class'=>'form-update',
-                                                    )); ?>
-                                                        <div class="row">
+                                                    <div class="row">
                                                             <?php echo $form->textArea($modelI,'vision',
                                                                     array('rows'=>6,
                                                                         'cols'=>50,
