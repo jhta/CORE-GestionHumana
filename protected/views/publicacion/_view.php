@@ -11,7 +11,7 @@
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
         <h4 class="text-muted" style="font-size: 12px;">Palabras clave: <?php echo implode('</span>', $data->tagLinks); ?></h4>
         
-        <span class="text-muted" ><?php echo mb_substr(CHtml::encode($data->contenido) ,0,300)."..."; ?></span>
+        <div class="text-muted" ><?php echo mb_substr(CHtml::encode($data->contenido) ,0,300)."..."; ?></div>
         <h4>    
             <small class="text-muted">
                 <label class="label label-tag"><?php echo CHtml::link('Leer Más', array('view', 'id'=>$data->id));?></label>
