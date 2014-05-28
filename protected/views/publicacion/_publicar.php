@@ -55,7 +55,7 @@ $(document).ready(function(){
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-            <h2 class="text-center">Titulo</h2>
+            <h4 class="text-center">Titulo</h4>
 		<?php echo $form->textField($model,'titulo',
                           array('size'=>50,
                             'maxlength'=>50,
@@ -69,7 +69,7 @@ $(document).ready(function(){
     
         <div class="row">
 	
-            <h2 class="text-center">Contenido</h2>	
+            <h4 class="text-center">Contenido</h4>	
             <?php echo $form->textArea($model,'contenido',
                         array('rows'=>50,
                             'cols'=>50,
@@ -88,7 +88,7 @@ $(document).ready(function(){
         </div>
 
 	<div class="row">
-            <h2 class="text-center">Autor</h2>
+            <h4 class="text-center">Autor</h4>
 		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
