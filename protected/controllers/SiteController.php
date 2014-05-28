@@ -197,6 +197,7 @@ class SiteController extends Controller
             $this->layout='//layouts/column3';
             $modelI= Informacion::model()->findByPk(1);
             
+            $model= new Usuario;
             // Meter aquí los isset de cada post que sea necesario
             
             
@@ -227,6 +228,7 @@ class SiteController extends Controller
                         'modelU'=>$modelU,
                         'UComentarios'=>$UComentarios,
                         'modelI'=>$modelI,
+                        'model'=>$model,
                 ));
 	}
 
