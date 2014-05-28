@@ -37,13 +37,13 @@
 </div>-->
 <!-- /sidebarr -->
 
-<script>
-$(document).ready(function(){
-    $("#delete").click(
-            $("#myModal2").fadeIn();
-                );
-});
-</script>
+<script>//
+//$(document).ready(function(){
+//    $("#delete").click(
+//            $("#myModal2").fadeIn();
+//                );
+//});
+//</script>
 <!-- Modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -78,7 +78,7 @@ $(document).ready(function(){
                         echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
                    
                     }?>
-            <button class="btn btn-primary pull-right" id="delete"style="margin-right:10px; " data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-trash" >Puta</span></button>
+            <button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-trash" >Puta</span></button>
           </div>
         
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
