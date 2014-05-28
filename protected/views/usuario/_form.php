@@ -28,7 +28,6 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
-        'action' => array('/usuario/create'),
 	'enableAjaxValidation'=>false,
         'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
