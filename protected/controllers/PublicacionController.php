@@ -164,7 +164,7 @@ class PublicacionController extends Controller
                                 }
                             }
                                 
-                            $this->redirect(array(Yii::app()->createAbsoluteUrl('publicacion/view'),'id'=>$model->id));
+                            $this->redirect(array('publicacion/view','id'=>$model->id));
                         }
                 }
         }
