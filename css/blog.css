@@ -228,3 +228,15 @@ body{
     text-align: justify;
     margin-bottom:  60px ;
 }
+
+#new-publication legend{
+    text-align: justify;
+}
+
+#new-publication h4{
+    margin-bottom: 20px;
+}
+
+#new-publication .btn-primary{
+    margin-top: 20px;
+}
