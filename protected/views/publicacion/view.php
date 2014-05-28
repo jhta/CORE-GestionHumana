@@ -82,9 +82,9 @@ echo CHtml::link(CHtml::encode('Delete image'),  array('publicacion/delete', 'id
                    
                     if(!Yii::app()->user->isGuest) {
                         echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
-                        echo '<button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2">';
+                        echo '<button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-trash" >Eliminar</span></button></div>';
                     }?>
-            
+          
         
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
 
