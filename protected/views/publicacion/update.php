@@ -15,7 +15,7 @@ $this->menu=array(
 	array('label'=>'Manage Publicacion', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Update Publicacion <?php echo $model->id; ?></h1>
-
+<div id='new-publication' class='col-sm-10 col-sm-offset-1 col-xs-12'>
+<Legend>Crear Publicación</legend>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>
