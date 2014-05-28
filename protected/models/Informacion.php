@@ -19,7 +19,7 @@ class Informacion extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'infromacion';
+		return 'informacion';
 	}
 
 	/**

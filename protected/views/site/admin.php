@@ -10,27 +10,6 @@
      
     ));?>
 
-<script>
-$(document).ready(function(){
-    $('#general').click(function(){
-        var ajax_data={
-            "titulo": $('#tituloInfo').val(),
-            "descripcion": $('#descripcionInfo').val()
-        };
-        $.ajax({
-            async:true,    
-            cache:false,   
-            url: "<?php echo Yii::app()->createAbsoluteUrl('site/CambiarGeneral'); ?>",
-            data: ajax_data,
-            type: "POST",
-        }).done(function(resul){
-            alert(resul);
-            $('#tituloInfo').val('');
-            $('#descripcionInfo').val('');
-        });
-    });
-});
-</script>
 <div class="col-xs-9" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right ">
@@ -100,23 +79,44 @@ $(document).ready(function(){
                                     <h4> Modificar el texto del Index</h4>
                                     <div class="list-group">
                                             <div class="col-xs-10 col-xs-offset-1">
-                                            <div class="row">
-                                                    <form  action="" method="post">
-
+                                            <?php if(Yii::app()->user->hasFlash('informationchange')): ?>
+                                                <div class="flash-success">
+                                                        <?php echo Yii::app()->user->getFlash('informationchange'); ?>
+                                                </div>
+                                            <?php else:?>
+                                                <div class="row">
+                                                    <?php $form=$this->beginWidget('CActiveForm', array(
+                                                            'id'=>'general-form',
+                                                            'enableAjaxValidation'=>false,
+                                                    )); ?>
                                                             <div class="row">
-                                                            <input size="30" maxlength="70" class="form-control input-comentario" edit-publicacioneseholder="nombre" name="Comentario[nombre]" id="tituloInfo" type="text" placeholder="Titulo texto">			
+                                                                <?php echo $form->textField($modelI,'titulo',
+                                                                        array('size'=>30,
+                                                                            'maxlength'=>70,
+                                                                            'class'=>'form-control input-comentario',
+                                                                            'placeholder'=>'Titulo a mostrar en el index',
+
+                                                                            )); ?>
+                                                                <?php echo $form->error($modelI,'titulo'); ?>
                                                             </div>
 
 
                                                             <div class="row">
-                                                                    <textarea rows="6" cols="50" class="form-control input-comentario" placeholder="Escribe aqui la descripción que saldrá en el index" required="required" id="descripcionInfo" name="Comentario[comentario]" placeholder="cuerpoTexto" ></textarea>			</div>
+                                                                <?php echo $form->textArea($modelI,'descripcion',
+                                                                        array('rows'=>6,
+                                                                            'cols'=>50,
+                                                                            'class'=>'form-control input-comentario',
+                                                                            'placeholder'=>'Escribe aqui la descripción que saldrá en el index',
 
+                                                                            )); ?>
+                                                                <?php echo $form->error($modelI,'descripcion'); ?>
+                                                            </div>
                                                             <div class="row buttons">
-                                                                <a class="btn btn-primary" id="general" style="margin-top:15px;">Modificar</a> 
+                                                                <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
                                                             </div>
-
-                                                    </form>
-                                            </div>
+                                                    <?php $this->endWidget(); ?>
+                                                </div>
+                                            <?php endif ?>
 
                                             </div>
                                         </div>
