@@ -265,6 +265,16 @@ border-radius: 5px;
     text-align: justify !important;
 }
 
+.fade-transparent{
+    z-index: 100;
+    background: transparent;
+    
+}
+
+.contenido-blog{
+    z-index: 1;
+}
+
 @media (max-width: 768px) { 
     #sidebar{
         display: none;
