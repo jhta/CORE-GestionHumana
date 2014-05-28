@@ -40,17 +40,17 @@
 <!-- main -->
 <div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
     <div class="padding">
-        
+        <div class="nav navbar ">
         <?php 
          $sisas='<span class="glyphicon glyphicon-arrow-left"> Volver</span>';
-          $pencil='<span class="glyphicon glyphicon-arrow-pencil"> Editar</span>';
+          $pencil='<span class="glyphicon glyphicon--pencil"> Editar</span>';
         echo CHtml::link($sisas,array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));
        
                    
                     if(!Yii::app()->user->isGuest) {
                     echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     }?>
-                   
+          </div>
         <div class="full col-sm-9 text-center container-fluid">
 
             <!-- content -->
