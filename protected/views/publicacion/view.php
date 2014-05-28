@@ -37,11 +37,13 @@
 </div>-->
 <!-- /sidebarr -->
 
-<!--<script>
+<script>
 $(document).ready(function(){
-    $("#delete").click();
+    $("#delete").click(
+            $("#myModal2").fadeIn();
+                );
 });
-</script>-->
+</script>
 <!-- Modal -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
