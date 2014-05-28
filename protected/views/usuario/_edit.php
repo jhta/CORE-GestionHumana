@@ -62,7 +62,7 @@
             </div>
           
           <div class="row">
-            <h4 class="text-center" > Descripcion</h4>
+            <h4 class="text-center" >Descripción</h4>
             <?php echo $form->textArea($modelU,'descripcion',
                     array(
                         'rows'=>6,
