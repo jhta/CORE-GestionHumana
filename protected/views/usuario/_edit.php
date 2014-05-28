@@ -26,9 +26,6 @@
                         'size'=>50,
                         'maxlength'=>50,
                         'class'=>'form-control',
-                        'required'=>'requiered',
-                        'type'=>'text',
-                        'value'=> $model->nombre,
                         'placeholder'=>'Nombre'
                         
                         )
@@ -43,9 +40,6 @@
                         'size'=>50,
                         'maxlength'=>50,
                         'class'=>'form-control',
-                        'required'=>'requiered',
-                        'type'=>'text',
-                        'value'=> $modelU->titulo,
                         'placeholder'=>'Titulo'
                         
                         )
@@ -60,9 +54,6 @@
                         'size'=>70,
                         'maxlength'=>70,
                         'class'=>'form-control',
-                        'required'=>'requiered',
-                        'type'=>'email',
-                        'value'=> $modelU->correo,
                         'placeholder'=>'Correo'
                         
                         )
@@ -77,9 +68,6 @@
                         'rows'=>6,
                         'cols'=>50,
                         'class'=>'form-control',
-                        'required'=>'requiered',
-                        'type'=>'text',
-                        'value'=> $modelU->descripcion,
                         'placeholder'=>'Contenido'
                         
                         )
