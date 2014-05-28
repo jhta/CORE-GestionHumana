@@ -102,14 +102,14 @@
 
 
                                                             <div class="row">
-                                                                <?php echo $form->textArea($modelI,'titulo',
+                                                                <?php echo $form->textArea($modelI,'descripcion',
                                                                         array('rows'=>6,
                                                                             'cols'=>50,
                                                                             'class'=>'form-control input-comentario',
                                                                             'placeholder'=>'Escribe aqui la descripción que saldrá en el index',
 
                                                                             )); ?>
-                                                                <?php echo $form->error($modelI,'titulo'); ?>
+                                                                <?php echo $form->error($modelI,'descripcion'); ?>
                                                             </div>
                                                             <div class="row buttons">
                                                                 <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
