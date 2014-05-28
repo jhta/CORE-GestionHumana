@@ -21,6 +21,14 @@
                 </div>
         </nav>
 
+          <div id="Publicaciones">
+                <legend><span class="glyphicon glyphicon-list"></span> Publicaciones</legend>
+                <?php
+                    if(!Yii::app()->user->isGuest) {
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    }?>
+                   
+        </div>
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
                 <div class="col-xs-7">
