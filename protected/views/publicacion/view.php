@@ -58,7 +58,13 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
         
-        <?php  echo CHtml::link(Eliminarl,  array('publicacion/delete', 'id'=>$model->id),array('type'=>'button' ,'class'=>'btn btn-primary '));?>
+        <?php
+   
+echo CHtml::link(CHtml::encode('Delete image'),  array('publicacion/delete', 'id'=>$model->id),
+        array('type'=>'button' ,'class'=>'btn btn-primary ',
+            'submit'=>array('publicacion/delete', 'id'=>$model->id),
+            'confirm'=>'This will remove the image. Are you sure?'
+            ));?>
       </div>
     </div>
   </div>
