@@ -35,7 +35,7 @@
         </li>
     </ul>
 </div>-->
-<!-- /sidebar -->
+<!-- /sidebarr -->
 
 <!-- main -->
 <div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
@@ -43,7 +43,7 @@
         <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));?>
          <?php
                     if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link('Editar', array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    echo CHtml::link('Editar',  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     }?>
                    
         <div class="full col-sm-9 text-center container-fluid">
