@@ -243,7 +243,7 @@ class PublicacionController extends Controller
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete($id)
-	{
+	{           echo "<script>alert('hola');</script>";
 		$this->loadModel($id)->delete();
                 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
