@@ -36,6 +36,25 @@
     </ul>
 </div>-->
 <!-- /sidebarr -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       
+      </div>
+      <div class="modal-body">
+          <div class="alert alert-warning">Esta seguro que desea eliminar este post?</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <!--<button type="button" class="btn btn-primary">Eliminar</button>-->
+        <?php  echo CHtml::link(Eliminarl,  array('publicacion/delete', 'id'=>$model->id),array('type'=>'button' ,'class'=>'btn btn-primary '));?>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- main -->
 <div class="column col-sm-8 col-sm-offset-2 col-xs-12 contenedor-post"  id="main">
@@ -48,9 +67,11 @@
        
                    
                     if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
+                        echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
+                    echo '<div class="btn-btn-primary pull-right"><span class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#myModal">Eliminar</span></div>';
                     }?>
           </div>
+        
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
 
             <!-- content -->
