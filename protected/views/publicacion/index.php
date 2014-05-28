@@ -38,6 +38,9 @@
             <div class="col-sm-12" id="featured">   
                 <div class="page-header text-muted">
                     Publicaciones
+                    <div class="btn btn-primary pull-right" style="
+                        margin: -7px;
+                    ">Nueva Publicación</div>
                 </div> 
             </div>
             <!--Fin Titulo para post-->

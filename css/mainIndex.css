@@ -302,8 +302,8 @@ h3.spec {
 	width: 100%;
 	height: 100%;
 	background: #223A52;
-	opacity: 0.7;
-	filter: alpha(opacity=70);
+	opacity: 0.4;
+	filter: alpha(opacity=40);
 	z-index: 0;
 }
 
@@ -1422,4 +1422,8 @@ footer .credits {
 
 #linkedin{
     background: #007bb6 !important;
+}
+
+#text-rememberMe{
+    color: white !important;
 }

@@ -125,7 +125,7 @@ h1,h2,h3 {
 }
 .page-header {
   margin-top: 55px;
-  padding-top: 9px;
+  padding: 12px 0px;
   border-top:1px solid #eeeeee;
   font-weight:700;
   text-transform:uppercase;

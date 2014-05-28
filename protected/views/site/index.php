@@ -340,7 +340,7 @@ $(document).ready(function() {
 
 	
 		<?php echo $form->checkBox($modelL,'rememberMe'); ?>
-                <?php echo $form->label($modelL,'rememberMe'); ?>
+                <?php echo $form->label($modelL,'rememberMe',array('id'=>'text-rememberMe')); ?>
 		<?php echo $form->error($modelL,'rememberMe'); ?>
     </br>
 

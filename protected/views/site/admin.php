@@ -38,7 +38,7 @@
                                                                 strokeColor : "rgba(151,187,205,1)",
                                                                 pointColor : "rgba(151,187,205,1)",
                                                                 pointStrokeColor : "#fff",
-                                                                data : [28,48,40,19,96,27,100]
+                                                                data : [2,4,4,1,9,2,10]
                                                         }
                                                 ]
 
