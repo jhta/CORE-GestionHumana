@@ -104,7 +104,7 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 		slides 					:  	[			// Slideshow Images
                     
 											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/profilePictures/5.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
 											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
 											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
