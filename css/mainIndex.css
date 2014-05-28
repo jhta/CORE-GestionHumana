@@ -1384,3 +1384,42 @@ footer .credits {
 .profile>.image-wrap{
     height: 240px;
 }
+
+
+
+/* ==================================================
+   Icons
+================================================== */
+
+/**** Icons****/
+
+#facebook{
+    background: #3b5998 !important;
+}
+
+#facebook > span {
+    color: white !important;
+}
+#twitter{
+    background: #4099ff !important;
+}
+#twitter> span{
+    color: white !important;
+}
+
+#plus{
+    background: #D34836 !important;
+}
+
+#plus> span{
+    color: white !important;
+}
+
+
+#linkedin> span{
+    color: white !important;
+}
+
+#linkedin{
+    background: #007bb6 !important;
+}

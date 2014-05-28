@@ -7,6 +7,9 @@ $(document).ready(function() {
     $('#logout').click(function(){
         window.location.href= "<?php echo Yii::app()->createAbsoluteUrl("site/logout");?>";
     });
+    $('#admin').click(function(){
+        window.open("<?php echo Yii::app()->createAbsoluteUrl("site/admin")?>","_blank"); 
+    });
 });
 </script>
 
@@ -18,7 +21,7 @@ $(document).ready(function() {
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#home-slider" title="Brushed | Responsive One Page Template">Brushed Template</a>
+        	<a id="goUp" href="#home-slider" title="CORE | Gestion Humana">CORE</a>
         </div>
         
         <nav id="menu">
@@ -28,14 +31,21 @@ $(document).ready(function() {
                 <li><a href="#about">Acerca de Nosotros</a></li>
                 <li><a href="#contact">Contactanos</a></li>
                 <li><?php echo CHtml::link('Blog', array('publicacion/index'),array('class'=>'External','id'=>'Blog','target'=>'_blank')); ?></li>
+                
+                    <?php 
+                    if(!Yii::app()->user->isGuest) {
+                        echo "<li>".CHtml::link('Administración', array('site/admin'),array('class'=>'External','id'=>'admin'))."</li>"; 
+                    }
+                ?>
+                
                 <li><?php 
                     if(!Yii::app()->user->isGuest) {
                         echo CHtml::link('logout', array('site/logout'),array('class'=>'External','id'=>'logout'));
                     }else{
                         echo CHtml::link('login', "#content-login",array('class'=>'External','id'=>'login'));
-                    }   
-                    
-                ?></li>
+                    }
+                ?>
+                </li>
                 <!--<li><a id="login" href="#content-loginclass="external">login</a></li>-->
             </ul>
         </nav>
@@ -269,10 +279,10 @@ $(document).ready(function() {
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="https://twitter.com/jh7a" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="https://www.facebook.com/ccmoralesj" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/+CristianCamiloMoralesJiménez" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/ccmoralesj" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
+                        <li><a href="https://twitter.com/jh7a" title="Follow Me on Twitter" target="_blank" id="facebook"><span  class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="https://www.facebook.com/ccmoralesj" title="Follow Me on Facebook" target="_blank" id="twitter"><span  class="font-icon-social-facebook"></span></a></li>
+                        <li><a href="https://plus.google.com/+CristianCamiloMoralesJiménez" title="Follow Me on Google Plus" target="_blank" id="plus"><span   class="font-icon-social-google-plus"></span></a></li>
+                        <li><a href="http://www.linkedin.com/in/ccmoralesj" title="Follow Me on LinkedIn" target="_blank" id="linkedin" ><span class="font-icon-social-linkedin"></span></a></li>
                         
                     </ul>
                 </nav>
