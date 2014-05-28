@@ -11,14 +11,6 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Crear Perfil</h4>
       </div>
-
-<?php
-    Yii::app()->clientScript->registerScript(
-       'myHideEffect',
-       '$(".alert-success").animate({opacity: 1.0}, 3000).fadeOut("slow");',
-       CClientScript::POS_READY
-    );
-?> 
 <?php if(Yii::app()->user->hasFlash('usercreate')): ?>
     <div class="alert alert-success">
             <?php echo Yii::app()->user->getFlash('usercreate'); ?>
