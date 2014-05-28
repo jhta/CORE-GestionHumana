@@ -42,8 +42,8 @@
     <div class="padding">
         <div class="nav navbar ">
         <?php 
-         $sisas='<span class="glyphicon glyphicon-arrow-left"> Volver</span>';
-          $pencil='<span class="glyphicon glyphicon-pencil"> Editar</span>';
+         $sisas='<span class="glyphicon glyphicon-arrow-left">Volver</span>';
+          $pencil='<span class="glyphicon glyphicon-pencil">Editar</span>';
         echo CHtml::link($sisas,array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));
        
                    
