@@ -195,10 +195,12 @@ class SiteController extends Controller
             $modelI= Informacion::model()->findByPk(1);
             
             // Meter aquí los isset de cada post que sea necesario
-            if(isset($_POST['Informacion']['titulo'])){
+            
+            
+            if(isset($_POST['Informacion']['descripcion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
-                $modelI->titulo= $_POST['Informacion']['titulo'];
+                $modelI->descripcion= $_POST['Informacion']['descripcion'];
                 
                 if($modelI->save()){
                     Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
@@ -206,10 +208,10 @@ class SiteController extends Controller
                 }
             }
             
-            if(isset($_POST['Informacion']['descripcion'])){
+            if(isset($_POST['Informacion']['titulo'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
-                $modelI->descripcion= $_POST['Informacion']['descripcion'];
+                $modelI->titulo= $_POST['Informacion']['titulo'];
                 
                 if($modelI->save()){
                     Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
