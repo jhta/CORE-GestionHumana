@@ -10,7 +10,7 @@
                     ?>
                     <img  class="img-circle" src="<?php echo $foto?>">  
                 </div>
-            <h3 class="nombre"><?php echo $model->nombre; ?></h3>
+            <h3 class="nombre"><?php echo $modelU->nombre; ?></h3>
             <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
         </div>
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
