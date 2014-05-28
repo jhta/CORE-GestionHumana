@@ -54,9 +54,10 @@ $(document).ready(function(){
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-            <h4 class="text-center">Titulo</h4>
-		<?php echo $form->textField($model,'titulo',
+	<div class="row form-group">
+            <h4 class="text-center col-xs-2">Titulo</h4>
+            <div class="col-xs-10">
+                <?php echo $form->textField($model,'titulo',
                           array('size'=>50,
                             'maxlength'=>50,
                             
@@ -65,9 +66,10 @@ $(document).ready(function(){
                             'id'=>'titulo',
                             )); ?>
 		<?php echo $form->error($model,'titulo'); ?>
+            </div>
 	</div>
     
-        <div class="row">
+        <div class="row form-group">
 	
             <h4 class="text-center">Contenido</h4>	
             <?php echo $form->textArea($model,'contenido',
@@ -87,13 +89,15 @@ $(document).ready(function(){
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </div>
 
-	<div class="row">
-            <h4 class="text-center">Autor</h4>
-		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
-		<?php echo $form->error($model,'USUARIO_id'); ?>
+	<div class="row form-group" >
+            <h4 class="text-center col-xs-2">Autor</h4>
+		<div class="col-xs-10">
+                    <?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
+                </div>
+                <?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
-        <div class="row">
+        <div class="row form-group">
             	
             <?php echo $form->textField($model,'tags',
                         array('size'=>50,
@@ -126,7 +130,7 @@ $(document).ready(function(){
   ));
 ?>
     
-    <div class="row buttons">
+    <div class="row buttons form-group">
             <div class="btn btn-primary"  id="publicacion">Publicar</div>
 	</div>
 </div><!-- form -->
