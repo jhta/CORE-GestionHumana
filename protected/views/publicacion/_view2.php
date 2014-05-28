@@ -8,8 +8,9 @@
         <legend><?php echo CHtml::encode($data->titulo); ?></legend>
     </div>
     <br/>
-    <div class="fade-transparent">
+    
     <div class="content contenido-blog" >
+        <div class="fade-transparent">
             <?php
                     $this->beginWidget('CMarkdown', array('purifyOutput'=>true));
                     echo $data->contenido;
