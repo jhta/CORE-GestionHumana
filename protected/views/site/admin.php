@@ -133,7 +133,7 @@
                                             <?php else:?>
                                                 <div class="row">
                                                     <?php $form=$this->beginWidget('CActiveForm', array(
-                                                            'id'=>'general-form',
+                                                            'id'=>'mision-form',
                                                             'enableAjaxValidation'=>false,
                                                             'class'=>'form-update',
                                                     )); ?>
@@ -166,7 +166,7 @@
                                             <?php else:?>
                                                 <div class="row">
                                                     <?php $form=$this->beginWidget('CActiveForm', array(
-                                                            'id'=>'general-form',
+                                                            'id'=>'vision-form',
                                                             'enableAjaxValidation'=>false,
                                                             'class'=>'form-update',
                                                     )); ?>
