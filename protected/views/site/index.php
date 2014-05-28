@@ -1,5 +1,5 @@
 <script>
-$(document).ready(function(resul) {
+$(document).ready(function() {
     $('#Blog').click(function(){
         window.open("<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>","_blank");
         
