@@ -9,6 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'edit_person',
     'enableAjaxValidation'=>false,
+    'action' => array('/usuario/update'),
     'htmlOptions'=>array(
                         'enctype' => 'multipart/form-data',
                         //'onsubmit'=>"return false;",/* Disable normal form submit */
