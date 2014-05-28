@@ -67,7 +67,7 @@ a {
 #sidebar, #sidebar a {
   color:#ffffff;
   background-color:transparent;
-  text-shadow:1px 0 1px #888888;
+  text-shadow:1px 0 1px #fff;
 }
 #sidebar a.logo {
   font-family: 'Lato', sans-serif;
@@ -147,8 +147,7 @@ small>a{
 .sideBar-link{
     text-decoration: none;
     margin-bottom: 10px;
-    font-weight: bold;
-}
+ }
 .label-tag{
     background: #cccc99;
 font-size: 13px;
@@ -219,4 +218,10 @@ body{
    
         border: white;
         font-size: 15px;
+}
+
+
+#new-publication{
+    background: white;
+    padding :15px;
 }
