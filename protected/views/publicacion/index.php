@@ -35,7 +35,7 @@
 
             <!-- content -->
             <!--Titulo para post-->
-            <div class="col-sm-12" id="featured">   
+            <div class="col-sm-12 col-xs-12" id="featured">   
                 <div class="page-header text-muted">
                     Publicaciones
                     <?php
