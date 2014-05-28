@@ -11,15 +11,6 @@
     ));?>
 
 <div class="col-xs-9" id="slide-right">
-        <nav class="navbar navbar-inverse " role="navigation">
-                <div class="navbar-right ">
-                        <div class="pull-right">
-                                <a href="<?php echo Yii::app()->request->baseUrl; ?>">INDEX</a>
-                                <a href="<?php echo Yii::app()->createAbsoluteUrl('site/logout'); ?>">SALIR</a>
-
-                        </div>
-                </div>
-        </nav>
 
           <div id="Publicaciones">
                 <legend><span class="glyphicon glyphicon-list"></span> Publicaciones</legend>
