@@ -48,7 +48,7 @@
        
                    
                     if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
                     }?>
           </div>
         <div class="full col-sm-9 text-center container-fluid">
