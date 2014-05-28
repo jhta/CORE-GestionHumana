@@ -266,7 +266,13 @@ class PublicacionController extends Controller
             $pages = new CPagination($count);
             $pages->setPageSize(10);
             $dataProvider=new CActiveDataProvider('Publicacion',
-                    array('criteria'=>$Criteria2));
+                    array('criteria'=>$Criteria2,
+                         'pagination'=>array(
+                        'pageSize'=>10,
+                ),
+                    )
+                    
+                    );
             
             $this->render('index',array(
                     'dataProvider'=>$dataProvider,
