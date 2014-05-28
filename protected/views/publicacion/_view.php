@@ -2,7 +2,11 @@
 /* @var $this PublicacionController */
 /* @var $data Publicacion */
 ?>
-
+<script>
+$(document).ready(function(){
+    $('#content').html(<?php echo mb_substr(CHtml::encode($data->contenido) ,0,300)."..."; ?>);
+});
+</script>
 <div class="view">
 
     <!--Element-->
@@ -11,7 +15,9 @@
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
         <h4 class="text-muted" style="font-size: 12px;">Palabras clave: <?php echo implode('</span>', $data->tagLinks); ?></h4>
         
-        <div class="text-muted" ><?php echo mb_substr(CHtml::encode($data->contenido) ,0,300)."..."; ?></div>
+        <span class="text-muted" id="content">
+            
+        </span>
         <h4>    
             <small class="text-muted">
                 <label class="label label-tag"><?php echo CHtml::link('Leer Más', array('view', 'id'=>$data->id));?></label>
