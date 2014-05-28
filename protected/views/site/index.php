@@ -1,5 +1,5 @@
 <script>
-$(document).ready(function() {
+$(document).ready(function(resul) {
     $('#Blog').click(function(){
         window.open("<?php echo Yii::app()->createAbsoluteUrl("publicacion/index")?>","_blank");
         
@@ -10,12 +10,12 @@ $(document).ready(function() {
     $('#admin').click(function(){
         window.open("<?php echo Yii::app()->createAbsoluteUrl("site/admin")?>","_blank"); 
     });
+    alert(resul);
 });
 </script>
 
 
-<?php $modelI= Informacion::model()->findByPk(1);
-      $modelI->setAttribute('total_clicks',$modelI->total_clicks + 1); 
+<?php 
 ?>
 <!-- Header -->
 <header>
