@@ -63,7 +63,7 @@
 echo CHtml::link(CHtml::encode('Delete image'),  array('publicacion/delete', 'id'=>$model->id),
         array('type'=>'button' ,'class'=>'btn btn-primary ',
             'submit'=>array('publicacion/delete', 'id'=>$model->id),
-            'confirm'=>'This will remove the image. Are you sure?'
+           
             ));?>
       </div>
     </div>
@@ -85,9 +85,6 @@ echo CHtml::link(CHtml::encode('Delete image'),  array('publicacion/delete', 'id
                         echo '<button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2">';
                     }?>
             
-                <span class="glyphicon glyphicon-trash" >Puta</span>
-            </button>
-          </div>
         
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
 
