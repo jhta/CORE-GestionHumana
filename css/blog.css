@@ -233,10 +233,6 @@ body{
     text-align: justify;
 }
 
-#new-publication h4{
+#new-publication row,#new-publication  .btn-primary{
     margin-bottom: 20px;
-}
-
-#new-publication .btn-primary{
-    margin-top: 20px;
 }
