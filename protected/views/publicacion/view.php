@@ -35,19 +35,30 @@
         </li>
     </ul>
 </div>-->
-<!-- /sidebar -->
+<!-- /sidebarr -->
 
 <!-- main -->
-<div class="column col-xs-8 col-xs-offset-2 contenedor-post"  id="main">
+<div class="column col-sm-8 col-sm-offset-2 col-xs-12 contenedor-post"  id="main">
     <div class="padding">
-        <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));?>
-        <div class="full col-sm-9 text-center container-fluid">
+        <div class="nav navbar ">
+        <?php 
+         $sisas='<span class="glyphicon glyphicon-arrow-left">Volver</span>';
+          $pencil='<span class="glyphicon glyphicon-pencil">Editar</span>';
+        echo CHtml::link($sisas,array('publicacion/index'),array('class'=>'btn pull-left btn-primary'));
+       
+                   
+                    if(!Yii::app()->user->isGuest) {
+                    echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
+                    }?>
+          </div>
+        <div class="full col-sm-9 text-center col-xs-12 container-fluid">
 
             <!-- content -->
 <!--            ____________________________________________________________________________________
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     CONTENIDO POST
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+
             <?php $this->renderPartial('_view2', array(
                     'data'=>$model,
             )); ?>

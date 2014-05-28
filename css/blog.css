@@ -244,6 +244,7 @@ border-radius: 5px;
 }
 
 #contenido{
+    min-height: 200px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -259,3 +260,13 @@ border-radius: 5px;
 .pad-l-0{
     padding-left: 0 !important;
 }
+.contenido-blog{
+    text-align: justify !important;
+}
+
+@media (max-width: 768px) { 
+    #sidebar{
+        display: none;
+    }
+}
+
