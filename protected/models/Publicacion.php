@@ -138,6 +138,16 @@ class Publicacion extends CActiveRecord
                     $links[]= CHtml::encode($tag->ETIQUETA_nombre);
 		return $links;
 	}
+        
+        /* Returns a Plain Text that comes from a HTML text
+         * @return Plan Text
+         */
+        public function getPlainText(){
+            include_once(Yii::app()->basePath.'\extensions\html2text\Html2Text.php');
+            $html2text = new Html2Text\Html2Text(mb_substr($this->contenido,0,300));
+            $texto= $html2text->get_text();
+            return $text;
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

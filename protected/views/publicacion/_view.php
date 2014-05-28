@@ -12,7 +12,7 @@
         <h4 class="text-muted" style="font-size: 12px;">Palabras clave: <?php echo implode('</span>', $data->tagLinks); ?></h4>
         
         <span class="text-muted" id="content">
-            <?php echo mb_substr($data->contenido,0,300)."..."; ?>
+            <?php echo CHtml::encode($data->PlainText)."..."; ?>
         </span>
         <h4>    
             <small class="text-muted">
