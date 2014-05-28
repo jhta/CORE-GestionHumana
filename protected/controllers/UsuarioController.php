@@ -101,17 +101,17 @@ class UsuarioController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate()
 	{
-		$model=$this->loadModel($id);
+		$model=$this->loadModel(Yii::app()->user->id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
                 if(isset($_POST['Usuario'])){
                     if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
-                    $Nombre_foto='';
-                    $Extension_foto='';
+                    $Nombre_foto= $model->nombre_foto;
+                    $Extension_foto= $model->formato_foto;
                     if(isset($model->foto)){
                         $carpeta= DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'profilePictures';
                         $directorio= Yii::getPathOfAlias('webroot').$carpeta;
@@ -120,24 +120,16 @@ class UsuarioController extends Controller
                     }
 
                     $model->attributes=$_POST['Usuario'];
-                    $session= $model->generateSalt();
-                    $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session);
-                    $model->sesion= $session;
                     $model->nombre_foto= $Nombre_foto;
                     $model->formato_foto= $Extension_foto;  
 
                     if($model->save()){
                         if(isset($model->foto)) 
                             $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
-                        $this->redirect(array('view','id'=>$model->id));
+                        $this->refresh();
+                        //$this->redirect(array('view','id'=>$model->id));
                     }
                 }
-                $this->render('update',array(
-                    'model'=>$model,
-                ));
-                
-
-		
 	}
         
        

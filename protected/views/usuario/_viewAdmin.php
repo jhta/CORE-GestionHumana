@@ -18,20 +18,7 @@
   <span> Editar</span>
 </div>
     
-    <?php //echo CHtml::ajaxButton('Editar',array(
-//        
-//             CController::createUrl('usuario/update2'),                          
-//            'id'=> $modelU->id,
-//            ),
-//            array(
-//                'class'=>'btn btn-primary ',
-//                'id'=>'btn-perfil',
-//                'data-toggle'=>'modal',
-//                'data-target'=>'#myModal',
-//                
-//            ),
-//            array('update'=>'#datosMierda')
-//            ); ?>
+    
 
     
     <!--<div class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</div>-->
