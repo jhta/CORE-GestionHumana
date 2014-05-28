@@ -127,7 +127,7 @@ class UsuarioController extends Controller
                     if($model->save()){
                         if(isset($model->foto)) 
                             $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
-                        $this->refresh();
+                        $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                         //$this->redirect(array('view','id'=>$model->id));
                     }
                 }
