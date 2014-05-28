@@ -214,12 +214,7 @@ class SiteController extends Controller
                 
                 if($modelI->save()){
                     Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
-                    $this->render('admin',
-                            array(
-                                'modelU'=>$modelU,
-                                'UComentarios'=>$UComentarios,
-                                'modelI'=>$modelI,
-                    ));    
+                    $this->refresh();   
                 }
                     
             }

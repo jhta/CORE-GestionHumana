@@ -115,7 +115,6 @@
                                                                 <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
                                                             </div>
                                                 </div>
-                                            <?php endif ?>
 
                                             </div>
                                         </div>
@@ -125,40 +124,29 @@
                                     <h4> Modificar la Mision</h4>
                                     <div class="list-group">
                                         <div class="col-xs-10 col-xs-offset-1">
-                                            <?php if(Yii::app()->user->hasFlash('informationchange')): ?>
-                                                <div class="flash-success">
-                                                        <?php echo Yii::app()->user->getFlash('informationchange'); ?>
-                                                </div>
-                                            <?php else:?>
-                                                <div class="row">
+                                            <div class="row">
                                                     
-                                                        <div class="row">
-                                                            <?php echo $form->textArea($modelI,'mision',
-                                                                    array('rows'=>6,
-                                                                        'cols'=>50,
-                                                                        'class'=>'form-control input-comentario',
-                                                                        'placeholder'=>'Escribe aqui la misión de la empresa',
+                                                    <div class="row">
+                                                        <?php echo $form->textArea($modelI,'mision',
+                                                                array('rows'=>6,
+                                                                    'cols'=>50,
+                                                                    'class'=>'form-control input-comentario',
+                                                                    'placeholder'=>'Escribe aqui la misión de la empresa',
 
-                                                                        )); ?>
-                                                            <?php echo $form->error($modelI,'mision'); ?>
-                                                        </div>
-                                                        <div class="row buttons">
-                                                            <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
-                                                        </div>
-                                                </div>
-                                            <?php endif ?>
+                                                                    )); ?>
+                                                        <?php echo $form->error($modelI,'mision'); ?>
+                                                    </div>
+                                                    <div class="row buttons">
+                                                        <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
+                                                    </div>
+                                            </div>
                                         </div>               
                                     </div>
                                 </div>
                                 <div class="tab-pane fade in" id="messages">
                                         <h4> Modificar la Vision</h4>
                                         <div class="col-xs-10 col-xs-offset-1">								
-                                            <?php if(Yii::app()->user->hasFlash('informationchange')): ?>
-                                                <div class="flash-success">
-                                                        <?php echo Yii::app()->user->getFlash('informationchange'); ?>
-                                                </div>
-                                            <?php else:?>
-                                                <div class="row">
+                                            <div class="row">
                                                     <div class="row">
                                                             <?php echo $form->textArea($modelI,'vision',
                                                                     array('rows'=>6,
