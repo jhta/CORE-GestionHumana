@@ -63,14 +63,7 @@
             )); 
             
             
-            $this->widget('CLinkPager', array(
-                    'header' => '',
-                    'firstPageLabel' => '&lt;&lt;',
-                    'prevPageLabel' => '&lt;',
-                    'nextPageLabel' => '&gt;',
-                    'lastPageLabel' => '&lt;&lt;',
-                    'pages' => $pages,
-            ));
+            
             ?>
             
             <!--Element-->
