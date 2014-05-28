@@ -32,7 +32,15 @@
 <div class="column2 col-xs-9" id="main">
     <div class="padding">
         <div class="full col-sm-9">
+            <nav class="navbar navbar-inverse " role="navigation">
+                <div class="navbar-right ">
+                        <div class="pull-right">
+                                <a href="<?php echo Yii::app()->request->baseUrl; ?>">INDEX</a>
+                                <a href="<?php echo Yii::app()->createAbsoluteUrl('site/logout'); ?>">SALIR</a>
 
+                        </div>
+                </div>
+        </nav>
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12 col-xs-12" id="featured">   
