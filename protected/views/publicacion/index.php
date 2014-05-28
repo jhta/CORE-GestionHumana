@@ -68,7 +68,7 @@
             
             <!--Element-->
                <!--footer-->
-               <?php $this->renderPartial('//site/footer');?>
+               <?php //$this->renderPartial('//site/footer');?>
              <!--end Footer-->
 
 
