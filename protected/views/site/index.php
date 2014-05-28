@@ -14,7 +14,9 @@ $(document).ready(function() {
 </script>
 
 
-
+<?php $modelI= Informacion::model()->findByPk(1);
+      $modelI->setAttribute('total_clicks',$modelI->total_clicks + 1); 
+?>
 <!-- Header -->
 <header>
     <div class="sticky-nav">

@@ -48,9 +48,6 @@ class SiteController extends Controller
 	 */
 	public function actionIndex(){
             
-            $modelI= Informacion::model()->findByPk(1);
-            $modelI->setAttribute('total_clicks',$modelI->total_clicks + 1);
-            
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
