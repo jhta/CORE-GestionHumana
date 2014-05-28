@@ -260,3 +260,9 @@ border-radius: 5px;
 .pad-l-0{
     padding-left: 0 !important;
 }
+
+@media (max-width: 768px) { 
+    #sidebar{
+        display: none;
+    }
+}
