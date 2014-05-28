@@ -36,11 +36,14 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12" id="featured">   
-                <div class="page-header text-muted">
+         nu       <div class="page-header text-muted">
                     Publicaciones
-                    <div class="btn btn-primary pull-right" style="
+                    <?php CHtml::link('Nueva', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    ?>
+                    <!--<div class="btn btn-primary pull-right" style="
                         margin: -7px;
-                    ">Nueva Publicación</div>
+                        letter-spacing: 0px;
+                    ">Nueva Publicación</div>-->
                 </div> 
             </div>
             <!--Fin Titulo para post-->
