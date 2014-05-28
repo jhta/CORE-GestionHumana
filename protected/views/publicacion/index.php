@@ -57,8 +57,6 @@
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_view',
                     'ajaxUpdate'=>false,
-                    'pagerCssClass' => 'result-list',
-                    'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
                 
             )); 
             
