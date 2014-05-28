@@ -11,16 +11,15 @@
     ));?>
 
 <div class="col-xs-9" id="slide-right">
-        <nav class="navbar navbar-inverse " role="navigation">
-                <div class="navbar-right ">
-                        <div class="pull-right">
-                                <a href="<?php echo Yii::app()->request->baseUrl; ?>">INDEX</a>
-                                <a href="<?php echo Yii::app()->createAbsoluteUrl('site/logout'); ?>">SALIR</a>
 
-                        </div>
-                </div>
-        </nav>
-
+          <div id="Publicaciones">
+                <legend><span class="glyphicon glyphicon-list"></span> Publicaciones</legend>
+                <?php
+                    if(!Yii::app()->user->isGuest) {
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    }?>
+                   
+        </div>
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
                 <div class="col-xs-7">

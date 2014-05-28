@@ -32,14 +32,16 @@
 <div class="column2 col-xs-9" id="main">
     <div class="padding">
         <div class="full col-sm-9">
-
+           
             <!-- content -->
             <!--Titulo para post-->
-            <div class="col-sm-12" id="featured">   
+            <div class="col-sm-12 col-xs-12" id="featured">   
                 <div class="page-header text-muted">
                     Publicaciones
-                    <?php echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
-                    ?>
+                    <?php
+                    if(!Yii::app()->user->isGuest) {
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    }?>
                     <!--<div class="btn btn-primary pull-right" style="
                         margin: -7px;
                         letter-spacing: 0px;
