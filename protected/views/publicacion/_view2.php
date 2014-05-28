@@ -9,14 +9,16 @@
     </div>
     <br/>
     
-    <div class="content contenido-blog" >
-        <div class="fade-transparent">
+    <div class="content contenido-blog" onmousedown="return false;"
+oncontextmenu="return false;"
+onselectstart="return false;" >
+        
             <?php
                     $this->beginWidget('CMarkdown', array('purifyOutput'=>true));
                     echo $data->contenido;
                     $this->endWidget();
             ?>
-    </div>
+    
     </div>
     
 </div>
