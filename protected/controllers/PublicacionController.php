@@ -259,14 +259,14 @@ class PublicacionController extends Controller
 	public function actionIndex()
 	{   
             
-            //$Criteria2 = new CDbCriteria();
-            //$Criteria2->order="fecha DESC";
+            $Criteria2 = new CDbCriteria();
+            $Criteria2->order="fecha DESC";
             
             $count = Publicacion::model()->count();
             $pages = new CPagination($count);
             $pages->setPageSize(10);
-            //$result=  Publicacion::model()->findAll($Criteria2);
-            $dataProvider=new CActiveDataProvider('Publicacion');
+            $result=  Publicacion::model()->findAll($Criteria2);
+            $dataProvider=new CActiveDataProvider(Publicacion::model(),$Criteria2);
             
             $this->render('index',array(
                     'dataProvider'=>$dataProvider,
