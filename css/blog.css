@@ -257,5 +257,5 @@ border-radius: 5px;
 }
 
 .pad-l-0{
-    padding-left: 0;
+    padding-left: 0 !important;
 }
