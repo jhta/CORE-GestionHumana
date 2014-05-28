@@ -43,7 +43,7 @@ $(document).ready(function(){
 });
 </script>-->
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -76,7 +76,7 @@ $(document).ready(function(){
                         echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
                    
                     }?>
-            <button class="btn btn-primary pull-right" id="delete"style="margin-right:10px; <?php  if(Yii::app()->user->isGuest) { echo 'display:none;';} ?>"><span class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#myModal">Eliminar</span></button>
+            <button class="btn btn-primary pull-right" id="delete"style="margin-right:10px; <?php  if(Yii::app()->user->isGuest) { echo 'display:none;';} ?>" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-trash" >Eliminar</span></button>
           </div>
         
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
