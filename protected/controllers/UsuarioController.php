@@ -117,6 +117,7 @@ class UsuarioController extends Controller
                         $directorio= Yii::getPathOfAlias('webroot').$carpeta;
                         $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
                         $Extension_foto= '.'.$model->foto->extensionName;
+                        unlink($directorio . DIRECTORY_SEPARATOR . $model->nombre_foto . $model->formato_foto);
                     }
 
                     $model->attributes=$_POST['Usuario'];
