@@ -36,6 +36,12 @@
     </ul>
 </div>-->
 <!-- /sidebarr -->
+
+<!--<script>
+$(document).ready(function(){
+    $("#delete").click();
+});
+</script>-->
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -68,8 +74,9 @@
                    
                     if(!Yii::app()->user->isGuest) {
                         echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
-                    echo '<button class="btn btn-primary pull-right" style="margin-right:10px"><span class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#myModal">Eliminar</span></button>';
+                   
                     }?>
+            <button class="btn btn-primary pull-right" id="delete"style="margin-right:10px; <?php  if(Yii::app()->user->isGuest) { echo 'display:none;';} ?>"><span class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#myModal">Eliminar</span></button>
           </div>
         
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
