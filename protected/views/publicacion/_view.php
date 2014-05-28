@@ -2,12 +2,7 @@
 /* @var $this PublicacionController */
 /* @var $data Publicacion */
 ?>
-<script>
-$(document).ready(function(){
-    
-    $('#content').html('<?php echo mb_substr(CHtml::encode($data->contenido) ,0,300)."..."; ?>');
-});
-</script>
+
 <div class="view">
 
     <!--Element-->
@@ -17,7 +12,7 @@ $(document).ready(function(){
         <h4 class="text-muted" style="font-size: 12px;">Palabras clave: <?php echo implode('</span>', $data->tagLinks); ?></h4>
         
         <span class="text-muted" id="content">
-            
+            <?php echo mb_substr($data->contenido,0,300)."..."; ?>
         </span>
         <h4>    
             <small class="text-muted">
