@@ -55,8 +55,8 @@ $(document).ready(function(){
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <!--<button type="button" class="btn btn-primary">Eliminar</button>-->
-        <?php  echo CHtml::link(Eliminarl,  array('publicacion/delete', 'id'=>$model->id),array('type'=>'button' ,'class'=>'btn btn-primary '));?>
+        <button type="button" class="btn btn-primary">Eliminar</button>
+        <?php  //echo CHtml::link(Eliminarl,  array('publicacion/delete', 'id'=>$model->id),array('type'=>'button' ,'class'=>'btn btn-primary '));?>
       </div>
     </div>
   </div>
