@@ -49,8 +49,7 @@ class SiteController extends Controller
 	public function actionIndex(){
             $modelI= Informacion::model()->findByPk(1);
              
-            $num= $modelI->total_clicks + 1;
-            echo $num;        
+                    
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
@@ -135,6 +134,7 @@ class SiteController extends Controller
                     'Publicaciones'=>$Publicaciones,
                     'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,
+                    'modelI'=>$modelI,
                         ));
                     
 	}

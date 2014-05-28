@@ -10,12 +10,11 @@ $(document).ready(function(resul) {
     $('#admin').click(function(){
         window.open("<?php echo Yii::app()->createAbsoluteUrl("site/admin")?>","_blank"); 
     });
-    alert(resul);
 });
 </script>
 
 
-<?php 
+<?php $modelI->setAttribute('total_clicks',$modelI->total_clicks + 1);
 ?>
 <!-- Header -->
 <header>
