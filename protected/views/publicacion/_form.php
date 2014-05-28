@@ -49,6 +49,8 @@ $(document).ready(function(){
     
 });
 </script>
+
+<div class="pad-l-0 form col-sm-10 col-sm-offset-1 col-xs-12" >
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -57,9 +59,10 @@ $(document).ready(function(){
 )); ?>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'titulo'); ?>
+   <div class="row form-group">
+        <h4 class="pad-l-0 text-center col-xs-1 ">Titulo</h4>
+        <div class="col-xs-9">
+		
 		<?php echo $form->textField($model,'titulo',
                         array('size'=>50,
                             'maxlength'=>50,
@@ -70,8 +73,9 @@ $(document).ready(function(){
                             )); ?>
 		<?php echo $form->error($model,'titulo'); ?>
 	</div>
+        </div>
 
-	<div class="row">
+	<div class="row form-group">
 		<?php echo $form->labelEx($model,'contenido'); ?>
 		<?php echo $form->textArea($model,'contenido',
                         array('rows'=>50,
@@ -82,19 +86,21 @@ $(document).ready(function(){
                             'style'=>'display: none;'
                             )); ?>
 		<?php echo $form->error($model,'contenido'); ?>
-	</div>
+	
         <div class='editor' contenteditable='true' id="contenido">
         
         </div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
+            </div>
+	<div class="row form-group">
+            <h4 class="pad-l-0 text-center col-xs-1 ">Autor</h4>
+            <div class="col-xs-9">
 		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
+            </div>
 
-        <div class="row">
-		<?php echo $form->labelEx($model,'tags'); ?>
+       <div class="pad-l-0 row form-group col-xs-7">
+		
 		<?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
@@ -106,9 +112,9 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
         
-	<div class="row buttons">
-            <div class="btn" id="publicacion">Editar</div>
-	</div>
-    
+      <div class="row buttons form-group">
+        <div class="btn btn-primary col-xs-offset-6"  id="publicacion">Editar</div>
+    </div>
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>
