@@ -62,7 +62,7 @@ class UsuarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-		
+		$model=new Usuario;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
