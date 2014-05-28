@@ -223,5 +223,7 @@ body{
 
 #new-publication{
     background: white;
-    padding :15px;
+    padding :50px 15px;
+    margin-top: 60px ;
+    margin-bottom:  60px ;
 }

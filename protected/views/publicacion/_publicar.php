@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
 });
 </script>
-<div class="form">
+<div class="form col-sm-10 col-sm-offset-1 col-xs-12" >
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'publicacion-form',
@@ -55,9 +55,9 @@ $(document).ready(function(){
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'titulo'); ?>
+            <h2 class="text-center">Titulo</h2>
 		<?php echo $form->textField($model,'titulo',
-                        array('size'=>50,
+                          array('size'=>50,
                             'maxlength'=>50,
                             
                             'class'=>'form-control',
@@ -68,8 +68,9 @@ $(document).ready(function(){
 	</div>
     
         <div class="row">
-		<?php echo $form->labelEx($model,'contenido'); ?>
-		<?php echo $form->textArea($model,'contenido',
+	
+            <h2 class="text-center">Contenido</h2>	
+            <?php echo $form->textArea($model,'contenido',
                         array('rows'=>50,
                             'cols'=>50,
                             'class'=>'form-control',
@@ -87,14 +88,14 @@ $(document).ready(function(){
         </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'USUARIO_id'); ?>
+            <h2 class="text-center">Autor</h2>
 		<?php echo $form->dropDownList($model,'USUARIO_id',CHtml::ListData(Usuario::model()->findAll(),'id','nombre'),array('empty'=>'Selecciona Autor de publicación','id'=>'USUARIO_id')); ?>
 		<?php echo $form->error($model,'USUARIO_id'); ?>
 	</div>
 
         <div class="row">
-		<?php echo $form->labelEx($model,'tags'); ?>
-		<?php echo $form->textField($model,'tags',
+            	
+            <?php echo $form->textField($model,'tags',
                         array('size'=>50,
                             'maxlength'=>100,
                             
@@ -105,9 +106,7 @@ $(document).ready(function(){
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
     
-	<div class="row buttons">
-            <div class="btn" id="publicacion">Publicar</div>
-	</div>
+	
 <?php $this->endWidget(); ?>
 <?php
   $this->widget('CMultiFileUpload', array(
@@ -126,4 +125,8 @@ $(document).ready(function(){
      'max'=>5, // max 10 files
   ));
 ?>
+    
+    <div class="row buttons">
+            <div class="btn btn-primary"  id="publicacion">Publicar</div>
+	</div>
 </div><!-- form -->
