@@ -47,7 +47,7 @@
 <!-- Modal -->
 
 
-<div id="myModal" class="modal hide fade" style="display: none; ">
+<div id="myModal2" class="modal hide fade" style="display: none; ">
             <div class="modal-header">
               <button class="close" data-dismiss="modal">×</button>
               <h3>Modal Heading</h3>
@@ -93,11 +93,12 @@
                    
                     }?>
             <!--<button class="btn btn-primary pull-right" id="delete" type="button" style="margin-right:10px; " data-toggle="modal" data-target="#myModal2">-->
-            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
-
+<!--           
                 <span class="glyphicon glyphicon-trash" >Puta</span>
             </button>
-          </div>
+          </div>-->
+ <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-large">Launch demo modal</a>
+
         
         <div class="full col-sm-9 text-center col-xs-12 container-fluid">
 
