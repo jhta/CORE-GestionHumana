@@ -68,7 +68,7 @@
                    
                     if(!Yii::app()->user->isGuest) {
                         echo CHtml::link($pencil,  array('publicacion/update', 'id'=>$model->id),array('class'=>'btn btn-primary pull-right'));
-                    echo '<div class="btn btn-primary pull-right" style="margin-right:10px"><span class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#myModal">Eliminar</span></div>';
+                    echo '<button class="btn btn-primary pull-right" style="margin-right:10px"><span class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#myModal">Eliminar</span></button>';
                     }?>
           </div>
         
