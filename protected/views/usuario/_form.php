@@ -12,7 +12,7 @@
         <h4 class="modal-title" id="myModalLabel">Crear Perfil</h4>
       </div>
 <?php if(Yii::app()->user->hasFlash('usercreate')): ?>
-    <div class="flash-success">
+    <div class="alert alert-success">
             <?php echo Yii::app()->user->getFlash('usercreate'); ?>
     </div>
 <?php else:?>
