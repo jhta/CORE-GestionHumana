@@ -52,6 +52,8 @@ class PublicacionController extends Controller
 	public function actionView($id){
             
             $model=$this->loadModel($id);
+            $model->visitas= $model->visitas + 1;
+            $model->save();
             $comment= $this->newComment($model);
             $this->render('view',array(
                     'model'=>$model,

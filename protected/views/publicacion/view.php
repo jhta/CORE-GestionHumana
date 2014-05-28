@@ -60,7 +60,7 @@
         
         <?php
    
-echo CHtml::link(CHtml::encode('Delete image'),  array('publicacion/delete', 'id'=>$model->id),
+echo CHtml::link(CHtml::encode('Eliminar publicación'),  array('publicacion/delete', 'id'=>$model->id),
         array('type'=>'button' ,'class'=>'btn btn-primary ',
             'submit'=>array('publicacion/delete', 'id'=>$model->id),
            
