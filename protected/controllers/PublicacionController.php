@@ -267,9 +267,7 @@ class PublicacionController extends Controller
             $pages->setPageSize(10);
             $dataProvider=new CActiveDataProvider('Publicacion',
                     array('criteria'=>$Criteria2,
-                         'pagination'=>array(
-                        'pageSize'=>10,
-                ),
+                       
                     )
                     
                     );
