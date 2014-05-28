@@ -14,8 +14,7 @@ $(document).ready(function() {
 </script>
 
 
-<?php $modelI->total_clicks;
-?>
+
 <!-- Header -->
 <header>
     <div class="sticky-nav">

@@ -47,9 +47,10 @@ class SiteController extends Controller
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex(){
+            
             $modelI= Informacion::model()->findByPk(1);
-             
-                    
+            $modelI->setAttribute('total_clicks',$modelI->total_clicks + 1);
+            $modelI->save();
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
@@ -134,7 +135,6 @@ class SiteController extends Controller
                     'Publicaciones'=>$Publicaciones,
                     'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,
-                    'modelI'=>$modelI,
                         ));
                     
 	}
