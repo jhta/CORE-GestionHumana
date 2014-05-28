@@ -38,8 +38,10 @@
             <div class="col-sm-12" id="featured">   
                 <div class="page-header text-muted">
                     Publicaciones
-                    <?php echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
-                    ?>
+                    <?php
+                    if(!Yii::app()->user->isGuest) {
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    }?>
                     <!--<div class="btn btn-primary pull-right" style="
                         margin: -7px;
                         letter-spacing: 0px;
