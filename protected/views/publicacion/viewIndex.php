@@ -18,7 +18,7 @@
                             </div>
                             <div id="oneArea" class="accordion-body collapse">
                                 <div class="accordion-inner">
-                                    <?php echo mb_substr($i['contenido'], 0,300); ?>
+                                    <?php echo $i->PlainText; ?>
                                 
                                 </div>
                             </div>
