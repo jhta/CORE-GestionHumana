@@ -6,7 +6,7 @@
                     
                     <!-- Start Accordion -->
                     <div class="accordion" id="accordionArea">
-                        <?php foreach ($Publicaciones2 as $i) {
+                        <?php foreach ($Publicaciones as $i) {
     
                         ?>
                         <div class="accordion-group">
@@ -34,7 +34,7 @@
                     
                     <!-- Start Accordion -->
                     <div class="accordion" id="toogleArea">
-                        <?php foreach ($Publicaciones as $i) {
+                        <?php foreach ($Publicaciones2 as $i) {
     
                         ?>
                         <div class="accordion-group">
