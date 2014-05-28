@@ -223,6 +223,31 @@ class SiteController extends Controller
                     
             }
             
+            if(isset($_POST['Usuario'])){
+                if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
+                $Nombre_foto='';
+                $Extension_foto='';
+                if(isset($model->foto)){
+                    $carpeta= DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'profilePictures';
+                    $directorio= Yii::getPathOfAlias('webroot').$carpeta;
+                    $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
+                    $Extension_foto= '.'.$model->foto->extensionName;
+                }
+
+                $model->attributes= $_POST['Usuario'];
+                $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
+                $model->sesion= $session;
+                $model->nombre_foto= $Nombre_foto;
+                $model->formato_foto= $Extension_foto;
+
+                if($model->save()){
+                    if(isset($model->foto)) 
+                        $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
+                    Yii::app()->user->setFlash('usercreate','Se ha creado el usuario de manera correcta!');
+                    //$this->redirect(array('view','id'=>$model->id));
+                }	
+            }
+            
             $this->render('admin',
                     array(
                         'modelU'=>$modelU,
