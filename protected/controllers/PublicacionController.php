@@ -145,14 +145,14 @@ class PublicacionController extends Controller
                                 $arrTags= split('[;]',$_POST['tags']);
                                 foreach($arrTags as $tag){
                                     $newTag= new Etiqueta;
-                                    $newTag->nombre= $tag;
+                                    $newTag->nombre= strtolower($tag);
                                     $criteria= new CDbCriteria();
                                     $criteria->condition= 'nombre=:nombre';
-                                    $criteria->params= array(':nombre'=>$tag);
+                                    $criteria->params= array(':nombre'=>strtolower($tag));
                                     
                                     if(Etiqueta::model()->exists($criteria)){
                                         $trend= new Trending;
-                                        $trend->ETIQUETA_nombre= $tag;
+                                        $trend->ETIQUETA_nombre= strtolower($tag);
                                         $trend->PUBLICACION_id= $model->id;
                                         $trend->save();
                                     }else{
@@ -209,19 +209,19 @@ class PublicacionController extends Controller
                         $arrTags= split('[;]',$_POST['tags']);
                         foreach($arrTags as $tag){
                             $newTag= new Etiqueta;
-                            $newTag->nombre= $tag;
+                            $newTag->nombre= strtolower($tag);
                             $criteria= new CDbCriteria();
                             $criteria->condition= 'nombre=:nombre';
-                            $criteria->params= array(':nombre'=>$tag);
+                            $criteria->params= array(':nombre'=>strtolower($tag));
 
                             if(Etiqueta::model()->exists($criteria)){
                                 $trend= new Trending;
-                                $trend->ETIQUETA_nombre= $tag;
+                                $trend->ETIQUETA_nombre= strtolower($tag);
                                 $trend->PUBLICACION_id= $model->id;
 
                                 $criteria2= new CDbCriteria();
                                 $criteria2->condition= 'ETIQUETA_nombre= :ETIQUETA_nombre AND PUBLICACION_id= :PUBLICACION_id';
-                                $criteria2->params= array(':ETIQUETA_nombre'=>$tag,':PUBLICACION_id'=>$model->id);
+                                $criteria2->params= array(':ETIQUETA_nombre'=>strtolower($tag),':PUBLICACION_id'=>$model->id);
                                 if(!Trending::model()->exists($criteria2))
                                     $trend->save();
                             }else{
