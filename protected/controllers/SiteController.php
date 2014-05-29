@@ -226,6 +226,13 @@ class SiteController extends Controller
             $CriteriaP= new CDbCriteria();
             $CriteriaP->order="visitas DESC";
             $modelP= Publicacion::model()->findAll($Criteria);
+            
+            $criteria2= new CDbCriteria();
+            $criteria2->select= 'month, visitas';
+            $criteria2->condition='year = :year';
+            $criteria2->params= array(':year'=> date("Y"));
+            $criteria2->order= 'numMonth ASC';
+            $analytic= Estadistica::model()->find($criteria2);
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
