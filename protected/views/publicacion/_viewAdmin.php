@@ -11,8 +11,8 @@
                                 <?php foreach ($modelP as $i) {?> 
                                 <tr>
                                    
-                                    <td><?php echo $modelP->titulo;?></td>
-                                    <td><?php echo $modelP->visitas;?></td>
+                                    <td><?php echo $i->titulo;?></td>
+                                    <td><?php echo $i->visitas;?></td>
                                 </tr>
                                 <?php }?>
                             </thbody>
