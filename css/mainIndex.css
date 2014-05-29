@@ -301,7 +301,7 @@ h3.spec {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #223A52;
+	background: #cccc99;
 	opacity: 0.4;
 	filter: alpha(opacity=40);
 	z-index: 0;
