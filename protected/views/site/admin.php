@@ -4,14 +4,14 @@
        'id'=> $modelU->id,
     ));*/?>
 <!-- Modal para crear usuario -->
-<?php $this->renderPartial('//usuario/_form', array(
+<?php /*$this->renderPartial('//usuario/_form', array(
      'model' => $model,
-    ));?>
+    ));*/?>
 <!-- Informacion de perfil en columna de la izquierda-->
-<?php /*$this->renderPartial('//usuario/_viewAdmin', array(
+<?php $this->renderPartial('//usuario/_viewAdmin', array(
      'modelU' => $modelU,
      
-    ));*/?>
+    ));?>
 
 <div class="col-sm-9 col-xs-12" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
