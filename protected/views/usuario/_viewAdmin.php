@@ -21,12 +21,7 @@
         <span class="glyphicon glyphicon-edit"> </span> 
         <span> Editar</span>
     </div>
-           
     
-    <div class="btn btn-primary " id="btn-cambiar" data-toggle="modal" data-target="#myModal3">
-        <span class="glyphicon glyphicon-edit"> </span> 
-        <span> Cambiar contraseña</span>
-    </div>
        
     
     </div>
