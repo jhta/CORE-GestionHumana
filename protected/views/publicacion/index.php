@@ -8,6 +8,10 @@
     color: white;
 ">CORE</a>
     <legend style="color: white;">Publicaciones</legend>
+     <div >
+                    <input type="search" class="form-control " placeholder="buscar Publicacion.." style="width: 300px;margin: -7px; ">
+                    </div>
+                   
     <ul class="nav">
         
         <?php  $this->widget('zii.widgets.CListView', array(
@@ -37,12 +41,7 @@
             <!--Titulo para post-->
             <div class="col-sm-12 col-xs-12" id="featured">   
                 <div class="page-header text-muted">
-                    <div class="pull-left">
                     Publicaciones
-                    <div class="pull-right">
-                    <input type="search" class="form-control " placeholder="buscar Publicacion.." style="width: 300px;margin: -7px; ">
-                    </div>
-                    </div>
                         <?php
                     if(!Yii::app()->user->isGuest) {
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
