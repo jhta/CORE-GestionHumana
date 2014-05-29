@@ -263,7 +263,9 @@ class SiteController extends Controller
                 }
                     
             }
-            
+            $s = Yii::app()->createController('Usuario'); //returns array containing controller instance and action index.
+            $s = $ms[0];
+            $s->performAjaxValidation($model);
             if(isset($_POST['Usuario'])){
                 if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
                 $Nombre_foto='';
