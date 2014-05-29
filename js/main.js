@@ -478,7 +478,7 @@ function inicio(){
 	toolTip();
 
 $(window).resize(function(){
-	BRUSHED.mobileNav();
+	mobileNav();
 });
 }
 
