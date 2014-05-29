@@ -10,7 +10,6 @@
     'id'=>'edit_person',
     'enableAjaxValidation'=>false,
     'action' => array('/usuario/update'),
-    
     'htmlOptions'=>array(
                         'autocomplete'=>'off',
                         'enctype' => 'multipart/form-data',
