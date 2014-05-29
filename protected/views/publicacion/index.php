@@ -36,18 +36,17 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12 col-xs-12" id="featured">   
-                <div class="nav navbar  page-header text-muted" >
+                <div class="nav navbar  page-header text-muted">
                     Publicaciones
-                    
                     <?php
                     if(!Yii::app()->user->isGuest) {
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     }?>
-                    
-                    <!--Barra de bisqueda-->
-                    
-                </div>
-                
+                    <!--<div class="btn btn-primary pull-right" style="
+                        margin: -7px;
+                        letter-spacing: 0px;
+                    ">Nueva Publicación</div>-->
+                </div> 
             </div>
             <!--Fin Titulo para post-->
 <!--            ____________________________________________________________________________________
