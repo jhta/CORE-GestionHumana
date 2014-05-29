@@ -97,6 +97,7 @@ class UsuarioController extends Controller
                     }
 
                     $model->attributes=$_POST['Usuario'];
+                    $model->contrasena2= $model->contrasena;
                     $model->nombre_foto= $Nombre_foto;
                     $model->formato_foto= $Extension_foto;  
 
