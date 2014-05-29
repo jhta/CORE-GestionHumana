@@ -30,7 +30,7 @@
    
     font-size: 12px;
     margin-top: 10px;
-">por: sfdffgffdgf</p>
+    ">por: <?php echo Usuario::model()->findByPk($data->USUARIO_id)->titulo;?></p>
 </div>
 <div class="row divider">    
     <div class="col-sm-12"><hr></div>
