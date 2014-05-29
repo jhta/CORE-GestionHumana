@@ -3,8 +3,8 @@
                     <div class="col-xs-8">
                         <table class="table table-striped table-hover">
                             <trhead>
-                                <th>Nombre</th>
-                                <th>Visitas</th>
+                                <th><span class="glyphicon glyphicon-th-list"></span>Publicacion</th>
+                                <th><span class="glyphicon glyphicon-th-ok"></span>Visitas</th>
                                 
                             </trhead>
                             <thbody>
