@@ -221,8 +221,10 @@ class SiteController extends Controller
             
             $model= new Usuario;
             // Meter aquí los isset de cada post que sea necesario
-            
-            
+            //Crieria for PUblication in Admin
+            $CriteriaP= new CDbCriteria();
+            $CriteriaP->order="visitas DESC";
+            $modelP= Publicacion::model()->findAll($Criteria);
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
@@ -276,6 +278,7 @@ class SiteController extends Controller
                         'UComentarios'=>$UComentarios,
                         'modelI'=>$modelI,
                         'model'=>$model,
+                        'modelP'=>$modelP,
                 ));
 	}
 
