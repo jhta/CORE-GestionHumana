@@ -36,6 +36,7 @@ class Usuario extends CActiveRecord
 		return array(
                         array('foto','file', 'allowEmpty'=>true),
 			array('nombre, contrasena, correo, username', 'required'),
+                        array('username','unique'),
 			array('nombre, nombre_foto', 'length', 'max'=>50),
                         array('formato_foto', 'length', 'max'=>10),
 			array('contrasena, sesion', 'length', 'max'=>150),
