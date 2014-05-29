@@ -18,7 +18,7 @@
     <div class="row">
         
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
-        <span class="glyphicon glyphicon-edit"> </span> 
+        <span class="glyphicon glyphicon-cog"> </span> 
         <span> Editar</span>
     </div>
            
@@ -32,7 +32,7 @@
     </div>
     
     <div class="btn btn-primary " id="btn-crear"  style="width: 173px;" data-toggle="modal" data-target="#myModal2">
-        <span class="glyphicon glyphicon-edit"> </span> 
+        <span class="glyphicon glyphicon-user"> </span> 
         <span>Crear Usuario</span>
     </div>
 
