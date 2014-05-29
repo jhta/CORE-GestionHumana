@@ -1,4 +1,4 @@
-body>.col-xs-3{
+body>.col-sm-3{
 	background: transparent;
 	color: white;
 	text-align: justify;
@@ -12,7 +12,7 @@ a{
 	color:black;
 }
 
-body>.col-xs-9{
+body>.col-sm-9{
 	background-color: white;
 	overflow-x:hidden; 
 	padding:0 15px;
@@ -79,7 +79,7 @@ h4{
 -webkit-text-shadow: 1px 1px 3px #000;
 
 }
-body>.col-xs-3>.btn{
+body>.col-sm-3>.btn{
 	width: 130px;
 	margin: 15px auto;
 	display: block;
@@ -92,7 +92,7 @@ body>.col-xs-3>.btn{
 	padding: 0 15px;
 }
 
-#graficas>.col-xs-4{
+#graficas>.col-sm-4{
 
 }
 
@@ -224,7 +224,7 @@ text-shadow: 1px 1px 3px #000;
 #tabla{
     padding: 0 30px;
 }
-#tabla>.col-xs-8{
+#tabla>.col-sm-8{
     
    max-height: 400px !important;
     overflow-y: auto;
