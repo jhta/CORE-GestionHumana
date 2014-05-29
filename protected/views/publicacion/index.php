@@ -45,7 +45,9 @@
                     }?>
                     
                     <!--Barra de bisqueda-->
-                    <div class="row">
+                    
+                </div>
+                <div class="row">
                         <p class="col-xs-2">Buscar: </p>  
                     <div class="input-group col-xs-4">
                         
@@ -55,7 +57,6 @@
                     </span>
                   </div><!-- /input-group -->
                     </div>
-                </div> 
             </div>
             <!--Fin Titulo para post-->
 <!--            ____________________________________________________________________________________
