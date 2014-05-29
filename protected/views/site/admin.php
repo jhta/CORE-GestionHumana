@@ -40,7 +40,7 @@
                     ?>
                          </div>
                      <div class="col-xs-3">
-                         <p>Total de visitas: <?php echo ($ModelI->total_clicks)/2;?>
+                         <p>Total de visitas: <?php echo $ModelI->total_clicks;?>
                           <?php
                     
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-left','style'=>'margin: -7px;letter-spacing: 0px;'));
