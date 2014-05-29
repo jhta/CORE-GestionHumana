@@ -33,7 +33,7 @@
 .button:active,
 .button:focus {
 	background-color: #cccc99;
-	color:#FFFFFF;
+	color:#232735;
 }
 
 /* --- Button Sizes --- */
@@ -107,12 +107,12 @@
 .accordion-heading:hover .accordion-toggle,
 .accordion-heading:hover .accordion-toggle.inactive {
 	background:#cccc99;
-	color:#FFFFFF;
+	color:#232735;
 }
 
 .accordion-heading .accordion-toggle.active {
 	background:#cccc99;
-	color:#FFFFFF;
+	color:#232735;
 }
 
 .accordion-heading .accordion-toggle.inactive {
@@ -274,7 +274,7 @@
 .nav > li > a:hover,
 .nav > li > a:focus {
   	background-color: #cccc99;
-	color: #FFFFFF;
+	color: #232735;
   	text-decoration: none;
   	display: block;
 }
@@ -322,7 +322,7 @@
 .nav-tabs > .active > a:focus {
 	border: none;
   	background-color: #cccc99;
-	color: #FFFFFF;
+	color: #232735;
   	cursor: default;
 }
 
