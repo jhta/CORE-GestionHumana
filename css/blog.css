@@ -174,7 +174,7 @@ font-size: 13px;
     -o-border-radius: 8px;
 }
 body{
-     background: #19232C;
+     background: rgba(26, 46, 66, 1);
     
     background-attachment: fixed;
 }
