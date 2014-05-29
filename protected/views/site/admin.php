@@ -26,11 +26,19 @@
 
           <div id="Publicaciones">
                 <legend><span class="glyphicon glyphicon-list"></span> Publicaciones</legend>
-                <?php
+                <div class="row">
+                    <?php
                     if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-left','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    ?>
+                    </div>
+                <?php 
+                    $this->renderPartial('//publicacion/_viewAdmin', array(
+                        'model' => $modelP,
+    ));
                     }?>
                    
+               
         </div>
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
