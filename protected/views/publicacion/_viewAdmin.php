@@ -1,10 +1,10 @@
 
 <div class="row" id="tabla">
-                    <div class="col-xs-8">
+                    <div class="col-xs-8 pad-0">
                         <table class="table table-striped table-hover">
                             <trhead>
-                                <th><span class="glyphicon glyphicon-th-list"></span>Publicacion</th>
-                                <th><span class="glyphicon glyphicon-th-ok"></span>Visitas</th>
+                                <th><span class="glyphicon glyphicon-th-list"></span> Publicacion</th>
+                                <th><span class="glyphicon glyphicon-ok"></span> Visitas</th>
                                 
                             </trhead>
                             <thbody>
