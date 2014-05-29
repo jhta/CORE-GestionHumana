@@ -236,7 +236,7 @@ class SiteController extends Controller
             
             foreach($analytic as $dato){
                 $mes[]= $dato->month;
-                $visita[]= $dato->visitas;
+                $visita[]= (int) $dato->visitas;
             }
             $jsonMes= json_encode($mes);
             $jsonVis= json_encode($visita);
