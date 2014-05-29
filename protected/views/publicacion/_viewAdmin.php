@@ -8,7 +8,7 @@
                                 
                             </trhead>
                             <thbody>
-                                <?php foreach ($modelP as $i) {?> 
+                                <?php foreach ($Publicaciones as $i) {?> 
                                 <tr>
                                    
                                     <td><?php echo $i->titulo;?></td>

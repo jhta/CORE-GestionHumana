@@ -34,7 +34,7 @@
                     </div>
                 <?php 
                     $this->renderPartial('//publicacion/_viewAdmin', array(
-                        'model' => $modelP,
+                        'Publicaciones' => $Publicaciones,
     ));
                     }?>
                    
