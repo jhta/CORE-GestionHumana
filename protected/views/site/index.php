@@ -59,21 +59,21 @@ $(document).ready(function() {
             <div class="row">
                 <div class="span12">
                     <div class="title-page">
-                        <h2 class="title">CORE Gestion Humana</h2>
+                        <h2 class="title">CORE Gestión Humana</h2>
                         <h3 class="title-description"><?php  echo $modelIn->titulo;?></h3>
                         <p style="font-size:20px;"  ><?php  echo $modelIn->descripcion;?></p>
                         <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
                     </div>
                     
                     <div class="title-page">
-                        <h3 class="title-description">Mision</h3>
+                        <h3 class="title-description">Misión</h3>
                         <p style="font-size:20px;"  ><?php  echo $modelIn->mision;?></p>
                         <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
                     </div>
                 </div>
                 <div class="title-page">
                       
-                        <h3 class="title-description">Vision</h3>
+                        <h3 class="title-description">Visión</h3>
                         <p style="font-size:20px;"  ><?php  echo $modelIn->vision;?></p>
                         <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
                     </div>
@@ -84,7 +84,7 @@ $(document).ready(function() {
     <!-- End Title Page -->
 
     <!-- Publicaciones -->
-    <!- - Start Accordion/Toggle Section -->
+    <!-- Start Accordion/Toggle Section -->
     <div  class="page" >
         <div class="container">
             <div class="row">
