@@ -37,7 +37,7 @@ class Publicacion extends CActiveRecord
 		// will receive user inputs.
 		return array(
                         array('files','file','allowEmpty' => true),
-			array('titulo, contenido, USUARIO_id, fecha', 'required'),
+			array('titulo, contenido, USUARIO_id, fecha', 'required', 'message'=>'El campo {attribute} no puede quedar vacío'),
 			array('USUARIO_id, visitas', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>50),
 			array('contenido', 'length', 'max'=>5000),
