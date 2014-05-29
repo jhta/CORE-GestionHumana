@@ -30,7 +30,7 @@
                     if(!Yii::app()->user->isGuest) {
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-left','style'=>'margin: -7px;letter-spacing: 0px;'));
                     
-                    $this->renderPartial('_viewAdmin', array(
+                    $this->renderPartial('//publicacion/_viewAdmin', array(
                         'model' => $modelP,
     ));
                     }?>
