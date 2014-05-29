@@ -30,7 +30,7 @@
    
     font-size: 12px;
     margin-top: 10px;
-">por: </br>sfdffgffdgf</p>
+">por:</p> </br><p>sfdffgffdgf</p>
 </div>
 <div class="row divider">    
     <div class="col-sm-12"><hr></div>
