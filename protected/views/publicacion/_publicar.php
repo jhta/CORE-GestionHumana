@@ -51,6 +51,8 @@
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'publicacion-form',
         'enableAjaxValidation' => false,
+        'enableClientValidation'=>true,
+        'clientOptions'=>array('validateOnSubmit'=>true),
         'htmlOptions' => array('enctype' => 'multipart/form-data','autocomplete'=>'off'),
     ));
     ?>

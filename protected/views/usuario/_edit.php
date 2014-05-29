@@ -10,6 +10,8 @@
     'id'=>'edit_person',
     'enableAjaxValidation'=>false,
     'action' => array('/usuario/update'),
+    'enableClientValidation'=>true,
+    'clientOptions'=>array('validateOnSubmit'=>true),
     'htmlOptions'=>array(
                         'autocomplete'=>'off',
                         'enctype' => 'multipart/form-data',
