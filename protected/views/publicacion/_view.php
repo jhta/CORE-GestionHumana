@@ -7,7 +7,7 @@
 
     <!--Element-->
 <div class="row">    
-    <div class="col-sm-10">
+    <div class="col-sm-10 col-xs-12">
         <h3><?php echo CHtml::encode($data->titulo); ?></h3>
         <h4 class="text-muted" style="font-size: 12px;">Palabras clave: <?php echo implode('</span>', $data->tagLinks); ?></h4>
         
@@ -21,11 +21,16 @@
             </small>
             
         </h4>
-         <small class="text-muted">Publicado: <?php echo CHtml::encode($data->fecha); ?></small>
+         <small class="text-muted ">Publicado: <?php echo CHtml::encode($data->fecha); ?></small>
     </div> 
-    <div class="col-sm-2">
-        <a href="#" class="pull-right"><img src="<?php echo $this->traerLink($data->USUARIO_id);?>" class="img-circle"></a>
-    </div> 
+    <div class="col-sm-2 col-xs-0" id="foto">
+        <a href="#" class="col-sm-8 col-sm-offset-2" style="margin-bottom: 15px;"><img src="<?php echo $this->traerLink($data->USUARIO_id);?>" class="img-circle"></a>
+    </div>
+    <p class="text-muted text-center" style="
+   
+    font-size: 12px;
+    margin-top: 10px;
+">por: sfdffgffdgf</p>
 </div>
 <div class="row divider">    
     <div class="col-sm-12"><hr></div>

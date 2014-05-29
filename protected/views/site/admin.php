@@ -13,7 +13,7 @@
      
     ));?>
 
-<div class="col-xs-9" id="slide-right">
+<div class="col-sm-9 col-xs-12" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right ">
                         <div class="pull-right">
@@ -27,22 +27,33 @@
           <div id="Publicaciones">
                 <legend><span class="glyphicon glyphicon-list"></span> Publicaciones</legend>
                
-                    <?php
-                    if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-left','style'=>'margin: -7px;letter-spacing: 0px;'));
-                    ?>
-                 
-                <?php 
+                   
+                 <div class="row" id="tabla">
+                    <div class="  col-ms-8  col-xs-12 pad-0">
+                <?php
+                /*
+                 * RenderPartial for view visits X publication's
+                 */
                     $this->renderPartial('//publicacion/_viewAdmin', array(
                         'Publicaciones' => $Publicaciones,
-    ));
-                    }?>
+                        'cantidad'=>floor( ($modelI->total_clicks)/2),
+                    ));
+                    ?>
+                         </div>
+                     <div class="col-sm-3 col-xs-12">
+                            <?php
+                    
+                    echo CHtml::link('Nueva Publicacion', array('publicacion/create'),array('class'=>'btn btn-primary pull-left'));
+                    ?>
+                         
+                     </div>
+                </div>
                    
                
         </div>
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
-                <div class="col-xs-7">
+                <div class="col-sm-7 col-xs-12">
                         <canvas id="canvas" height="400" width="560"></canvas>
 
 

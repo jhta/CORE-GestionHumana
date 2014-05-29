@@ -34,16 +34,18 @@
 		<?php echo $form->textField($model,'nombre',array(
                     'size'=>50,
                     'maxlength'=>50,
+                     'class'=>'form-control',
                     'placeholder'=>'Escribe Nombre completo'
                     )); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 	</div>
 
         <div class="row">
-		<h4 class="text-center" >Nombre de usuaio</h4>
+		<h4 class="text-center" >Nombre de usuario</h4>
 		<?php echo $form->textField($model,'username',array(
                     'size'=>60,
                     'maxlength'=>60,
+                     'class'=>'form-control',
                     'placeholder'=>'Escribe Nombre de usuario'
                     )); ?>
 		<?php echo $form->error($model,'username'); ?>
@@ -54,6 +56,7 @@
 		<?php echo $form->passwordField($model,'contrasena',array(
                     'size'=>30,
                     'maxlength'=>150,
+                     'class'=>'form-control',
                     'placeholder'=>'ingresa una contraseña'
                     )); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
@@ -74,6 +77,7 @@
 		<?php echo $form->textField($model,'correo',array(
                     'size'=>60,
                     'maxlength'=>60,
+                     'class'=>'form-control',
                     'placeholder'=>'Escribe el correo a donde te escribirán'
                     )); ?>
 		<?php echo $form->error($model,'correo'); ?>
@@ -95,6 +99,7 @@
             <?php echo $form->textField($model,'titulo',array(
                 'size'=>60,
                 'maxlength'=>60,
+                 'class'=>'form-control',
                 'placeholder'=>'Escribe la profesión en que te desempeñas'
                 )); ?>
             <?php echo $form->error($model,'titulo'); ?>

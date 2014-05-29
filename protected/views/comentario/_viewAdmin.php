@@ -1,4 +1,4 @@
-  <div class="col-xs-5" >
+  <div class="col-sm-5 col-xs-12" >
                         <div class="panel panel-default">
                                 <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Ultimos Comentarios</div>
                                 <div class="panel-body">

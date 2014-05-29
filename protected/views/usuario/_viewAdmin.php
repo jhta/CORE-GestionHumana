@@ -1,4 +1,4 @@
-<div class="col-xs-3" id="slide-left">
+<div class="col-sm-3 col-xs-12" id="slide-left">
         <div id="edit-perfil">
                 <div class="imagen">
                     <?php if($modelU->nombre_foto==NULL){
