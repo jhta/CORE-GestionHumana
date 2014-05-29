@@ -1,7 +1,7 @@
 
 <div class="row" id="tabla">
                     <div class="col-xs-8">
-                        <table class="table table-striped">
+                        <table class="table table-striped table-hover">
                             <trhead>
                                 <th>Nombre</th>
                                 <th>Visitas</th>
