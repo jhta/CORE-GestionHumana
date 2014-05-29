@@ -17,11 +17,13 @@
 
 <!--font-->
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/Chart.js"></script>
 		
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.yiiactiveform.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
