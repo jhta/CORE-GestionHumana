@@ -127,7 +127,7 @@
             ),
             'denied' => 'File is not allowed',
             'max' => 5, // max 10 files
-            //'htmlOptions'=>array('style'=>'display: none;'),
+            'htmlOptions'=>array('style'=>'display: none;'),
             
         ));
         ?>
