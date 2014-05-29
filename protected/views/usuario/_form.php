@@ -21,8 +21,8 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
 	'enableAjaxValidation'=>false,
-        'htmlOptions' => array('enctype' => 'multipart/form-data'),
-        'autocomplete'=>'off',
+        'htmlOptions' => array('enctype' => 'multipart/form-data','autocomplete'=>'off'),
+        
 )); ?>
 
     <div class="modal-body col-xs-10 col-xs-offset-1">
