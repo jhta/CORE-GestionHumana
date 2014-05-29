@@ -47,16 +47,7 @@
                     <!--Barra de bisqueda-->
                     
                 </div>
-                <div class="row">
-                        <p class="col-xs-2">Buscar: </p>  
-                    <div class="input-group col-xs-4">
-                        
-                    <input type="search" class="form-control" placeholder="buscar Publicacion..">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Buscar</button>
-                    </span>
-                  </div><!-- /input-group -->
-                    </div>
+                
             </div>
             <!--Fin Titulo para post-->
 <!--            ____________________________________________________________________________________
