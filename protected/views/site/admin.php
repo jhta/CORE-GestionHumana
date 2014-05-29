@@ -1,10 +1,10 @@
 <!-- Modal Para editar perfil-->
-<?php/* $this->renderPartial('//usuario/_edit', array(
+<?php $this->renderPartial('//usuario/_edit', array(
      'modelU' => $modelU,
        'id'=> $modelU->id,
     ));?>
 <!-- Modal para crear usuario -->
-<?php $this->renderPartial('//usuario/_form', array(
+<?php /* $this->renderPartial('//usuario/_form', array(
      'model' => $model,
     ));?>
 <!-- Informacion de perfil en columna de la izquierda-->
