@@ -17,7 +17,8 @@
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right ">
                         <div class="pull-right">
-                                <a href="<?php echo Yii::app()->request->baseUrl; ?>">INDEX</a>
+                                 <a href="<?php echo Yii::app()->createAbsoluteUrl('publicacion/index'); ?>">BLOG</a>
+                                <a href="<?php echo Yii::app()->createAbsoluteUrl('site/index'); ?>">INDEX</a>
                                 <a href="<?php echo Yii::app()->createAbsoluteUrl('site/logout'); ?>">SALIR</a>
 
                         </div>
