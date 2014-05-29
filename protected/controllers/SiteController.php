@@ -65,6 +65,7 @@ class SiteController extends Controller
             }else{
                 $estadistica->year= date("Y");
                 $estadistica->month= date("F");
+                $estadistica->numMonth= date("n");
                 $estadistica->visitas= 1;
                 $estadistica->save();
             }
@@ -222,6 +223,20 @@ class SiteController extends Controller
             $model= new Usuario;
             // Meter aquí los isset de cada post que sea necesario
             
+            $criteria2= new CDbCriteria();
+            $criteria2->select= 'month, visitas';
+            $criteria2->condition='year = :year';
+            $criteria2->params= array(':year'=> date("Y"));
+            $criteria2->order= 'numMonth ASC';
+            $analytic= Estadistica::model()->find($criteria2);
+            
+            foreach($analytic as $dato){
+                $mes[]= '"'.$dato->month.'"';
+                $visitas[] = $dato->visitas;
+            }
+            
+            $jsonMes= json_encode($mes);
+            $jsonVis= json_encode($visitas);
             
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
@@ -276,6 +291,8 @@ class SiteController extends Controller
                         'UComentarios'=>$UComentarios,
                         'modelI'=>$modelI,
                         'model'=>$model,
+                        'jsonMes'=>$jsonMes,
+                        'jsonVis'=>$jsonVis,
                 ));
 	}
 
