@@ -31,6 +31,24 @@
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     }?>
                    
+                <div class="row" id="tabla">
+                    <div class="col-xs-8">
+                        <table class="table table-striped">
+                            <trhead>
+                                <th>Nombre</th>
+                                <th>Visitas</th>
+                                
+                            </trhead>
+                            <thbody>
+                                <tr>
+                                   
+                                    <td>Cosa1</td>
+                                    <td>Cosa2</td>
+                                </tr>
+                            </thbody>
+                      </table>
+                    </div>
+                </div>
         </div>
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
