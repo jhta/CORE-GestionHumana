@@ -112,7 +112,6 @@
         <?php echo $form->error($model, 'tags'); ?>
     </div>
     <div class="form-group">
-        <?php $this->endWidget(); ?>
         <?php
         $this->widget('CMultiFileUpload', array(
             'model' => $model,
@@ -128,9 +127,12 @@
             ),
             'denied' => 'File is not allowed',
             'max' => 5, // max 10 files
+            //'htmlOptions'=>array('style'=>'display: none;'),
             
         ));
         ?>
+        <?php $this->endWidget(); ?>
+        
     </div>
 
     <div class="row buttons form-group">
