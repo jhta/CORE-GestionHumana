@@ -8,7 +8,7 @@
                             </trhead>
                             <thbody>
                                 <tr>
-                                    <td>INDEX</td>
+                                    <td>PÁGINA PRINCIPAL (Inicio)</td>
                                     <td><?php echo  $cantidad;?></td>
                                 </tr>
                                 <?php foreach ($Publicaciones as $i) {?> 
