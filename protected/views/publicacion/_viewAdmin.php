@@ -7,6 +7,10 @@
                                 
                             </trhead>
                             <thbody>
+                                <tr>
+                                    <td>INDEX</td>
+                                    <td><?php echo  $cantidad;?></td>
+                                </tr>
                                 <?php foreach ($Publicaciones as $i) {?> 
                                 <tr>
                                    
@@ -14,6 +18,7 @@
                                     <td><?php echo $i->visitas;?></td>
                                 </tr>
                                 <?php }?>
+                                
                             </thbody>
                       </table>
                    
