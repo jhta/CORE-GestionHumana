@@ -40,12 +40,14 @@
                     ?>
                          </div>
                      <div class="col-xs-3">
-                         <p>Total de visitas: <?php echo floor( ($modelI->total_clicks)/2);?>
-                         </p></hr>
-                          <?php
+                            <?php
                     
                     echo CHtml::link('Nueva Publicacion', array('publicacion/create'),array('class'=>'btn btn-primary pull-left'));
                     ?>
+                         </hr>
+                         <p>Total de visitas: <?php echo floor( ($modelI->total_clicks)/2);?>
+                         </p></hr>
+                       
                      </div>
                 </div>
                    
