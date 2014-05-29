@@ -23,7 +23,7 @@
         </h4>
          <small class="text-muted ">Publicado: <?php echo CHtml::encode($data->fecha); ?></small>
     </div> 
-    <div class="col-sm-2 col-xs-0">
+    <div class="col-sm-2 col-xs-0" id="foto">
         <a href="#" class="col-sm-8 col-sm-offset-2" style="margin-bottom: 15px;"><img src="<?php echo $this->traerLink($data->USUARIO_id);?>" class="img-circle"></a>
     </div>
     <p class="text-muted text-center" style="
