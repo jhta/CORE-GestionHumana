@@ -69,8 +69,8 @@
             
             <!--Element-->
                <!--footer-->
-               <?php $this->renderPartial('//site/footer');?>
-             <!--end Footer-->
+               
+               <!--end Footer-->
 
 
         </div><!-- /col-9 -->
