@@ -232,7 +232,7 @@ class SiteController extends Controller
             $criteria2->condition='year = :year';
             $criteria2->params= array(':year'=> date("Y"));
             $criteria2->order= 'numMonth ASC';
-            $analytic= Estadistica::model()->find($criteria2);
+            $analytic= Estadistica::model()->findAll($criteria2);
             
             foreach($analytic as $dato){
                 $mes[]= $dato->month;
