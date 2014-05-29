@@ -65,6 +65,7 @@ class SiteController extends Controller
             }else{
                 $estadistica->year= date("Y");
                 $estadistica->month= date("F");
+                $estadistica->numMonth= date("n");
                 $estadistica->visitas= 1;
                 $estadistica->save();
             }
@@ -224,7 +225,14 @@ class SiteController extends Controller
             //Crieria for PUblication in Admin
             $CriteriaP= new CDbCriteria();
             $CriteriaP->order="visitas DESC";
-            $Publicaciones= Publicacion::model()->findAll($CriteriaP);
+            $Publicaciones= Publicacion::model()->findAll($Criteria);
+            
+            $criteria2= new CDbCriteria();
+            $criteria2->select= 'month, visitas';
+            $criteria2->condition='year = :year';
+            $criteria2->params= array(':year'=> date("Y"));
+            $criteria2->order= 'numMonth ASC';
+            $analytic= Estadistica::model()->find($criteria2);
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
@@ -278,6 +286,8 @@ class SiteController extends Controller
                         'UComentarios'=>$UComentarios,
                         'modelI'=>$modelI,
                         'model'=>$model,
+                        'jsonMes'=>$jsonMes,
+                        'jsonVis'=>$jsonVis,
                         'Publicaciones'=>$Publicaciones,
                 ));
 	}

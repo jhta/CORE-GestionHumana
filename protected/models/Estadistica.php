@@ -28,11 +28,11 @@ class Estadistica extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('year, month, visitas', 'required'),
-			array('year, visitas', 'numerical', 'integerOnly'=>true),
+			array('year, visitas,numMonth', 'numerical', 'integerOnly'=>true),
 			array('month', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('year. onth, visitas', 'safe', 'on'=>'search'),
+			array('numMonth, year, month, visitas', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -43,6 +43,7 @@ class Estadistica extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+                        'numMonth' => 'Número de Mes',
 			'year' => 'Año',
 			'month' => 'Mes',
                         'visitas' => 'Visitas',
@@ -70,6 +71,7 @@ class Estadistica extends CActiveRecord
 		$criteria->compare('year',$this->year);
 		$criteria->compare('month',$this->ETIQUETA_nombre);
                 $criteria->compare('visitas',$this->visitas);
+                $criteria->compare('numMonth',$this->numMonth);
                 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
