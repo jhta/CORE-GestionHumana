@@ -59,17 +59,24 @@ $(document).ready(function() {
             <div class="row">
                 <div class="span12">
                     <div class="title-page">
-                        <h2 class="title"><?php  echo $modelIn->titulo;?></h2>
-                        <h3 class="title-description">Consultoría Organizacional Especializada.</h3>
-                        <p style="font-size:20px;" class="span3" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <!--<img class="img-rounded" src="http://blog.codeconutrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
+                        <h2 class="title">CORE Gestion Humana</h2>
+                        <h3 class="title-description"><?php  echo $modelIn->titulo;?></h3>
+                        <p style="font-size:20px;"  ><?php  echo $modelIn->descripcion;?></p>
+                        <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
+                    </div>
+                    
+                    <div class="title-page">
+                        <h3 class="title-description">Mision</h3>
+                        <p style="font-size:20px;"  ><?php  echo $modelIn->mision;?></p>
+                        <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
                     </div>
                 </div>
+                <div class="title-page">
+                      
+                        <h3 class="title-description">Vision;?></h3>
+                        <p style="font-size:20px;"  ><?php  echo $modelIn->vision;?></p>
+                        <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
+                    </div>
             </div>
 
         </div>
