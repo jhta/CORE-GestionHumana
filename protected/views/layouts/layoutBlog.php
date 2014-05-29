@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <!-- Main Blog Style -->
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/blog.css" rel="stylesheet">
+<link rel='shortcut icon' type='image/x-icon' href='<?php echo Yii::app()->request->baseUrl; ?>/images/logo-ico.ico' />
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
