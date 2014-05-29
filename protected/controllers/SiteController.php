@@ -225,7 +225,7 @@ class SiteController extends Controller
             //Crieria for PUblication in Admin
             $CriteriaP= new CDbCriteria();
             $CriteriaP->order="visitas DESC";
-            $modelP= Publicacion::model()->findAll($Criteria);
+            $Publicaciones= Publicacion::model()->findAll($Criteria);
             
             $criteria2= new CDbCriteria();
             $criteria2->select= 'month, visitas';
@@ -288,6 +288,7 @@ class SiteController extends Controller
                         'model'=>$model,
                         'jsonMes'=>$jsonMes,
                         'jsonVis'=>$jsonVis,
+                        'Publicaciones'=>$Publicaciones,
                 ));
 	}
 
