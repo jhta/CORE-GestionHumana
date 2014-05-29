@@ -12,11 +12,12 @@
                     <img src= "<?php echo Yii::app()->request->baseUrl.$i['nombre_foto'].$i['formato_foto'];?>" alt="<?php echo $i['nombre'] ?>">
             </div>
             <h3 class="profile-name"><?php echo $i['nombre'];?></h3>
+            <h5 class="profile-name" style="color: #cccc99"><?php echo $i['correo'];?></h5>
             <p class="profile-description">
                 
                 <?php echo substr($i['descripcion'],0,305)."...";?>
             </p>
-            <h3 class="profile-name"><?php echo $i['correo'];?></h3>
+            
 <!--            <div class="social">
             	<ul class="social-icons">
                 	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
