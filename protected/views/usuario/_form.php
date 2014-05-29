@@ -61,7 +61,17 @@
                     )); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
 	</div>
-
+        
+        <div class="row">
+		<h4 class="text-center" >Repite contraseña</h4>
+		<?php echo $form->passwordField($model,'contrasena2',array(
+                    'size'=>30,
+                    'maxlength'=>150,
+                    'placeholder'=>'Vuelve a escribir tu contraseña'
+                    )); ?>
+		<?php echo $form->error($model,'contrasena2'); ?>
+	</div>
+        
 	<div class="row">
 		<h4 class="text-center" >Correo</h4>
 		<?php echo $form->textField($model,'correo',array(
@@ -95,11 +105,6 @@
             <?php echo $form->error($model,'titulo'); ?>
 	</div>
         
-        <div class="row">
-            <h4 class="text-center" >Foto</h4>
-            <?php echo $form->fileField($model,'foto'); ?>
-            <?php echo $form->error($model,'foto'); ?>
-        </div>
              
     </div>
     <div class="modal-footer">
