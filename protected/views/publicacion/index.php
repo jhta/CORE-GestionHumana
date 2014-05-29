@@ -17,9 +17,9 @@ var searchP = new List('searchP', options');
     color: white;
 ">CORE</a>
     <legend style="color: white;">Publicaciones</legend>
-    <div >
+<!--    <div >
                     <input type="text" class="search form-control " placeholder="buscar Publicacion.." >
-                    </div>
+                    </div>-->
                    
     <ul class="nav ">
         
