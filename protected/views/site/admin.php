@@ -54,7 +54,7 @@
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
                 <div class="col-sm-7 col-xs-12">
-                        <canvas id="canvas" ></canvas>
+                        <canvas id="canvas" height="400" width="560"></canvas>
 
 
                                 <script>
