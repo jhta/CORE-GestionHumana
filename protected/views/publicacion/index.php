@@ -40,7 +40,7 @@
                     <div class="pull-left">
                     Publicaciones
                     <div class="pull-right">
-                    <input type="search" class="form-control " placeholder="buscar Publicacion..">
+                    <input type="search" class="form-control " placeholder="buscar Publicacion.." style="width: 300px;margin: -7px; ">
                     </div>
                     </div>
                         <?php
