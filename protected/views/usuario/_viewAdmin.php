@@ -11,8 +11,8 @@
                     <img  class="img-circle" src="<?php echo $foto?>">  
                 </div>
             <h3 class="nombre"><?php echo $modelU->nombre; ?></h3>
-            <h4 style="color:#cccc99"> <?php echo $modelU->correo; ?></h4>
-            <h4><?php echo $modelU->titulo; ?></h4>
+            <h4 class="correo text-center"> <?php echo $modelU->correo; ?></h4>
+            <h4 class="titulo text-center"><?php echo $modelU->titulo; ?></h4>
             <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
         </div>
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
