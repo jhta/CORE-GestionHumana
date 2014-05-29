@@ -3,7 +3,7 @@
 /* @var $data Publicacion */
 ?>
 
-<li class="view elemento">
+<div class="view elemento">
 
     <!--Element-->
 <div class="row">    
@@ -51,4 +51,4 @@
 	<?php //echo CHtml::encode($data->fecha); ?>
 	
 
-</li>
+</div>
