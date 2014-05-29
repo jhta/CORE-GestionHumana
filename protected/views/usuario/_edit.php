@@ -11,6 +11,7 @@
     'enableAjaxValidation'=>false,
     'action' => array('/usuario/update'),
     'htmlOptions'=>array(
+                        'autocomplete'=>'off',
                         'enctype' => 'multipart/form-data',
                         //'onsubmit'=>"return false;",/* Disable normal form submit */
                         'onkeypress'=>" if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */

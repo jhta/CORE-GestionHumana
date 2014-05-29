@@ -56,6 +56,7 @@ $(document).ready(function(){
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'publicacion-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' => array('enctype' => 'multipart/form-data','autocomplete'=>'off')
 )); ?>
 
 	<?php echo $form->errorSummary($model); ?>

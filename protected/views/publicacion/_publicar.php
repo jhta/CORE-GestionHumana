@@ -51,6 +51,7 @@
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'publicacion-form',
         'enableAjaxValidation' => false,
+        'htmlOptions' => array('enctype' => 'multipart/form-data','autocomplete'=>'off'),
     ));
     ?>
 
@@ -128,6 +129,7 @@
             ),
             'denied' => 'File is not allowed',
             'max' => 5, // max 10 files
+            
         ));
         ?>
     </div>
