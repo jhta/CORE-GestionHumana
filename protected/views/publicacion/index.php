@@ -53,7 +53,7 @@ var searchP = new List('searchP', options');
                     Publicaciones
                         <?php
                     if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    echo CHtml::link('Publicar', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     echo CHtml::link('Administracion', array('site/admin'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px; margin-right:10px;'));
                     }?>
                     <!--<div class="btn btn-primary pull-right" style="
