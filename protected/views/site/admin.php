@@ -13,7 +13,7 @@
      
     ));?>
 
-<div class="col-xs-9" id="slide-right">
+<div class="col-sm-9 col-xs-12" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right ">
                         <div class="pull-right">
