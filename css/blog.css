@@ -57,10 +57,10 @@ a {
 
 #main {
   background-color:#fefefe;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 #main .img-circle {
- padding-top:18px;
+  margin-top:18px;
   height:70px;
   width:70px;
 }
