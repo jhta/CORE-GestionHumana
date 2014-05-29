@@ -36,6 +36,7 @@
                  */
                     $this->renderPartial('//publicacion/_viewAdmin', array(
                         'Publicaciones' => $Publicaciones,
+                        'cantidad'=>floor( ($modelI->total_clicks)/2),
                     ));
                     ?>
                          </div>
