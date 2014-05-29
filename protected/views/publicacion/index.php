@@ -3,7 +3,7 @@ $(document).ready(function(){
     var options = {
   valueNames: [ 'Stitulo' ]
 };
-var searchP = new List('searchP', options);
+var searchP = new List('searchP', 'Stitulo');
 });
 </script>   
 <div id="searchP">
