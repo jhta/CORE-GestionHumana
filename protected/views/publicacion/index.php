@@ -36,8 +36,15 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12 col-xs-12" id="featured">   
-                <div class="page-header text-muted">
+                <div class="nav navbar  page-header text-muted" >
                     Publicaciones
+                    <!--Barra de bisqueda-->
+                    <div class="input-group">
+                    <input type="search" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Buscar</button>
+                    </span>
+                  </div><!-- /input-group -->
                     <?php
                     if(!Yii::app()->user->isGuest) {
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
