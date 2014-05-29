@@ -42,7 +42,9 @@
                          </div>
                      <div class="col-sm-3 col-xs-12">
                             <?php
-                    
+                    /*
+                     * Button for create new Publication
+                     */
                     echo CHtml::link('Nueva Publicacion', array('publicacion/create'),array('class'=>'btn btn-primary pull-left'));
                     ?>
                          
@@ -56,9 +58,12 @@
                 <div class="col-sm-7 col-xs-12">
                         <canvas id="canvas" height="400" width="560"></canvas>
 
-
+                                
                                 <script>
-//                                  
+//                              
+                                    /*
+                                     * Graphics: Count visitor's
+                                     */
                                         var lineChartData = {
                                                 labels : <?php echo $jsonMes; ?>,
                                                 datasets : [
@@ -80,7 +85,11 @@
 
                 </div>
               <!-- Modal Para editar perfil-->
-<?php $this->renderPartial('//comentario/_viewAdmin', array(
+<?php
+/*
+ * Last Comments
+ */
+$this->renderPartial('//comentario/_viewAdmin', array(
      'UComentarios' => $UComentarios,
     ));?>
         </div>

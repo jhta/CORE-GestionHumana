@@ -476,10 +476,11 @@ function inicio(){
 	accordion();
 	toggle();
 	toolTip();
-}
 
 $(window).resize(function(){
-	BRUSHED.mobileNav();
+	mobileNav();
 });
+}
+
 
 });
