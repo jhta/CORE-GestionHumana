@@ -15,9 +15,16 @@
             <h4 class="titulo text-center"><?php echo $modelU->titulo; ?></h4>
             <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
         </div>
+    <div class="row">
+        <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-edit"> </span> 
+        <span> Editar</span>
+    </div>
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
         <span class="glyphicon glyphicon-edit"> </span> 
         <span> Editar</span>
+    </div>
+    
     </div>
     
     <div class="btn btn-primary " id="btn-crear" data-toggle="modal" data-target="#myModal2">
