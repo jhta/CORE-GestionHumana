@@ -49,7 +49,7 @@
                                 <script>
 //                                  
                                         var lineChartData = {
-                                                labels : <?php echo $jsonMes; ?>,
+                                                labels : ["January","February"],
                                                 datasets : [
 
                                                         {
@@ -57,7 +57,7 @@
                                                                 strokeColor : "rgba(151,187,205,1)",
                                                                 pointColor : "rgba(151,187,205,1)",
                                                                 pointStrokeColor : "#fff",
-                                                                data : <?php echo $jsonVis; ?>
+                                                                data : [34,100]
                                                         }
                                                 ]
 
