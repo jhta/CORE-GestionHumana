@@ -38,7 +38,7 @@
                
                 <div class="page-header text-muted">
                     Publicaciones con etiqueta <?php echo $tagName;?>
-                     <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn btn-primar pull-right', 'style'=>'margin-top: -7px;'));?>
+                     <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn btn-primary pull-right', 'style'=>'margin-top: -7px;'));?>
                 </div> 
             </div>
             <!--Fin Titulo para post-->
