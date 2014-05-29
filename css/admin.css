@@ -193,6 +193,10 @@ label.filebutton {
     display: initial !important;
 }
 
+#btn-cambiar{
+    width: 173px;
+}
+
 .correo{
     color: #E0E050;
 text-shadow: 1px 1px 3px #000;
