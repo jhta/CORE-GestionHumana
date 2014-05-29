@@ -65,7 +65,7 @@ class UsuarioController extends Controller
 		$model=new Usuario;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		
 
@@ -92,7 +92,8 @@ class UsuarioController extends Controller
                         $directorio= Yii::getPathOfAlias('webroot').$carpeta;
                         $Nombre_foto= $carpeta.DIRECTORY_SEPARATOR.Yii::app()->user->id;
                         $Extension_foto= '.'.$model->foto->extensionName;
-                        unlink(Yii::getPathOfAlias('webroot') . DIRECTORY_SEPARATOR . $model->nombre_foto . $model->formato_foto);
+                        if($model->nombre_foto != '')
+                            unlink(Yii::getPathOfAlias('webroot') . DIRECTORY_SEPARATOR . $model->nombre_foto . $model->formato_foto);
                     }
 
                     $model->attributes=$_POST['Usuario'];
@@ -104,7 +105,7 @@ class UsuarioController extends Controller
                             $model->foto->saveAs($directorio.DIRECTORY_SEPARATOR.Yii::app()->user->id.$Extension_foto);
                         $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));
                         //$this->redirect(array('view','id'=>$model->id));
-                    }
+                    }else{ echo $model->save();}
                 }
 	}
         
@@ -193,7 +194,7 @@ class UsuarioController extends Controller
 	 * Performs the AJAX validation.
 	 * @param Usuario $model the model to be validated
 	 */
-	protected function performAjaxValidation($model)
+	public function performAjaxValidation($model)
 	{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='usuario-form')
 		{

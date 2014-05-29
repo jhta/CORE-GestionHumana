@@ -216,7 +216,7 @@ class SiteController extends Controller
             $Criteria->order="fecha DESC";
             $Criteria->limit=15;
             $UComentarios= Comentario::model()->findAll($Criteria);
-            echo Yii::app()->user->id;
+            
             $modelU= Usuario::model()->findByPk(Yii::app()->user->id);
             $this->layout='//layouts/column3';
             $modelI= Informacion::model()->findByPk(1);
@@ -263,7 +263,9 @@ class SiteController extends Controller
                 }
                     
             }
-            
+            $s = Yii::app()->createController('Usuario'); //returns array containing controller instance and action index.
+            $s = $s[0];
+            $s->performAjaxValidation($model);
             if(isset($_POST['Usuario'])){
                 if(isset($_POST['Usuario']['foto'])) $model->foto = CUploadedFile::getInstance($model,'foto');
                 $Nombre_foto='';
@@ -277,6 +279,7 @@ class SiteController extends Controller
 
                 $model->attributes= $_POST['Usuario'];
                 $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
+                $model->contrasena2= $model->hashPassword($_POST['Usuario']['contrasena2'],$session);
                 $model->sesion= $session;
                 $model->nombre_foto= $Nombre_foto;
                 $model->formato_foto= $Extension_foto;

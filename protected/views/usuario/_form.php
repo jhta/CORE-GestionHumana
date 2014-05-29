@@ -20,7 +20,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'usuario-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
         'enableClientValidation'=>true,
         'clientOptions'=>array('validateOnSubmit'=>true),
         'htmlOptions' => array('enctype' => 'multipart/form-data','autocomplete'=>'off'),
@@ -47,7 +47,8 @@
 		<?php echo $form->textField($model,'username',array(
                     'size'=>60,
                     'maxlength'=>60,
-                     'class'=>'form-control',
+                    'class'=>'form-control',
+                    'value'=>'',
                     'placeholder'=>'Escribe Nombre de usuario'
                     )); ?>
 		<?php echo $form->error($model,'username'); ?>
@@ -58,7 +59,8 @@
 		<?php echo $form->passwordField($model,'contrasena',array(
                     'size'=>30,
                     'maxlength'=>150,
-                     'class'=>'form-control',
+                    'class'=>'form-control',
+                    'value'=>'',
                     'placeholder'=>'ingresa una contraseña'
                     )); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
