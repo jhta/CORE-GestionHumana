@@ -222,6 +222,7 @@ text-shadow: 1px 1px 3px #000;
     overflow-y: auto;
 }
 #tabla>.col-xs-8{
+    padding: 0 30px;
    max-height: 400px !important;
     overflow-y: auto;
     
