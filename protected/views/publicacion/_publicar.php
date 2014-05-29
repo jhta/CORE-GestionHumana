@@ -55,7 +55,7 @@
     ));
     ?>
 
-<?php echo $form->errorSummary($model); ?>
+<?php echo $form->errorSummary($model,'Por favor corrija los siguientes campos:'); ?>
 
     <div class="row form-group">
         <h4 class="pad-l-0 text-center col-xs-1 ">Titulo</h4>

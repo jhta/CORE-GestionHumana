@@ -3,9 +3,7 @@
 /* @var $model Usuario */
 /* @var $form CActiveForm */
 ?>
-<head>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.yiiactiveform.js"></script>
-</head>
+
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -29,7 +27,7 @@
 
     <div class="modal-body col-xs-10 col-xs-offset-1">
 
-	<?php echo $form->errorSummary($model,'Por favor corriga los siguientes campos:'); ?>
+	<?php echo $form->errorSummary($model,'Por favor corrija los siguientes campos:'); ?>
 
 	<div class="row">
 		<h4 class="text-center" >Nombre</h4>
@@ -69,6 +67,7 @@
 		<?php echo $form->passwordField($model,'contrasena2',array(
                     'size'=>30,
                     'maxlength'=>150,
+                    'class'=>'form-control',
                     'placeholder'=>'Vuelve a escribir tu contraseña'
                     )); ?>
 		<?php echo $form->error($model,'contrasena2'); ?>
@@ -79,7 +78,7 @@
 		<?php echo $form->textField($model,'correo',array(
                     'size'=>60,
                     'maxlength'=>60,
-                     'class'=>'form-control',
+                    'class'=>'form-control',
                     'placeholder'=>'Escribe el correo a donde te escribirán'
                     )); ?>
 		<?php echo $form->error($model,'correo'); ?>

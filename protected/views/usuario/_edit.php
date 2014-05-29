@@ -19,10 +19,11 @@
             
 )); ?>
       <div class="modal-body col-xs-10 col-xs-offset-1">
-												
+            <?php echo $form->errorSummary($model,'Por favor corrija los siguientes campos:'); ?>										
+            
             <div class="row">
-            <h4 class="text-center" > Nombre</h4>
-            <?php echo $form->textField($modelU,'nombre',
+                <h4 class="text-center" > Nombre</h4>
+                <?php echo $form->textField($modelU,'nombre',
                     array(
                         'size'=>50,
                         'maxlength'=>50,
@@ -35,8 +36,8 @@
             </div>
 
           <div class="row">
-            <h4 class="text-center" > Titulo</h4>
-            <?php echo $form->textField($modelU,'titulo',
+                <h4 class="text-center" > Titulo</h4>
+                <?php echo $form->textField($modelU,'titulo',
                     array(
                         'size'=>50,
                         'maxlength'=>50,
