@@ -3,7 +3,8 @@ body>.col-xs-3{
 	color: white;
 	text-align: justify;
 }
-body{background: url('http://th06.deviantart.net/fs71/PRE/i/2010/156/d/0/Shiny_Blue_Texture_3_by_BrokenVain_Stock.png');
+body{
+    background: #19232C;
      background-repeat-x: initial;
     background-attachment: fixed;
 }
