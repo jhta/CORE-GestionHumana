@@ -233,6 +233,14 @@ class SiteController extends Controller
             $criteria2->params= array(':year'=> date("Y"));
             $criteria2->order= 'numMonth ASC';
             $analytic= Estadistica::model()->find($criteria2);
+            
+            foreach($analytic as $dato){
+                $mes[]= $dato->month;
+                $visita[]= $dato->visitas;
+            }
+            $jsonMes= json_encode($mes);
+            $jsonVis= json_encode($visita);
+            
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
