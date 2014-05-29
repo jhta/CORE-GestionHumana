@@ -1,4 +1,5 @@
- <div class="row" id="tabla">
+
+<div class="row" id="tabla">
                     <div class="col-xs-8">
                         <table class="table table-striped">
                             <trhead>
@@ -7,11 +8,13 @@
                                 
                             </trhead>
                             <thbody>
+                                <?php foreach ($modelP as $i) {?> 
                                 <tr>
                                    
-                                    <td>Cosa1</td>
-                                    <td>15</td>
+                                    <td><?php echo $modelP->titulo;?></td>
+                                    <td><?php echo $modelP->visitas;?></td>
                                 </tr>
+                                <?php }?>
                             </thbody>
                       </table>
                     </div>
