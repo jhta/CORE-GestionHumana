@@ -15,12 +15,14 @@
             <p class="profile-description">
                 
                 <?php echo substr($i['descripcion'],0,305)."...";?>
-            <div class="social">
+            </p>
+            <h3 class="profile-name"><?php echo $i['correo'];?></h3>
+<!--            <div class="social">
             	<ul class="social-icons">
                 	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
                         <li><a href="#"><i class="font-icon-social-facebook"></i></a></li>
                 </ul>
-            </div>
+            </div>-->
         </div>
         <!-- End Profile -->
         
