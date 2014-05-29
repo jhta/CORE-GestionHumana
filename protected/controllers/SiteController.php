@@ -68,7 +68,7 @@ class SiteController extends Controller
                 $estadistica->visitas= 1;
                 $estadistica->save();
             }
-            
+            //Criteria for publication's 
                 $Criteria = new CDbCriteria();
                 $Criteria->limit = 2;
                 $Criteria->order = "fecha DESC";
@@ -85,6 +85,9 @@ class SiteController extends Controller
                 $Usuarios = Usuario::model()->findAll();
 		
                 $modelL=new LoginForm;
+                
+                $modelIn= Informacion::model()->findByPk(1);
+                
 
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -150,6 +153,7 @@ class SiteController extends Controller
 		$this->render('index',array(
                     'model'=>$model,
                     'modelL'=>$modelL,
+                    'modelIn'=>$modelIn,
                     'Publicaciones'=>$Publicaciones,
                     'Publicaciones2'=>$Publicaciones2,
                     'Usuarios'=>$Usuarios,
