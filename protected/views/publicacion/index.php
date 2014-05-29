@@ -13,7 +13,7 @@
         <?php  $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_viewSideBar',
-                    'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
+                    'summaryText' => 'Se encontraron '. $pages2->itemCount .' ',
             ));
 //            $this->renderPartial('_viewSideBar', array(
 //            'publicacionesl' => $publicacionesl,
