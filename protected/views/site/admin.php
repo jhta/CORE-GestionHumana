@@ -29,7 +29,7 @@
                
                    
                  <div class="row" id="tabla">
-                    <div class=" col-xs-offset-1 col-xs-8 pad-0">
+                    <div class="  col-xs-8 pad-0">
                 <?php
                 /*
                  * RenderPartial for view visits X publication's
