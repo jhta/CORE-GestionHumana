@@ -27,16 +27,25 @@
           <div id="Publicaciones">
                 <legend><span class="glyphicon glyphicon-list"></span> Publicaciones</legend>
                
-                    <?php
-                    if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-left','style'=>'margin: -7px;letter-spacing: 0px;'));
-                    ?>
-                 
-                <?php 
+                   
+                 <div class="row" id="tabla">
+                    <div class=" col-xs-offset-1 col-xs-8 pad-0">
+                <?php
+                /*
+                 * RenderPartial for view visits X publication's
+                 */
                     $this->renderPartial('//publicacion/_viewAdmin', array(
                         'Publicaciones' => $Publicaciones,
-    ));
-                    }?>
+                    ));
+                    ?>
+                         </div>
+                     <div class="col-xs-3">
+                          <?php
+                    
+                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-left','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    ?>
+                     </div>
+                </div>
                    
                
         </div>
