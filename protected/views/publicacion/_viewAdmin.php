@@ -11,7 +11,7 @@
                                 <?php foreach ($Publicaciones as $i) {?> 
                                 <tr>
                                    
-                                    <td><?php echo $i->titulo;?></td>
+                                    <td><?php echo CHtml::link($i->titulo, array('view', 'id'=>$i->id));?></td>
                                     <td><?php echo $i->visitas;?></td>
                                 </tr>
                                 <?php }?>
