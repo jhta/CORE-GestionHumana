@@ -218,3 +218,8 @@ text-shadow: 1px 1px 3px #000;
     max-height: 400px !important;
     overflow-y: auto;
 }
+#tabla>col-xs-8{
+   max-height: 400px !important;
+    overflow-y: auto;
+    
+}
