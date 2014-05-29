@@ -37,10 +37,13 @@
             <!--Titulo para post-->
             <div class="col-sm-12 col-xs-12" id="featured">   
                 <div class="page-header text-muted">
+                    <div class="pull-left">
                     Publicaciones
-                        
-                    <input type="search" class="form-control pull-right" placeholder="buscar Publicacion..">
-                    <?php
+                    <div class="pull-right">
+                    <input type="search" class="form-control " placeholder="buscar Publicacion..">
+                    </div>
+                    </div>
+                        <?php
                     if(!Yii::app()->user->isGuest) {
                     echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
                     }?>
