@@ -18,6 +18,8 @@
 <meta name="HandheldFriendly" content="true"/>
 <meta name="MobileOptimized" content="320"/>   
 
+<!--favicon-->
+<link rel='shortcut icon' type='image/x-icon' href='<?php echo Yii::app()->request->baseUrl; ?>/images/logo-ico.ico' />
 <!-- Mobile Internet Explorer ClearType Technology -->
 <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
