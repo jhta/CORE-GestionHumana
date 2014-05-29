@@ -31,7 +31,7 @@
     
     </div>
     
-    <div class="btn btn-primary " id="btn-crear" data-toggle="modal" data-target="#myModal2">
+    <div class="btn btn-primary " id="btn-crear"  style="width: 173px;" data-toggle="modal" data-target="#myModal2">
         <span class="glyphicon glyphicon-edit"> </span> 
         <span>Crear Usuario</span>
     </div>
