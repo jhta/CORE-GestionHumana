@@ -1,4 +1,4 @@
-<div class="column col-sm-3 " id="sidebar">
+<div class="column col-sm-3 col-xs-0" id="sidebar">
     <a class="logo col-xs-1" href="#" style="margin-right: 0;">C</a>
     <a class="logo col-xs-4 col-xs-offset-1" href="#" style="
     margin-left: 0;
@@ -35,9 +35,10 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12" id="featured">
-                <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn btn-primary'));?>
+               
                 <div class="page-header text-muted">
                     Publicaciones con etiqueta <?php echo $tagName;?>
+                     <?php echo CHtml::link('Volver',array('publicacion/index'),array('class'=>'btn btn-primar pull-right', 'style'=>'margin-top: -7px;'));?>
                 </div> 
             </div>
             <!--Fin Titulo para post-->
