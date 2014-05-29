@@ -224,7 +224,7 @@ class SiteController extends Controller
             //Crieria for PUblication in Admin
             $CriteriaP= new CDbCriteria();
             $CriteriaP->order="visitas DESC";
-            $modelP= Publicacion::model()->findAll($Criteria);
+            $Publicaciones= Publicacion::model()->findAll($CriteriaP);
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
@@ -278,7 +278,7 @@ class SiteController extends Controller
                         'UComentarios'=>$UComentarios,
                         'modelI'=>$modelI,
                         'model'=>$model,
-                        'modelP'=>$modelP,
+                        'Publicaciones'=>$Publicaciones,
                 ));
 	}
 
