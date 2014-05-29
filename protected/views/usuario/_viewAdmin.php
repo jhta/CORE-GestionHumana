@@ -16,18 +16,18 @@
             <div class="descripcion"><?php echo $modelU->descripcion; ?></div>
         </div>
     <div class="row">
-        <div class="col-xs-6 pull-right">
+        
     <div class="btn btn-primary " id="btn-perfil" data-toggle="modal" data-target="#myModal">
         <span class="glyphicon glyphicon-edit"> </span> 
         <span> Editar</span>
     </div>
-            </div>    
-    <div class="col-xs-6 pull-left">
+           
+    
     <div class="btn btn-primary " id="btn-cambiar" data-toggle="modal" data-target="#myModal3">
         <span class="glyphicon glyphicon-edit"> </span> 
         <span> Cambiar contraseña</span>
     </div>
-        </div>
+       
     
     </div>
     
