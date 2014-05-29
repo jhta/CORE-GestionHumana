@@ -36,7 +36,7 @@ class Usuario extends CActiveRecord
 		// will receive user inputs.
 		return array(
                         array('foto','file', 'allowEmpty'=>true),
-			array('nombre, contrasena, correo, username', 'required'),
+			array('nombre, contrasena, correo, username', 'required', 'message'=>'El campo {attribute} no puede quedar vacío'),
                         array('username','unique', 'message'=>'Este nombre de usuario ya existe'),
                         array('contrasena2','compare','compareAttribute'=>'contrasena','operator'=>'=','message'=>'Las contraseñas no coinciden'),
                         array('nombre, nombre_foto', 'length', 'max'=>50),
