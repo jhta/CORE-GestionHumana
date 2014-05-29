@@ -36,7 +36,7 @@
             <!-- content -->
             <!--Titulo para post-->
             <div class="col-sm-12 col-xs-12" id="featured">   
-                <div class="nav navbar  page-header text-muted">
+                <div class="page-header text-muted">
                     Publicaciones
                     <?php
                     if(!Yii::app()->user->isGuest) {
