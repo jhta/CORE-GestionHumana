@@ -1,5 +1,5 @@
 <!-- Modal Para editar perfil-->
-<?php $this->renderPartial('//usuario/_edit', array(
+<?php  $this->renderPartial('//usuario/_edit', array(
      'modelU' => $modelU,
        'id'=> $modelU->id,
     ));?>

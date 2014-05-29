@@ -216,6 +216,7 @@ class SiteController extends Controller
             $Criteria->order="fecha DESC";
             $Criteria->limit=15;
             $UComentarios= Comentario::model()->findAll($Criteria);
+            echo Yii::app()->user->id;
             $modelU= Usuario::model()->findByPk(Yii::app()->user->id);
             $this->layout='//layouts/column3';
             $modelI= Informacion::model()->findByPk(1);

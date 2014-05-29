@@ -10,7 +10,6 @@
     'id'=>'edit_person',
     'enableAjaxValidation'=>false,
     'action' => array('/usuario/update'),
-    
     'htmlOptions'=>array(
                         'autocomplete'=>'off',
                         'enctype' => 'multipart/form-data',
@@ -20,7 +19,7 @@
             
 )); ?>
       <div class="modal-body col-xs-10 col-xs-offset-1">
-            <?php echo $form->errorSummary($model,'Por favor corrija los siguientes campos:'); ?>										
+            <?php echo $form->errorSummary($modelU,'Por favor corrija los siguientes campos:'); ?>										
             
             <div class="row">
                 <h4 class="text-center" > Nombre</h4>
