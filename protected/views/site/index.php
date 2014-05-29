@@ -59,9 +59,9 @@ $(document).ready(function() {
             <div class="row">
                 <div class="span12">
                     <div class="title-page">
-                        <h2 class="title">GESTIÓN HUMANA</h2>
+                        <h2 class="title"><?php $modelIn->titulo;?></h2>
                         <h3 class="title-description">Consultoría Organizacional Especializada.</h3>
-                        <p style="font-size:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <p style="font-size:20px;" class="span3" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
