@@ -29,7 +29,7 @@
                
                    
                  <div class="row" id="tabla">
-                    <div class="  col-xs-8 pad-0">
+                    <div class="  col-ms-8  col-xs-12 pad-0">
                 <?php
                 /*
                  * RenderPartial for view visits X publication's
@@ -40,7 +40,7 @@
                     ));
                     ?>
                          </div>
-                     <div class="col-xs-3">
+                     <div class="col-sm-3 col-xs-12">
                             <?php
                     
                     echo CHtml::link('Nueva Publicacion', array('publicacion/create'),array('class'=>'btn btn-primary pull-left'));
@@ -53,7 +53,7 @@
         </div>
         <div id="graficas">
                 <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
-                <div class="col-xs-7">
+                <div class="col-sm-7 col-xs-12">
                         <canvas id="canvas" height="400" width="560"></canvas>
 
 
