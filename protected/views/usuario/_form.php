@@ -50,7 +50,7 @@
         
 	<div class="row">
 		<h4 class="text-center" >Contraseña</h4>
-		<?php echo $form->textField($model,'contrasena',array(
+		<?php echo $form->passwordField($model,'contrasena',array(
                     'size'=>30,
                     'maxlength'=>150,
                     'placeholder'=>'ingresa una contraseña'
