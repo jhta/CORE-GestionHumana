@@ -193,7 +193,7 @@ class UsuarioController extends Controller
 	 * Performs the AJAX validation.
 	 * @param Usuario $model the model to be validated
 	 */
-	protected function performAjaxValidation($model)
+	public function performAjaxValidation($model)
 	{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='usuario-form')
 		{
