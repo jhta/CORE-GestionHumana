@@ -279,6 +279,7 @@ class SiteController extends Controller
 
                 $model->attributes= $_POST['Usuario'];
                 $model->contrasena= $model->hashPassword($_POST['Usuario']['contrasena'],$session= $model->generateSalt());
+                $model->contrasena2= $model->hashPassword($_POST['Usuario']['contrasena2'],$session);
                 $model->sesion= $session;
                 $model->nombre_foto= $Nombre_foto;
                 $model->formato_foto= $Extension_foto;
