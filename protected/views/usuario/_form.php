@@ -90,11 +90,6 @@
             <?php echo $form->error($model,'titulo'); ?>
 	</div>
         
-        <div class="row">
-            <h4 class="text-center" >Foto</h4>
-            <?php echo $form->fileField($model,'foto'); ?>
-            <?php echo $form->error($model,'foto'); ?>
-        </div>
              
     </div>
     <div class="modal-footer">

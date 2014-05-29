@@ -18,6 +18,7 @@
 class Usuario extends CActiveRecord
 {
         public $foto;
+        public $contrasena2;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -36,8 +37,9 @@ class Usuario extends CActiveRecord
 		return array(
                         array('foto','file', 'allowEmpty'=>true),
 			array('nombre, contrasena, correo, username', 'required'),
-                        array('username','unique'),
-			array('nombre, nombre_foto', 'length', 'max'=>50),
+                        array('username','unique', 'message'=>'Este nombre de usuario ya existe'),
+                        array('contrasena2','compare','compareAttribute'=>'contrasena','operator'=>'=','message'=>'Las contraseñas no coinciden'),
+                        array('nombre, nombre_foto', 'length', 'max'=>50),
                         array('formato_foto', 'length', 'max'=>10),
 			array('contrasena, sesion', 'length', 'max'=>150),
 			array('correo, titulo, username', 'length', 'max'=>60),
