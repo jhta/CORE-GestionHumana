@@ -20,8 +20,6 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/Chart.js"></script>
-		
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.yiiactiveform.js"></script>
 
 
 <!-- Latest compiled and minified JavaScript -->

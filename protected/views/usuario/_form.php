@@ -3,7 +3,9 @@
 /* @var $model Usuario */
 /* @var $form CActiveForm */
 ?>
-
+<head>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.yiiactiveform.js"></script>
+</head>
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -27,7 +29,7 @@
 
     <div class="modal-body col-xs-10 col-xs-offset-1">
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model,'Por favor corriga los siguientes campos:'); ?>
 
 	<div class="row">
 		<h4 class="text-center" >Nombre</h4>
