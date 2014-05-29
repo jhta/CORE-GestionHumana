@@ -223,3 +223,9 @@ text-shadow: 1px 1px 3px #000;
     overflow-y: auto;
     
 }
+
+th{
+    background-color: #223A52 !important;
+    color: white;
+    border-color: #223A52 !important;
+}
