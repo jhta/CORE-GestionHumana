@@ -1,3 +1,12 @@
+<script>
+$(document).ready(function(){
+    var options = {
+  valueNames: [ 'Stitulo', 'Snombre' ]
+};
+var userList = new List('searchP', options);
+});
+</script>   
+<div id="searchP">
 
 <!-- sidebar -->
 <div class="column col-sm-3 col-xs-0" id="sidebar">
@@ -8,11 +17,11 @@
     color: white;
 ">CORE</a>
     <legend style="color: white;">Publicaciones</legend>
-     <div >
-                    <input type="search" class="form-control " placeholder="buscar Publicacion.." style="width: 300px;margin: -7px; ">
+    <div >
+                    <input type="text" class="search form-control " placeholder="buscar Publicacion.." >
                     </div>
                    
-    <ul class="nav">
+    <ul class="nav ">
         
         <?php  $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
@@ -57,7 +66,8 @@
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     CONTENIDO GENERAL
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-            <?php $this->widget('zii.widgets.CListView', array(
+<ul class="list">
+                <?php $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_view',
                     
@@ -65,11 +75,9 @@
                     'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
                 
             )); 
-            
-            
-            
+
             ?>
-            
+            </ul>
             <!--Element-->
                <!--footer-->
                <?php //$this->renderPartial('//site/footer');?>
@@ -81,3 +89,4 @@
 </div>
 <!-- /main -->
 
+    <div id="searchP">
