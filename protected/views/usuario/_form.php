@@ -34,6 +34,7 @@
 		<?php echo $form->textField($model,'nombre',array(
                     'size'=>50,
                     'maxlength'=>50,
+                     'class'=>'form-control',
                     'placeholder'=>'Escribe Nombre completo'
                     )); ?>
 		<?php echo $form->error($model,'nombre'); ?>
