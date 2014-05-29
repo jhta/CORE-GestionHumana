@@ -1,9 +1,9 @@
 <script>
 $(document).ready(function(){
     var options = {
-  valueNames: [ 'Stitulo' ]
+  valueNames: [ 'Stitulo','snombre' ]
 };
-var searchP = new List('searchP', 'Stitulo');
+var searchP = new List('searchP', options');
 });
 </script>   
 <div id="searchP">
