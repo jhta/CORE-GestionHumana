@@ -44,7 +44,8 @@
 		<?php echo $form->textField($model,'username',array(
                     'size'=>60,
                     'maxlength'=>60,
-                    'placeholder'=>'Escribe Nombre de usuario'
+                    'placeholder'=>'Escribe Nombre de usuario',
+                    'autocomplete'=>'off'
                     )); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
@@ -54,7 +55,8 @@
 		<?php echo $form->passwordField($model,'contrasena',array(
                     'size'=>30,
                     'maxlength'=>150,
-                    'placeholder'=>'ingresa una contraseña'
+                    'placeholder'=>'ingresa una contraseña',
+                    'autocomplete'=>'off'
                     )); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
 	</div>
