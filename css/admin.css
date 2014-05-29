@@ -208,6 +208,9 @@ text-shadow: 1px 1px 3px #000;
 -webkit-text-shadow: 1px 1px 3px #000;
     
 }
+.pad-0{
+    padding: 0px !important;
+}
 
 
 /* ==================================================
@@ -228,4 +231,5 @@ th{
     background-color: #223A52 !important;
     color: white;
     border-color: #223A52 !important;
+    font-weight: 100;
 }
