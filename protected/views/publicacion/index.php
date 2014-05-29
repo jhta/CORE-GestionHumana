@@ -89,4 +89,4 @@ var searchP = new List('searchP', options');
 </div>
 <!-- /main -->
 
-    <div id="searchP">
+    </div >
