@@ -1,7 +1,7 @@
 <script>
 $(document).ready(function(){
     var options = {
-  valueNames: [ 'Stitulo', 'Snombre' ]
+  valueNames: [ 'Stitulo' ]
 };
 var userList = new List('searchP', options);
 });
