@@ -73,7 +73,7 @@ $(document).ready(function() {
                 </div>
                 <div class="title-page">
                       
-                        <h3 class="title-description">Vision;?></h3>
+                        <h3 class="title-description">Vision</h3>
                         <p style="font-size:20px;"  ><?php  echo $modelIn->vision;?></p>
                         <!--<img class="img-rounded" src="http://blog.codeconñ'utrilife.com/wp-content/uploads/2011/01/dolor-de-cabeza.jpg">-->
                     </div>
