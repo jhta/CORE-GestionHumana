@@ -19,6 +19,7 @@
 	'id'=>'change-password',
 	'enableAjaxValidation'=>true,
         'enableClientValidation'=>true,
+        'action' => array('/usuario/ChangePass'),
         'clientOptions'=>array('validateOnSubmit'=>true),
         'htmlOptions' => array('enctype' => 'multipart/form-data','autocomplete'=>'off'),
         
