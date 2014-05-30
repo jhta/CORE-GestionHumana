@@ -153,6 +153,8 @@ class UsuarioController extends Controller
                         $this->redirect(Yii::app()->createAbsoluteUrl ('site/admin'));
                     }
                 
+                }else{
+                    $model->addError('old_pass','Contraseña de validación es incorrecta');
                 }
             }
            

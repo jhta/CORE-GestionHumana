@@ -54,13 +54,13 @@
         
         <div class="row">
 		<h4 class="text-center" >Repite contraseña</h4>
-		<?php echo $form->passwordField($model,'contrasena2',array(
+		<?php echo $form->passwordField($model,'repeat_pass',array(
                     'size'=>30,
                     'maxlength'=>150,
                     'class'=>'form-control',
                     'placeholder'=>'Vuelve a escribir tu nueva contraseña'
                     )); ?>
-		<?php echo $form->error($model,'contrasena2'); ?>
+		<?php echo $form->error($model,'repeat_pass'); ?>
 	</div>             
     </div>
     <div class="modal-footer">
