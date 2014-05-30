@@ -140,12 +140,18 @@ class UsuarioController extends Controller
          */
         public function actionChangePass(){
             $model= $this->loadModel(Yii::app()->user->id);
-            $model->setScenario('changePassword');
             
             if(isset($_POST['Usuario'])){
-                if($model->save()){
-                    Yii::app()->user->setFlas('passChange','La contraseña se ha cambiado correctamente');
-                    $this->redirect(Yii::app()->createAbsoluteUrl ('site/admin'));
+                if($model->validatePassword($_POST['Usuario']['old_pass'])){
+                    $session= $model->generateSalt();
+                    $model->contrasena= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
+                    $model->contrasena2= $model->hashPassword($_POST['Usuario']['contrasena2'],$session);
+                    $model->sesion= $session;
+                    if($model->save()){
+                        Yii::app()->user->setFlas('passChange','La contraseña se ha cambiado correctamente');
+                        $this->redirect(Yii::app()->createAbsoluteUrl ('site/admin'));
+                    }
+                
                 }
             }
            

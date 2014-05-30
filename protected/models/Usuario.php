@@ -50,7 +50,6 @@ class Usuario extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo, nombre_foto, formato_foto', 'safe', 'on'=>'search'),
-                        array('old_pass','checkOldPassword','message'=>'Contraseña de acceso erronea', 'on'=>'changePassword'),
                         array( 'contrasena2', 'compare', 'compareAttribute' => 'new_pass', 'operator'=>'=', 'message'=>'Las contraseñas no coinciden','on'=>'changePassword'),
 		);
 	}
@@ -139,11 +138,6 @@ class Usuario extends CActiveRecord
 		));
 	}
         
-        public function checkOldPassword($attribute,$params){
-            $user= Usuario::model()->findByPk(Yii::app()->user->id);
-            if($user->contrasena !== $this->hashPassword($params['old_pass'],$user->sesion))
-                   $this->addError('old_pass','La contraseña introducida es incorrecta');
-        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
