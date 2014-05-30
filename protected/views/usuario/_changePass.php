@@ -6,7 +6,6 @@
         <h4 class="modal-title" id="myModalLabel">Crear Perfil</h4>
       </div>
 <?php $model->setScenario('changePassword');
-      $s->performAjaxValidation($model);
 ?>
 <?php if(Yii::app()->user->hasFlash('passChange')): ?>
     <div class="alert alert-success">
@@ -17,7 +16,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'change-password',
-	'enableAjaxValidation'=>true,
+	'enableAjaxValidation'=>false,
         'enableClientValidation'=>true,
         'action' => array('/usuario/ChangePass'),
         'clientOptions'=>array('validateOnSubmit'=>true),

@@ -2,7 +2,7 @@
 
                         <table class="table table-striped table-hover">
                             <trhead>
-                                <th><span class="glyphicon glyphicon-th-list"></span> Publicacion</th>
+                                <th><span class="glyphicon glyphicon-th-list"></span> Publicación</th>
                                 <th><span class="glyphicon glyphicon-ok"></span> Visitas</th>
                                 
                             </trhead>
