@@ -133,8 +133,23 @@ class UsuarioController extends Controller
 
 		
 	}
-        
-        
+        /*
+         * Changes a User's password 
+         * If the change is successful, the browser will be redirected to the 'admin' page
+         * 
+         */
+        public function actionChangePass(){
+            $model= $this->loadModel(Yii::app()->user->id);
+            $model->setScenario('changePassword');
+            
+            if(isset($_POST['Usuario'])){
+                if($model->save()){
+                    Yii::app()->user->setFlas('passChange','La contraseña se ha cambiado correctamente');
+                    $this->redirect(Yii::app()->createAbsoluteUrl ('site/admin'));
+                }
+            }
+           
+        }
 
 	/**
 	 * Deletes a particular model.

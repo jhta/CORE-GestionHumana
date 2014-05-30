@@ -12,6 +12,9 @@
      'modelU' => $modelU,
      
     ));?>
+<?php  $this->renderPartial('//usuario/_changePass', array(
+                                    'model'=>$model,
+                                )); ?>
 
 <div class="col-sm-9 col-xs-12" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">

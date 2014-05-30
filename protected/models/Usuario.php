@@ -19,6 +19,9 @@ class Usuario extends CActiveRecord
 {
         public $foto;
         public $contrasena2;
+        public $old_pass;
+        public $new_pass;
+        
 	/**
 	 * @return string the associated database table name
 	 */
@@ -47,6 +50,8 @@ class Usuario extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo, nombre_foto, formato_foto', 'safe', 'on'=>'search'),
+                        array('old_pass', 'compare', 'compareAttribute' => 'contrasena', 'operator'=>'=','message'=>'Contraseña de acceso erronea', 'on'=>'changePassword'),
+                        array( 'contrasena2', 'compare', 'compareAttribute' => 'new_pass', 'operator'=>'=', 'message'=>'Las contraseñas no coinciden','on'=>'changePassword'),
 		);
 	}
 
