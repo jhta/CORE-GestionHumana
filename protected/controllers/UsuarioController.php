@@ -146,7 +146,7 @@ class UsuarioController extends Controller
                     $session= $model->generateSalt();
                     $model->contrasena= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
                     $model->repeat_pass= $model->hashPassword($_POST['Usuario']['repeat_pass'],$session);
-                    $model->contrasena2= $model->hashPassword($_POST['Usuario']['repeat_pass'],$session);
+                    $model->contrasena2= $model->repeat_pass;
                     $model->new_pass= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
                     $model->sesion= $session;
                     if($model->save()){
