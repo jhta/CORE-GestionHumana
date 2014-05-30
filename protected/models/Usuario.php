@@ -50,7 +50,7 @@ class Usuario extends CActiveRecord
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, nombre, contrasena, sesion, correo, descripcion, titulo, nombre_foto, formato_foto', 'safe', 'on'=>'search'),
-                        array( 'contrasena2', 'compare', 'compareAttribute' => 'new_pass', 'operator'=>'=', 'message'=>'Las contraseñas no coinciden','on'=>'changePassword'),
+                        array( 'contrasena2', 'compare', 'compareAttribute' => 'new_pass', 'operator'=>'=', 'message'=>'Las contraseñas no coinciden 2','on'=>'changePassword'),
 		);
 	}
 
