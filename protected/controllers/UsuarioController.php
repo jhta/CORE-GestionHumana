@@ -146,6 +146,7 @@ class UsuarioController extends Controller
                     $session= $model->generateSalt();
                     $model->contrasena= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
                     $model->contrasena2= $model->hashPassword($_POST['Usuario']['contrasena2'],$session);
+                    $model->new_pass= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
                     $model->sesion= $session;
                     if($model->save()){
                         Yii::app()->user->setFlas('passChange','La contraseña se ha cambiado correctamente');
