@@ -154,7 +154,8 @@ class UsuarioController extends Controller
                     }
                 
                 }else{
-                    $model->addError('old_pass','Contraseña de validación es incorrecta');
+                    //Yii::app()->user->setFlas('passChange','La contraseña se ha cambiado correctamente');
+                    $this->redirect(Yii::app()->createAbsoluteUrl ('site/admin'));
                 }
             }
            
