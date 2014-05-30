@@ -1,3 +1,12 @@
+<script>
+$(document).ready(function(){
+    var options = {
+  valueNames: [ 'Stitulo','Snombre' ]
+};
+var searchP = new List('searchP', options');
+});
+</script>   
+<div id="searchP">
 
 <!-- sidebar -->
 <div class="column col-sm-3 col-xs-0" id="sidebar">
@@ -8,11 +17,11 @@
     color: white;
 ">CORE</a>
     <legend style="color: white;">Publicaciones</legend>
-     <div >
-                    <input type="search" class="form-control " placeholder="buscar Publicacion.." style="width: 300px;margin: -7px; ">
-                    </div>
+<!--    <div >
+                    <input type="text" class="search form-control " placeholder="buscar Publicacion.." >
+                    </div>-->
                    
-    <ul class="nav">
+    <ul class="nav ">
         
         <?php  $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
@@ -44,7 +53,8 @@
                     Publicaciones
                         <?php
                     if(!Yii::app()->user->isGuest) {
-                    echo CHtml::link('Nueva!', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    echo CHtml::link('Publicar', array('publicacion/create'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px;'));
+                    echo CHtml::link('Administracion', array('site/admin'),array('class'=>'btn btn-primary pull-right','style'=>'margin: -7px;letter-spacing: 0px; margin-right:10px;'));
                     }?>
                     <!--<div class="btn btn-primary pull-right" style="
                         margin: -7px;
@@ -57,7 +67,8 @@
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                     CONTENIDO GENERAL
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
-            <?php $this->widget('zii.widgets.CListView', array(
+<ul class="list">
+                <?php $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_view',
                     
@@ -65,11 +76,9 @@
                     'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
                 
             )); 
-            
-            
-            
+
             ?>
-            
+            </ul>
             <!--Element-->
                <!--footer-->
                <?php //$this->renderPartial('//site/footer');?>
@@ -81,3 +90,4 @@
 </div>
 <!-- /main -->
 
+    </div >

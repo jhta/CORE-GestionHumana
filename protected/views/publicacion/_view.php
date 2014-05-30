@@ -3,12 +3,12 @@
 /* @var $data Publicacion */
 ?>
 
-<div class="view">
+<div class="view elemento">
 
     <!--Element-->
 <div class="row">    
     <div class="col-sm-10 col-xs-12">
-        <h3><?php echo CHtml::encode($data->titulo); ?></h3>
+        <h3 class="Stitulo"><?php echo CHtml::encode($data->titulo); ?></h3>
         <h4 class="text-muted" style="font-size: 12px;">Palabras clave: <?php echo implode('</span>', $data->tagLinks); ?></h4>
         
         <span class="text-muted" id="content">
@@ -26,7 +26,7 @@
     <div class="col-sm-2 col-xs-0" id="foto">
         <a href="#" class="col-sm-8 col-sm-offset-2" style="margin-bottom: 15px;"><img src="<?php echo $this->traerLink($data->USUARIO_id);?>" class="img-circle"></a>
     </div>
-    <p class="text-muted text-center" style="
+    <p class="text-muted text-center Snombre" style="
    
     font-size: 12px;
     margin-top: 10px;
