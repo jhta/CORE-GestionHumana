@@ -5,6 +5,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Crear Perfil</h4>
       </div>
+<?php $model->setScenario('changePassword'); ?>
 <?php if(Yii::app()->user->hasFlash('passChange')): ?>
     <div class="alert alert-success">
             <?php echo Yii::app()->user->getFlash('passChange'); ?>
@@ -44,7 +45,7 @@
                     'maxlength'=>150,
                     'class'=>'form-control',
                     'value'=>'',
-                    'placeholder'=>'Ingresa una nueva contraseña'
+                    'placeholder'=>'Ingresa tu nueva contraseña'
                     )); ?>
 		<?php echo $form->error($model,'new_pass'); ?>
 	</div>
@@ -55,7 +56,7 @@
                     'size'=>30,
                     'maxlength'=>150,
                     'class'=>'form-control',
-                    'placeholder'=>'Vuelve a escribir tu contraseña'
+                    'placeholder'=>'Vuelve a escribir tu nueva contraseña'
                     )); ?>
 		<?php echo $form->error($model,'contrasena2'); ?>
 	</div>             
