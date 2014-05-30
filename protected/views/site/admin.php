@@ -14,7 +14,6 @@
     ));?>
 <?php  $this->renderPartial('//usuario/_changePass', array(
                                     'model'=>$model,
-                                    's'=>$s,
                                 )); ?>
 
 <div class="col-sm-9 col-xs-12" id="slide-right">

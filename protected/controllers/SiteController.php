@@ -301,7 +301,7 @@ class SiteController extends Controller
                         'jsonMes'=>$jsonMes,
                         'jsonVis'=>$jsonVis,
                         'Publicaciones'=>$Publicaciones,
-                        's'=>$s,
+                        
                 ));
 	}
 

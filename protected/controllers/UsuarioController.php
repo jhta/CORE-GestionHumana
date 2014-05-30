@@ -146,11 +146,11 @@ class UsuarioController extends Controller
                     $session= $model->generateSalt();
                     $model->contrasena= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
                     $model->repeat_pass= $model->hashPassword($_POST['Usuario']['repeat_pass'],$session);
-                    $model->contrasena2= $model->repeat_pass;
+                    $model->contrasena2= $model->contrasena;
                     $model->new_pass= $model->hashPassword($_POST['Usuario']['new_pass'],$session);
                     $model->sesion= $session;
                     if($model->save()){
-                        Yii::app()->user->setFlas('passChange','La contraseña se ha cambiado correctamente');
+                        Yii::app()->user->setFlash('passChange','La contraseña se ha cambiado correctamente');
                         $this->redirect(Yii::app()->createAbsoluteUrl ('site/admin'));
                     }
                 

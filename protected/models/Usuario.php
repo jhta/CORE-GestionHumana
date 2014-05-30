@@ -45,7 +45,7 @@ class Usuario extends CActiveRecord
                         array('contrasena2','compare','compareAttribute'=>'contrasena','operator'=>'=','message'=>'Las contraseñas no coinciden'),
                         array('nombre, nombre_foto', 'length', 'max'=>50),
                         array('formato_foto', 'length', 'max'=>10),
-			array('contrasena, sesion', 'length', 'max'=>150),
+			array('contrasena, sesion, new_pass, repeat_pass, old_pass, contrasena2', 'length', 'max'=>150),
 			array('correo, titulo, username', 'length', 'max'=>60),
 			array('descripcion', 'length', 'max'=>120),
 			// The following rule is used by search().
