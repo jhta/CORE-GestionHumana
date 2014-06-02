@@ -300,7 +300,7 @@ $(document).ready(function() {
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2014  <a href="http://twitter.com/jh7a" title="">sinSO</a>. Todos los derechos reservados </p>
+	<p class="credits">&copy;2014  <a href="http://twitter.com/jh7a" title="">SotOut Develompent</a>. Todos los derechos reservados </p>
 </footer>
 <!-- End Footer -->
 
