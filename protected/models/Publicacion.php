@@ -40,7 +40,6 @@ class Publicacion extends CActiveRecord
 			array('titulo, contenido, USUARIO_id, fecha', 'required', 'message'=>'El campo {attribute} no puede quedar vacío'),
 			array('USUARIO_id, visitas', 'numerical', 'integerOnly'=>true),
 			array('titulo', 'length', 'max'=>50),
-			array('contenido', 'length', 'max'=>5000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, titulo, contenido, USUARIO_id, fecha, visitas', 'safe', 'on'=>'search'),
