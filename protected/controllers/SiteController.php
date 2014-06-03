@@ -307,7 +307,7 @@ class SiteController extends Controller
                 
                 if($modelI->save()){
                     Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
-                    $this->redirect(Yii::app()->createAbsoluteUrl('site/admin'));   
+                       
                 }
             }
         }

@@ -55,6 +55,8 @@ $(document).ready(function(){
             url: <?php echo "'".CController::createUrl('site/CambiarGeneral')."'"; ?>,
             data: ajax_data,
             type: "post",
+        }).done(function(){
+            window.location.href = "<?php echo Yii::app()->createAbsoluteUrl('site/admin')?>";
         });
     });
 });
