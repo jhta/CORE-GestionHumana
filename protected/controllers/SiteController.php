@@ -292,7 +292,7 @@ class SiteController extends Controller
         public function actionCambiarGeneral(){
             if(isset($_POST['titulo']) || isset($_POST['descripcion']) || isset($_POST['mision']) || isset($_POST['vision'])){
                 $modelI= Informacion::model()->findByPk(1);
-                echo 'hola';
+                
                 if(isset($_POST['descripcion']))
                     $modelI->descripcion= $_POST['descripcion'];
 
