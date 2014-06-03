@@ -245,23 +245,22 @@ class SiteController extends Controller
             if(isset($_POST['Informacion'])){
                 $modelI= Informacion::model()->findByPk(1);
                 
-                if(isset($_POST['Informacion']['descripcion']))
-                    $modelI->descripcion= $_POST['Informacion']['descripcion'];
+                if(isset($_POST['descripcion']))
+                    $modelI->descripcion= $_POST['descripcion'];
 
-                if(isset($_POST['Informacion']['titulo']))
-                    $modelI->titulo= $_POST['Informacion']['titulo'];
+                if(isset($_POST['titulo']))
+                    $modelI->titulo= $_POST['titulo'];
                 
-                if(isset($_POST['Informacion']['mision']))
-                    $modelI->mision= $_POST['Informacion']['mision'];
+                if(isset($_POST['mision']))
+                    $modelI->mision= $_POST['mision'];
                 
-                if(isset($_POST['Informacion']['vision']))
-                    $modelI->vision= $_POST['Informacion']['vision'];
+                if(isset($_POST['vision']))
+                    $modelI->vision= $_POST['vision'];
                 
                 if($modelI->save()){
                     Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
                     $this->refresh();   
                 }
-                    
             }
             $s = Yii::app()->createController('Usuario'); //returns array containing controller instance and action index.
             $s = $s[0];

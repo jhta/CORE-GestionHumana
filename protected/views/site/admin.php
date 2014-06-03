@@ -15,7 +15,37 @@
 <?php  $this->renderPartial('//usuario/_changePass', array(
                                     'model'=>$model,
                                 )); ?>
-
+<script>
+$(document).ready(function(){
+    $(".editor").popline();
+    $('#descripcion').html($('#descripcionForm').val());
+    $('#mision').html($('#misionForm').val());
+    $('#vision').html($('#visionForm').val());
+    $('.modificar').click(function(){
+        $('#descripcionForm').val($('#descripcion').html());
+        $('#misionForm').val($('#mision').html());
+        $('#visionForm').val($('#vision').html());
+        var titulo= $('#titulo').val();
+        var descripcion= $('#descripcion').html();
+        var mision= $('#mision').html();
+        var vision= $('#vision').html();
+        
+        var ajax_data = {
+                "titulo":titulo,
+                "descripcion": descripcion,
+                "mision":mision,
+                "vision":vision
+            };
+        $.ajax({  
+            async:true,    
+            cache:false,   
+            url: <?php echo "'".CController::createUrl('site/admin')."'"; ?>,
+            data: ajax_data,
+            type: "post",
+        });
+    });
+});
+</script>
 <div class="col-sm-9 col-xs-12" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
                 <div class="navbar-right ">
@@ -138,7 +168,7 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                                                             'maxlength'=>70,
                                                                             'class'=>'form-control input-comentario',
                                                                             'placeholder'=>'Titulo a mostrar en el index',
-
+                                                                            'id'=>'titulo',
                                                                             )); ?>
                                                                 <?php echo $form->error($modelI,'titulo'); ?>
                                                             </div>
@@ -150,12 +180,15 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                                                             'cols'=>50,
                                                                             'class'=>'form-control input-comentario',
                                                                             'placeholder'=>'Escribe aqui la descripción que saldrá en el index',
-
+                                                                            'id'=>'descripcionForm',
+                                                                            'style' => 'display: none;',
                                                                             )); ?>
                                                                 <?php echo $form->error($modelI,'descripcion'); ?>
                                                             </div>
+                                                            <div class="editor row contenedores" contenteditable="true" id="descripcion">
+                                                            </div>
                                                             <div class="row buttons">
-                                                                <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
+                                                                <div class="btn btn-primary modificar" style="margin-top:15px;">Modificar</div>
                                                             </div>
                                                 </div>
 
@@ -175,12 +208,15 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                                                     'cols'=>50,
                                                                     'class'=>'form-control input-comentario',
                                                                     'placeholder'=>'Escribe aqui la misión de la empresa',
-
+                                                                    'style' => 'display: none;',
+                                                                    'id'=>'misionForm',
                                                                     )); ?>
                                                         <?php echo $form->error($modelI,'mision'); ?>
                                                     </div>
+                                                    <div class="editor row contenedores" contenteditable="true" id="mision">
+                                                    </div>
                                                     <div class="row buttons">
-                                                        <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
+                                                        <div class="btn btn-primary modificar" style="margin-top:15px;">Modificar</div>
                                                     </div>
                                             </div>
                                         </div>               
@@ -196,12 +232,15 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                                                         'cols'=>50,
                                                                         'class'=>'form-control input-comentario',
                                                                         'placeholder'=>'Escribe aqui la visión de la empresa',
-
+                                                                        'style' => 'display: none;',
+                                                                        'id'=>'visionForm',
                                                                         )); ?>
                                                             <?php echo $form->error($modelI,'vision'); ?>
                                                         </div>
+                                                        <div class="editor row contenedores" contenteditable="true" id="vision">
+                                                        </div>
                                                         <div class="row buttons">
-                                                            <?php echo CHtml::submitButton('Modificar',array('class'=>'btn btn-primary','style'=>'margin-top:15px;')); ?>
+                                                            <div class="btn btn-primary modificar" style="margin-top:15px;">Modificar</div>
                                                         </div>
                                                     <?php $this->endWidget(); ?>
                                                 </div>
