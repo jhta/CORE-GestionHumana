@@ -103,10 +103,10 @@ var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
                     
-											{image : 'http://invisibledisabilities.org/wp-content/gallery/pamphlets/fragrance-free-zone.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '../images/profilePictures/5.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : 'http://gsr2r.com/blog/wp-content/uploads/2013/11/bigstock_Office_Life_-_Happy_People_Hav_4098282.jpg ', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
-											{image : '../images/slider-images/image03.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
+											{image : '../images/slider-images/slide1.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/slide2.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/slide3.jpg ', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''},
+											{image : '../images/slider-images/slide4.jpg', title : '<div class="slide-content"><div class="log"></div></div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
