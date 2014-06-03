@@ -68,7 +68,7 @@ $(document).ready(function(){
 		
 		<?php echo $form->textField($model,'titulo',
                         array('size'=>50,
-                            'maxlength'=>50,
+                            'maxlength'=>200,
                             'id'=>'titulo',
                             'class'=>'form-control',
                             'placeholder'=>'titulo',

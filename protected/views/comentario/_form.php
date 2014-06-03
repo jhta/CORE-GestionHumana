@@ -21,7 +21,7 @@
 	<div class="row">
 		<?php echo $form->textField($model,'nombre',
                         array('size'=>30,
-                            'maxlength'=>30,
+                            'maxlength'=>70,
                              'class'=>'form-control input-comentario',
                             'placeholder'=>'nombre',
                             'required'=>'required',
