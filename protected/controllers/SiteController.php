@@ -242,9 +242,9 @@ class SiteController extends Controller
             $jsonMes= json_encode($mes);
             $jsonVis= json_encode($visita);
             
-            if(isset($_POST['Informacion'])){
+            if(isset($_POST['titulo']) || isset($_POST['descripcion']) || isset($_POST['mision']) || isset($_POST['vision'])){
                 $modelI= Informacion::model()->findByPk(1);
-                
+                echo 'hola';
                 if(isset($_POST['descripcion']))
                     $modelI->descripcion= $_POST['descripcion'];
 
