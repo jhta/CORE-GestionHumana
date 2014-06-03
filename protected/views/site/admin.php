@@ -228,7 +228,7 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                                                     )); ?>
                                                         <?php echo $form->error($modelI,'mision'); ?>
                                                     </div>
-                                                    <div class="editor row contenedores" contenteditable="true" id="mision">
+                                                    <div class="editor row contenedores"  contenteditable="true" id="mision">
                                                     </div>
                                                     <div class="row buttons">
                                                         <div class="btn btn-primary modificar" style="margin-top:15px;">Modificar</div>
