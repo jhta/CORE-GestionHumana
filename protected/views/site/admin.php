@@ -55,6 +55,8 @@ $(document).ready(function(){
             url: <?php echo "'".CController::createUrl('site/admin')."'"; ?>,
             data: ajax_data,
             type: "post",
+        }).done(function(resul){
+            alert(resul);
         });
     });
 });
