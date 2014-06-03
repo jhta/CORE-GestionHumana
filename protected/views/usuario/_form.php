@@ -61,7 +61,7 @@
                     'maxlength'=>150,
                     'class'=>'form-control',
                     'value'=>'',
-                    'placeholder'=>'ingresa una contraseña'
+                    'placeholder'=>'Ingresa una contraseña'
                     )); ?>
 		<?php echo $form->error($model,'contrasena'); ?>
 	</div>

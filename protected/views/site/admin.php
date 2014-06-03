@@ -12,6 +12,9 @@
      'modelU' => $modelU,
      
     ));?>
+<?php  $this->renderPartial('//usuario/_changePass', array(
+                                    'model'=>$model,
+                                )); ?>
 
 <div class="col-sm-9 col-xs-12" id="slide-right">
         <nav class="navbar navbar-inverse " role="navigation">
@@ -55,7 +58,7 @@
                
         </div>
         <div id="graficas">
-                <legend><span class="glyphicon glyphicon-stats"></span> Graficas</legend>
+                <legend><span class="glyphicon glyphicon-stats"></span> Gráficas</legend>
                 <div class="col-sm-7 col-xs-12">
                         <canvas id="canvas" height="400" width="560"></canvas>
 
@@ -95,7 +98,7 @@ $this->renderPartial('//comentario/_viewAdmin', array(
     ));?>
         </div>
         <div id="edit-index">
-                <legend><span class="glyphicon glyphicon-wrench"></span> Administracion</legend>
+                <legend><span class="glyphicon glyphicon-wrench"></span> Administración</legend>
                 <div>
                         <div class="container">
 
@@ -108,9 +111,9 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                 <li class="active"><a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-th-list">
                                 </span>General</a></li>
                                 <li><a href="#profile" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span>
-                                    Mision</a></li>
+                                    Misión</a></li>
                                 <li><a href="#messages" data-toggle="tab"><span class="glyphicon glyphicon-th-list"></span>
-                                    Vision</a></li>
+                                    Visión</a></li>
 
                             </ul>
                             <!-- Tab panes -->
@@ -161,7 +164,7 @@ $this->renderPartial('//comentario/_viewAdmin', array(
 
                                     </div>
                                 <div class="tab-pane fade in" id="profile">
-                                    <h4> Modificar la Mision</h4>
+                                    <h4> Modificar la Misión</h4>
                                     <div class="list-group">
                                         <div class="col-xs-10 col-xs-offset-1">
                                             <div class="row">
@@ -184,7 +187,7 @@ $this->renderPartial('//comentario/_viewAdmin', array(
                                     </div>
                                 </div>
                                 <div class="tab-pane fade in" id="messages">
-                                        <h4> Modificar la Vision</h4>
+                                        <h4> Modificar la Visión</h4>
                                         <div class="col-xs-10 col-xs-offset-1">								
                                             <div class="row">
                                                     <div class="row">
