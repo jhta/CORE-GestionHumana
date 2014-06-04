@@ -52,9 +52,11 @@ $(document).ready(function(){
         $.ajax({  
             async:true,    
             cache:false,   
-            url: <?php echo "'".CController::createUrl('site/admin')."'"; ?>,
+            url: <?php echo "'".CController::createUrl('site/CambiarGeneral')."'"; ?>,
             data: ajax_data,
             type: "post",
+        }).done(function(){
+            window.location.href = "<?php echo Yii::app()->createAbsoluteUrl('site/admin')?>";
         });
     });
 });

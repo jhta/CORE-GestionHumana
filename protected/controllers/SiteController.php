@@ -242,26 +242,7 @@ class SiteController extends Controller
             $jsonMes= json_encode($mes);
             $jsonVis= json_encode($visita);
             
-            if(isset($_POST['Informacion'])){
-                $modelI= Informacion::model()->findByPk(1);
-                
-                if(isset($_POST['descripcion']))
-                    $modelI->descripcion= $_POST['descripcion'];
-
-                if(isset($_POST['titulo']))
-                    $modelI->titulo= $_POST['titulo'];
-                
-                if(isset($_POST['mision']))
-                    $modelI->mision= $_POST['mision'];
-                
-                if(isset($_POST['vision']))
-                    $modelI->vision= $_POST['vision'];
-                
-                if($modelI->save()){
-                    Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
-                    $this->refresh();   
-                }
-            }
+            
             $s = Yii::app()->createController('Usuario'); //returns array containing controller instance and action index.
             $s = $s[0];
             $s->performAjaxValidation($model);
@@ -309,23 +290,26 @@ class SiteController extends Controller
          * 
          */
         public function actionCambiarGeneral(){
-            $model= new Informacion;
-            echo 'hola pirola';/*
-            if(isset($_POST['titulo'])){
-                $model= Informacion::model()->findByPk(1);
+            if(isset($_POST['titulo']) || isset($_POST['descripcion']) || isset($_POST['mision']) || isset($_POST['vision'])){
+                $modelI= Informacion::model()->findByPk(1);
                 
-                $model->titulo= $_POST['titulo'];
+                if(isset($_POST['descripcion']))
+                    $modelI->descripcion= $_POST['descripcion'];
+
+                if(isset($_POST['titulo']))
+                    $modelI->titulo= $_POST['titulo'];
                 
+                if(isset($_POST['mision']))
+                    $modelI->mision= $_POST['mision'];
+                
+                if(isset($_POST['vision']))
+                    $modelI->vision= $_POST['vision'];
+                
+                if($modelI->save()){
+                    Yii::app()->user->setFlash('informationchange','La información ha sido actualizada correctamente');
+                       
+                }
             }
-            
-            if(isset($_POST['descripcion'])){
-                $model= Informacion::model()->findByPk(1);
-                
-                $model->descripcion= $_POST['descripcion'];
-            }
-            
-            if($model->save()) echo 'Información General modificada';
-            */
         }
         
         /*
