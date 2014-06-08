@@ -19,11 +19,7 @@ class ComentarioController extends Controller
 				'class'=>'CCaptchaAction',
 				'backColor'=>0xF2E3D4,
 			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
+			
 		);
 	}
 	public function filters()
@@ -43,7 +39,7 @@ class ComentarioController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create'),
+				'actions'=>array('index','view','create','captcha'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
