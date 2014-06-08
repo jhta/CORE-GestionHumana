@@ -23,11 +23,11 @@ var searchP = new List('searchP', options');
                    
     <ul class="nav ">
         
-        <?php  /*$this->widget('zii.widgets.CListView', array(
+        <?php  $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_viewSideBar',
                     'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
-            )); HASTA AQUI */
+            ));
 //            $this->renderPartial('_viewSideBar', array(
 //            'publicacionesl' => $publicacionesl,
 //            ));
