@@ -19,7 +19,11 @@ class ComentarioController extends Controller
 				'class'=>'CCaptchaAction',
 				'backColor'=>0xF2E3D4,
 			),
-			
+			// page action renders "static" pages stored under 'protected/views/site/pages'
+			// They can be accessed via: index.php?r=site/page&view=FileName
+			'page'=>array(
+				'class'=>'CViewAction',
+			),
 		);
 	}
 	public function filters()
