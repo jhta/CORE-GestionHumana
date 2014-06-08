@@ -285,9 +285,9 @@ $(document).ready(function() {
             <div class="span12">
                 <nav id="social">
                     <ul>
-                        <li><a href="https://twitter.com/jh7a" title="Follow Me on Twitter" target="_blank"  id="twitter"><span  class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="https://www.facebook.com/ccmoralesj" title="Follow Me on Facebook" target="_blank"  id="facebook"><span  class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/+CristianCamiloMoralesJiménez" title="Follow Me on Google Plus" target="_blank" id="plus"><span   class="font-icon-social-google-plus"></span></a></li>
+                        <li><a href="https://twitter.com/coregh" title="Follow Me on Twitter" target="_blank"  id="twitter"><span  class="font-icon-social-twitter"></span></a></li>
+                        <li><a href="https://www.facebook.com/diego.florez.73113" title="Follow Me on Facebook" target="_blank"  id="facebook"><span  class="font-icon-social-facebook"></span></a></li>
+                        <li><a href="https://plus.google.com/109326510331235200178/" title="Follow Me on Google Plus" target="_blank" id="plus"><span   class="font-icon-social-google-plus"></span></a></li>
                         <li><a href="http://www.linkedin.com/in/ccmoralesj" title="Follow Me on LinkedIn" target="_blank" id="linkedin" ><span class="font-icon-social-linkedin"></span></a></li>
                         
                     </ul>

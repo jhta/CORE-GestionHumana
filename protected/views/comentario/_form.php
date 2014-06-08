@@ -39,7 +39,16 @@
                             )); ?>
 		<?php echo $form->error($model,'comentario'); ?>
 	</div>
-
+        <?php  if(CCaptcha::checkRequirements()): ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'verifyCode'); ?>
+		<div>
+		<?php $this->widget('CCaptcha'); ?>
+		<?php echo $form->textField($model,'verifyCode',array('required'=>true)); ?>
+		</div>
+		<?php echo $form->error($model,'verifyCode'); ?>
+	</div>
+	<?php endif; ?>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Guardar', array(
                     'class'=>'btn btn-primary',

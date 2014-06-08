@@ -11,6 +11,16 @@ class ComentarioController extends Controller
 	/**
 	 * @return array action filters
 	 */
+        public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xF2E3D4,
+			),
+		);
+	}
 	public function filters()
 	{
 		return array(
