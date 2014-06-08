@@ -283,7 +283,7 @@ $(document).ready(function() {
 	<div class="container">
     	<div class="row">
             <div class="span12">
-                <!--<nav id="social">
+                <nav id="social">
                     <ul>
                         <li><a href="https://twitter.com/coregh" title="Follow Me on Twitter" target="_blank"  id="twitter"><span  class="font-icon-social-twitter"></span></a></li>
                         <li><a href="https://www.facebook.com/diego.florez.73113" title="Follow Me on Facebook" target="_blank"  id="facebook"><span  class="font-icon-social-facebook"></span></a></li>
@@ -291,7 +291,7 @@ $(document).ready(function() {
                         <li><a href="http://co.linkedin.com/pub/core-gestion-humana/97/695/706" title="Follow Me on LinkedIn" target="_blank" id="linkedin" ><span class="font-icon-social-linkedin"></span></a></li>
                         
                     </ul>
-                </nav>-->
+                </nav>
             </div>
         </div>
     </div>
