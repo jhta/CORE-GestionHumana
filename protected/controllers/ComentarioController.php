@@ -11,7 +11,7 @@ class ComentarioController extends Controller
 	/**
 	 * @return array action filters
 	 */
-        public function actions()
+        /*public function actions()
 	{
 		return array(
 			// captcha action renders the CAPTCHA image displayed on the contact page
@@ -20,7 +20,7 @@ class ComentarioController extends Controller
 				'backColor'=>0xF2E3D4,
 			),
 		);
-	}
+	}*/
 	public function filters()
 	{
 		return array(
