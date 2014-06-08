@@ -31,18 +31,18 @@ $(document).ready(function() {
                 <li><a href="#contact">Contactanos</a></li>
                 <li><?php echo CHtml::link('Blog', array('publicacion/index'),array('class'=>'External','id'=>'Blog','target'=>'_blank')); ?></li>
                 
-                    <?php /*
+                    <?php 
                     if(!Yii::app()->user->isGuest) {
                         echo "<li>".CHtml::link('Administración', array('site/admin'),array('class'=>'External','id'=>'admin'))."</li>"; 
-                    }*/
+                    }
                 ?>
                 
-                <li><?php /* 
+                <li><?php  
                     if(!Yii::app()->user->isGuest) {
                         echo CHtml::link('logout', array('site/logout'),array('class'=>'External','id'=>'logout'));
                     }else{
                         echo CHtml::link('login', "#content-login",array('class'=>'External','id'=>'login'));
-                    }*/
+                    }
                 ?>
                 </li>
                 <!--<li><a id="login" href="#content-loginclass="external">login</a></li>-->
