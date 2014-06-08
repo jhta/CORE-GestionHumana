@@ -15,7 +15,7 @@
 class Comentario extends CActiveRecord
 {
     
-        //public $verifyCode2;
+        public $verifyCode;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -36,7 +36,7 @@ class Comentario extends CActiveRecord
 			array('PUBLICACION_id', 'numerical', 'integerOnly'=>true),
 			array('nombre', 'length', 'max'=>70),
 			array('comentario', 'length', 'max'=>5000),
-                        //array('verifyCode2', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+                        array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, fecha, nombre, comentario, PUBLICACION_id', 'safe', 'on'=>'search'),
@@ -66,7 +66,7 @@ class Comentario extends CActiveRecord
                         'fecha'=>'Fecha Creacion',
 			'comentario' => 'Comentario',
 			'PUBLICACION_id' => 'Publicacion',
-                        //'verifyCode2'=>'Código de verificación (Se usa para comprobar que es una persona y no una máquina quien nos escribe)',
+                        'verifyCode'=>'Código de verificación (Se usa para comprobar que es una persona y no una máquina quien nos escribe)',
 		);
 	}
 

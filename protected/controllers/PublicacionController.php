@@ -11,6 +11,17 @@ class PublicacionController extends Controller
 	/**
 	 * @return array action filters
 	 */
+        public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha'=>array(
+				'class'=>'CCaptchaAction',
+				'backColor'=>0xF2E3D4,
+			),
+			
+		);
+	}
 	public function filters()
 	{
 		return array(
@@ -28,7 +39,7 @@ class PublicacionController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','AllTagPost'),
+				'actions'=>array('index','view','AllTagPost','captcha'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
