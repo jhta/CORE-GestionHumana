@@ -17,7 +17,7 @@
         <h4>    
             <small class="text-muted">
                 <label class="label label-tag"><?php echo CHtml::link('Leer Más', array('view', 'id'=>$data->id));?></label>
-                <label class="label label-tag"><?php echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?></label>
+                <label class="label label-tag"><?php //echo CHtml::link("Comentarios ({$data->cuentaComentarios})",$data->url.'#comentarios'); ?></label>
             </small>
             
         </h4>
