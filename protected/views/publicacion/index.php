@@ -68,14 +68,14 @@ var searchP = new List('searchP', options');
                     CONTENIDO GENERAL
             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 <ul class="list">
-                <?php/* $this->widget('zii.widgets.CListView', array(
+                <?php $this->widget('zii.widgets.CListView', array(
                     'dataProvider'=>$dataProvider,
                     'itemView'=>'_view',
                     
                     'pagerCssClass' => 'result-list',
                     'summaryText' => 'Se encontraron '. $pages->itemCount .' ',
                 
-            )); */
+            )); 
 
             ?>
             </ul>
