@@ -1,10 +1,10 @@
 <script>
-/*$(document).ready(function(){
+$(document).ready(function(){
     var options = {
   valueNames: [ 'Stitulo','Snombre' ]
 };
 var searchP = new List('searchP', options');
-});*/
+});
 </script>   
 <div id="searchP">
 
