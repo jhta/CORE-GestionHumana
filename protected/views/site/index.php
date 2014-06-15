@@ -105,7 +105,7 @@ $(document).ready(function() {
 <!-- About Section -->
 <div id="about" class="page-alternate">
 <div class="container">
-    <!-- Title Page -->
+    <!-- Title Psge -->
     <div class="row">
         <div class="span12">
             <div class="title-page">
