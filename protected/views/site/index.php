@@ -116,7 +116,7 @@ $(document).ready(function() {
     </div>  
     <!-- End Title Page -->
     
-    <!-- Usuarios -->
+    <!-- Usuarios  -->
     <div class="row">
     	<?php $this->renderPartial('//usuario/viewIndex',array(
                     'Usuarios'=>$Usuarios,
