@@ -260,14 +260,6 @@ $(document).ready(function() {
         		<h3>Detalles de contacto</h3>
                 <ul>
                     <li><a href="#">info@coregestionhumana.com</a></li>
-                    <li>(+57)314-615-2596</li>
-                    <li>
-                        Diego Flórez
-                        <br>
-                        5240 Medellín, Colombia.
-                        <br>
-                        Psicologo
-                    </li>
                 </ul>
             </div>
         </div>
